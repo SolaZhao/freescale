@@ -1,0 +1,39 @@
+===================================
+  MCURegisters Component Release Notes
+===================================
+
+=================================================
+  MCURegisters Component mcuregisters.wnd v6.1.1
+=================================================
+
+List of new Features
+--------------------
+- None.
+
+
+List of fixed Bugs
+--------------------
+- Format specification fixed to avoid truncation of long addresses.
+
+
+List of known Bugs
+--------------------
+- None.
+
+=================================================
+  MCURegisters Component mcuregisters.wnd v6.1.0
+=================================================
+
+List of new Features
+--------------------
+- This is the first release of the MCURegisters component.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.

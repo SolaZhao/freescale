@@ -1,0 +1,192 @@
+==========================================
+  HIWARE object file loader  Release Notes
+==========================================
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.27
+===============================================
+
+List of new Features
+-------------------	
+- Internal upgrade: 
+- Loaded application code alignment can be forced with new environment variables to be set
+  in the [HI-WAVE] section of the current project:
+  .ALIGNMENT: The alignment size/boundary. This parameter value can only be a power of 2. 
+              By default, alignment is "1", except for HCS12 devices where alignment is "2".
+  .FILLPATTERN: The pattern to add to complete aligned code blocks and fill "holes". Default is 0xFF.
+
+  Usage example:
+  [HI-WAVE]
+  ALIGNMENT=8
+  FILLPATTERN=0xA5
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.26
+===============================================
+
+List of new Features
+--------------------	
+- Internal upgrade.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.25
+===============================================
+
+List of new Features
+--------------------	
+- Internal upgrade.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.24
+===============================================
+
+List of new Features
+--------------------	
+- None.
+
+
+List of fixed Bugs
+--------------------
+- Internal improvements.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.23
+===============================================
+
+List of new Features
+--------------------	
+- "Code Download Verification" feature implementation. 
+Please see section 3-Executable.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.22
+===============================================
+
+List of new Features
+--------------------
+- None.
+
+
+List of fixed Bugs
+--------------------
+- Improvement in debug information (path name handling).
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.21
+===============================================
+
+List of new Features
+--------------------	
+- "Code Download Verification" feature implementation. 
+Please see section 3-Executable.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+List of known Bugs
+--------------------
+- None.
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.20
+===============================================
+	
+List of new Features
+--------------------
+- None.
+
+
+List of fixed Bugs
+--------------------
+- None. 
+
+
+List of known Bugs
+--------------------
+- R2587: HI-WAVE did stop loading abs file after linker defined object
+
+
+===============================================
+  HIWARE object file loader hiload.dll V 6.1.19
+===============================================
+
+List of new Features
+--------------------	
+- ST19X support. 
+
+
+List of fixed Bugs
+--------------------
+- Improvement of call chain display in case of static local variables.
+- Now correctly load the parameter types (for Call chain display).
+- R2514: all parameters of a function are now displayed in the call chain.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+
+
+
+

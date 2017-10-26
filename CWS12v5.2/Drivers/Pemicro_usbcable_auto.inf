@@ -1,0 +1,130 @@
+; Installation inf for P&E's USB Direct Driver
+;
+; Portions Copyright (c) 2001-2002 Future Technology Devices International Ltd.
+;
+
+[Version]
+Signature="$CHICAGO$"
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000}
+Provider=%Pemicro%
+;CatalogFile=pemicro10.cat
+DriverVer=07/29/2002,1.03.20
+
+[SourceDirs]
+1=%windir%SYSTEM32
+2=%windir%SYSTEM32\DRIVERS
+
+[SourceDisksFiles]
+PEUSBV1.sys = 2
+PEUSBV1.dll = 1
+PEUSBFTDUN.exe = 1
+
+[Manufacturer]
+%Pemicro%=PemicroHw
+
+[PemicroHw]
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BF
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BE
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BD
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BC
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BB
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5BA
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B9
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B8
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B7
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B6
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B5
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B4
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B3
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B2
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B1
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_F5B0
+%USB\VID_0403&PID_6789.DeviceDesc%=PEUSBV1, USB\VID_0403&PID_6789
+
+[ControlFlags]
+ExcludeFromSelect=USB\VID_0403&PID_F5BF
+ExcludeFromSelect=USB\VID_0403&PID_F5BE
+ExcludeFromSelect=USB\VID_0403&PID_F5BD
+ExcludeFromSelect=USB\VID_0403&PID_F5BC
+ExcludeFromSelect=USB\VID_0403&PID_F5BB
+ExcludeFromSelect=USB\VID_0403&PID_F5BA
+ExcludeFromSelect=USB\VID_0403&PID_F5B9
+ExcludeFromSelect=USB\VID_0403&PID_F5B8
+ExcludeFromSelect=USB\VID_0403&PID_F5B7
+ExcludeFromSelect=USB\VID_0403&PID_F5B6
+ExcludeFromSelect=USB\VID_0403&PID_F5B5
+ExcludeFromSelect=USB\VID_0403&PID_F5B4
+ExcludeFromSelect=USB\VID_0403&PID_F5B3
+ExcludeFromSelect=USB\VID_0403&PID_F5B2
+ExcludeFromSelect=USB\VID_0403&PID_F5B1
+ExcludeFromSelect=USB\VID_0403&PID_F5B0
+ExcludeFromSelect=USB\VID_0403&PID_6789
+
+;[PreCopySection]
+;HKR,,NoSetupUI,,1
+
+[DestinationDirs]
+DefaultDestDir   = 11
+PEUSBV1.Files.Ext = 10,System32\Drivers
+PEUSBV1.Files.Dll = 11
+PEUSBV1.Files.Exe = 11
+
+;---------------------------------------------------------------;
+; For Win98 ...
+;
+
+[PEUSBV1]
+; CopyFiles=PEUSBV1.Files.Ext, PEUSBV1.Files.Dll, PEUSBV1.Files.Exe
+AddReg=PEUSBV1.AddReg, PEUSBV1.UnInst
+
+[PEUSBV1.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,PEUSBV1.sys
+HKLM,"System\Currentcontrolset\Services\PEUSBV1\Parameters","MaximumTransferSize",0x10001,4096
+HKLM,"System\Currentcontrolset\Services\PEUSBV1\Parameters","DebugLevel",0x10001,2
+
+[PEUSBV1.Files.Ext]
+PEUSBV1.sys
+
+[PEUSBV1.Files.Dll]
+PEUSBV1.dll
+
+[PEUSBV1.Files.Exe]
+PEUSBFTDUN.exe
+
+[PEUSBV1.UnInst]
+HKLM,%WINUN%,"PEUSBV1"
+HKLM,%WINUN%\PEUSBV1 , "UninstallString",,"%11%\PEUSBFTDUN.exe"
+HKLM,%WINUN%\PEUSBV1 , "DisplayName",,"P&E USB Drivers"
+
+
+;---------------------------------------------------------------;
+; For Win2000 ...
+;
+
+[PEUSBV1.NT]
+CopyFiles=PEUSBV1.Files.Ext, PEUSBV1.Files.Dll, PEUSBV1.Files.Exe
+AddReg=PEUSBV1.AddReg, PEUSBV1.UnInst
+
+[PEUSBV1.NT.Services]
+Addservice = PEUSBV1, 0x00000002, PEUSBV1.AddService
+
+[PEUSBV1.AddService]
+DisplayName    = %PEUSBV1.SvcDesc%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_DEMAND_START
+ErrorControl   = 1                  ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %10%\System32\Drivers\PEUSBV1.sys
+LoadOrderGroup = Base
+
+
+;---------------------------------------------------------------;
+
+[Strings]
+Pemicro="P&E"
+USB\VID_0403&PID_6789.DeviceDesc="P&E USB Device"
+PEUSBV1.SvcDesc="PEUSBV1.SYS P&E USB device driver v1"
+WINUN="Software\Microsoft\Windows\CurrentVersion\Uninstall"
+DriversDisk="P&E USB Drivers Disk"
+

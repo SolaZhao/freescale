@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<!DOCTYPE WIZARD SYSTEM "../wizard.dtd" [
+    <!ENTITY % SHORTCUTS SYSTEM "../shortcuts.dtd">
+    %SHORTCUTS;
+]>
+
+<WIZARD>
+    <DIALOGLIST idref="ID_DLG_CHIP">
+        <DIALOG id="ID_DLG_CHIP"/>
+        <DIALOG id="ID_DLG_MEM_MDL_DEF_BANKED"/>
+        <DIALOG id="ID_DLG_MEM_MDL_DEF_SMALL"/>
+        <!-- <DIALOG id="ID_DLG_MEM_MDL_WITH_CUSTOM"/> -->
+        <DIALOG id="ID_DLG_XGATE_OPTIONS_DEF_FLASH"/>
+        <DIALOG id="ID_DLG_XGATE_OPTIONS_DEF_RAM"/>
+        <DIALOG id="ID_DLG_MEM_MOD_OPT"/>
+    </DIALOGLIST>    
+    <WIZARDELEMENTLIST>
+        <WIZARDELEMENT name="" term="" id="ID_CHIP_LIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_CHIP_FAMILY_hcs12x">
+                    <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_CHIP_hcs12x_SUBFAMILY_XE">
+                    <WIZARDELEMENTLIST>
+                        <WIZARDELEMENT name="Chip" term="MC9S12XEQ384" id="ID_CHIP_XEQ384">
+                           <NEXTDIALOGSLIST>
+                               <NEXTDIALOGS>
+<DEPENDENCY kind="AND">
+ <DEPENDENCY kind="NOR">
+  <WIZARDELEMENTREF idref="ID_PRC_EXP_RAD"/>
+ </DEPENDENCY>
+ <DEPENDENCY kind="NOR">
+  <WIZARDELEMENTREF idref="ID_MEM_MDL_S"/>
+ </DEPENDENCY>
+ <DEPENDENCY kind="OR">
+  <WIZARDELEMENTREF idref="ID_LANG_C"/>
+  <WIZARDELEMENTREF idref="ID_LANG_CPP"/>
+ </DEPENDENCY>
+</DEPENDENCY><DIALOGREFLIST><DIALOGREF idref="ID_DLG_MEM_MOD_OPT"/></DIALOGREFLIST></NEXTDIALOGS>
+                               <NEXTDIALOGS>
+                                   <DEPENDENCY>
+                                       <WIZARDELEMENTREF idref="ID_XGATE_YES"/>
+                                   </DEPENDENCY>
+                                   <DIALOGREFLIST>
+                                       <DIALOGREF idref="ID_DLG_XGATE_OPTIONS_DEF_FLASH"/>
+                                   </DIALOGREFLIST>
+                               </NEXTDIALOGS>
+
+                              <NEXTDIALOGS>
+                                 <!-- we show build options dialog if C or C++ was chosen -->
+                                 <DEPENDENCY kind="OR">
+                                    <WIZARDELEMENTREF idref="ID_LANG_C"/>
+                                    <WIZARDELEMENTREF idref="ID_LANG_CPP"/>
+                                 </DEPENDENCY>
+                                 <DIALOGREFLIST>
+                                    <DIALOGREF idref="ID_DLG_MEM_MDL_DEF_BANKED"/>
+                                 </DIALOGREFLIST>
+                              </NEXTDIALOGS>
+                           </NEXTDIALOGSLIST>
+
+                            <REJECTIONLIST>
+
+<!-- reject OSEK for S12X if Processor Expert or Device Init selected: -->
+<REJECTION><DEPENDENCY kind="OR"><WIZARDELEMENTREF idref="ID_PRC_EXP_INIT"/><WIZARDELEMENTREF idref="ID_PRC_EXP_RAD"/></DEPENDENCY>
+    <WIZARDELEMENTREF idref="ID_OSEK_YES"/></REJECTION>
+
+<REJECTION><WIZARDELEMENTREF idref="ID_MEM_MDL_L"/></REJECTION>
+<!-- reject ID_MEM_MDL_CUSTOM to protect daily tests until custom memory model implemented
+
+                            	<REJECTION>
+                            		<WIZARDELEMENTREF idref="ID_MEM_MDL_CUSTOM"/>
+                       			 </REJECTION>
+-->
+<!-- reject ID_XGATE_YES_RAM_FLASH to protect daily tests until xgate in ram & flash implemented
+                            	<REJECTION>
+                            		<WIZARDELEMENTREF idref="ID_XGATE_YES_RAM_FLASH"/>
+                       			 </REJECTION>
+-->															                       			 
+                            	<REJECTION>
+                            		<DEPENDENCY>
+                               			 <WIZARDELEMENTREF idref="ID_PRC_EXP_RAD"/>
+                            		</DEPENDENCY>
+                            			<WIZARDELEMENTREF idref="ID_MEM_MDL_S"/>
+                       			 </REJECTION>
+                    		</REJECTIONLIST> 
+                    
+                            <RESTRICTIONLIST>
+<RESTRICTION>
+<WIZARDELEMENTREF idref="ID_CONNECTION_LIST">
+<RECURSION nameref="" idrefs="ID_CONNECTION_LIST ID_CONN_SIM"></RECURSION>
+</WIZARDELEMENTREF>
+</RESTRICTION>
+<RESTRICTION>
+<WIZARDELEMENTREF idref="ID_CONNECTION_LIST">
+<RECURSION nameref="" idrefs="ID_CONNECTION_LIST ID_CONN_PEHW_HCS12"></RECURSION>
+</WIZARDELEMENTREF>
+</RESTRICTION>
+<RESTRICTION>
+<WIZARDELEMENTREF idref="ID_CONNECTION_LIST">
+<RECURSION nameref="" idrefs="ID_CONNECTION_LIST ID_CONN_PEHW_HCS12_CYCLONE_USB"></RECURSION>
+</WIZARDELEMENTREF>
+</RESTRICTION>
+<RESTRICTION>
+<WIZARDELEMENTREF idref="ID_CONNECTION_LIST">
+<RECURSION nameref="" idrefs="ID_CONNECTION_LIST ID_CONN_PEHW_HCS12_CYCLONE_SERIAL"></RECURSION>
+</WIZARDELEMENTREF>
+</RESTRICTION>
+<RESTRICTION>
+<WIZARDELEMENTREF idref="ID_CONNECTION_LIST">
+<RECURSION nameref="" idrefs="ID_CONNECTION_LIST ID_CONN_PEHW_HCS12_CYCLONE_TCPIP"></RECURSION>
+</WIZARDELEMENTREF>
+</RESTRICTION>
+                            </RESTRICTIONLIST>
+                            <SETTINGSLIST>
+                                <SETTINGS>
+                                	<FILELIST>
+                                	
+                            		</FILELIST>
+                                    <OPTIONLIST>
+                                		<OPTION pluginname="Panel for Compiler for HC12" fieldname="Panel for Compiler for HC12.Options" value=" -CpuHCS12XE " insertmode="Add"/>
+                                		<OPTION pluginname="Panel for Assembler for HC12" fieldname="Panel for Assembler for HC12.Options" value=" -CpuHCS12XE " insertmode="Add"/>
+                                		<OPTION pluginname="Panel for Linker for HC12" fieldname="Panel for Linker for HC12.PrmTemplateName" value="MC9S12XEQ384.prm" insertmode="Replace"/>
+                            		</OPTIONLIST>
+                                    <MACROLIST>
+                                        <MACRO name="$$MCU_ID_TARGET_ENTRY$$" kind="Set">MCUID=0x02DB</MACRO>
+                                        <MACRO name="$$MCU_BANK_TARGET_ENTRY$$" kind="Set"></MACRO>
+                                        <MACRO name="$$MCU_ASM_INCLUDE$$" kind="Set">; include derivative specific macros
+            INCLUDE 'MC9S12XEQ384.inc'
+</MACRO>
+                                        <MACRO name="$$MCU_ASM_RAMROMDEF$$" kind="Set">ROMStart    EQU  $4000  ; absolute address to place my code/constant data
+</MACRO>
+                                        <MACRO name="$$MCU_HCS12_SUPPORT$$" kind="Set">HCS12_SUPPORT=3</MACRO>
+                                        <MACRO name="$$FCS_ENTRY$$" kind="Set">FCS=MC9S12XEQ384</MACRO>
+                                        <MACRO name="$$PRM_FILE_NAME$$" kind="Set" replaceInFilenames="Yes">MC9S12XEQ384</MACRO>
+                                        <MACRO name="$$BBL_FILE_NAME$$" kind="Set" replaceInFilenames="Yes">burner_hcs12x.bbl</MACRO>
+                                        <MACRO name="$$MCU_HITEX_CMD$$" kind="Set" replaceInGeneratedFiles="Yes">##HitexCmd##</MACRO>
+                                        <MACRO name="$$MCU_SOFTEC_DERIVATIVE_NAME$$" kind="Set" replaceInGeneratedFiles="Yes">MC9S12XEQ384</MACRO>
+                                        <MACRO name="$$X_HCS12X_LIBNAME_PART$$" kind="Set" replaceInFilenames="Yes">x</MACRO>
+                                        <MACRO name="$$UNSECURE_TYPE$$" kind="Set" replaceInFilenames="Yes" replaceInGeneratedFiles="Yes">hcs12xe</MACRO>
+
+                                        <MACRO name="$$CHIP_OSEK_OIL_FILENAME$$" kind="Set" replaceInFilenames="Yes">hcs12xep100</MACRO>
+                                        <MACRO name="$$CHIP_OSEK_MID_PATH$$" kind="Set" replaceInFilenames="Yes" replaceInOptionsValue="Yes">osts12x</MACRO>
+                                        <MACRO name="$$CHIP_OSEK_OIN_FILENAME$$" kind="Set" replaceInFilenames="Yes">ost22s12x</MACRO>
+                                        <MACRO name="$$XGATE_CORE2$$" kind="Set">0</MACRO>
+                                        <MACRO name="$$XGATE_CORE3$$" kind="Set">1</MACRO>
+                                    </MACROLIST>
+                                </SETTINGS>
+
+
+
+                                <SETTINGS>
+                                    <DEPENDENCY>
+                                        <WIZARDELEMENTREF idref="ID_MEM_MDL_L"/>
+                                    </DEPENDENCY>
+                                    <OPTIONLIST>
+                                        <OPTION pluginname="Panel for Compiler for HC12" fieldname="Panel for Compiler for HC12.Options" value="-CpGPAGE  " insertmode="Add"/>
+                                    </OPTIONLIST>
+                                </SETTINGS>
+
+
+        <!-- ***** Target specific settings *************************************** -->
+                            <!-- the connection is PE Hardware -->
+                        		
+                        		
+                        		
+        <!-- ***** Language specific settings ************************************* -->
+                                <!-- assembly was chosen -->                                
+                                <!-- Create the derivative.inc file for Assembly project -->                                
+                        		<SETTINGS>
+                            		<DEPENDENCY kind="OR">                                        
+                                        <WIZARDELEMENTREF idref="ID_LANG_ASM"/>
+                                        <WIZARDELEMENTREF idref="ID_LANG_ABS_ASM"/>
+                                    </DEPENDENCY>
+                                    <FILELIST>
+<REFERENCEFILE>
+<FILE name="..\..\..\..\..\lib\HC12c\include\MC9S12XEQ384.inc" group="Includes" priority="29"></FILE>
+</REFERENCEFILE>                     				 <GENERATEFILE>
+                                            <FILE name="Sources\derivative.inc" group="Includes" priority="504" reconfigAction="ReplaceNoBackup"/>
+                                            <INPUT>
+ ; Note: This file is recreated by the project wizard whenever the MCU is
+ ;       changed and should not be edited by hand
+ ;
+
+			$$MCU_ASM_INCLUDE$$
+		
+
+</INPUT>
+                                    </GENERATEFILE>
+                  			   	</FILELIST>                    			   	         		
+                  				 	<WIZARDELEMENTLINKS>
+                                        <WIZARDELEMENTREF idref="ID_TOOL_LIST">
+                                            <RECURSION nameref="" idrefs="ID_TOOL_LIST ID_ASM_BASE"/>
+                                        </WIZARDELEMENTREF>
+                                    </WIZARDELEMENTLINKS>                            			 
+                        		</SETTINGS>                       		
+                        	
+                        		
+                         		
+                        		  <!-- If only assembly is chosen, then stop here -->
+                                <SETTINGS flow="IgnoreFollowing">
+                                    <DEPENDENCY kind="NOR">
+                                        <WIZARDELEMENTREF idref="ID_LANG_C"/>
+                                        <WIZARDELEMENTREF idref="ID_LANG_CPP"/>
+                                    </DEPENDENCY>
+                                </SETTINGS>
+
+
+                       		                        	
+                        		 <!-- if C/C++ support, add the libraries and do basic settings -->
+                        		<SETTINGS>
+                            		<DEPENDENCY kind="OR">
+                                		<WIZARDELEMENTREF idref="ID_LANG_C"/>
+                                		<WIZARDELEMENTREF idref="ID_LANG_CPP"/>
+                            		</DEPENDENCY>
+                            		<WIZARDELEMENTLINKS>
+                                		<WIZARDELEMENTREF idref="ID_TOOL_LIST">
+                                    		<RECURSION nameref="" idrefs="ID_TOOL_LIST ID_LIB_12"/>
+                                		</WIZARDELEMENTREF>
+                                		<WIZARDELEMENTREF idref="ID_TOOL_LIST">
+                                    		<RECURSION nameref="" idrefs="ID_TOOL_LIST ID_C_CPP_BASE"/>
+                                		</WIZARDELEMENTREF>
+                            		</WIZARDELEMENTLINKS>
+                        		</SETTINGS>
+
+                        		<!-- processor expert is supported so break here -->
+                        		<!-- Copy .pe file if using processor expert -->
+                        		<SETTINGS flow="IgnoreFollowing">
+                            		<DEPENDENCY>
+                                		<WIZARDELEMENTREF idref="ID_PRC_EXP_RAD"/>
+                            		</DEPENDENCY>
+                            		<FILELIST>
+                                		<COPYFILE>
+                                    		<SOURCE>
+                                        		<FILE name="pe\XEQ384.pe"/>
+                                    		</SOURCE>
+                                    		<DESTINATION>
+                                        		<FILE name="default.pe"/>
+                                    		</DESTINATION>
+                                		</COPYFILE>
+                            		</FILELIST>
+                        		</SETTINGS>                        	
+
+							 
+						
+                                
+                       		 <!-- add the C/C++ header/source files -->
+                       		 
+                       		 <SETTINGS>
+                 				<FILELIST>
+                     				 <REFERENCEFILE>  
+                          					<FILE name="..\..\..\..\..\lib\HC12c\include\MC9S12XEQ384.h" group="Includes" priority="28"></FILE>
+                      				 </REFERENCEFILE>
+                      				<REFERENCEFILE>
+                          					<FILE name="..\..\..\..\..\lib\HC12c\src\MC9S12XEQ384.c" group="Libs" priority="27" linkorder="10" ></FILE>
+                          			</REFERENCEFILE>
+                      				<GENERATEFILE>
+                                            <FILE name="Sources\derivative.h" group="Includes" priority="504" reconfigAction="ReplaceNoBackup"/>
+                                            <INPUT>/*
+ * Note: This file is recreated by the project wizard whenever the MCU is
+ *       changed and should not be edited by hand
+ */
+
+/* Include the derivative-specific header file */
+#include &lt;MC9S12XEQ384.h&gt;
+
+#pragma LINK_INFO DERIVATIVE "MC9S12XEQ384"
+
+</INPUT>
+                                    </GENERATEFILE>
+                  				</FILELIST>
+              				</SETTINGS>
+              
+                        	
+
+	                        <!-- Update the Macros in the *.c , *.cpp values (these are particular to HC12 -->
+	                          <!-- C++ was chosen -->
+    		                    <SETTINGS flow="IgnoreFollowing">
+            		                <DEPENDENCY>
+                    		            <WIZARDELEMENTREF idref="ID_LANG_CPP"/>
+                            		</DEPENDENCY>
+                            		<FILELIST>
+                                		<COPYFILE>
+	                                    	<SOURCE>
+    	                                    	<FILE name="Sources\main.c"/>
+        	                            	</SOURCE>
+            	                        	<DESTINATION>
+                	                        	<FILE name="Sources\main.cpp" group="Sources" priority="57">
+                    	                        	<FIND>/*$Lib$*/</FIND>
+                        	                    	<REPLACE>#include &lt;MC9S12XEQ384.h&gt;     /* derivative information */</REPLACE>
+                            	                	<FIND>/*$Pragma$*/</FIND>
+                                	            	<REPLACE>#pragma LINK_INFO DERIVATIVE "mc9s12xeq384"</REPLACE>
+                                    	    	</FILE>
+                                    		</DESTINATION>
+                                		</COPYFILE>
+                            		</FILELIST>
+                        		</SETTINGS>
+                        	
+                            </SETTINGSLIST>
+                        </WIZARDELEMENT>
+                    </WIZARDELEMENTLIST>
+                  </WIZARDELEMENT>
+                 </WIZARDELEMENTLIST>
+               </WIZARDELEMENT>
+           </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>                  
+ <!-- the following elements are defined in the main XML file (wizard.xml). They are referenced in this -->
+        <!-- file so you must redeclare them (referenced IDs must be declared in the same file) -->  
+        <WIZARDELEMENT name="" term="" id="ID_XGATE">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_NO"/>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_YES"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        <WIZARDELEMENT name="" term="" id="ID_XGATE_MEMORY_SELECT">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_YES_FLASH"/>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_YES_RAM"/>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_YES_RAM_FLASH"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        <WIZARDELEMENT name="" term="" id="ID_STARTUP_CODE">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_STARTUP_CODE_MINIMAL"/>
+                <WIZARDELEMENT name="" term="" id="ID_STARTUP_CODE_ANSI"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        
+        <WIZARDELEMENT name="" term="" id="ID_XGATE_FL_POINT">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_FL_POINT_NONE"/>
+                <WIZARDELEMENT name="" term="" id="ID_XGATE_FL_POINT_32"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+        <WIZARDELEMENT name="" term="" id="ID_LANG_LIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_LANG_ABS_ASM"/>
+                <WIZARDELEMENT name="" term="" id="ID_LANG_ASM"/>
+                <WIZARDELEMENT name="" term="" id="ID_LANG_C"/>
+                <WIZARDELEMENT name="" term="" id="ID_LANG_CPP"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        
+        <WIZARDELEMENT name="" term="" id="ID_CONNECTION_LIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_SIM"/>
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_PEHW"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_CYCLONE_USB"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_CYCLONE_SERIAL"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_CYCLONE_TCPIP"/-->
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12"/>
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12X"/-->
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12XE"/-->
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12_CYCLONE_USB"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12_CYCLONE_SERIAL"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12_CYCLONE_TCPIP"/>
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_FSLOSBDM"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12X"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12XE"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ABAT"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ABAT_HCS12XE"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_MON"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_TBDML"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_TBDML_HCS12XE"/-->
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        
+        <WIZARDELEMENT name="" term="" id="ID_PRC_EXP">
+            <WIZARDELEMENTLIST>
+               <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_NO"/> 
+               <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_INIT"/>  
+               <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_RAD"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        
+        <WIZARDELEMENT name="" term="" id="ID_PC_LINT">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_PC_LINT_YES"></WIZARDELEMENT>
+                <WIZARDELEMENT name="" term="" id="ID_PC_LINT_NO"></WIZARDELEMENT>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+        <WIZARDELEMENT name="" term="" id="ID_OSEK">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_OSEK_YES"/>
+                <WIZARDELEMENT name="" term="" id="ID_OSEK_NO"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+        
+        <WIZARDELEMENT name="" term="" id="ID_HC12_FL_POINT">
+         <WIZARDELEMENTLIST>
+            <WIZARDELEMENT name="" term="" id="ID_HC12_FL_POINT_NONE"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_HC12_FL_POINT_32"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_HC12_FL_POINT_64"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+         <WIZARDELEMENT name="" term="" id="ID_MEM_MDL">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_S"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_B"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_L"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_C"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+        <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_RADIOLIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_NOT_FIT"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_ALLNONCONST_IN_NONPAGEDRAM"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_ALLCONST_CODE_IN_NONPAGEDFLASH"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+         <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MAPPING">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MAPPING_RAM"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MAPPING_FLASH"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MAPPING_EXTERNAL"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+        <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_BOTH_FOR_CODE_N_CONST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_ALLNONCONST_IN_NONPAGEDRAM_YES"/>
+                <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_ALLNONCONST_IN_NONPAGEDRAM_NO"/>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+
+        <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MEMORY_BANKER_CODE"/>
+        <WIZARDELEMENT name="" term="" id="ID_MEM_MOD_OPT_MEMORY_BANKER_DATA"/>
+
+
+        <WIZARDELEMENT name="" term="" id="ID_TOOL_LIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_LIB_12"/>
+                <WIZARDELEMENT name="" term="" id="ID_ASM_BASE"/>
+                <WIZARDELEMENT name="" term="" id="ID_C_CPP_BASE"/>
+                <WIZARDELEMENT name="" term="" id="ID_SOFTEC_NVMC_LIST">
+                    <WIZARDELEMENTLIST>
+                        <WIZARDELEMENT name="" term="" id="ID_SOFTEC_NVMC12"/>
+                        <WIZARDELEMENT name="" term="" id="ID_NO_SOFTEC_NVMC12"/>
+                    </WIZARDELEMENTLIST>
+                </WIZARDELEMENT>
+                <WIZARDELEMENT name="" term="" id="ID_UNSEC_LIST">
+                    <WIZARDELEMENTLIST>
+                        <WIZARDELEMENT name="" term="" id="ID_UNSEC_ICD12_HCS12XE"/>
+                        <WIZARDELEMENT name="" term="" id="ID_UNSEC_ICD12"/>
+                        <WIZARDELEMENT name="" term="" id="ID_NO_UNSEC_ICD12"/>
+                        <WIZARDELEMENT name="" term="" id="ID_UNSEC_TBDML_HCS12XE"/>
+                        <WIZARDELEMENT name="" term="" id="ID_UNSEC_TBDML"/>
+                        <WIZARDELEMENT name="" term="" id="ID_NO_UNSEC_TBDML"/>
+                    </WIZARDELEMENTLIST>
+                </WIZARDELEMENT>
+
+                <WIZARDELEMENT name="" term="" id="ID_CONNECTION_OPTIONS_LIST">
+            <WIZARDELEMENTLIST>
+                <WIZARDELEMENT name="" term="" id="ID_NO_ABATRON_FLASH"/>
+                <WIZARDELEMENT name="" term="" id="ID_ABATRON_FLASH"/>
+                
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+            </WIZARDELEMENTLIST>
+        </WIZARDELEMENT>
+      </WIZARDELEMENTLIST>
+</WIZARD>

@@ -1,0 +1,44 @@
+====================================
+  Adc_dac Component Release Notes
+====================================
+
+The Adc_dac Component has been discontinued in the CodeWarrior for HC(S)12 V4.7.
+It is not included into a product package.
+
+=========================================
+Adc_dac Component Adc_dac.wnd v6.1.1.1
+=========================================
+
+List of New Features
+--------------------
+- None.
+
+
+List of Fixed Bugs
+--------------------
+- None.
+
+
+List of Known Bugs
+--------------------
+- None.
+
+
+=========================================
+Adc_dac Component Adc_dac.wnd v6.1.1.0
+=========================================
+
+List of New Features
+--------------------
+- This is the first release of this component. For further information, see the help file.
+
+
+List of Fixed Bugs
+--------------------
+- None.
+
+
+List of Known Bugs
+--------------------
+- None.
+

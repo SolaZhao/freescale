@@ -1,0 +1,19 @@
+WORLDWIDE SUPPORT
+
+We are pleased to offer you a 24-hour-a-day, 365-day-per-year
+information and support resource available on our World-Wide Web at
+
+     http://www.freescale.com/support
+
+With our web support, you can:
+  - ask technical support, or registration questions
+  - link to other developer resources
+  - file bug reports or feature suggestions
+  - download updates, patches, and new versions of tools
+  - find user-contributed tips, and techniques
+  - find out more about Freescale Developer Technology 
+  - find online documentation, white papers and searchable knowledgebase
+ 
+Worldwide help is available to anyone with an Internet connection. 
+This includes users of America Online, other internet provider
+who can use their online service's World-Wide Web browser.

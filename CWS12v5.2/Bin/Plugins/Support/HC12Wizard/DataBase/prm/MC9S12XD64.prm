@@ -1,0 +1,181 @@
+/* This is a linker parameter file for the MC9S12XD64 */
+
+$$IF $$COND_XGATE$$ != 0 && $$COND_XGATE$$ != 1
+$$ERROR $$COND_XGATE$$ must be a macro set with 0 or 1
+$$ENDIF
+$$IF $$XGATE_ASM_ONLY_RAM$$ != 0 && $$XGATE_ASM_ONLY_RAM$$ != 1
+$$ERROR $$XGATE_ASM_ONLY_RAM$$ must be a macro set with 0 or 1
+$$ENDIF
+$$//  $$COND_XGATE$$: This macro defines if the XGATE should be supported
+$$//  $$XGATE_ASM_ONLY_RAM$$: this macro defines if we only have assembly code and therefore no
+$$//            C startup code which could copy the XGATE code from FLASH into RAM
+
+$$IF $$COND_XGATE$$
+/*
+   This parameter file is setup in a generic way to allow exploring most common features of both cores:
+   - S12X core
+   - XGATE code and constants in FLASH and/or RAM
+   - XGATE data and stack in RAM
+   It might be required to adapt some of the definitions to best match your application.
+*/
+$$ELSE
+/*
+This file is setup to use the HCS12X core only.
+If you plan to also use the XGATE in your project, best create a new project with the
+'New Project Wizard' (File|New... menu in the CodeWarrior IDE) and choose the appropriate
+project parameters.
+*/
+$$ENDIF
+
+NAMES
+    /* CodeWarrior will pass all the needed files to the linker by command line. But here you may add your additional files */
+END
+
+SEGMENTS /* here all RAM/ROM areas of the device are listed. Used in PLACEMENT below. All addresses are 'logical' */
+/* Register space  */
+/*    IO_SEG        = PAGED         0x0000 TO   0x07FF; intentionally not defined */
+
+/* non-paged EEPROM */
+      EEPROM        = READ_ONLY   DATA_NEAR IBCC_NEAR  0x0C00 TO   0x0FFB; 
+
+/* non-paged RAM */
+$$IF $$COND_XGATE$$
+      RAM           = READ_WRITE  DATA_NEAR            0x3400 TO   0x3FFF ALIGN 2[1:1]; /* word align for XGATE accesses */
+$$ELSE
+      RAM           = READ_WRITE  DATA_NEAR            0x3000 TO   0x3FFF; 
+$$ENDIF
+
+/* non-banked FLASH */
+      ROM_4000      = READ_ONLY   DATA_NEAR IBCC_NEAR  0x4000 TO   0x7FFF; 
+      ROM_C000      = READ_ONLY   DATA_NEAR IBCC_NEAR  0xC000 TO   0xFEFF; 
+/*    VECTORS       = READ_ONLY                        0xFF00 TO   0xFFFF; intentionally not defined: used for VECTOR commands below */
+    //OSVECTORS     = READ_ONLY                        0xFF10 TO   0xFFFF;  /* OSEK interrupt vectors (use your vector.o) */
+
+/* paged EEPROM                     0x0800 TO   0x0BFF; addressed through EPAGE */
+/*    EEPROM_FF     = READ_ONLY   0xFF0800 TO 0xFF0BFF; intentionally not defined: equivalent to EEPROM */
+
+/* paged RAM:                       0x1000 TO   0x1FFF; addressed through RPAGE */
+$$IF $$COND_XGATE$$
+      RAM_XGATE_STK = READ_WRITE    DATA_FAR           0x3000 TO   0x307F; /* The stack is set by the XGATE compiler option -Cstv=F080 */
+$$IF $$XGATE_ASM_ONLY_RAM$$
+      RAM_XGATE_L   = READ_WRITE    DATA_FAR           0x3080 TO   0x337F ALIGN 2[1:1]; /* is also mapped to XGATE:   0xF080..0xF37F */
+      RAM_XGATE_H   = READ_WRITE    DATA_FAR           0x3380 TO   0x33FF ALIGN 2[1:1]; /* is also mapped to XGATE:   0xF380..0xF3FF */
+$$ELSE
+      RAM_XGATE     = READ_WRITE    DATA_FAR           0x3080 TO   0x33FF ALIGN 2[1:1]; /* is also mapped to XGATE:   0xF080..0xF3FF */
+$$ENDIF
+$$ENDIF
+/*    RAM_FF        = READ_WRITE  0xFF1000 TO 0xFF1FFF; intentionally not defined: equivalent to RAM: 0x3000..0x3FFF */
+
+/* paged FLASH:                     0x8000 TO   0xBFFF; addressed through PPAGE */
+      PAGE_FC       = READ_ONLY   DATA_FAR IBCC_FAR  0xFC8000 TO 0xFCBFFF; 
+/*    PAGE_FD       = READ_ONLY                      0xFD8000 TO 0xFDBFFF; intentionally not defined: equivalent to ROM_4000 */
+$$IF $$COND_XGATE$$ && $$XGATE_ASM_ONLY_RAM$$
+      ROM_XGATE     = READ_ONLY   DATA_FAR IBCC_FAR  0xFE8000 TO 0xFE82FF RELOCATE_TO 0x3080 ALIGN 2; 
+      PAGE_FE       = READ_ONLY   DATA_FAR IBCC_FAR  0xFE8300 TO 0xFEBFFF; 
+$$ELSE
+      PAGE_FE       = READ_ONLY   DATA_FAR IBCC_FAR  0xFE8000 TO 0xFEBFFF; 
+$$ENDIF
+/*    PAGE_FF       = READ_ONLY                      0xFF8000 TO 0xFFBFFF; intentionally not defined: equivalent to ROM_C000 */
+END
+
+PLACEMENT /* here all predefined and user segments are placed into the SEGMENTS defined above. */
+      _PRESTART,              /* Used in HIWARE format: jump to _Startup at the code start */
+      STARTUP,                /* startup data structures */
+      ROM_VAR,                /* constant variables */
+      STRINGS,                /* string literals */
+      VIRTUAL_TABLE_SEGMENT,  /* C++ virtual table segment */
+    //.ostext,                /* eventually OSEK code  */
+      NON_BANKED,             /* runtime routines which must not be banked */
+      COPY                    /* copy down information: how to initialize variables */
+$$IF $$CODE_AT_4000$$
+                        INTO  ROM_C000, ROM_4000;
+$$ELSE
+                              /* in case you want to use ROM_4000 here as well, make sure
+                                 that all files (incl. library files) are compiled with the
+                                 option: -OnB=b */
+                        INTO  ROM_C000/*, ROM_4000*/;
+$$ENDIF
+
+      DEFAULT_ROM       INTO           PAGE_FE,          PAGE_FC;
+$$IF $$COND_XGATE$$
+
+    //.stackstart,            /* eventually used for OSEK kernel awareness: Main-Stack Start */
+      SSTACK,                 /* allocate stack first to avoid overwriting variables on overflow */
+    //.stackend,              /* eventually used for OSEK kernel awareness: Main-Stack End */
+      SHARED_DATA,            /* variables that are shared between CPU12 and XGATE */
+      PAGED_RAM,              /* there is no need for paged data accesses on this derivative */
+
+      DEFAULT_RAM             /* all variables, the default RAM location */
+                        INTO  RAM;
+
+$$IF $$XGATE_ASM_ONLY_RAM$$
+      XGATE_VECTORS,          /* XGATE vector table has to be copied into RAM by HCS12X */
+      XGATE_STRING,           /* XGATE string literals have to be copied into RAM by HCS12X */
+      XGATE_CONST,            /* XGATE constants have to be copied into RAM by HCS12X */
+      XGATE_CODE,             /* XGATE functions have to be copied into RAM by HCS12X */
+      XGATE_STRING_RAM,       /* XGATE strings that should always go into RAM */
+      XGATE_CONST_RAM,        /* XGATE constants what should always go into RAM */
+      XGATE_CODE_RAM,         /* XGATE code that should always run out of RAM */
+      XGATE_STRING_FLASH,     /* there is no FLASH for XGATE on this derivative -> RAM */
+      XGATE_CONST_FLASH,      /* there is no FLASH for XGATE on this derivative -> RAM */
+      XGATE_CODE_FLASH        /* there is no FLASH for XGATE on this derivative -> RAM */
+                        INTO  ROM_XGATE;
+$$ENDIF
+$$ELSE
+    //.stackstart,            /* eventually used for OSEK kernel awareness: Main-Stack Start */
+      SSTACK,                 /* allocate stack first to avoid overwriting variables on overflow */
+    //.stackend,              /* eventually used for OSEK kernel awareness: Main-Stack End */
+      PAGED_RAM,              /* there is no need for paged data accesses on this derivative */
+      DEFAULT_RAM             /* all variables, the default RAM location */
+                        INTO  RAM;
+
+$$ENDIF
+
+$$IF $$COND_XGATE$$
+$$IF $$XGATE_ASM_ONLY_RAM$$
+      XGATE_DATA              /* data that are accessed by XGATE only */
+                        INTO  RAM_XGATE_H;
+$$ELSE
+$$IF $$COND_XGATE_IN_FLASH$$
+ -> error: this derivative does not allow to allocate XGATE code into FLASH!
+$$ELSE
+      XGATE_VECTORS,          /* XGATE vector table has to be copied into RAM by HCS12X */
+      XGATE_STRING,           /* XGATE string literals have to be copied into RAM by HCS12X */
+      XGATE_CONST,            /* XGATE constants have to be copied into RAM by HCS12X */
+      XGATE_CODE,             /* XGATE functions have to be copied into RAM by HCS12X */
+$$ENDIF
+      XGATE_STRING_RAM,       /* XGATE strings that should always go into RAM */
+      XGATE_CONST_RAM,        /* XGATE constants what should always go into RAM */
+      XGATE_CODE_RAM,         /* XGATE code that should always run out of RAM */
+      XGATE_DATA,             /* data that are accessed by XGATE only */
+      XGATE_STRING_FLASH,     /* there is no FLASH for XGATE on this derivative -> RAM */
+      XGATE_CONST_FLASH,      /* there is no FLASH for XGATE on this derivative -> RAM */
+      XGATE_CODE_FLASH        /* there is no FLASH for XGATE on this derivative -> RAM */
+                        INTO  RAM_XGATE;
+
+$$ENDIF
+$$ENDIF
+
+$$IF  $$USE_MEM_BANKER$$
+      DISTRIBUTE        DISTRIBUTE_INTO
+                              ROM_4000, PAGE_FE, PAGE_FC;
+      CONST_DISTRIBUTE  DISTRIBUTE_INTO
+                              ROM_4000, PAGE_FE, PAGE_FC;
+      DATA_DISTRIBUTE   DISTRIBUTE_INTO
+                              RAM;
+$$ENDIF
+    //.vectors          INTO  OSVECTORS; /* OSEK vector table */
+END
+
+
+ENTRIES /* keep the following unreferenced variables */
+    /* OSEK: always allocate the vector table and all dependent objects */
+  //_vectab OsBuildNumber _OsOrtiStackStart _OsOrtiStart
+END
+
+STACKSIZE 0x100   /* size of the stack (will be allocated in DEFAULT_RAM) */
+
+/* use these definitions in plane of the vector table ('vectors') above */
+VECTOR 0 _Startup /* reset vector: this is the default entry point for a C/C++ application. */
+//VECTOR 0 Entry  /* reset vector: this is the default entry point for an Assembly application. */
+//INIT Entry      /* for assembly applications: that this is as well the initialization entry point */

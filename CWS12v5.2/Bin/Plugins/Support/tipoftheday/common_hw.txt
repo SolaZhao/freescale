@@ -1,0 +1,86 @@
+The about boxes of the build tools gives useful information about your license configuration, e.g. which features are enabled or if the tool is running in demo mode.
+You can display this about box in the preference panels of the build tools with the About button.
+
+Add the option '-NoBeep' to the compiler and assembler to avoid the system beep if there was an error.
+
+To get the decription of a compiler or assembler error message, click in the Errors and Warnings window on the specified error and press F1. (or use the context menu and select What's this?)
+
+To check the license status of the build tools, Click the About button in the linker preference Panel. Then click "Extended Information".
+The content of this window can help to resolve licensing issues.
+
+If you need help using our product, you can ask our support team with e-mail to 'cw_support@freescale.com'.
+
+The tools are looking first in the directory where they are installed for the license file 'license.dat'.
+
+Features not registered are running in a restricted demo mode. E.g. the code size or the maximum number of commands will be restricted.
+
+You can start the compilers, assemblers and linkers also directly from the command line. The executables are in the prog directory.
+To see the output of the tools started via command line, use the piper.exe. Just call piper with the complete command line including the tool. 
+E.g. "piper.exe linker.exe test.prm".
+
+The memory model used has to be consistent across a project. Make sure you specify the same memory model for the assembler as you do for the compiler. Also use the right library (see the readme.txt in the library folder for a list).
+
+To prevent memory areas from zero out during startup, just use NO_INIT instead READ_WRITE in the linker parameter file (*.prm).
+
+You can force the linker to link some objects (functions or variables), even when they are not referenced using an ENTRIES block in the PRM file.
+
+Using the ELF/Dwarf object file format, you can force to link all objects using ENTRIES * END.
+
+Using float/double may increase the code size. If not really necessary, try to avoid them.
+
+You can use the piper.exe located in the prog directory (usually C:\METROWERKS\PROG) to direct the tool outputs to STDOUT. This is useful for editor integration.
+
+The source code for the standard run-time library is provided, so you can step into run-time functions just as you would any other code.
+
+Be careful if there are assignements in conditions. For some of such assignements the compiler can generate a warning.
+
+Do not use spaces in macros, e.g. '#define ABC (x)  MyFunc(x)' is an error hard to find.
+
+Use the C++ option -Cn=Ctr to avoid compiler generated member functions. This may be useful for compiling C sources containing structures with the C++ compiler.
+
+If you have troubles with functions returning a large structure, try to compile with the option -Rpt.
+
+You can modify the sizes of standard types like char, int, long in the compiler preference panel, just press the Type Sizes button.
+
+If you allocate memory in a derived class, you should make the destructor for the base class virtual.
+
+If a derived class allocates memory, use a virtual destructor.
+
+If you want to see or edit the include files taken for compilation simply double-click on the include path in the log. 
+The editor command must be specified in the dialog invoked by the menu <File>, <Configuration ...>.
+
+Producing a header file interfacing C/C++ with Assembler? No problem! Try the option -La.
+
+Always use parenthesis if you are not sure about C expression rules. E.g. 'if(a&0x8 == b&0x8)' is not the same as 'if ((a&0x8)==(b&0x8))'!
+
+You can use C++ templates to write generic classes and functions for arbitrary types.
+
+You should initialize all members in a constructor.
+
+You should define an assignment operator if you define a copy constructor.
+
+You must initialize references and non-static const members in the member-initialization list of the constructor.
+
+You can use the option -Ldf to write all predefined defines to a file.
+
+You can use the #pragma TEST_CODE to speed up your SQA process.
+
+You can use the #pragma MESSAGE in your sources to adapt the message behaviour.
+
+Be aware that in ANSI-C the result of a int multiplication is a int. 
+So if int is 16 bits in size, the upper 16 bits of the result of the multiplication are lost even if you assign the resul to a long. 
+See 'Chapter Usual arithmetic conversions' in the compiler manual for details.
+
+You can either use the #pragma TRAP_PROC or the __interrupt keyword to implement your ISR.
+
+Without prototypes functions are assumed to have int as parameter and returning an int. 
+Thus always provide function prototypes and use the compiler switch '-Wpd' to detect such implicit parameter declarations.
+
+ANSI C allows the concatenation of strings, e.g. "ABC" "def" is the same as "ABCdef".
+This may be useful if large strings over different lines have to build a single string,
+but it may be dangerous if there is a missing comma e.g. in 'char Strings[] = {"ABC","def"}'.
+To catch such errors simply set the compiler information C3303 to an error with -WmsgSE3303.
+
+The #pragma NO_RETURN suppresses the return instruction at the end of a function. With this pragma functions can be 'concatenated'.
+
+Memory allocated with the C++ operator new[] must be freed with operator delete[].

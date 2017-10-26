@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>Freescale-<br />EthernetAPI</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreescaleEthernetAPI.html">General Info</a><br />
+<a href="FreescaleEthernetAPIProperties.html">Properties</a><br />
+<a href="FreescaleEthernetAPIMethods.html">Methods</a><br />
+<a href="FreescaleEthernetAPIEvents.html">Events</a><br />
+<a href="FreescaleEthernetAPIUser Types.html">Types and constants</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreescaleEthernetAPI_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              FreescaleEthernetAPI
+            </div>
+            <div class="descrtext">NE64 ethernet API routines</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">Low</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+   This example shows simple implementation of ICMP echo example and Simple ARP (Address Resolution Protocol).<br/>
+   It is assumed that these properties are set to correct values:<br/>
+   <br/>
+   <u><b>Cpu component:</b></u>
+   <ul>
+     <u>Properties:</u>
+     <ul>
+       <li><b>Oscillator frequency</b> is set to 25MHz. It is needed for proper functionality of internal EPHY device
+       (Ethernet Physical Transceiver)</li>
+       <li><b>Internal bus clock</b> is set to 20, 25, 30, 33, 40 or 50Mhz.</li>
+       <li><b>Register block mapping</b> is set to $0000</li>
+       <li><b>Internal RAM mapping</b> is set to $2000</li>
+     </ul>
+     <br/>
+     <u>Build options:</u><br/>
+     For <b>ROM/RAM area</b> - change the RAM for compiler/linker because
+     the EMAC device uses the beginning of the RAM for receive and transmit buffers.
+     The occupied size depends on the <a href="../FreescaleEMAC/FreescaleEMACProperties.html#BUFMAP">Buffer mapping</a>
+     of inherited EMAC component. If you use <b>RX and TX size buffer 1536 bytes</b> then change these values:
+     <ul>
+       <li><b>Address</b> - change to 3200 hex</li>
+       <li><b>Size</b> - change to 800 hex</li>
+     </ul>
+   </ul>
+
+   <u><b>Ethernet API component:</b></u>
+   <ul>
+    <li><a href="FreescaleEthernetAPIProperties.html#DeviceName">Bean name</a> is set to &quot;Eth&quot;</li>
+    <li><a href="FreescaleEthernetAPIProperties.html#ICMPSupport">IP ICMP support</a> is set to &quot;yes&quot;</li>
+    <li><a href="FreescaleEthernetAPIProperties.html#ARPSupport">ARP support</a> is set to &quot;yes&quot;</li>
+    <li><a href="FreescaleEthernetAPIProperties.html#WordAccess">Word Access</a> is set to &quot;yes&quot;</li>
+    <li><a href="FreescaleEthernetAPIProperties.html#ZeroCopy">Zero copy</a> is set to &quot;yes&quot;</li>
+    <li>Property <a href="../FreescaleEMAC/FreescaleEMACProperties.html#RXPollMode">RX poll mode</a> of inherited EMAC component must be set to &quot;Interrupt driven&quot;</li>
+   </ul>
+   <br/>
+</FONT>
+<PRE>
+<I><U>MAIN.C</U></I>
+#include "MotTypes.h"
+#include "ne64config.h"
+#include "ne64driver.h"
+#include "ne64api.h"
+#include "ne64debug.h"
+#include "mBuf.h"
+
+#include "arp.h"
+#include "ip.h"
+
+
+extern tU16 gotxflowc;         /**Global Variable For Determination
+                                  of Flow Control Packets are sent in Full Duplex*/
+extern tU08 gotlink;           /**Global Variable For Determination if link is active*/
+
+#if ZERO_COPY
+#else
+  tU08 ourbuffer [1518];    /** Space for packet temporary storage if zero copy not used */
+#endif
+
+#if USE_SWLED
+tU16 LEDcounter=0;
+#endif
+
+/******************************************************************************
+*
+* Add user application code here
+******************************************************************************/
+void MyAppInit()
+{
+}
+
+/******************************************************************************
+*
+* Add user application code here
+******************************************************************************/
+void MyAppLinked()
+{
+}
+
+/******************************************************************************
+*
+* Add user application code here
+******************************************************************************/
+void MyAppNotLinked()
+{
+}
+
+void main(void)
+{
+/*
+*        Step 1: Intialize CRG, SCI, EMAC, and EPHY
+*  Main Loop: Process Received Packets
+*
+*
+* NOTE.- <b>THIS EXAMPLE IS BUILD WITH THE FOLLOWING CONFIGURATIONS</b> (see ne64config.h)*
+*
+*  <b>WORD_ACCESS    1 - use word access</b>
+*  <b>ZERO_COPY      1 - use zero copy</b>
+*  <b>RX_POLL_MODE   0 - use buffer interrupts</b>
+*/
+  /*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
+  PE_low_level_init();
+  /*** End of Processor Expert internal initialization.                    ***/
+
+  //=========================
+  //Variables
+  //=========================
+  mBufInit ();
+
+  /* Ethernet Init */
+  gotxflowc = 0;                 /* Do not send or respond to pause frames unless */
+  EtherInit();                         /* Initialize MAC and PHY                         */
+#if USE_EXTBUS
+  ExternalBusCfg();
+#endif
+
+  /* Add user application init code here */
+  MyAppInit();
+
+  for (;;)  /* do forever */
+  {
+#if USE_SWLED
+    UseSWLedRun();
+#endif
+    if (gotlink)
+    {
+        /* Link is UP - Add user application code here */
+        if (NE64ValidFrameReception ())
+        {
+            void ProcessPacket(void *ptr);   /* Forward declaration */
+            MBUF* ptr;
+            ptr = (MBUF *)NE64GetCurrentReceivedFrame ();
+            ProcessPacket (ptr->data);
+            NE64FreeReceiveBuffer ();
+
+            /* Link is UP - Add user application code here */
+            MyAppLinked();
+        }
+
+        #if XFLOWC
+            /* send pause frames - if agreement with auto negotiation pause resolution */
+            if (gotxflowc)  EtherPause(SEND_PAUSE, PAUSE_TIME);
+        #endif
+    }
+    else
+    {
+
+        /* Link is DOWN - Add user application code here */
+        MyAppNotLinked();
+
+    }   /* if (gotlink) */
+
+  } /* Forever loop */
+
+  ...
+}
+</PRE>
+<PRE>
+void ProcessPacket(void *ptr)
+{
+    typedef struct
+      {
+       tU08 destination [6]; /** destination address */
+       tU08 source      [6]; /** source address */
+       tU16 type;            /** frame type */
+      } EthHeader;
+
+    switch ( ((EthHeader *)ptr)-&gt;type)
+    {
+        case 0x0806:    /* ARP Received */
+            _DEBUGT("\r\nGOTARP");
+            HandleARP (ptr);
+            break;
+
+        case 0x0800:    /* IP Received  */
+            _DEBUGT("\r\nGOTIP");
+            HandleIP (ptr);
+            break;
+
+        case 0x86DD:
+            /* Add your IPv6 handler here */
+            break;
+
+        case 0x8808:    /* Pause frame Received */
+            /* Add your PAUSE handler here */
+            break;
+
+        default:        /* Huh? */
+            /* Add your handler here */
+            break;
+    }
+}
+</PRE>
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

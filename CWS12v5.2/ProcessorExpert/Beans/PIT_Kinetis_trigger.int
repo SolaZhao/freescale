@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+  <Name>PIT_Kinetis_trigger</Name>
+  <Description>Trigger source for ADC.</Description>
+  <Author>Author</Author>
+  <Version>01.000</Version>
+  <FileVersion>2</FileVersion>
+  <MethodList>
+    <EmptySection_DummyValue/>
+  </MethodList>
+  <EventList>
+    <EmptySection_DummyValue/>
+  </EventList>
+  <Registration>
+    <Template>Init_PIT_VAR0</Template>
+    <Template>TimerUnit_LDD</Template>
+  </Registration>
+  <UserTypes>
+    <EmptySection_DummyValue/>
+  </UserTypes>
+</Interface>

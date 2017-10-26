@@ -1,0 +1,440 @@
+=============================================
+Full Chip Simulation Connection Release Notes
+=============================================
+
+========================
+sim.tgt version v6.1.31
+========================
+
+List of New Features
+------------------------------
+- dynamic breakpoints support implemented for CF simulator (MTWX30632)
+
+List of Fixed Bugs
+--------------------------
+-none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+========================
+sim.tgt version v6.1.30
+========================
+
+List of New Features
+------------------------------
+- none: generated for CW MCUs 6.1
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+========================
+sim.tgt version v6.1.29
+========================
+
+List of New Features
+------------------------------
+- none: generated for CW12V46 Service Pack for S12XS Series
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+========================
+sim.tgt version v6.1.28
+========================
+
+List of New Features
+------------------------------
+-none.
+
+List of Fixed Bugs
+--------------------------
+- MTWX20610, io peripheral incompatibility
+  For read accesses, if multiple IO peripherals subscribe to the same address of the TargetObject, then the previous version did return the value returned by the last
+  imperialist or 0, if the access to the last peripheral failed.
+  In the new behavior (which matches the behavior of older versions of the sim.tgt) failed read accesses are ignored, instead the last successfully read value is returned.
+  Note that this only occurs in a collision case where multiple IO's want to implement the same memory address. It is recommended to avoid this situation in the first place.
+
+List of Known Bugs
+----------------------------
+- none.
+
+========================
+sim.tgt version v6.1.27
+========================
+
+List of New Features
+------------------------------
+
+-The Simulator Target interface has been renamed "Full Chip Simulation" connection, and
+ the concept of "Target interfaces" has been requalified "Connections".
+ In "CORE" simulation, the menu entry remains "Simulator", whereas in "SAMPLE" and derivative
+ specific simulation, the menu entry is replaced by "HC12 FCS", "HCS12 FCS" or "HCS12X FCS".
+
+-HCS12X devices Full Chip Simulation.
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.26
+========================
+
+List of New Features
+------------------------------
+-For HC08 and HCS08, TRUE-TIME SIMULATOR is hidden in the Set Connection dialog.
+ The TRUE-TIME SIMULATOR is still available through the "set sim" command line command. 
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.25
+========================
+
+List of New Features
+------------------------------
+
+-A new dialog called "Set Derivative" can be opened from the Simulator menu to select
+ the derivative to simulate. At least, the cpu Core simulation is available. 
+ More Full Chip Simulations io modules might be available. 
+ The current derivative setup is displayed in the debugger status bar. Clicking on this 
+ item opens automatically the Set Derivative dialog.
+
+-Simulation Trace: The Simulator is able to record all executed instructions and memory
+ accesses in the Trace component, this up to one million of frames. Enabling recording
+ can be done in the Trace menu/context sensitive popup menu, after opening the Trace component. 
+ By default, the Simulator records instructions only (faster). Check "Record memory accesses" 
+ and choose "Textual" mode in the Trace menu/context sensitive popup menu to record memory accesses.
+ Many information can be retrieved from the Trace window, like:
+  -instructions and instruction addresses,
+  -data address, data value and read/write access type,
+  -true time, cycles and total simulation cycles for each instruction,
+  -function name and module name for each instruction,
+  -variable name and module name for each global variable data access.
+
+-new commands:
+  -OSCFREQUENCY  Displays/sets the oscillator frequency.
+  -TRUETIME      Returns the true time in microseconds.
+
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.24
+========================
+
+List of New Features
+------------------------------
+-The Simulator provides now a true time information. It is possible to provide an 
+oscillator clock frequency to the debugger. The debugger CPU awareness and io 
+modules provide the "clock factor" to apply to this input frequency to finally get 
+the CPU cycle frequency. 
+IO simulations caring of bus speed change (multiply or divide) through PLL modules 
+can dynamically (while the application is running) update the clock factor. 
+Accumulated elapsed time will not be affected and a new cycle time is applied to 
+next simulated instructions.
+The Clock Frequency Setup dialog (Simulator->Clock Frequency menu entry) can be 
+opened to set enter/edit either the oscillator frequency or the CPU frequency. 
+However, the project saved frequency is the oscillator one.
+Two radio buttons allow choosing between cycles or true time display in 
+debugger status bar.
+Unchecking "reset cycles/time..." will simply make the debugger cumulate 
+cycles/time other CPU reset.
+The true time unit is the microsecond. The TRUETIME new command line command gives 
+the time as a number in microseconds.
+
+List of Fixed Bugs
+--------------------------
+- IO Simulations installed events occurring at the same CPU cycles time are now 
+handled simultaneously before next instruction execution. 
+
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.23
+========================
+
+List of New Features
+------------------------------
+- none: Internal upgrade.
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.22
+========================
+
+List of New Features
+------------------------------
+- The simulator cycle counter has been extended from 32 to 64 bits allowing larger simulation sequences. For peripheral simulation 
+purpose there are now two version for many TB functions:
+
+The 'old' versions are using a 32 bit counter for the cycles. The new functions, which have names ending with a 2, are using 64 bit 
+cycle counters. If TB_AttachRequest was ever used, then the simulator will stop after it reaches the 32 bit limit  otherwise, it will 
+continue until it reaches the 64 bit limit. The new functions are also C compatible while the old ones are using mangled names.
+When an IO which is using the 32 bit interface is used, it behaves as before. But the simulator will stop at the 32 bit boundary. 
+In order to make it use the 64-bit interface, the following replacements are needed in the source code: 
+
+32 bits             64 bits
+--------------------------------------------------------
+LWord            -> TB_Time            for every stored
+                                       cycle time 
+TimeEvent        -> TB_TimeEvent2      everywhere
+TB_KillRequest   -> TB_KillRequest2    everywhere 
+TB_AttachRequest -> TB_AttachRequest2  everywhere 
+TB_GetTicks      -> TB_GetTicks2       everywhere 
+TB_GetFirstEvent -> TB_GetFirstEvent2  everywhere 
+TB_GetNextEvent  -> TB_GetNextEvent2   everywhere 
+EventProc        -> TB_EventProc2      everywhere  
+
+To make this changes easier to find, all except the LWord macros are not defined when the TB_PROVIDE_32_BIT_INTERFACE macro is defined 
+on the command line with -dTB_PROVIDE_32_BIT_INTERFACE.
+
+
+List of Fixed Bugs
+--------------------------
+- R2759.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.21
+========================
+
+List of New Features
+------------------------------
+- none: Internal upgrade.
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+========================
+sim.tgt version v6.1.20
+========================
+
+List of New Features
+------------------------------
+- none.
+
+List of Fixed Bugs
+--------------------------
+- After loading a memory configuration file with the “LOADMEM” command line command, a refresh of the simulator 
+memory was missing. This is now fixed. 
+- Fixed little endian access to partially undefined memory. The defined part was at the wrong place.
+
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.19
+========================
+
+List of New Features
+------------------------------
+-Simulator target interface has been extended for peripheral simulation purpose 
+in order to handle memory accesses. With this new feature, the user is able to 
+be notified through a callback function each time an access occurs (Read/Write)
+ at a specific location in the memory of the simulator:
+
+A - How to trigger the corresponding memory locations
+-------------------------------------------------------------------
+
+In your initialization function from your peripheral, you have to call 
+ST_MemTriggerPoint() function in order to define the memory locations where
+ you want to be notified with a Callback function.
+
+//****** Additional include file for SimTrace features
+#include "simtrace_pub.h"
+
+
+void init() {
+   ...
+  Address MyAdr 
+  MyAdr.adr = 0x102;
+  MyAdr.space = 0;
+  long MyRangeSize = 2L;
+  // Memory range from 0x102 to 0x103 will now be set
+  ST_MemTriggerPoint(ST_SET_MEMORY_RANGE, MyAdr, MyRangeSize);
+   .....
+  MyAdr.adr = 0x500;
+  long MyRangeSize = 8L;
+  // Memory range from 0x500 to 0x507 will now be set
+  ST_MemTriggerPoint(ST_SET_MEMORY_RANGE, MyAdr, MyRangeSize);
+  ...............
+  // SET ALL THE NEEDED MEMORY LOCATIONS BY CALLING THE
+  // ST_MemTriggerPoint() function
+
+}
+
+
+This is the definition of the ST_MemTriggerPoint() function (see SimTrace_pub.h):
+
+/* Command id's for ST_MemTriggerPoint()  */
+#define ST_CLEAR_MEMORY_RANGE    0        /* clears a memory range specified with "adr" and "size"   */
+#define ST_SET_MEMORY_RANGE      1        /* sets a memory range specified with "adr" and "size"     */
+#define ST_CLEAR_ALL_MEMORY      2        /* clears all the memory   */
+#define ST_SET_ALL_MEMORY        3        /* sets all the memory     */
+
+DLL32 Bool ST_MemTriggerPoint(int cmd, Address &adr, long size);
+/* Triggers memory location(s) 
+
+   To set all the memory   :  ST_MemTriggerPoint(ST_SET_ALL_MEMORY, MyAdr, NULL);
+   To clear all the memory :  ST_MemTriggerPoint(ST_CLEAR_ALL_MEMORY, MyAdr, NULL);
+   To set a memory range   :  Address MyAdr 
+                              MyAdr.adr = 0x102;
+                              MyAdr.space = 0;
+                              long MyRangeSize = 2L;
+                              // Memory range from 0x102 to 0x103 will now be set
+                              ST_MemTriggerPoint(ST_SET_MEMORY_RANGE, MyAdr, MyRangeSize);
+   To clear a memory range :  Address MyAdr 
+                              MyAdr.adr = 0x102;
+                              MyAdr.space = 0;
+                              long MyRangeSize = 2L;
+                              // Memory range from 0x102 to 0x103 will now be cleared
+                              ST_MemTriggerPoint(ST_CLEAR_MEMORY_RANGE, MyAdr, MyRangeSize);
+                              
+
+*/
+
+B - Installing the Memory Access Callback function
+---------------------------------------------------------------
+
+Now you just have to call the ST_InstallMemAccessCallback() function in order to install
+the Callback mechanism:
+
+//******** Callback function definition
+void MemAccessCallback(Address &adr, LWord data, Bool write, int size, int mode) {
+// adr contains the address of the currently accessed memory location
+// Data is the content of this memory location (for read access) or the value to write
+// write stands for write or read access
+// size for the access size (byte, word, double)
+// mode for NORMAL ,INSTR_FETCH, NO_UPDATE
+}
+
+void init() {
+   ...
+  Address MyAdr 
+  MyAdr.adr = 0x102;
+  MyAdr.space = 0;
+  long MyRangeSize = 2L;
+  // Memory range from 0x102 to 0x103 will now be set
+  ST_MemTriggerPoint(ST_SET_MEMORY_RANGE, MyAdr, MyRangeSize);
+   .....
+  MyAdr.adr = 0x500;
+  long MyRangeSize = 8L;
+  // Memory range from 0x500 to 0x507 will now be set
+  ST_MemTriggerPoint(ST_SET_MEMORY_RANGE, MyAdr, MyRangeSize);
+  ...............
+  // SET ALL THE NEEDED MEMORY LOCATIONS BY CALLING THE ST_MemTriggerPoint() function
+  
+  //**************** INSTALL THE CALLBACK
+  ST_InstallMemAccessCallback(MemAccessCallback, ST_MemAccessCallback_Only);
+  .......................................
+
+}
+
+Now you will be notified each time a memory access occurs in the locations you defined.
+Here is the definition of this function (from SimTrace_pub.h):
+
+typedef void (*ST_MemAccessProc) (Address &adr, LWord data, Bool write, int size, int mode);
+
+typedef enum ST_MemAccess_Kind {
+  ST_MemAccessCallback_Only   = 0x0001,  /* Memory Access is redirected to User Callback function only  */
+  ST_TraceDataBase_Only            = 0x0002,  /* Memory Access is redirected to Trace Data Base only    */
+  ST_TraceDataBase_MemAccessCallback = 0x0004,  /* Memory Access is redirected to both User Callback
+                                                                                                                         function and Trace Data Base   */
+} ST_MemAccess_Kind;
+
+DLL32 Bool ST_InstallMemAccessCallback (ST_MemAccessProc proc, ST_MemAccess_Kind kind);
+/* Install a callback function to be called each time a memory location is accessed (read/write) 
+   Note: you first need to enable all the memory locations  where a notification should happen   by using the
+   ST_MemTriggerPoint() function  */
+
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+
+
+========================
+sim.tgt version v6.1.18
+========================
+
+List of New Features
+------------------------------ 
+-The RESETMEM command has been extended in order to reset a given memory area to 'undefined', e.g.:
+RESETMEM 0x100..0x110	: resets the memory between 0x100 and 0x110 (if configured) to 'undefined'
+RESETMEM 0x003F		: resets the memory location 0x003F (if configured) to 'undefined'.
+RESETMEM			:  resets all configured memory to 'undefined'.
+
+-Extension of RESETCYCLES command (R2274). It is now possible to reset the cycles to a given value:
+RESETCYCLES 		: sets cycles to zero
+RESETCYCLES value 	: sets cycles to the given value
+
+-The Simulator Target Interface Command Files dialog allows to set up the execution of the Startup, Reset, Preload and Postload HI-WAVE command files.
+
+List of Fixed Bugs
+--------------------------
+- none.
+
+List of Known Bugs
+----------------------------
+- none.
+

@@ -1,0 +1,157 @@
+====================================
+  Assembly Component Release Notes
+====================================
+
+========================================
+Assembly Component assembly.wnd v6.1.22
+========================================
+
+-internal upgrade.
+
+
+========================================
+Assembly Component assembly.wnd v6.1.21
+========================================
+
+List of new Features
+--------------------
+- New context menu option: freeze
+  Description: By enabling the freeze option in the context menu,
+  the position in the assembly window will not follow the
+  PC.
+
+List of fixed Bugs
+------------------
+- None.
+
+List of known Bugs
+------------------
+- None.	
+
+
+========================================
+Assembly Component assembly.wnd v6.1.20
+========================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- scroll wheel bug on WinXP fixed.
+
+List of known Bugs
+------------------
+- None.	
+
+========================================
+Assembly Component assembly.wnd v6.1.19
+========================================
+
+List of New Features
+--------------------
+Added Markpoint support:
+It is now possible to set markpoints in Source, Assembly, Data and Memory 
+component windows. Markpoints are user friendly visible marks that have no
+effect on the debugging session (except special target markpoints like triggers). 
+Markpoints are set, deleted like breakpoints through context sensitive popup
+menus. In the debugger "Run" menu, the "Control Points" give now the lists
+of Breakpoints, Watchpoints and Markpoints.
+Note that markpoints set in the Source and Assembly components are automatically
+qualified as "Instruction" type of markpoints, whereas markpoints set in the Data 
+and Memory components are automatically qualified as "R/W Access" type.
+However, this qualification can be changed within the dialog described above
+and markpoints are always visible in all component windows listed here above.
+Note also that only one single markpoint can be set for a given memory address.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=======================================
+Assembly Component assembly.wnd v6.1.18
+=======================================
+
+List of New Features
+--------------------
+- Real Time Awareness support.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=======================================
+Assembly Component assembly.wnd v6.1.17
+=======================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- internal improvements.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=======================================
+Assembly Component assembly.wnd v6.1.16
+=======================================
+
+List of New Features
+--------------------
+- The memory range of  the assembly component now matches the real memory range of the currently loaded cpu.
+- This component now has an additional horizontal scrollbar if required.
+
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=======================================
+Assembly Component assembly.wnd v6.1.15
+=======================================
+
+List of New Features
+--------------------
+- Symbolic Display functionality concerning the display of operand  in the Assembly Component: display operands as symbols if possible.
+This functionality is accessible through a entry called ‘Display symbolic’ from the pop-up menu entries.
+
+OPEN Register 60 30 40 30
+Register < attributes FORMAT HEX,COMPLEMENT None  (<- Bit Reverse disabled)
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.

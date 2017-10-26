@@ -1,0 +1,97 @@
+Freescale Developer Technology Suggestion Form
+
+1. Copy this text and paste it into a new e-mail message.
+
+2. Replace the bracketed text (text surrounded by [ ]) with your own 
+   information. Please report only one suggestion per form.
+
+3. E-mail the completed form to cw_support@freescale.com
+
+Tip: Fill in the USER and DEVELOPMENT COMPUTER sections, then save this
+     document to use it as stationery.
+
+Note: Refer to the Quick Start guide for other information on contacting
+Freescale and for copyright information.
+
+----------------------------------------------------------------------------
+
+USER SECTION
+
+Please fill out information about yourself and how we can contact you if we need to.
+
+User name:                  [ Your name ]
+Company name:               [ Your company's name, if any ]
+Academic institution:       [ Your school name, if you are a student ]
+Phone:                      [ Your voice telephone number ]
+E-mail:                     [ Your e-mail address ]
+
+----------------------------------------------------------------------------
+
+FEATURE OR SUGGESTION
+
+            [ Give us your feedback or idea for improving our tools. If you think 
+            it might be obscure, include some detail.  For improving compatibility 
+            with standards, please note the reference document and page or section 
+            number that describes the correct behavior.  For documentation 
+            suggestions, note the document name and page or figure number. ]
+
+------------------------ Optional Useful Information -------------------------
+
+DEVELOPMENT COMPUTER SECTION
+
+Please fill out information about the computer you use for software development.
+
+Model of computer used:     [ Your computer's brand name and model name ]
+
+
+Operating system:           [ Choose one of: 
+                                Windows XP, Windows Server,
+                                Solaris, Linux
+                                other (please specify) ]
+
+Operating system version:   [ Example: Windows XP SP2 ]
+
+RAM:                        [ How much physical RAM is installed. ]
+
+Available disk space:       [ How much hard disk space is available after the
+                                 Freescale software has been installed. ]
+
+Special hardware:           [ Examples: hardware upgrades, accelerator chips ]
+
+Special software:           [ Examples: virtual memory, third party memory 
+                                 managers, special drivers, hard disk compression 
+                                 software, and so on ]
+
+----------------------------------------------------------------------------
+DEVELOPMENT TARGET/PROCESSOR SECTION
+
+Please indicate which TARGET/PROCESSOR you use for software development.
+
+Development board:          [ Freescale MBX, ADS, NEC VR4300, 4100, IDT 3081, other ]
+
+Target Processor:           [ PPC 5xx/6xx/7xx/8xx, NEC, DSP, 68xxx, MCore, SH, x86, HC(S)08, HC(S)12X, other ]
+
+Operating system:           [ QNX, Nucleus, VxWorks, OSEK, or bareboard ]
+
+Debug Protocol:             [ MetroTRK, BDM, MON08, CodeTAP, PowerTAP, Partner, ADS, other ]
+
+Additional Info:            [ Any other information that may be important about your setup ]
+
+----------------------------------------------------------------------------
+
+
+PRODUCT AND USAGE SECTION
+
+Please fill out information about the Freescale tool you're using and how you use it.
+
+Product Name:               [ CW for PPC, CW for 6800, CW for HC(S)08,
+                                CW for HC(S)12x, other (please specify) ]
+
+Component name:             [ Choose one of these: C/C++ compiler, Debugger, IDE, MSL]
+
+Component version:          [ Example: IDE version x.x.x]
+
+Generating:                 [ Choose one of: 8/16 bit, 68000, PPC, DSP, other (please specify) ]
+
+Purpose:                    [  optional ]
+

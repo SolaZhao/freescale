@@ -1,0 +1,531 @@
+====================================
+Debugger Executable Release Notes
+====================================
+
+========================================
+Debugger Executable (hiwave.exe v6.1.44)
+========================================
+
+List of new Features
+--------------------
+-"light hot plugging" implementation:
+ When loading an application, if the hardware is running, a message prompts:
+ "Loading a new application will stop the execution of the current one".
+
+ When pressing "Cancel" a new message displays:
+ "Do you want to load application symbolic information?"
+ Pressing "Yes" will load symbols without halting the running application. Pressing "No" behaves 
+ like before, when pressing "Cancel" in previous Warning dialog (i.e. keep running, do nothing).
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.43)
+========================================
+
+List of new Features
+--------------------
+- Improved the Load Executable dialog. To change the global load settings please look
+  at File -> Configuration -> Load. When changing the options in the Load Executable dialog,
+  they will only have an effect to this current load and they are not saved.
+
+List of fixed Bugs
+------------------
+- none.
+
+List of known Bugs
+------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.42)
+========================================
+
+List of new Features
+--------------------
+- Internal upgrade.
+
+List of fixed Bugs
+------------------
+- The handling of the system command argument was fixed. If the wait option was not specified,
+  the previous versions did not use the complete command line.
+
+List of known Bugs
+------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.41)
+========================================
+
+List of New Features
+--------------------
+- Replaced Breakpoints and Watchpoints menu entries with Control Points menu entry: 
+Selecting this menu entry will open the Controlpoints dialog which contains one tab for Breakpoints, 
+one tab for Watchpoints and one tab for Markpoints.
+- Added support for Microsoft's Component Object Model (COM). This makes it possible to remote control
+the debugger from scripts. See the debugger manual on how to use this COM interface.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.40)
+========================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- Improvements in the "Set Target Dialog": now opens on the CPU and target 
+it reads in the project file, if any.
+- WB1-36632.
+
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.39)
+========================================
+
+List of New Features
+--------------------
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a license for the former version, 
+you need to upgrade your license. Additionally be aware that in compliance with other Metrowerks tools the license 
+(license.dat) file in the installation root (e.g. c:\metrowerks\license.dat, the installation script has created a 
+shortcut to this file) is used. If such a license.dat exists, this file is used to check out the license. Only if 
+this file does not exist, the one in C:\FLEXlm is used. 
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.38)
+========================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.37)
+========================================
+
+List of New Features
+--------------------
+- The simulator cycle counter has been extended from 32 to 64 bits allowing larger simulation sequences.
+- You can now use register values in the condition field of controlpoints (breakpoint or watchpoint) with 
+the following syntax: $RegisterName. For instance, you can check the value of R3 by using $R3.
+In this case, the debugger will stop on the breakpoint if the value of register R3 is equal to 5.
+
+- Some menu entries from the Debugger Files Menu are renamed: 
+"Open Project" is renamed to "Open Configuration".
+"Save Project" is renamed to "Save Configuration".
+"Save Project as..." is renamed to "Save Configuration as...".
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.36)
+========================================
+
+List of New Features
+--------------------
+- The simulator cycle counter has been extended from 32 to 64 bits allowing larger simulation sequences.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.35)
+========================================
+
+List of New Features
+--------------------
+- Basic mouse wheel support.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.34)
+========================================
+
+List of New Features
+--------------------
+- The new release of the debugger is featured with "Code Download Verification" options to make sure, mainly 
+on hardware target interfaces, of the correct loading of the code in the target hardware memory. This verification 
+is fully implemented in HexLoad, Hiload and ElfLoad loaders.
+In the "Load Executable File" dialog, a new group called "Code Verification Options" contains 4 radio button to let 
+the user choose between 4 levels of verification:
+1.When checking the "None" option, the loader does not verify anything. The loader behaves as in previous versions 
+of the debugger.
+2.When checking the "First bytes only" option, the loader reads back at maximum the 4 first bytes of a block that have
+just be written to memory. This option is not as secure as the next option but is faster.
+3.When checking the "All bytes" option, the loader reads back all bytes of a block that have just be written to memory. 
+The file loading is almost twice longer. However, the verification is done on the all file.
+4.When checking the "Read back only" option, the loader does not load any data to memory. However, it reads back the 
+current data matching the same areas from the target memory and compares all data with the data from the selected file.
+If "Load Symbols only" is selected, verification radio buttons are grayed and NO verification is performed.
+When the verification fails, a message is displayed, giving the address where a difference occurred.
+ 
+Setting the focus on any radio button of the dialog + F1 key calls the debugger help file.
+No option settings are saved. By default, "None" is on for verification and "Load Code + Symbols" is on.
+
+- LOAD command extension:
+The LOAD command syntax has been extended as below:
+LOAD [<applicationName>] 
+     |
+     "[<applicationName>]"[CODEONLY|SYMBOLSONLY][NOPROGRESSBAR]
+     [NOBPT][NOXPR][NOPRELOADCMD][NOPOSTLOADCMD][DELAY]
+     [VERIFYFIRST|VERIFYALL|VERIFYONLY][VERIFYOPTIONS|SYMBOLSOPTIONS]
+
+    VERIFYFIRST matches the "First bytes only" option.
+    VERIFYALL matches the "All bytes" option.
+    VERIFYONLY matches the "Read back only" option.
+    VERIFYOPTIONS displays the "Code Verification Options" group in the "Load Executable File" dialog. If this option is 
+    missing, the group is not displayed. However, the verification mode can still be specified with options above.
+    SYMBOLSOPTIONS displays the "Load Options" group in the "Load Executable File" dialog. If this option is missing, the 
+    group is not displayed. However, the code+symbols mode can still be specified with options CODEONLY and SYMBOLSONLY.
+
+By default, the LOAD command is "code+symbols" with no verification, as it was before this version.
+If the "SYMBOLSONLY" parameter is passed, verification parameters are ignored and NO verification is performed.
+
+Simulator Target peculiar behavior:
+With the Simulator, the "Read back only" option will replace the Memory with "UU" undefined values when the verification 
+succeeded. However, if a difference is detected with the current code in the target memory, the error message above is 
+displayed. The "dummy" loading is halted and the code remains unchanged (not replaced by "UU") in memory. 
+
+- The menu ‘File‘ now contains a second recent file list. The list shows the last four applications loaded and resides 
+directly below the ‘Load Application‘ menu entry.
+
+- The About Box now displays the current project file in the Environment File variable and also the following environment 
+variables:
+
+ GENPATH, LIBPATH, OBJPATH, ABSPATH, TEXTPATH
+ 
+- New HI-WAVE startup command line option -Instance=%currentTargetName to defines a build instance name. When a build instance
+is defined, always the same one will be used. 
+
+Example of startup command line:
+
+c:\Metrowerks\prog\hiwave.exe -Instance=%currentTargetName
+now if you attempt to start the debugger again, the existing instance of the debugger is brought to the foreground.
+
+- Extension of the -T debugger startup command line option :
+ -T[=<time>]   where time is specified in seconds.
+
+ c:\Metrowerks\prog\hiwave.exe -T 
+in this case HI-WAVE will exit after a predefined value of 300 seconds.
+ c:\Metrowerks\prog\hiwave.exe -T=20 
+in this case HI-WAVE will exit after  20 seconds.
+
+- There’s a new command line command to open a project file:
+
+OPENPROJECT  <projectname> | <"projectname">
+
+- New debugger startup command line option -Env to set an Environment Variable: 
+
+-Env <Environment Variable> = <Variable Setting>
+where <Environment Variable> represents the Environment Variable to be set
+and <Variable Setting> represents the setting of the Environment Variable.
+
+This Environment Variable may be used to overwrite system Environment Variables.
+ 
+c:\Metrowerks\prog\hiwave.exe -EnvOBJPATH=c:\sources\obj
+sets OBJPATH to  \sources\obj.
+
+- There’s a new configuration dialog accessible through the main menu File | Configuration... . 
+With this new menu it is possible to set up Environment Variables for the current project. 
+The environment dialog get its configuration the time the dialog is opened and save it by clicking on OK. 
+It is not saved together with the Debugger configuration. See also manual/help file for details.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.33)
+========================================
+
+List of New Features
+--------------------
+- The complete path is now displayed in the recent application file list.
+
+
+List of Fixed Bugs
+--------------------
+- Improvement to correct LOAD operations recording.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.32)
+========================================
+
+List of New Features
+--------------------
+- The new release of the debugger is featured with "Code Download Verification" options to make sure, mainly 
+on hardware target interfaces, of the correct loading of the code in the target hardware memory. 
+This verification is fully implemented in HexLoad, Hiload and ElfLoad loaders.
+In the "Load Executable File" dialog, a new group called "Code Verification Options" contains 4 radio button 
+to let the user choose between 4 levels of verification:
+1.When checking the "None" option, the loader does not verify anything. The loader behaves as in previous 
+versions of the debugger.
+2.When checking the "First bytes only" option, the loader reads back at maximum the 4 first bytes of a block 
+that have just be written to memory. This option is not as secure as the next option but is faster.
+3.When checking the "All bytes" option, the loader reads back all bytes of a block that have just be written 
+to memory. The file loading is almost twice longer. However, the verification is done on the all file.
+4.When checking the "Read back only" option, the loader does not load any data to memory. However, it reads 
+back the current data matching the same areas from the target memory and compares all data with the data from 
+the selected file.
+If "Load Symbols only" is selected, verification radio buttons are grayed and NO verification is performed.
+When the verification fails, the message above is displayed, giving the address where a difference occurred.
+
+ 
+Setting the focus on any radio button of the dialog + F1 key calls the debugger help file.
+No option settings are saved. By default, "None" is on for verification and "Load Code + Symbols" is on.
+
+LOAD command extension:
+The LOAD command syntax has been extended as below:
+LOAD [<applicationName>] 
+     |
+     "[<applicationName>]"[CODEONLY|SYMBOLSONLY][NOPROGRESSBAR]
+     [NOBPT][NOXPR][NOPRELOADCMD][NOPOSTLOADCMD][DELAY]
+     [VERIFYFIRST|VERIFYALL|VERIFYONLY][VERIFYOPTIONS|SYMBOLSOPTIONS]
+
+     VERIFYFIRST matches the "First bytes only" option.
+     VERIFYALL matches the "All bytes" option.
+     VERIFYONLY matches the "Read back only" option.
+     VERIFYOPTIONS displays the "Code Verification Options" group in the "Load Executable File" dialog. If this 
+     option is missing, the group is not displayed. However, the verification mode can still be specified with options above.
+
+     SYMBOLSOPTIONS displays the "Load Options" group in the "Load Executable File" dialog. If this option is missing, the 
+     group is not displayed. However, the code+symbols mode can still be specified with options CODEONLY and SYMBOLSONLY.
+
+By default, the LOAD command is "code+symbols" with no verification, as it was before this version.
+If the "SYMBOLSONLY" parameter is passed, verification parameters are ignored and NO verification is performed.
+
+Simulator Target peculiar behavior:
+With the Simulator, the "Read back only" option will replace the Memory with "UU" undefined values when the verification succeeded. 
+However, if a difference is detected with the current code in the target memory, the error message above is displayed. The "dummy" 
+loading is halted and the code remains unchanged (not replaced by "UU") in memory. 
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.31)
+========================================
+
+List of New Features
+--------------------
+- The menu File now contains a second recent file list. The list shows the last four applications loaded and resides directly below 
+the ‘Load Application...‘ menu entry.
+
+- The About Box now displays the current project file in the Environment File variable:
+ 
+- New HI-WAVE startup command line option -Instance=%currentTargetName to defines a build instance name. When a build instance is defined, 
+always the same one will be used. 
+
+Example of startup command line:
+
+c:\Metrowerks\prog\hiwave.exe -Instance=%currentTargetName
+now if you attempt to start the debugger again, the existing instance of the debugger is brought to the foreground.
+
+- Extension of the -T HI-WAVE startup command line option :
+ -T[=<time>]   where time is specified in seconds.
+
+ c:\Metrowerks\prog\hiwave.exe -T 
+in this case HI-WAVE will exit after a predefined value of 300 seconds.
+ c:\Metrowerks\prog\hiwave.exe -T=20 
+in this case HI-WAVE will exit after  20 seconds.
+
+- New HI-WAVE startup command line option -Env to set an Environment Variable: 
+
+  -Env <Environment Variable> = <Variable Setting>
+  where <Environment Variable> represents the Environment Variable to be set
+  and <Variable Setting> represents the setting of the Environment Variable.
+
+This Environment Variable may be used to overwrite system Environment Variables.
+ 
+ c:\Metrowerks\prog\hiwave.exe -EnvOBJPATH=c:\sources\obj
+sets OBJPATH to  \sources\obj.
+
+- There’s a new configuration dialog accessible through the main menu 
+File | Configuration... . 
+
+With this new menu it is possible to set up Environment Variables for the current project. The environment dialog get its configuration 
+the time the dialog is opened and save it by clicking on OK. It is not saved together with the Debugger configuration. See also manual/help file for details.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.30)
+========================================
+
+List of New Features
+--------------------
+- The ‘About Box’ now displays the following environment variables:
+
+ GENPATH, LIBPATH, OBJPATH, ABSPATH, TEXTPATH 
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.29)
+========================================
+
+List of New Features
+--------------------
+- There’s a new button available in the "Customize Toolbar" window which allows you to switch directly to the 
+IDF from the True-Time Simulator and Real-Time Debugger side. To use this feature, just add this "Switch to the IDF" 
+button to your current toolbar. Then when launching the True-Time Simulator and Real-Time Debugger from the IDF, you 
+are able to switch back to the 
+IDF by pressing this button.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Debugger Executable (hiwave.exe v6.1.28)
+========================================
+
+List of New Features
+--------------------
+- New about box with hypertext link to HIWARE Email and HIWARE web page. All licensing informations are now only available 
+after clicking on a new button called "Extended Information". This avoids previous time consuming operations 
+(license checking) while opening the about box.
+
+- The current directory is now displayed at the top of the information box.
+
+- The splash screen has been definitively removed (including the command line option "-d").
+
+- New option "-Target=<targetname>" allowing to set the specified target directly from the command line, e.g.:
+
+C:\hiware\prog\hiwave.exe c:\hiware\demo\hc12\sim\fibo.abs -w -Target=sim
+
+Starts HI-WAVE, sets the simulator target, loads fibo.abs file.
+
+- Keyboard shortcuts now appear in tool tips.
+
+
+List of Fixed Bugs
+--------------------
+- R2499: Support for path names in the OPEN and OPENIO command line commands. Now it is possible to specify a path to open 
+a component. For this the component name has to be in double quotes. See manual for details.
+Examples:
+OPEN "data.wnd"
+OPEN ".\data"
+OPENIO "c:\hiware\prog\myio\thisio".
+
+
+List of Known Bugs
+--------------------
+- if the debugger cannot connect to a target, the debugger tries to download the file when started from the demo project 
+]in the IDF after the message given that it cannot connect to the target, which results in one more error message.

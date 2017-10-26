@@ -1,0 +1,770 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>InternalI2C</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="InternalI2C.html">General Info</a><br />
+<a href="InternalI2CProperties.html">Properties</a><br />
+<a href="InternalI2CMethods.html">Methods</a><br />
+<a href="InternalI2CEvents.html">Events</a><br />
+<a href="InternalI2CUser Types.html">Types and constants</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="InternalI2C_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              InternalI2C
+            </div>
+            <div class="descrtext">Internal I2C Communication Interface</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">The examples are accompanied by sequence charts which demonstrate the sequence of calling the methods and events and internal processing of the communication.
+These charts show detailed information about InternalI2C component algorithm for a typical usage of this component.
+Each chart is composed of four objects.
+The first I2C bus object represents communication line that carries the information to other I2C node(s).
+The second I2C peripheral object represents the functions of the internal I2C peripheral module of the CPU.
+The third InternalI2C object represents generated InternalI2C component code (interrupt routines, methods).
+The fourth User application object represents a user written code.
+The third and the fourth objects are processed by CPU core, thus they cannot be performed concurrently and the control flow of the CPU core is divided into these objects.
+
+<p>The colors and types of arrows used in diagrams mean:
+<br/>
+<table><tr><td><img src="ChartText.gif"/></td></tr></table>
+</p>
+
+ <hr size="1" color="#BOBOBO"/>
+ <!-- MENU -->
+<br/><b>Typical settings and usage of InternalI2C component</b>
+<p>
+  <UL>
+<LI><B><a href="#Master send">(1) Sending data in the MASTER mode</a></B>
+<br/>
+</LI><LI><B><a href="#Master receive">(2) Receiving data in the MASTER mode</a></B>
+<br/>
+</LI><LI><B><a href="#Slave send">(3) Sending data in the SLAVE mode</a></B>
+<br/>
+</LI><LI><B><a href="#Slave receive">(4) Receiving data in the SLAVE mode</a></B>
+<br/>
+</LI><LI><B><a href="#Master send polling">(5) Sending data in the MASTER mode without interrupts</a></B>
+<br/>
+</LI><LI><B><a href="#Master receive polling">(6) Receiving data in the MASTER mode without interrupts</a></B>
+<br/>
+</LI><LI><B><a href="#Slave selection">(7) Slave Selection and general call in the MASTER mode.</a></B>
+<br/>
+</LI><LI><B><a href="#EEPROM">(8) Communication with external serial EEPROM memory.</a></B>
+<br/>
+
+  </LI></UL>
+<B>NOTE: I2C bus lines are open collector (open drain), therefore a pull-up resistor is necessary on both lines.</B>
+ </p>
+ <hr size="1" color="#BOBOBO"/>
+
+</FONT>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(1) <a name="Master send">Sending data in the MASTER mode</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER, <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - enabled.
+<a href="InternalI2CEvents.html#OnTransmitData">OnTransmitData</a> event is called at the end of data transmission.  <a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection and
+<a href="InternalI2CMethods.html#SendBlock">SendBlock</a> method is used for data sending start.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates sending of 2 bytes to the slave.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte flags;
+byte err;
+byte Data[]="AB";
+word ret;
+#define SLAVE 0x08
+
+void main(void)
+{
+   
+  /* Set slave address */
+  (void)I2C1_SelectSlave(SLAVE);
+  
+  /* Clear "Complete" flag */
+  flags = 0;
+  
+  /* Send bytes in master mode */
+  err=I2C1_SendBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+  /* Wait for communication complete */
+  while(!flags) ;
+  
+}
+
+
+<I><U>EVENTS.C</U></I>
+
+extern byte flags;
+
+void I2C1_OnTransmitData(void)
+{
+  flags = 1;		 /* Set "Complete" flag */
+}</PRE>
+</p>
+<P>
+<i>This chart shows sequence of data sending communication flow in the master mode when the address of the slave is sent as an ordinary data byte.
+In this case OnByteTransfer event is also called after address transmission. If the peripheral supports automatic slave address sending (special address register), OnByteTransfer event is not called after address transmission. See version specific info on <a href="InternalI2C.html">General Info page</a>.
+</i>
+<table><tr><td><img src="MsSendHC12.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Master receive">(2) Receiving data in the MASTER mode</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER, <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - enabled.
+Event <a href="InternalI2CEvents.html#OnReceiveData">OnReceiveData</a> is called at the end of data reception.   <a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection and
+<a href="InternalI2CMethods.html#RecvBlock">RecvBlock</a> method is used for data reception start.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates receiving of 2 bytes from the slave.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte flags;
+byte err;
+byte Data[2];
+word ret;
+#define SLAVE 0x08
+
+void main(void)
+{
+
+    
+  /* Set slave address */
+  (void)I2C1_SelectSlave(SLAVE);
+  
+  /* Clear "Complete" flag */
+  flags = 0;
+  
+  /* Receive bytes in master mode */
+  err=I2C1_RecvBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+  /* Wait for communication complete */
+  while(!flags) ;
+
+  /* Now Data field contains received values */
+  
+}
+
+
+<I><U>EVENTS.C</U></I>
+
+extern byte flags;
+
+void I2C1_OnReceiveData(void)
+{
+  flags = 1;		 /* Set "Complete" flag */
+}</PRE>
+</p>
+<P>
+<i>This chart shows a sequence of data receiving communication flow in the master mode if the address of the slave is sent as an ordinary data byte.
+In this case OnByteTransfer event is also called after address transmission. If the peripheral supports automatic slave address sending (special address register),
+OnByteTransfer event is not called after address transmission. 
+See version specific info on <a href="InternalI2C.html">General Info page</a>.
+</i>
+<table><tr><td><img src="MsRecvHC12.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Slave send">(3) Sending data in the SLAVE mode</a></B>
+<br/>Required component name is "I2C1"
+and the ollowing component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - SLAVE, <a href="InternalI2CProperties.html#OutBufferSize">Output buffer size</a> - 3.
+<a href="InternalI2CEvents.html#OnTxChar">OnTxchar</a> event is sent after each byte sending. <a href="InternalI2CEvents.html#OnFreeTxBuf">OnFreeTxBuf</a> event is called when last byte from the buffer was sent.
+<a href="InternalI2CEvents.html#OnTxEmptyChar">OnTxEmptyChar</a> event is called when no data is available and <a href="InternalI2CProperties.html#EOF">Empty character</a> must be sent. 
+<a href="InternalI2CMethods.html#SendBlock">SendBlock</a> method is used to prepare data to the output buffer.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates how the slave prepares 2 bytes into the output buffer. Then the master requests 3 bytes to be sent by slave,
+i.e., the last sent character is the <a href="InternalI2CProperties.html#EOF">Empty character</a>.
+</FONT>
+</p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte flags;
+byte err;
+byte data[]="AB";
+word ret;
+
+#define TX_CHAR     1    /* Flag for OnTxChar event */
+#define BUFFER_FREE 2    /* Flag for OnFreeTxBuf event */
+#define TX_EMPTY    4    /* Flag for OnTxEmpty event */
+
+void main(void)
+{
+
+  /* Clear "empty" flag */
+  flags = 0;
+  
+  /* Send bytes in slave mode (prepare to the output buffer) */
+  err=I2C1_SendBlock(&data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+  /* Scan the events */
+  do {
+    if(flags & TX_CHAR) {
+      /* Now all bytes has been sent */
+      flags &= ~TX_CHAR;
+    }
+    if(flags & BUFFER_FREE) {
+      /* Now buffer is empty, last character has been sent */
+      flags &= ~BUFFER_FREE;
+    }
+    if(flags & TX_EMPTY) {
+      /* Buffer is empty, empty character has been sent */
+      flags &= ~TX_EMPTY;
+      break;
+    }
+  }while(1);
+
+}
+
+
+<I><U>EVENTS.C</U></I>
+
+extern byte cntr;
+extern byte flags;
+
+void I2C1_OnTxChar(void)
+{
+  flags |= TX_CHAR;	 /* Set the "TX" flag */
+}
+
+void I2C1_OnFreeTxBuf(void)
+{
+  flags |= BUFFER_FREE;  /* Set the "Buffer Free" flag */
+}
+
+void I2C1_OnTxEmptychar(void)
+{
+  flags |= TX_EMPTY;	 /* Set the "empty" flag */
+}
+</PRE>
+<P>
+<i>This chart shows sequence of data sending communication flow in the slave mode.</i>
+<table><tr><td><img src="SlSendHC12.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Slave receive">(4) Receiving data in the SLAVE mode</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - SLAVE, <a href="InternalI2CProperties.html#InpBufferSize">Input buffer size</a> - 2.
+<a href="InternalI2CEvents.html#OnRxChar">OnRxchar</a> event is sent after each byte reception. <a href="InternalI2CEvents.html#OnFullRxBuf">OnFullRxBuf</a> event is called when input data buffer is full.  
+<a href="InternalI2CMethods.html#RecvBlock">RecvBlock</a> method is used for getting the received data from the input buffer.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates how the slave receives 3 bytes from the master. As the slave has only 2 bytes input buffer,
+<a href="InternalI2CEvents.html#OnError">OnError</a> event is called and the last received character is lost.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte flags;
+byte errFlags;
+byte err;
+byte data[2];
+word ret;
+
+void main(void)
+{
+   
+  flags = 0;       /* Clear flags */
+  errFlags = 0;
+  
+  while(!flags);   /* Wait for full buffer */
+
+  /* Now the buffer is full. */
+  /* If the input buffer was read now the error would not occur */
+
+  /* For demo purpose, wait for error flag */
+  /* One more byte has to be received */
+  while(!errFlags);
+
+  /* Receive bytes in slave mode (read the input buffer) */
+  err=I2C1_RecvBlock(&data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+
+}
+
+
+<I><U>EVENTS.C</U></I>
+
+extern byte flags;
+
+void I2C1_OnFullRxBuf(void)
+{
+  flags = 1;		 /* Set the "full" flag */
+}
+
+void I2C1_OnError(void)
+{
+  errFlags = 1;		 /* Set the "error" flag */
+}</PRE>
+</p>
+<P>
+<i>This chart shows sequence of data receiving communication flow in the slave mode.</i>
+<table><tr><td><img src="SlRecv.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Master send polling">(5) Sending data in the MASTER mode without interrupts</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER, <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - disabled.
+<a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection and
+<a href="InternalI2CMethods.html#SendBlock">SendBlock</a> method is used for data sending.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates sending of 2 bytes to the slave.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte err;
+byte Data[]="AB";
+word ret;
+#define SLAVE 0x08
+
+void main(void)
+{
+
+  
+  /* Set slave address */
+  (void)I2C1_SelectSlave(SLAVE);
+  
+  /* Send bytes in master mode */
+  err=I2C1_SendBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+
+}</PRE>
+</p>
+<P>
+<i>This chart shows a sequence of data sending communication flow in the master mode without interrupts if the address of the slave is sent as an ordinary data byte.
+In this case OnByteTransfer event is also called after address transmission. If the peripheral supports automatic slave address sending (special address register),
+OnByteTransfer event is not called after address transmission. 
+See version specific info on <a href="InternalI2C.html">General Info page</a>.
+</i>
+<table><tr><td><img src="MsSendHC12_polling.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Master receive polling">(6) Receiving data in the MASTER mode without interrupts</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER and <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - disabled.
+<a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection and
+<a href="InternalI2CMethods.html#RecvBlock">RecvBlock</a> is used for data reception.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates receiving of 2 bytes from the slave.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte err;
+byte Data[2];
+word ret;
+#define SLAVE 0x08
+
+void main(void)
+{
+
+    
+  /* Set slave address */
+  (void)I2C1_SelectSlave(SLAVE);
+  
+  /* Receive bytes in master mode */
+  err=I2C1_RecvBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+  /* Now Data field contains received values */
+  
+
+ 
+}</PRE>
+</p>
+
+<P>
+<i>This chart shows sequence of data receiving communication flow in the master mode without interrupts if the address of the slave is sent as an ordinary data byte.
+In this case OnByteTransfer event is also called after address transmission. If the peripheral supports automatic slave address sending (special address register),
+OnByteTransfer event is not called after address transmission. 
+See version specific info on <a href="InternalI2C.html">General Info page</a>.
+</i>
+<table><tr><td><img src="MsRecvHC12_polling.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Slave selection">(7) Slave Selection and general call in the MASTER mode.</a></B>
+<br/>Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER and <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - disabled.
+<a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection in 7-bit addressing mode,
+<a href="InternalI2CMethods.html#SelectSlave10">SelectSlave10</a> method is used for slave address selection in 10-bit addressing mode (available if supported by HW),
+<a href="InternalI2CMethods.html#SelectSpecialCommand">SelectSpecialCommand</a> method is used for special command (address) selection such as General call address (available if supported by HW),
+<a href="InternalI2CMethods.html#SendBlock">SendBlock</a> is used for data sending.</FONT>
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example demonstrates selection of a slave address, general call address selection and sending of 2 bytes from the master.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte err;
+byte Data[2] = {5,6};
+word ret;
+#define SLAVE_7 0x08   /* A slave address - 7-bit addressing mode */
+#define SLAVE_10 0x97   /* A slave address - 10-bit addressing mode */
+
+void main(void)
+{
+
+    
+  /* Set slave address - 7-bit addressing mode */
+  /* All subsequent calls of SendChar, SendBlock, RecvChar, RecvBlock */
+  /* will use selected address and 7-bit addressing mode */
+  (void)I2C1_SelectSlave(SLAVE_7);
+  
+  /* Send bytes in master mode to the selected slave - 7-bit address */
+  err=I2C1_SendBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+  /* Set slave address - 10-bit addressing mode */
+  /* All subsequent calls of SendChar, SendBlock, RecvChar, RecvBlock */
+  /* will use selected address and 10-bit addressing mode */
+  (void)I2C1_SelectSlave10(SLAVE_10);
+  
+  /* Send bytes in master mode to the selected slave - 10-bit address */
+  err=I2C1_SendBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+  
+  /* Set slave address - general call address */
+  /* All subsequent calls of SendChar, SendBlock will use general call address */
+  /* Calls of RecvChar, RecvBlock are not available, it will return ERR_NOTAVAIL  */
+  (void)I2C1_SelectSpecialCommand(0);
+  
+  /* Send bytes in master mode to the selected slave - general call address */
+  err=I2C1_SendBlock(&Data,2,&ret);
+  if(err!=ERR_OK) {
+    /* Handle an error */
+  }
+
+ 
+}</PRE>
+</p>
+
+<hr size="1"/>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="EEPROM">(8) Communication with external serial EEPROM memory.</a></B>
+<br/>
+Required component name is "I2C1"
+and the following component settings: <a href="InternalI2CProperties.html#Mode">Mode</a> selection - MASTER, <a href="InternalI2CProperties.html#IntService">Interrupt service</a> - enabled,
+<a href="InternalI2CProperties.html#AutoStop">Automatic Stop condition</a> - no.
+<a href="InternalI2CMethods.html#SelectSlave">SelectSlave</a> method is used for slave address selection in 7-bit addressing mode,
+<a href="InternalI2CMethods.html#SendBlock">SendBlock</a> method is used for data sending and <a href="InternalI2CMethods.html#RecvBlock">RecvBlock</a> used for data receiving.</FONT>
+Cpu_Delay100US - method of the CPU component used for time delay.
+</p>
+<p>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+The example shows the communication with external serial EEPROM memory, specifically 24C128 device.
+</FONT>
+</p>
+<p>
+<PRE>
+<I><U>MAIN.C</U></I>
+
+byte buffer[3];  
+word sent;
+byte data;
+byte err;
+extern volatile byte TransmitComplete;
+
+void main(void)
+{
+
+  //WRITE DATA
+  TransmitComplete = 0;
+  err = I2C1_SelectSlave(0x50);           //Select address of the EEPROM device (not required if only one device on the bus)
+  buffer[0] = 0;                          //most significant byte of storage address
+  buffer[1] = 0x50;                       //least significant byte of storage address
+  buffer[2] = 0x10;                       //data  
+  err = I2C1_SendBlock(buffer, 3, &sent); //send storage address and data to the EEPROM
+  while(!TransmitComplete){}              //wait for communication completition
+  err = I2C1_SendStop();                  //Send STOP condition
+  
+  Cpu_Delay100US(100); //10ms delay for EEPROM to complete write cycle - for more details see EEPROM datasheet
+ 
+  //READ DATA
+  TransmitComplete = 0;
+  buffer[0] = 0;                          //most significant byte of storage address
+  buffer[1] = 0x50;                       //least significant byte of storage address
+  err = I2C1_SendBlock(buffer, 2, &sent); //send address to the EEPROM
+  while(!TransmitComplete){}
+  err = I2C1_RecvChar(&data);             //read data from EEPROM  
+
+}
+
+<I><U>EVENTS.C</U></I>
+
+volatile byte TransmitComplete;
+
+void I2C1_OnTransmitData(void)
+{
+  TransmitComplete = 1;
+}</PRE>
+</p>
+
+
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

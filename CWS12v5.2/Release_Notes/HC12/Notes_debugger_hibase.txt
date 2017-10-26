@@ -1,0 +1,605 @@
+====================================
+   Debugger Engine Release Notes
+====================================
+
+==================================
+Debugger Engine hibase.dll v6.1.72
+==================================
+
+List of new Features
+--------------------
+- application external variables are stored in symbol table (needed for External Scope in Data window)
+
+List of fixed Bugs
+------------------
+- None
+
+List of known Bugs
+------------------
+- None.	
+
+==================================
+Debugger Engine hibase.dll v6.1.71
+==================================
+
+List of new Features
+--------------------
+- Added support for loading multiple executable files and symbol tables (additional option ADD_SYSMBOLS in LOAD command).
+  Only the entry point of the first loaded file will be used to initialize the program counter (PC). 
+
+
+List of fixed Bugs
+------------------
+- fixed: made symbol table more stable to support additional compilers (ColdFire one for example)	
+
+List of known Bugs
+------------------
+- None.	
+
+==================================
+Debugger Engine hibase.dll v6.1.70
+==================================
+
+List of new Features
+--------------------
+- The address space support was improved. Now the symbolic information is aware of aliases between different address spaces.
+- Updated the common component FLEXlm version number to 4.000 (assembly window, coverage, profiling, stimulation, visualisation tool, etc)
+
+List of fixed Bugs
+------------------
+- fixed: debugger crash when double clicking on a local variable in the source window, while the application is running.	
+
+List of known Bugs
+------------------
+- None.	
+
+
+==================================
+Debugger Engine hibase.dll v6.1.69
+==================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- fixed parsing of expressions like: e *(unsigned char*)(0x1 + 1) ;X	
+
+List of known Bugs
+------------------
+- None.	
+
+
+==================================
+Debugger Engine hibase.dll v6.1.68
+==================================
+
+List of new Features
+--------------------
+- The about box shows now as well borrowing status (same as lmborrow.exe -status)
+- FLEXlm support for BORROWING. Note that BORROWING is only available for floating licenses, and may be sold
+  as a separate product or for an additional fee. BORROWING is used so you can work with a floating license
+  even if you are disconnected from the licensing server. See FLEXlm user manuals for details on BORROWING.
+  Note that this product needs a FLEXlm daemon (metrowks.exe on the licensing server) with following
+  version information:
+  FLEXlm v8.4a (lmgr.lib), Copyright (c) 1988-2003 by Macrovision Corporation. All rights reserved.
+  The latest FLEXlm floating server software can as well be downloaded from the www.metrowerks.com
+  web page, or get in touch with support to get the latest version.
+- In case of an expire/evaluation license, you are now warned 10 days before the license expires.
+  The warning dialog box pops up once every day.
+
+List of fixed Bugs
+------------------
+- None.	
+
+List of known Bugs
+------------------
+- None.	
+
+
+==================================
+Debugger Engine hibase.dll v6.1.67
+==================================
+
+List of New Features
+--------------------
+- Quoted strings may now contain also control characters according to the ANSI-C standard
+(H-TAB, V-TAB, FORM-FEED). The escape sequence '\"' is interpreted and leaves the '"' in the string
+constant, all the other escape sequences are not interpreted. In addition, string constants following 
+each other are concatenated into one single string constants (also according to ANSI-C standard).
+
+- Markpoints: 
+Markpoints is a new entity which has been added to the 8/16 bits Metrowerks debugger in order to give 
+the user the ability to mark a line code, variable, memory area and to keep trace of it. 
+
+.Markpoints are a help for the user in order to retrieve a specific information. 
+
+.Four kinds of Markpoints are available: Instruction, R/W Access, Read Access and Write Access, typically: 
+An Instruction Markpoint has been set through the Source or Assembly component to mark a specific line of 
+code or a specific instruction, 
+A R/W Access, a Read Access or a Write Access Markpoint has been set through the Memory or Data component, 
+to mark a specific address in the derivative memory area or to mark a variable. 
+
+.Markpoints can be stored according to the application name, in a file (.mrk) 
+and automatically retrieved on a next debugging session. 
+
+.Markpoints can be set from the debugger Source, Assembly, Memory and Data component using pop up menus.
+
+.Markpoints are visible by the user, with a blue icon in the Source and Assembly components and a blue line in the Memory and Data components.
+
+- Controlpoints configuration dialog:
+The Watchpoints and Breakpoints dialos have been suppressed and replaced with the Controlpoints configuration dialog. 
+.Controlpoints configuration dialog, Breakpoints tab allows to manage the Breakpoints
+.Controlpoints configuration dialog, Watchpoints tab allows to manage the Watchpoints 
+.Controlpoints configuration dialog, Markpoints tab allows to manage the Markpoints (save, view, add, delete, …).
+.This dialog allows to modify a Markpoint attributes: address, name, size or kind.
+.The Show Location button allows to view in the debugger, as an example, the source line where is set an Instruction Markpoint 
+or a Breakpoint in the Source component.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.66
+==================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- Improvements in the “Set Target Dialog”: now opens on the CPU and target it reads in the project file, if any.
+- WB1-36457.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.65
+==================================
+
+List of New Features
+--------------------
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a license for the former version, 
+you need to upgrade your license. Additionally be aware that in compliance with other Metrowerks tools the license 
+(license.dat) file in the installation root (e.g. c:\metrowerks\license.dat, the installation script has created a 
+shortcut to this file) is used. If such a license.dat exists, this file is used to check out the license. Only if 
+this file does not exist, the one in C:\FLEXlm is used. 
+
+- Set Target dialog:
+The dialog opens now on the Target Interface and the CPU defined in your project file. If there is no target file defined,
+it will open on the Simulator Target Interface. If there is no CPU defined, the CPU combo box displays “Unknown”, and you
+have to choose a CPU.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- In HIWARE format, the module name is now coded with the following extension: “.c.o”. This is responsible for generating 
+an error message when using the SMOD command line command: “this is not a module of the application currently loaded”. 
+This command is often used by the Recorder component, this means that such a recording session may be broken due to this fact.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.64
+==================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.63
+==================================
+
+List of New Features
+--------------------
+- Set target dialog:
+The target interfaces are displayed according to the selected CPU. A text field informs about the supported hardware with 
+this configuration ( CPU + Target Interface).
+All Dll of the target interfaces have to be loaded in order to get the clue of which CPU they support. This may take a long 
+time, so a progress bar has been implemented.
+
+- Open Component Dialog:
+The new Open Component dialog supports an “explorer like” view of the components . The components may be displayed as Large Icons, 
+List of Icons, Details. This last view contains a field that is a short description of the component.
+The dialog opens up on the last selected view.
+The short description’s field uses an external file for the moment. It is located in the “ApplicationDir”\resources directory, 
+as well as the icons files.
+In the future, all these resources may be included in the component resources, provided that the speed does not decrease too much.
+
+- The simulator cycle counter has been extended from 32 to 64 bits allowing larger simulation sequences.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- In HIWARE format, the module name is now coded with the following extension: “.c.o”. This is responsible for generating an error 
+message when using the SMOD command line command: “this is not a module of the application currently loaded”. This command is often 
+used by the Recorder component, this means that such a recording session may be broken due to this fact.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.62
+==================================
+
+List of New Features
+--------------------
+- Set target dialog:
+The target interfaces are displayed according to the selected CPU. A text field informs about the supported hardware with 
+this configuration ( CPU + Target Interface).
+All Dll of the target interfaces have to be loaded in order to get the clue of which CPU they support. This may take a long 
+time, so a progress bar has been implemented.
+
+- Open Component Dialog:
+The new Open Component dialog supports an “explorer like” view of the components . The components may be displayed as Large Icons, 
+List of Icons, Details. This last view contains a field that is a short description of the component.
+The dialog opens up on the last selected view.
+The short description’s field uses an external file for the moment. It is located in the “ApplicationDir”\resources directory, 
+as well as the icons files.
+In the future, all these resources may be included in the component resources, provided that the speed does not decrease too much.
+ 
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.61
+==================================
+
+List of New Features
+--------------------
+- You can now use register values in the condition field of controlpoints (breakpoint or watchpoint) with the following syntax:
+$RegisterName. For instance, you can check the value of R3 by using $R3. In this case, the debugger will stop on the breakpoint 
+if the value of register R3 is equal to 5.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.60
+==================================
+
+List of New Features
+--------------------
+- The simulator cycle counter has been extended from 32 to 64 bits allowing larger simulation sequences.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- In HIWARE format, the module name is now coded with the following extension: “.c.o”. This is responsible for generating an error 
+message when using the SMOD command line command: “this is not a module of the application currently loaded”. This command is often 
+used by the Recorder component, this means that such a recording session may be broken due to this fact.
+
+
+
+==================================
+Debugger Engine hibase.dll v6.1.59
+==================================
+
+List of New Features
+--------------------
+- The user expression file (*.xpr) as well as the breakpoint file (*.bpt) are now saved at the same location  as the application file (*.abs, *.elf).
+
+
+List of Fixed Bugs
+--------------------
+- Several improvements for RTKA.
+
+
+List of Known Bugs
+--------------------
+- In HIWARE format, the module name is now coded with the following extension: “.c.o”. This is responsible for generating an error 
+message when using the SMOD command line command: “this is not a module of the application currently loaded”. This command is often 
+used by the Recorder component, this means that such a recording session may be broken due to this fact.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.58
+==================================
+
+List of New Features
+--------------------
+- Command line commands DB, DW, DL (from the Base Command family) were extended in order to get the same display in the ascii field 
+as the one in the Memory component. The separator (‘-‘) which appeared every 8 bytes  in the DB command line command has been removed.
+
+- The command file error dialog contains now the name of the executed command file and displays the coordinates (line, column) of the error.
+
+- The ‘A’ command has been extended and supports now quoted expression: 
+A <variable> = ["]<expression>["]
+Assign command also support string and enum type as expression.
+	A day1 = ”monday_8U”    (Monday_8U is defined in an Enum)
+	A value = “3.3”
+
+- New command line commands for testing purpose:
+PAUSETEST     Displays a modal message box for testing purpose.
+TESTBOX "<String>"       Displays a modal message box with a given string.
+
+- The license file is searched in following order: 
+license.dat in the directory where the executable is (this was already the case) 
+hiware.lic in the directory where the executable is (this was already the case) 
+license.dat in one directory up from the where the executable is (this is new. E.g. if the executable is in c:\metrowerks\prog, the license 
+file in c:\metrowerks is searched too) 
+the license file using the normal FLEXlm way (usually c:\flexlm, this was already the case)
+
+- The Open Window component dialog has been extended with a Browse button allowing to load a component located outside of the \prog directory.
+
+- The Open IO Component dialog has been extended with a Browse button allowing to load a peripheral located outside of the \prog directory. 
+
+- For peripheral development purpose, the following messages are now sent to all components:
+MSG_START_LOADING is sent right before the code is loaded,
+MSG_END_LOADING is sent right after the code has been loaded.
+
+- Environment variables now support the following new macros (case sensitive): 
+{Project} 
+the variable is replaced with the path of the current project file, e.g if the current project file is “C:\Metrowerks\Examples\HC08\project.ini”, 
+then the following definition “{Project}bin” is resolved to “C:\Metrowerks\Examples\HC08\bin”
+{System}
+the variable is replaced with the path of the current Windows directory, e.g on a WINNT platform, the following definition “{System}Metrowerks” 
+is resolved to “C:\WINNT\Metrowerks”.
+
+
+List of Fixed Bugs
+--------------------
+- Until now, the postload command file (when set) was not executed when loading failed. This file, when enabled through the command file manager, 
+is now played in any case.
+
+
+List of Known Bugs
+--------------------
+- In HIWARE format, the module name is now coded with the following extension: “.c.o”. This is responsible for generating an error message
+ when using the SMOD comand line command: “this is not a module of the application currently loaded”. This command is often used by the 
+Recorder component, this means that such a recording session may be broken due to this fact.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.57
+==================================
+
+List of New Features
+--------------------
+- For peripheral development purpose, the following messages are now sent to all components: 
+MSG_START_LOADING is sent right before the code is loaded,
+MSG_END_LOADING is sent right after the code has been loaded.
+
+
+List of Fixed Bugs
+--------------------
+- Until now, the postload command file (when set) was not executed when loading failed. This file, when enabled through the command 
+file manager, is now played in any case.
+
+
+List of Known Bugs
+--------------------
+- Due to the module name with a ‘.c.o’ extension in the abs file in Hiware format, the SMOD command give an error for module 
+with a ‘.c’ extension in the application e.g. when the Recorder use the command, this create the’this is not a module of the 
+application currently loaded’ error.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.56
+==================================
+
+List of New Features
+--------------------
+- Command line commands DB, DW, DL (from the Base Command family) were extended in order to get the same display in the ascii field as 
+the one in the Memory component. The separator (‘-‘) which appeared every 8 bytes  in the DB command line command has been removed.
+
+List of Fixed Bugs
+--------------------
+- Improvement to correct LOAD operations recordingf ‘undefined’.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.55
+==================================
+
+List of New Features
+--------------------
+- Environment variables now support the following new macros (case sensitive): 
+
+{Project} 
+the variable is replaced with the path of the current project file, e.g if the current project file is “C:\Metrowerks\Examples\HC08\project.ini”, 
+then the following definition “{Project}bin” is resolved to “C:\Metrowerks\Examples\HC08\bin”
+
+{System}
+the variable is replaced with the path of the current Windows directory, e.g on a WINNT platform, the following definition “{System}Metrowerks” 
+is resolved to “C:\WINNT\Metrowerks”.
+
+- Modify DB, DW, DL display command  to match memory display.
+Delete ‘-‘ which appears every 8 bytes  in DB command line.
+Right align ASCII Display in DB command line.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.54
+==================================
+
+List of New Features
+--------------------
+- The ‘A’ command has been extended and supports now quoted expression: 
+A <variable> = ["]<expression>["]
+Assign command also support string and enum type as expression.
+	A day1 = ”monday_8U”    (Monday_8U is defined in an Enum)
+	A value = “3.3”
+
+- New command line commands for testing purpose:
+PAUSETEST     Displays a modal message box for testing purpose
+TESTBOX "<String>"       Displays a modal message box with a given string
+ 
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.53
+==================================
+
+List of New Features
+--------------------
+- The license file is searched in following order: 
+license.dat in the directory where the executable is (this was already the case) 
+hiware.lic in the directory where the executable is (this was already the case) 
+license.dat in one directory up from the where the executable is (this is new. E.g. if the executable is in c:\metrowerks\prog, the license file in c:\metrowerks is searched too) 
+the license file using the normal FLEXlm way (usually c:\flexlm, this was already the case)
+
+ 
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+
+==================================
+Debugger Engine hibase.dll v6.1.52
+==================================
+
+List of New Features
+--------------------
+- The command file error dialog contains now the name of the executed command file and displays the coordinates (line, column) of the error.
+
+
+List of Fixed Bugs
+--------------------
+- R2599 : In case of an undefined variable, the Data component was previously displaying the address of the variable in the value field instead of ‘undefined’.
+
+
+List of Known Bugs
+--------------------
+- The RS command sets only the lower part ( the 32 low bits) of 64 bits register like the PPC FPR register.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.51
+==================================
+
+List of New Features
+--------------------
+- Adaptation to support new “Set to IDF” button. 
+
+
+List of Fixed Bugs
+--------------------
+- Improvement of the WAIT command.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+==================================
+Debugger Engine hibase.dll v6.1.50
+==================================
+
+List of New Features
+--------------------
+- The progress bar is now always displayed during the loading of an application, independently of its size.
+
+- New interface with HIWARE IDF allowing exchanges between Debugger and IDF. The advantages of such connection show that it is possible to 
+execute other debugger operations. HIWARE IDF is furthermore following HI-WAVE debugger in its operation since it is always in the same file 
+and on the same line as the debugger. The communication between HIWARE IDF and HI-WAVE is performed via DDE.
+
+- New DDE features. The debugger now implements a DDE Server allowing an external application to execute all available commands through DDE 
+protocol (with service name “HI-WAVE” and topic name “Command”). A DDE client is also implemented in order to exchange synchronization 
+informations with HIWARE IDF.
+
+- New License Management with FLEXlm 2.0 involving lmgr327a.dll 
+
+- New command line instructions: 
+RESTART: 	Restarts the loaded application at his entry point.
+STEPOVER: 	Steps over the statement of a procedure during the debugging process of the loaded application 
+STEPINTO: 	Steps to the next source instruction during the debugging process of the loaded application 
+STEPOUT: 	Executes the program out of a function call, and stops on the instruction immediately following the call to the function during 
+the debugging process of the loaded application 
+STOP: 	Alias from the S command : stop the execution of the current application
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.

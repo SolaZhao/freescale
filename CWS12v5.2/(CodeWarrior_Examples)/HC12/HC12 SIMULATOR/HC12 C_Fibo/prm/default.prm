@@ -1,0 +1,14 @@
+NAMES END
+   
+SEGMENTS 
+    MY_RAM = READ_WRITE 0x800 TO 0x80F;
+    MY_ROM = READ_ONLY  0x810 TO 0xAFF;
+    MY_STK = READ_WRITE 0xB00 TO 0xBFF;
+
+PLACEMENT
+    DEFAULT_ROM   INTO  MY_ROM;
+    DEFAULT_RAM   INTO  MY_RAM;
+    SSTACK        INTO  MY_STK;
+END
+
+VECTOR 0 _Startup /* set reset vector on _Startup */

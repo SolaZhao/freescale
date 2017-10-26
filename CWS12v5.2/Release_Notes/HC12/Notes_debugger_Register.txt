@@ -1,0 +1,126 @@
+==================================
+ Register Component Release Notes
+==================================
+
+=========================================
+ Register Component register.wnd v6.1.20
+=========================================
+
+List of new Features
+--------------------
+- None.	
+
+List of fixed Bugs
+------------------
+- scroll wheel bug on WinXP fixed.
+
+List of known Bugs
+------------------
+- None.	
+
+
+=========================================
+ Register Component register.wnd v6.1.19
+=========================================
+
+List of New Features
+--------------------
+The Register component cycles number display is now updated while the application is running,
+like the cycles number display in the debugger status bar.
+If the CPU awareness module provides STOP and WAIT status of the CPU, the CPU cycles number 
+displayed is frozen and "(stopped)" or "(waiting)" is displayed next to cycles number.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=========================================
+ Register Component register.wnd v6.1.18
+=========================================
+
+List of New Features
+--------------------
+- 64 bits cycle counter support.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=========================================
+ Register Component register.wnd v6.1.17
+=========================================
+
+List of New Features
+--------------------
+- Extension to support 64 bits registers.
+
+
+List of Fixed Bugs
+--------------------
+- Drag and Drop from Memory to Register component now works properly.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=========================================
+ Register Component register.wnd v6.1.16
+=========================================
+
+List of New Features
+--------------------
+- Extension to support 64 bits registers.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+
+=========================================
+ Register Component register.wnd v6.1.15
+=========================================
+
+List of New Features
+--------------------
+- New Bit Reverse functionality concerning the display of data in the Register Component: the Bit Reverse computes the 1'complement, 
+each bit is reversed. This functionality is accessible through a 'check-mark' entry called ‘BitReverse’ in the Format entry of the PopUp Menu.
+The current status of the bit Reverse is displayed in the head line of the Register Component (prefix “Rev”). This new state is saved in the layout 
+file (*.hwl) through a new argument in the ATTRIBUTES command : COMPLEMENT(none|one) enables or disables this feature in the Register Component 
+according to the given parameter. 
+Example of layout file:
+
+OPEN Register 60 30 40 30
+Register < attributes FORMAT HEX,COMPLEMENT None  (<- Bit Reverse disabled)
+
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.

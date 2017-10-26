@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+  <Name>TriggerHCS12_TIM</Name>
+  <Description>Interface for configuration of a TIM channel used as internal trigger for HCS12</Description>
+  <Author>PC</Author>
+  <Version>01.001</Version>
+  <FileVersion>2</FileVersion>
+  <MethodList>
+    <EmptySection_DummyValue/>
+  </MethodList>
+  <EventList>
+    <EmptySection_DummyValue/>
+  </EventList>
+  <Registration>
+    <Template>TimerOut</Template>
+    <Template>Init_TIM_HCS12</Template>
+    <Template>Init_TIM_HCS12X</Template>
+  </Registration>
+  <UserTypes>
+    <EmptySection_DummyValue/>
+  </UserTypes>
+</Interface>

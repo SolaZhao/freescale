@@ -1,0 +1,2703 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><TITLE>
+MISRA C 2004 Compliance Features and Deviations
+</TITLE>
+<style type="text/css">
+A:visited {
+        COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+        COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+        COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.title {
+  color: #51626F;
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;
+}
+.text_title {
+  COLOR: #000000;
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+body, td {
+  font: 12px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</style>
+</head>
+
+<body style="background-color:white" topmargin="0" leftmargin="0" topMargin="0">
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <TBODY>
+        <tr bgcolor="#C3CFD1">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <font style="font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif; color: #51626F;">
+              Links
+            </font>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <font style="font: 10px/18px Helvetica Neue, Helvetica, Arial, sans-serif;COLOR: #005ba2;">
+              <a href="BeanCategories.html">Components Categories</a><br />
+              <a href="CPUindex.html#CPUs">CPU Components</a><br />
+              <a href="CPUindex.html#Compilers">Compilers</a><br />
+              <!--a href="VersionSpecificIndex.html">Version Specific</a><br-->
+              <br /><br /><br /><br /><br /><br /><br /><br />
+            </font>
+          </td>
+        </tr>
+        </TBODY>
+      </table>
+    </td>
+    <td width="1" bgcolor="#C3CFD1" valign="top">
+      <table bgcolor="#C3CFD1" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr bgcolor="#C3CFD1"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td width="4"></td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <TBODY>
+        <tr>
+          <td>
+            <div class="title">MISRA C 2004 Compliance Deviations</div>
+                 <div class="text_title">Introduction</div>
+<div style="margin-left:20px">
+This document contains MISRA C 2004 Compliance exceptions and documented features for Processor Expert generated code.
+The document contains chapter for each supported microcontroller architecture.
+Each chapter contains: <ul>
+<li>documentation required or recommended by MISRA standard;</li>
+<li>general exceptions, which apply across all embedded components;</li>
+<li>component exceptions associated with certain embedded component;</li>
+<li>PC-Lint configuration used for MISRA validation.</li>
+</ul>
+<br/>
+The MISRA compliance was checked using PC-Lint tool, so it is possible to find exceptions as a comment also in the generated code.
+</div>
+<!---VER_SPEC ~HCS12,HCS12X~ ^^ || DON'T CHANGE THIS LINE-->
+<a name="HCS12"></a>
+<div class="text_title">HCS12(X) Derivatives</div>
+<div style="margin-left:20px">
+<div class="text_title"><i>Required documentation for HCS12(X) Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="30%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Documentation</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+      <TR>
+        <td>3.1</td>
+        <td>Required</td>
+        <td>All usage of implementation-defined behavior shall be documented.</td>
+        <td><ul>
+             <li>Follows the list of implementation dependent behavior used in Processor Expert. See documentation of CodeWarrior S12(X) Build tools for more information on topics not specified below:</li>
+             <li>Startup function of the application is 'void _EntryPoint(void)' function, see <a href="ResetScenario.html">Reset Scenario</a>. HCS12(X) derivatives have two additional reset vectors: If clock monitor is enabled and clock monitor reset occurred, 'void _ClockMonitor_EntryPoint(void)' function is startup function of the application. 'void _COP_EntryPoint(void)' is startup function of the application if COP is enabled and COP reset occurred.</li>
+             <li>Program is finished at the end of main function in the infinite loop.</li>
+             <li>Execution character set and corresponding values are documented in rule 3.2 in this table.</li>
+             <li>Identifiers of registers sometimes have more than 31 characters to comply with the reference manual of the derivative. The number of significant initial characters in an identifier for CodeWarrior S12(X) compiler is 32,767 according to documentation of CodeWarrior S12(X) Build tools.</li>
+             <li>'Plain' char type (char_t) is unsigned by default setting of the compiler. The type is used in BWimage, COLimage, StringList and Term components.</li>
+             <li>Signed integers are used in BWimage, COLimage, Term and PWMMC components. Signed integers are in two’s complement representation. Conversion between signed and unsigned integer is used in PWMMC and Term components. For more information see the documentation of CodeWarrior S12(X) Build tools.</li>
+             <li>Float type is used in FreeCntr8, FreeCntr16, FreeCntr32, Term, PPG, PWM, TimerInt and TimerOut components. The Compiler supports two IEEE floating point formats: IEEE32 and IEEE64. For more information see the documentation of CodeWarrior S12(X) Build tools.</li>
+             <li>Conversion of pointer type to integer type is used in IntFlash, IntEEPROM  components. The integer type contains 3 byte number corresponding to the pointer address. Conversion of integer type to pointer type is used in IntFlash, IntEEPROM, CPU, ExtBitIO, ExtByteIO, Ext16IO, Ext32IO, Ext8IO. The pointer points to an address represented by the integer number (far keyword is used if integer number represents global address).</li>
+             <li>Unsigned char bit-field type is used. For more information on bit-fields see documented rule 3.5 in this table or the documentation of CodeWarrior S12(X) Build tools.</li>
+             <li>Volatile qualified variables are used to access peripheral registers (memory mapped).</li>
+             <li>#include "HeaderName" directive is used to include header files generated to the project. #include &lt;HeaderName&gt; directive is used to include CodeWarrior library header files. Nesting levels for #include files is 512. For more information see the documentation of CodeWarrior S12(X) Build tools.</li>
+             <li>Pragma directives are used and commented in the source code. See also documented rule 3.4 in this table.</li>
+             <li>Following CodeWarrior library header files are used: hidef.h (Device Initialization), limits.h (TimeDate component), stddef.h (ADC component)</li>
+             <li>Inline keyword is used in AsynchroSerial, AsynchroMaster and AsynchroSlave component. All calls of inline function are replaced by the code of this function, if possible. For more information see the documentation of CodeWarrior S12(X) Build tools.</li>
+        </ul></td>
+      </TR>
+      <TR>
+        <td>3.2</td>
+        <td>Required</td>
+        <td>The character set and the corresponding encoding shall be documented.</td>
+        <td>Basic character set (see ISO 9899) is used in execution character set. Execution character set uses ASCII encoding (possible codes 0-255). Exception to basic character set: Term component uses NULL(0x00), CR (0x0D), LF(0x0A).</td>
+      </TR>
+      <TR>
+        <td>3.3</td>
+        <td>Advisory</td>
+        <td>The implementation of integer division in the chosen compiler should be determined, documented and taken into account.</td>
+        <td>The way a Compiler implements division and modulo for negative operands is determined by the hardware implementation of the target’s division instructions. See documentation of CodeWarrior S12(X) Build tools for more information.</td>
+      </TR>
+      <TR>
+        <td>3.4</td>
+        <td>Required</td>
+        <td>All uses of the #pragma directives shall be documented and explained.</td>
+        <td><ul>
+             <li>All components use pragma directive to determine the memory segment, where code and data will be used (see below). All other uses of #pragma directives are commented in the generated source code.</li>
+             <li>#pragma CODE_SEG __NEAR_SEG NON_BANKED - places the code into non-banked memory area.</li>
+             <li>#pragma CODE_SEG [SegmentName] - where [SegmentName] is identifier of the memory segment. Places the code into specified memory area. For all PE components this directive selects DEFAULT memory area.</li>
+             <li>#pragma DATA_SEG [SegmentName] - where [SegmentName] is identifier of the memory segment. Places the data into specified memory area. For all PE components this directive selects DEFAULT memory area.</li>
+        </ul></td>
+      </TR>
+      <TR>
+        <td>3.5</td>
+        <td>Required</td>
+        <td>The implementation-defined behavior and packing of bit fields shall be documented if being relied upon.</td>
+        <td><ul>
+             <li>Bits in byte bit-fields are allocated from the least significant bit to the most significant bit in the order of declaration.</li>
+             <li>The bit-field allocation tries to avoid crossing a byte boundary whenever possible. To achieve optimized accesses, the compiler may insert some padding or gap bits to reach this. Maximum number of gap bits is set to 1 by default. Exception is register header files (IO_Map.h) where maximum number of gap bits is unlimited (4294967295).</li>
+             <li>See documentation of CodeWarrior S12(X) Build tools for more information.</li>
+        </ul></td>
+      </TR>
+      <TR>
+        <td>3.6</td>
+        <td>Required</td>
+        <td>All libraries used in production code shall be written to comply with the provision of this document and shall have been subject to appropriate validation.</td>
+        <td>Only libraries included in CodeWarrior development studio are used in the generated source code.</td>
+      </TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>General Exceptions for HCS12(X) Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+      <TR>
+        <td>1.1</td>
+        <td>Required</td>
+        <td>All code shall conform to ISO 9899-1990 (C-code guideline)</td>
+        <td>All components may contain one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+      </TR>
+      <TR>
+        <td>2.4</td>
+        <td>Advisory</td>
+        <td>Sections of code should not be 'commented out'.</td>
+        <td>Each init component contains 'Commented out' example of interrupt service routine (ISR), if generation of the ISR is enabled.</td>
+      </TR>
+      <TR>
+        <td>12.10</td>
+        <td>Required</td>
+        <td>The comma operator shall not be used.</td>
+        <td>Comma operator is used in macros for simple methods (optimization for code size). The rule is globally disabled for 'Generate macros = yes' option (Build Options)</td>
+      </TR>
+      <TR>
+        <td>14.7</td>
+        <td>Required</td>
+        <td>A function shall have a single point of exit at the end of the function.</td>
+        <td>Use of multiple return statements simplifies the code logic.</td>
+      </TR>
+      <TR>
+        <td>19.7</td>
+        <td>Advisory</td>
+        <td>A function should be used in preference to a function-like macro.</td>
+        <td>Macros are used to optimize simple methods for code size. The rule is globally disabled for 'Generate macros = yes' option (Build Options).</td>
+      </TR>
+      <TR>
+        <td>19.15</td>
+        <td>Required</td>
+        <td>Precautions shall be taken in order to prevent the contents of a header file being included twice.</td>
+        <td>All generated header files contain associated macro, which definition is tested. The headers file's content is included only if the macro is not defined.</td>
+      </TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>Component Exceptions for HCS12(X) Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Component</b></td>
+     <td><b>Rule</b></td>
+     <td><b>Type</font></b></td>
+     <td><b>Rule Details</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+  <TR></TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>14.3</td>
+          <td>Required</td>
+          <td>
+            Description: A null statement shall only occur on a line by itself<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 14.3, null statement not in line by itself</tt>
+          </td>
+          <td>Several inline asm instructions are in one line separated by semicolon (asm() is ignored by PC-lint).</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: All macros for register access, __DI, __EI, EnterCritical, ExitCritical, SaveStatusReg, RestoreStatusReg, PE_DEBUGHALT, ISR</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.12</td>
+          <td>Required</td>
+          <td>
+            Description: There shall be at most one occurrence of the # or ## preprocessor operators in a single macro definition.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 19.12, Multiple use of '#/##' operators in macro definition</tt>
+          </td>
+          <td>Multiple occurrences of preprocessor operators are used to convert bit name to bit mask in macros for accessing peripheral registers.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.13</td>
+          <td>Advisory</td>
+          <td>
+            Description: The # and ## preprocessor operators should not be used.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.13, '#/##' operator used</tt>
+          </td>
+          <td>Used to convert bit name to bit mask in macros accessing registers.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>5.1</td>
+          <td>Required</td>
+          <td>
+            Description: Identifiers (internal and external) shall not rely on the significance of more than 31 characters.<br/>
+            <tt>PC-Lint message: Warning 621: Identifier clash [MISRA 2004 Rules 1.2, 1.4 and 5.1]</tt>
+          </td>
+          <td>Length of register identifiers of peripheral modules are sometimes longer than 31 characters to comply with the Reference Manual.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: __RESET_WATCHDOG</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Cpu</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>8.10</td>
+          <td>Required</td>
+          <td>
+            Description: All declarations and definitions of objects or function at file scope shall have internal linkage unless external linkage is required.<br/>
+            <tt>PC-Lint message: Info 765: external 'function' could be made static [MISRA 2004 Rule 8.10]</tt>
+          </td>
+          <td>Device Initialization - ISR declaration is subject of various modifications by the user and may or may not be copied to another module - static is not used.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>INITRG register is written by typecasting address value to pointer;<br/> When Interrupt vector table is generated into RAM, pointers to ISR functions are initialized by typecast of an integral value to the function pointer type. Typecast from pointer to integral type is also used in SetIntVect method when checking parameter value;<br/> ExtBitIO Port array initialization structure uses integer value casted to pointer for definition of pointer to external memory;<br/> In SetIntVect method, interrupt vector allocation is checked by using typecast of a pointer to address value (integer). Only if interrupt vector table in RAM is selected.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay100US' method, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: GetPllLockStatusFlag, GetLowVoltageFlag, SetStopMode, SetWaitMode, DisableInt, EnableInt, GetSpeedMode</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>19.13</td>
+          <td>Advisory</td>
+          <td>
+            Description: The # and ## preprocessor operators should not be used.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.13, '#/##' operator used</tt>
+          </td>
+          <td>Not a preprocessor directive, used in high level inline asm command.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PPG</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>PPG</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'SetRatio' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PWM</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>PWM</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'SetRatio' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Info 740: Unusual pointer cast (incompatible indirect types) [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>When writing to FLASH memory, the routine waiting for write operation completion is copied to RAM memory and run in the RAM memory. Pointer cast of the wait routine is used for copy of the routine to the RAM memory.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver writing to FLASH memory uses pointer type for accessing data in the memory and integer type for manipulation and storage of the address to memory. Conversion between both types is needed and performed by the typecast between integral type and pointer type.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>The FLASH peripheral module works with two data bytes (word) for write operation, but access to one byte is needed (GetByte, SetByte methods). Conversion between the pointer to byte and pointer to word is used and typecast for pointer arithmetic is used.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>16.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object.<br/>
+            <tt>PC-Lint message: Info 818: Pointer parameter could be declared as pointing to const [MISRA 2004 Rule 16.7]</tt>
+          </td>
+          <td>'Source' parameter of SetBlockFlash method can be declared as const but only in specific component's setting (Write method = Write or Safe write). User interface should be uniform for all settings of the component, that's why 'const' is not used.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read/write a block of data from/to Flash memory (GetBlockFlash, WriteArray, SetPage in 'safe write' mode). Address parameter is converted to a pointer and by adding an offset to the pointer, data is accessed.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read/write a block of data from/to Flash memory. Address parameter is converted to a pointer and data is accessed by adding an offset to the pointer.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods and macros: EraseVerify, SetProtection, EraseFlash, SetWait, Busy, AddrOutOfRange, BlockOutOfRange, BlockAddress, GlobalToLocal, ClearFlags</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver writing to EEPROM memory uses pointer type for accessing data in the memory and integral type for manipulation and storage of the address to memory. Conversion between both types is needed and performed by the typecast between integral type and pointer type.</td>
+        </TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>The EEPROM peripheral module works with two data bytes (word) for write operation, but access to one byte is needed (GetByte, SetByte methods). Conversion between the pointer to byte and pointer to word is used and typecast for pointer arithmetic is used.</td>
+        </TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>16.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object.<br/>
+            <tt>PC-Lint message: Info 818: Pointer parameter could be declared as pointing to const [MISRA 2004 Rule 16.7]</tt>
+          </td>
+          <td>'Addr' parameter of EraseEeprom method can be declared as const but only in specific component's setting. User interface should be uniform for all settings of the component, that's why 'const' is not used.</td>
+        </TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read/write a block of data from/to Flash memory. Address parameter is converted to a pointer and by adding an offset to the pointer, data is accessed.</td>
+        </TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: SetWait, Busy,</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>WatchDog</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ExtInt</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>ExtInt</td>
+          <td>19.13</td>
+          <td>Advisory</td>
+          <td>
+            Description: The # and ## preprocessor operators should not be used.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.13, '#/##' operator used</tt>
+          </td>
+          <td>Not a preprocessor directive, used in high level inline asm command.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byteflight</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Byteflight</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>Byteflight</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read/write data from/to peripheral registers in ReadFrame and SendFrame methods. Register address, which corresponds to the start of the message buffer, is incremented when reading/writing the message. Range of the address is incremented only up to the length of the message (is part of the received frame).</td>
+        </TR>
+        <TR>
+          <td>Byteflight</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read/write data from/to peripheral registers in ReadFrame and SendFrame methods. Register address, which corresponds to the start of the message buffer, is incremented when reading/writing the message. Range of the address is incremented only up to the length of the message (is part of the received frame).</td>
+        </TR>
+        <TR>
+          <td>Byteflight</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: SetAlarm, ClrAlarm, SetSleepRequest, ClrSleepRequest, GetSleepAck, GetInitAck, GetModuleVersion</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access. The buffer is allocated by the user and handed over in a method parameter for SendBlock and RecvBlock methods. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>User buffer is used to store data send/received to/from communication bus. Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Init_IRQ</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>TimerInt</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Ext16IO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Ext16IO</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver is writing to External address space using typecast of address value (integer) to a pointer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Ext8IO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Ext8IO</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver is writing to External address space using typecast of address value (integer) to a pointer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Ext32IO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Ext32IO</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver is writing to External address space using typecast of address value (integer) to a pointer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ExtBitIO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>ExtBitIO</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver is writing to External address space using typecast of address value (integer) to a pointer.</td>
+        </TR>
+        <TR>
+          <td>ExtBitIO</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: GetVal, PutVal, SetDir, GetDir, ClrVal, SetVal, NegVal</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ExtByteIO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>ExtByteIO</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver is writing to External address space using typecast of address value (integer) to a pointer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ADC</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>In Init method, CSL and RVL allocation is set to pointer registers by using typecast of a pointer to address value (integer).</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used in GetChanValue, GetChanValue8 and GetChanValue16 methods when 'Autoscan = yes' and 'Number of conversions = 1' is selected. Register address, which corresponds to the beginning of the result registers array, is used for result retrieving after typecast.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access. The buffer is allocated by the user and handed over in a method parameter. Related to GetValue, GetValue8 and GetValue16 methods.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for manipulation with user data buffer when reading measured values by GetValue, GetValue8 and GetValue16 methods.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macros: MeasureWait, MeasureNotWait, MeasureChanWait, MeasureChanNotWait</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte2IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte3IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte4IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access in SendBlock and RecvBlock methods. The buffer is allocated by the user and handed over in a method parameter. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: Standby, LoopMode, SetDirection, TurnRxOff, TurnRxOn, TurnTxOff, TurnTxOn, GetTxComplete</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access in SendBlock and RecvBlock methods. The buffer is allocated by the user and handed over in a method parameter. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: Standby, LoopMode, SetDirection, TurnRxOff, TurnRxOn, TurnTxOff, TurnTxOn, GetTxComplete</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access in SendBlock and RecvBlock methods. The buffer is allocated by the user and handed over in a method parameter. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: Standby, LoopMode, SetDirection, TurnRxOff, TurnRxOn, TurnTxOff, TurnTxOn, GetTxComplete</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SynchroMaster</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>SynchroMaster</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access in SendBlock and RecvBlock methods. The buffer is allocated by the user and handed over in a method parameter. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>SynchroMaster</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>SynchroMaster</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: SetDir</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SynchroSlave</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>SynchroSlave</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access in SendBlock and RecvBlock methods. The buffer is allocated by the user and handed over in a method parameter. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>SynchroSlave</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>SynchroSlave</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: SetDir</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>BDLC</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>BDLC</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access. The buffer is allocated by the user and handed over in a method parameter for RecvBlock, RecvIFR and SendBlock methods. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>BDLC</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data received from communication bus (If input data or IFR buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>BDLC</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or IFR data buffer is enabled). Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used for swapping order of bytes in a 32-bit variable for code size optimization (GetAcceptanceCode, SetAcceptanceCode, GetAcceptanceMask, SetAcceptanceMask, SendFrame, SendFrameExt, ReadFrame methods). Typecast between pointers is used to access parts of the message buffer. The message buffer is mapped to a structure type with defined sub-parts of the message (SendFrame, SendFrameExt and ReadFrame methods).</td>
+        </TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read data from peripheral registers in ReadFrame method. Register address, which corresponds to the start of the message buffer, is incremented when reading the message. Range of the address is incremented only up to the length of the message (is part of the received frame).</td>
+        </TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for read data from peripheral registers in ReadFrame method. Register address, which corresponds to the start of the message buffer, is incremented when reading the message. Range of the address is incremented only up to the length of the message (is part of the received frame).</td>
+        </TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+        <TR>
+          <td>FreescaleCAN</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: GetAccHitIndicator, GetAbortMessageAck, GetSleepAck, ClearSleepRequest, SetSleepRequest, GetStateTX, BusOffRecoveryRequest</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PWMMC</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>PWMMC</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used in SetOutput method for conversion between bit-field structure type and byte type.</td>
+        </TR>
+        <TR>
+          <td>PWMMC</td>
+          <td>12.10</td>
+          <td>Required</td>
+          <td>
+            Description: The comma operator shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 12.10, comma operator used</tt>
+          </td>
+          <td>Comma operator is used in 'Load' macro (optimization for code size). The rule is disabled for 'Generate macros = no' option (Build Options)</td>
+        </TR>
+        <TR>
+          <td>PWMMC</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: Load</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SPI2UART</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Capture</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used in GetCaptureValue method in case, it is generated as a macro.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Term</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to char type and pointer to unsigned char type is used in ReadChar method to receive characters.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>FreeCntr</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used in GetCounterValue in case this method is generated as a macro.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>16.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A pointer parameter in a function prototype should be declared as pointer to const if the pointer is not used to modify the addressed object.<br/>
+            <tt>PC-Lint message: Info 818: Pointer parameter could be declared as pointing to const [MISRA 2004 Rule 16.7]</tt>
+          </td>
+          <td>'Ptr' parameter of SendBlock method can be declared as const but only in specific component's setting. User interface should be uniform for all settings of the component, that's why 'const' is not used.</td>
+        </TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>17.1</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer arithmetic shall only be applied to pointers that address an array or array element<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Pointer arithmetic is used for user buffer access. The buffer is allocated by the user and handed over in a method parameter for SendBlock and RecvBlock methods. Additional parameter specifies length of the buffer - pointer is manipulated only in the range between 0 and length of the buffer.</td>
+        </TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>17.2</td>
+          <td>Required</td>
+          <td>
+            Description: Pointer subtraction shall only be applied to pointers that address elements of the same array.<br/>
+            <tt>PC-Lint message: Note 946: Relational or subtract operator applied to pointers [MISRA 2004 Rules 17.2 and 17.3]</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus in slave mode only (If input or output data buffer is enabled). Pointer subtraction is used to check if read/write pointer is not out of circular buffer range.</td>
+        </TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>17.4</td>
+          <td>Required</td>
+          <td>
+            Description: Array indexing shall be the only allowed form of pointer arithmetic.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>Internal circular buffer is used to store data send/received to/from communication bus (If input or output data buffer is enabled). Pointer arithmetic is used for manipulation with this buffer.</td>
+        </TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: RecvChar, GetMode,CheckBus</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PE_Timer</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macros: LngHi5, LngHi6</td>
+        </TR>
+    <TR></TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>PC-Lint Configuration for HCS12(X) Derivatives</i></div>
+MISRA compliance was checked using PC-Lint tool version 9.00d with the following specific options:
+<pre>
+co-mwhc12.lnt       /* Use PC-lint specific configuration file for HC12 compiler */
+-dasm=_to_semi      /* Ignore asm block */
++rw(_to_semi)
+-d__asm=asm         /* Ignore __asm */
+-ident1(@)          /* ignore "@" and following brackets */
++rw(_to_brackets)
+-d"@=_to_brackets "
+-d__interrupt=      /* Ignore __interrupt */
+-dinterrupt=        /* Ignore interrupt */
+-dnear=             /* Ignore near */
+-dfar=              /* Ignore far */
+-$                  /* Ignore "$" in asm blocks */
+</pre>
+</div>
+<!---VER_SPEC_END DON'T CHANGE THIS LINE-->
+<!---VER_SPEC ~Kinetis~ ^^ || DON'T CHANGE THIS LINE-->
+<a name="Kinetis"></a>
+<div class="text_title">Kinetis Derivatives</div>
+<div style="margin-left:20px">
+<div class="text_title"><i>Required documentation for Kinetis Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="30%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Documentation</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+      <TR>
+        <td>3.1</td>
+        <td>Required</td>
+        <td>All usage of implementation-defined behavior shall be documented.</td>
+        <td><ul>
+             <li>Follows the list of implementation dependent behavior used in Processor Expert. See documentation of CodeWarrior MCU Build tools for more information on topics not specified below:</li>
+             <li>Program overloads void __init_hardware(void) function from the standard startup to provide initialization of clocks and external bus early after reset, see <a href="ResetScenario.html">Reset Scenario</a>.</li>
+             <li>Program is finished at the end of main function in the infinite loop.</li>
+             <li>Execution character set and corresponding values are documented in rule 3.2 in this table.</li>
+             <li>Volatile declarations are used to access peripheral registers (memory mapped).</li>
+             <li>Pragma directives are used and commented in the source code. See also documented rule 3.4 in this table.</li>
+        </ul></td>
+      </TR>
+      <TR>
+        <td>3.2</td>
+        <td>Required</td>
+        <td>The character set and the corresponding encoding shall be documented.</td>
+        <td>Basic character set (see ISO 9899) is used in execution character set. Execution character set uses ASCII encoding (possible codes 0-255). Exception to basic character set: Term component uses NULL(0x00), CR (0x0D), LF(0x0A).</td>
+      </TR>
+      <TR>
+        <td>3.3</td>
+        <td>Advisory</td>
+        <td>The implementation of integer division in the chosen compiler should be determined, documented and taken into account.</td>
+        <td>The way a Compiler implements division and modulo for negative operands is determined by the hardware implementation of the target's division instructions. See documentation of CodeWarrior S12(X) Build tools for more information.</td>
+      </TR>
+      <TR>
+        <td>3.4</td>
+        <td>Required</td>
+        <td>All uses of the #pragma directives shall be documented and explained.</td>
+        <td><ul>
+             <li>Some components use pragma directive to determine the memory segment, where code and/or data will be used (see below). All other uses of #pragma directives are commented in the generated source code.</li>
+        </ul></td>
+      </TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>General Exceptions for Kinetis Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+      <TR>
+        <td>12.10</td>
+        <td>Required</td>
+        <td>The comma operator shall not be used.</td>
+        <td>Comma operator is used in PDD macros.</td>
+      </TR>
+      <TR>
+        <td>13.7</td>
+        <td>Required</td>
+        <td>Boolean operations whose results are invariant shall not be permitted.</td>
+        <td>PDD macros define constants that can be passed as parameters to these macros.</td>
+      </TR>
+      <TR>
+        <td>14.2</td>
+        <td>Required</td>
+        <td>All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.</td>
+        <td>Some PDD macros have two commas in the macro implementation.</td>
+      </TR>
+      <TR>
+        <td>14.7</td>
+        <td>Required</td>
+        <td>A function shall have a single point of exit at the end of the function.</td>
+        <td>Use of multiple return statements simplifies the code logic.</td>
+      </TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>Component Exceptions for Kinetis Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Component</b></td>
+     <td><b>Rule</b></td>
+     <td><b>Type</font></b></td>
+     <td><b>Rule Details</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+  <TR></TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>2.1</td>
+          <td>Required</td>
+          <td>
+            Description: Assembly language shall be encapsulated and isolated.<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The file contains ASM language, but it is isolated in C macros.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>10.1</td>
+          <td>Required</td>
+          <td>
+            Description: The value of an expression of integer type shall not be implicitly converted to a different underlying type.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 10.1, Implicit conversion of integer to smaller type</tt>
+          </td>
+          <td>Call of the library function __set_FAULTMASK(). The code violates this rule for IAR compiler only.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Cpu</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>2.1</td>
+          <td>Required</td>
+          <td>
+            Description: Assembly language shall be encapsulated and isolated.<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The file contains ASM language, but it is isolated in C macros.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>8.10</td>
+          <td>Required</td>
+          <td>
+            Description: All declarations and definitions of objects or function at file scope shall have internal linkage unless external linkage is required.<br/>
+            <tt>PC-Lint message: Info 765: external 'function' could be made static [MISRA 2004 Rule 8.10]</tt>
+          </td>
+          <td>Device Initialization - ISR declaration is subject of various modifications by the user and may or may not be copied to another module - static is not used.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>2.1</td>
+          <td>Required</td>
+          <td>
+            Description: Assembly language shall be encapsulated and isolated.<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>8.10</td>
+          <td>Required</td>
+          <td>
+            Description: All declarations and definitions of objects or function at file scope shall have internal linkage unless external linkage is required.<br/>
+            <tt>PC-Lint message: Info 765: external 'function' could be made static [MISRA 2004 Rule 8.10]</tt>
+          </td>
+          <td>Device Initialization - ISR declaration is subject of various modifications by the user and may or may not be copied to another module - static is not used.</td>
+        </TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Need to explicitly cast pointers to the general ISR for Interrupt vector table</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>1.4</td>
+          <td>Required</td>
+          <td>
+            Description: The compiler/linker shall be checked to ensure that 31 character significance and case sensitivity are supported for external identifiers.<br/>
+            <tt>PC-Lint message: Note Warning 621: Identifier clash [MISRA 2004 Rules 1.2, 1.4 and 5.1]</tt>
+          </td>
+          <td>IO map defines register access constants. The constants' names contain peripheral name, register name, bit name and suffix _MASK/_SHIFT.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>IO map is based on structures and typecasting from a peripheral base address (integer constant) to a pointer type is used to get a pointer to the given peripheral structure used to access a peripheral registers.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>CAU_LDD</td>
+          <td>3.6</td>
+          <td>Required</td>
+          <td>
+            Description: All libraries used in production code shall be written to comply with the provision of this document and shall have been subject to appropriate validation.<br/>
+            <tt>PC-Lint message: MISRA Compliancy Review (part of formal technical review)</tt>
+          </td>
+          <td>CAU component uses an external CAU library that is not MISRA compliant. CAU component's code itself is MISRA compliant.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SDHC_LDD</td>
+          <td>10.1</td>
+          <td>Required</td>
+          <td>
+            Description: The value of an expression of integer type shall not be implicitly converted to a different underlying type.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 10.1, Implicit conversion of integer to smaller type</tt>
+          </td>
+          <td>Cannot shift by a value resulting from a complex expression.</td>
+        </TR>
+        <TR>
+          <td>SDHC_LDD</td>
+          <td>12.1</td>
+          <td>Advisory</td>
+          <td>
+            Description: Limited dependence should be placed on C's operator precedence rules in expressions.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 12.1, dependence placed on C's operator precedence; operators: ',' and ','</tt>
+          </td>
+          <td>Comma operator separates expressions in PDD macros.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Serial_LDD</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to void type and pointer to uint8_t/uint16_t type is used in ISR (transmitting/receiving characters).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SPIMaster_LDD</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to void type and pointer to uint8_t/uint16_t type is used in ISR (transmitting/receiving characters).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SPISlave_LDD</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to void type and pointer to uint8_t/uint16_t type is used in ISR (transmitting/receiving characters).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SSI_LDD</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to void type and pointer to uint8_t/uint16_t type is used in ISR (transmitting/receiving characters).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>USB_LDD</td>
+          <td>11.4</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointers is used in StartTransaction, HostQueueTransfer and Init methods.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Ethernet_LDD</td>
+          <td>12.1</td>
+          <td>Advisory</td>
+          <td>
+            Description: Limited dependence should be placed on C's operator precedence rules in expressions.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 12.1, dependence placed on C's operator precedence; operators: ',' and ','</tt>
+          </td>
+          <td>Comma operator separates expressions in PDD macros.</td>
+        </TR>
+        <TR>
+          <td>Ethernet_LDD</td>
+          <td>12.8</td>
+          <td>Required</td>
+          <td>
+            Description: The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand.<br/>
+            <tt>PC-Lint message: Warning 572: Excessive shift value (precision 2 shifted right by 8) [MISRA 2004 Rule 12.8]</tt>
+          </td>
+          <td>Macro for endianness conversion cannot be used on constants.</td>
+        </TR>
+        <TR>
+          <td>Ethernet_LDD</td>
+          <td>12.11</td>
+          <td>Advisory</td>
+          <td>
+            Description: Evaluation of constant unsigned integer expressions should not lead to wrap-around.<br/>
+            <tt>PC-Lint message: Warning 648: Overflow in computing constant for operation: 'unsigned shift left' [MISRA 2004 Rule 12.11]</tt>
+          </td>
+          <td>Macro for endianness conversion cannot be used on constants.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>TimerUnit_LDD</td>
+          <td>12.8</td>
+          <td>Required</td>
+          <td>
+            Description: The right-hand operand of a shift operator shall lie between zero and one less than the width in bits of the underlying type of the left-hand operand.<br/>
+            <tt>PC-Lint message: Warning 572: Excessive shift value (precision 2 shifted right by 8) [MISRA 2004 Rule 12.8]</tt>
+          </td>
+          <td>One of predefined constants for macro LPTMR_PDD_SetDivider has value 1.</td>
+        </TR>
+    <TR></TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>PC-Lint Configuration for Kinetis Derivatives</i></div>
+MISRA compliance was checked using PC-Lint tool version 9.00d with the following specific options:
+<pre>
+</pre>
+</div>
+<!---VER_SPEC_END DON'T CHANGE THIS LINE-->
+<!---VER_SPEC ~HCS08,RS08,ColdFireV1~ ^^ || DON'T CHANGE THIS LINE-->
+<a name="HCS08"></a>
+<div class="text_title">HCS08,RS08,ColdFire V1 Derivatives</div>
+<div style="margin-left:20px">
+<div class="text_title"><i>Required documentation for HCS08,RS08,ColdFire V1 Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="30%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Documentation</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>General Exceptions for HCS08,RS08,ColdFire V1 Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Rule</b></td>
+     <td><b>Type</b></td>
+     <td><b>Rule Description</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+      <TR>
+        <td>1.1</td>
+        <td>Required</td>
+        <td>All code shall conform to ISO 9899-1990 (C-code guideline)</td>
+        <td>All components may contain one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+      </TR>
+      <TR>
+        <td>2.4</td>
+        <td>Advisory</td>
+        <td>Sections of code should not be 'commented out'.</td>
+        <td>Each init component contains 'Commented out' example of interrupt service routine (ISR), if generation of the ISR is enabled.</td>
+      </TR>
+      <TR>
+        <td>12.10</td>
+        <td>Required</td>
+        <td>The comma operator shall not be used.</td>
+        <td>Comma operator is used in macros for simple methods (optimization for code size). The rule is globally disabled for 'Generate macros = yes' option (Build Options)</td>
+      </TR>
+      <TR>
+        <td>14.7</td>
+        <td>Required</td>
+        <td>A function shall have a single point of exit at the end of the function.</td>
+        <td>Use of multiple return statements simplifies the code logic.</td>
+      </TR>
+      <TR>
+        <td>19.7</td>
+        <td>Advisory</td>
+        <td>A function should be used in preference to a function-like macro.</td>
+        <td>Macros are used to optimize simple methods for code size. The rule is globally disabled for 'Generate macros = yes' option (Build Options).</td>
+      </TR>
+      <TR>
+        <td>19.15</td>
+        <td>Required</td>
+        <td>Precautions shall be taken in order to prevent the contents of a header file being included twice.</td>
+        <td>All generated header files contain associated macro, which definition is tested. The headers file's content is included only if the macro is not defined.</td>
+      </TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>Component Exceptions for HCS08,RS08,ColdFire V1 Derivatives</i></div>
+<TABLE border="1" cellspacing="0" cellpadding="3">
+  <THEAD>
+    <COL>
+    <COL>
+    <COL>
+    <COL width="40%">
+    <COL>
+    <tr>
+     <td><b>Component</b></td>
+     <td><b>Rule</b></td>
+     <td><b>Type</font></b></td>
+     <td><b>Rule Details</b></td>
+     <td><b>Reason</b></td>
+    </tr>
+  </THEAD>
+  <TBODY>
+  <TR></TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>14.3</td>
+          <td>Required</td>
+          <td>
+            Description: A null statement shall only occur on a line by itself<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 14.3, null statement not in line by itself</tt>
+          </td>
+          <td>Several inline asm instructions are in one line separated by semicolon (asm() is ignored by PC-lint).</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: All macros for register access, __DI, __EI, EnterCritical, ExitCritical, SaveStatusReg, RestoreStatusReg, PE_DEBUGHALT, ISR</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.12</td>
+          <td>Required</td>
+          <td>
+            Description: There shall be at most one occurrence of the # or ## preprocessor operators in a single macro definition.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 19.12, Multiple use of '#/##' operators in macro definition</tt>
+          </td>
+          <td>Multiple occurrences of preprocessor operators are used to convert bit name to bit mask in macros for accessing peripheral registers.</td>
+        </TR>
+        <TR>
+          <td>PE_Types.h</td>
+          <td>19.13</td>
+          <td>Advisory</td>
+          <td>
+            Description: The # and ## preprocessor operators should not be used.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.13, '#/##' operator used</tt>
+          </td>
+          <td>Used to convert bit name to bit mask in macros accessing registers.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>5.1</td>
+          <td>Required</td>
+          <td>
+            Description: Identifiers (internal and external) shall not rely on the significance of more than 31 characters.<br/>
+            <tt>PC-Lint message: Warning 621: Identifier clash [MISRA 2004 Rules 1.2, 1.4 and 5.1]</tt>
+          </td>
+          <td>Length of register identifiers of peripheral modules are sometimes longer than 31 characters to comply with the Reference Manual.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>18.4</td>
+          <td>Required</td>
+          <td>
+            Description: Unions shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 18.4, unions shall not be used</tt>
+          </td>
+          <td>Unions are used to efficiently swap bytes in a word or long word, to allow simple access to bit-field and to allow access to bits of registers for peripheral modules.</td>
+        </TR>
+        <TR>
+          <td>IO_Map.h</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: __RESET_WATCHDOG</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Vectors.c</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Cpu</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Info 740: Unusual pointer cast (incompatible indirect types) [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>When writing to FLASH memory in SetBackdoorKey method, the routine performing the write operation is copied to RAM memory and run in the RAM memory. Pointer cast of the routine is used for copy of the routine to the RAM memory and for call of the routine in RAM.;<br/>In the interrupt vector table in Device Initialization for ColdFire V1 derivatives, stack pointer is initialized by typecast of a pointer to the pointer to function.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>8.10</td>
+          <td>Required</td>
+          <td>
+            Description: All declarations and definitions of objects or function at file scope shall have internal linkage unless external linkage is required.<br/>
+            <tt>PC-Lint message: Info 765: external 'function' could be made static [MISRA 2004 Rule 8.10]</tt>
+          </td>
+          <td>Device Initialization - ISR declaration is subject of various modifications by the user and may or may not be copied to another module - static is not used.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Internal oscillator trim register is initialized by typecasting storage address of a trim value to the pointer;<br/> When Interrupt vector table is generated into RAM, pointers to ISR functions are initialized by typecast of an integral value to the function pointer type. Typecast from pointer to integral type is also used in SetIntVect method when checking parameter value;<br/>SetBackdoorKey method uses typecast from pointer to integral to pass parameter to high level inline assembly routine placed in RAM.<br/> In interrupt vector table in Device Initialization, unassigned ISR are initialized by typecast of an integral value to the function pointer type.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>When writing to FLASH memory in SetBackdoorKey method, the routine performing the write operation is copied to RAM memory and run in the RAM memory. Pointer cast of the routine is used for copy of the routine to the RAM memory and for call of the routine in RAM.;<br/>In the interrupt vector table in Device Initialization for ColdFire V1 derivatives, stack pointer is initialized by typecast of a pointer to the pointer to a function.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>12.4</td>
+          <td>Required</td>
+          <td>
+            Description: The right-hand operand of a logical && or || operator shall not contain side effects.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 12.4, side effects on right hand of logical operator</tt>
+          </td>
+          <td>In Device Initialization for RS08 derivatives that supports interrupt vector, in ISR dispatcher two status register are scanned in one while condition using || operator. Short evaluation of a condition is not important, because the ISR dispatcher scans the variables in the loop.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay100US' method, which is a wrapper for inline asm block (asm block is ignored by PC-lint);<br/>PC-lint may report the warning in Device Initialization for RS08 derivatives that supports interrupt vector. In interrupt service routine, empty sub-routines templates for each peripheral interrupt are called.</td>
+        </TR>
+        <TR>
+          <td>Cpu</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following methods: GetPllLockStatusFlag, GetLowVoltageFlag, SetStopMode, SetWaitMode, DisableInt, EnableInt, GetSpeedMode</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Info 740: Unusual pointer cast (incompatible indirect types) [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>When writing to FLASH memory, the routine waiting for write operation completion is copied to RAM memory and run in the RAM memory. Pointer cast of the wait routine is used for copy of the routine to the RAM memory.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>Driver writing to FLASH memory uses pointer type for accessing data in the memory and integer type for manipulation and storage of the address to memory. Conversion between both types is needed and performed by the typecast between integral type and pointer type.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>When writing to FLASH memory, the routine performing the write operation is copied to RAM memory and run in the RAM memory. Pointer cast is used for copy of the routine to the RAM memory and for call of the routine in RAM.;<br/>When Virtual page is enabled, it's possible to write or read a byte, a word or a double word to or from Virtual page (GetBytePage, SetBytePage, GetWordPage, SetWordPage, GetLongPage and SetLongPage methods). Pointer cast of the Virtual Page array to the desired type is used in these methods.</td>
+        </TR>
+        <TR>
+          <td>IntFlash</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: Busy, EnableEvent, DisableEvent</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>IntEEPROM</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>SW_I2C</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Init_SAW</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>Init_SAW</td>
+          <td>11.3</td>
+          <td>Advisory</td>
+          <td>
+            Description: A cast should not be performed between a pointer type and an integral type.<br/>
+            <tt>PC-Lint message: Note 923: cast from 'integer type' to pointer [Encompasses MISRA 2004 Rules 11.1 and 11.3], [MISRA 2004 Rule 11.3]</tt>
+          </td>
+          <td>SAW internal oscillator trim register is initialized by typecasting storage address of a trim value to the pointer.</td>
+        </TR>
+        <TR>
+          <td>Init_SAW</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>InternalI2C</td>
+          <td>14.2</td>
+          <td>Required</td>
+          <td>
+            Description: All non-null statements shall either: <br/>a) have at least one side effect however executed, <br/>or b) cause control flow to change.<br/>
+            <tt>PC-Lint message: Warning 522: Highest operation, function 'string', lacks side-effects [MISRA 2004 Rule 14.2]</tt>
+          </td>
+          <td>PC-lint reports the warning for 'Delay' function, which is a wrapper for inline asm block (asm block is ignored by PC-lint).</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+        <TR>
+          <td>AsynchroSerial</td>
+          <td>12.4</td>
+          <td>Required</td>
+          <td>
+            Description: The right-hand operand of a logical && or || operator shall not contain side effects.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 12.4, side effects on right hand of logical operator</tt>
+          </td>
+          <td>The code is accessing two volatile varibles in a condition. The order of access to variables is not important, because the variables are not mutualy dependent. Short evaluation of the condition is not importatnt in this case.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>BitIO</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>FreescaleAnalogComp</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Init_IRTC</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Init_PRACMP</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ExtInt</td>
+          <td>1.1</td>
+          <td>Required</td>
+          <td>
+            Description: All code shall conform to ISO 9899-1990 (C-code guideline)<br/>
+            <tt>PC-Lint message: Note 950: Non-ANSI reserved word or construct [MISRA 2004 Rules 1.1 and 2.2]</tt>
+          </td>
+          <td>The component contains one of non-ANSI C reserved word or construct used as specific language extensions: @, asm, __asm, near, __near, far, interrupt, __interrupt.</td>
+        </TR>
+        <TR>
+          <td>ExtInt</td>
+          <td>16.8</td>
+          <td>Required</td>
+          <td>
+            Description: All exit paths from a function with non-void return type shall have an explicit return statement with an expression.<br/>
+            <tt>PC-Lint message: Warning 533: function should return a value [MISRA 2004 Rule 16.8]</tt>
+          </td>
+          <td>Function contains inline assembler instructions to get value of pin not associated with any port.</td>
+        </TR>
+        <TR>
+          <td>ExtInt</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: Enable, Disable,GetVal</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>ADC</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for summing of the calibration registers values by Calibrate method. The variable in header file for access to each calibration register is declared as volatile, but the order of register access is not important for setting the gain registers, because the registers used for summing are not changed after the automatic calibration end.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>To ensure the high byte of the 16.bit result register is read first, both bytes are read separately and joined using the typecast to pointer to a structure.</td>
+        </TR>
+        <TR>
+          <td>ADC</td>
+          <td>12.4</td>
+          <td>Required</td>
+          <td>
+            Description: The right-hand operand of a logical && or || operator shall not contain side effects.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 12.4, side effects on right hand of logical operator</tt>
+          </td>
+          <td>The code is accessing a register and a volatile varible in a condition. The order of access is not important, because the variable and register are not mutualy dependent. Short evaluation of the condition is not importatnt in this case.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PE_Cnvrt.c</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for operations with status variables (EnChan, EnChanFlags, ChRun). The variables are declared as volatile, but the order of variables access is not important, because the variables are not mutualy dependent.</td>
+        </TR>
+        <TR>
+          <td>PE_Cnvrt.c</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>To ensure the high byte of the 16.bit result register is read first, both bytes are read separately and joined using the typecast to pointer to a structure.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>MeasurementEngine</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for summing of the calibration registers values by ADC_Calibrate method. The variable in header file for access to each calibration register is declared as volatile, but the order of register access is not important for setting the gain registers, because the registers used for summing are not changed after the automatic calibration end.</td>
+        </TR>
+        <TR>
+          <td>MeasurementEngine</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used when an array of pointers is accessed, which contains register addresses.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte2IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte3IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Byte4IO</td>
+          <td>1.2</td>
+          <td>Required</td>
+          <td>
+            Description: No reliance shall be placed on undefined or unspecified behavior<br/>
+            <tt>PC-Lint message: Note 931: Both sides have side effects [MISRA 2004 Rule 1.2]</tt>
+          </td>
+          <td>PC-Lint reports for reading the input value by GetVal method from several ports. The variable in header file for access to each port register is declared as volatile, but the order of register access is not important (neglected) for IO access.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroMaster</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>AsynchroSlave</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SynchroMaster</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SynchroSlave</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PWMMC</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>SPI2UART</td>
+          <td>6.4</td>
+          <td>Required</td>
+          <td>
+            Description: Bit-field shall only be defined to be of type unsigned int or signed int.<br/>
+            <tt>PC-Lint message: Error 46: field type should be int, unsigned int or signed int [MISRA 2004 Rule 6.4]</tt>
+          </td>
+          <td>Unsigned char type is used in bit-fields as smallest possible type.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>RTC</td>
+          <td>10.3</td>
+          <td>Required</td>
+          <td>
+            Description: The value of a complex expression of integer type may only be cast to a type that is narrower and of the same signedness as the underlying type of the expression.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 10.3, Cast of complex expression changes signedness</tt>
+          </td>
+          <td>For IRTC peripheral module, the value of a year in the register is represented by a signed value, but the interface of the component uses unsigned value. Typecast of na expression to unsigned value is used due to less code size.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Term</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Conversion between pointer to char type and pointer to unsigned char type is used in ReadChar method to receive characters.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>Capture</td>
+          <td>11.4</td>
+          <td>Required</td>
+          <td>
+            Description: A cast should be not be performed between a pointer to object type and different pointer to object type<br/>
+            <tt>PC-Lint message: Note 929: cast from pointer to pointer [MISRA 2004 Rule 11.4]</tt>
+          </td>
+          <td>Typecast between pointers is used in GetCaptureValue method in case, it is generated as a macro.</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>WatchDog</td>
+          <td>12.10</td>
+          <td>Required</td>
+          <td>
+            Description: The comma operator shall not be used.<br/>
+            <tt>PC-Lint message: Note 960: Violates MISRA 2004 Required Rule 12.10, comma operator used</tt>
+          </td>
+          <td>Comma operator is used in 'Clear' macro (optimization for code size). The rule is disabled for 'Generate macros = no' option (Build Options)</td>
+        </TR>
+        <TR>
+          <td>WatchDog</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: Clear</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>LCD</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macro: SetPixel, GetPixel</td>
+        </TR>
+    <TR></TR>
+        <TR>
+          <td>PE_Timer</td>
+          <td>19.7</td>
+          <td>Advisory</td>
+          <td>
+            Description: A function should be used in preference to a function-like macro.<br/>
+            <tt>PC-Lint message: Note 961: Violates MISRA 2004 Advisory Rule 19.7, Function-like macro defined</tt>
+          </td>
+          <td>Macros are used to optimize simple methods for code size. The rule is disabled for 'Generate macros = no' option (Build Options) for following macros: LngHi5</td>
+        </TR>
+    <TR></TR>
+  </TBODY>
+</TABLE>
+<div class="text_title"><i>PC-Lint Configuration for HCS08,RS08,ColdFire V1 Derivatives</i></div>
+MISRA compliance was checked using PC-Lint tool version 9.00d with the following specific options:
+<pre>
+co-mwhc08.lnt       /* Use PC-lint specific configuration file for HC12 compiler */
+-dasm=_to_semi      /* Ignore asm block */
++rw(_to_semi)
+-d__asm=asm         /* Ignore __asm */
+-ident1(@)          /* ignore "@" and following brackets */
++rw(_to_brackets)
+-d"@=_to_brackets "
+-d__interrupt=      /* Ignore __interrupt */
+-dinterrupt=        /* Ignore interrupt */
+-dnear=             /* Ignore near */
+-d__near=           /* Ignore __near */
+-dfar=              /* Ignore far */
+-dCONVERT_TO_PAGED= /* Ignore CONVERT_TO_PAGED (in RS08 project only) */
+-$                  /* Ignore "$" in asm blocks */
+</pre>
+</div>
+<!---VER_SPEC_END DON'T CHANGE THIS LINE-->
+<!---VER_SPEC ~56800~ ^^ || DON'T CHANGE THIS LINE-->
+<a name="56800"></a>
+<div class="text_title">56800(E) Derivatives</div>
+<div style="margin-left:20px">
+    MISRA 2004 is not supported yet.
+</div>
+<!---VER_SPEC_END DON'T CHANGE THIS LINE-->
+<!---VER_SPEC ~MCF~ ^^ || DON'T CHANGE THIS LINE-->
+<a name="MCF"></a>
+<div class="text_title">ColdFire V2-V4 Derivatives</div>
+<div style="margin-left:20px">
+    MISRA 2004 is not supported yet.
+</div>
+<!---VER_SPEC_END DON'T CHANGE THIS LINE-->
+       </td>
+       </tr>
+
+       <tr>
+                <td align="middle" colSpan="2">
+                <br /><br /><hr size="1" width="100%" color="#b0b0b0"/>
+                <font style="COLOR: #b0b0b0; FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;">
+                  PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+                  <br />
+                  Copyright 2010 Freescale Semiconductor, Inc.
+                </font>
+                </td>
+       </tr>
+      </TBODY>
+     </table>
+
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

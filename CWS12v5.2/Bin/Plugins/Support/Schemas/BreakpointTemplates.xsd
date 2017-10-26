@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by Rachel ww (Motorola) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="templates-file">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="templates">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="version" type="xs:integer"/>
+							<xs:element name="default-template" type="xs:string"/>
+							<xs:element name="template" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string"/>
+										<xs:element name="break-type" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Hardware, software or auto</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element ref="condition"/>
+										<xs:element name="condition-enabled" type="xs:string"/>
+										<xs:element name="times-left" type="xs:string"/>
+										<xs:element name="property" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="name" type="xs:string"/>
+													<xs:element name="datatype">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="vt" type="xs:string" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="value">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="other-value" type="xs:string" use="optional"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="type" use="required">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="source-breakpoint"/>
+												<xs:enumeration value="assembly-breakpoint"/>
+												<xs:enumeration value="watchpoint"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="resolved" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>This element is required for source and assembly breakpoints.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="condition" type="xs:string"/>
+	<xs:element name="properties">
+		<xs:complexType>
+			<xs:sequence/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

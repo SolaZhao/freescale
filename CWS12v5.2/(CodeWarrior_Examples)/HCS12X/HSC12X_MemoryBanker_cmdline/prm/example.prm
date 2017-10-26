@@ -1,0 +1,54 @@
+NAMES
+ datapage.c.o main.c.o start12.c.o ansixl.lib
+END
+
+LINK example.abs
+
+SEGMENTS
+      RAM           = READ_WRITE  DATA_NEAR            0x2000 TO   0x3FFF; 
+
+      NEAR_DATA_ROM = READ_ONLY   DATA_NEAR IBCC_NEAR  0x4000 TO   0x4100; 
+      NEAR_CODE_ROM = READ_ONLY   DATA_NEAR IBCC_NEAR  0x4101 TO   0x7FFF; 
+      ROM_C000      = READ_ONLY   DATA_NEAR IBCC_NEAR  0xC000 TO   0xFEFF; 
+
+      RAM_F0        = READ_WRITE  DATA_FAR           0xF01000 TO 0xF01FFF; 
+
+      PAGE_C0       = READ_ONLY   DATA_FAR IBCC_FAR  0xC08000 TO 0xC0BFFF; 
+      PAGE_C1       = READ_ONLY   DATA_FAR IBCC_FAR  0xC18000 TO 0xC1BFFF; 
+END
+
+PLACEMENT
+      _PRESTART,              /* Used in HIWARE format: jump to _Startup at the code start */
+      STARTUP,                /* startup data structures */
+      ROM_VAR,                /* constant variables */
+      STRINGS,                /* string literals */
+      VIRTUAL_TABLE_SEGMENT,  /* C++ virtual table segment */
+      NON_BANKED,             /* runtime routines which must not be banked */
+      COPY                    /* copy down information: how to initialize variables */
+                              /* in case you want to use ROM_4000 here as well, make sure
+                                 that all files (incl. library files) are compiled with the
+                                 option: -OnB=b */
+                        INTO  ROM_C000;
+
+      DEFAULT_ROM       INTO           PAGE_C0, PAGE_C1;
+
+      SSTACK,                 /* allocate stack first to avoid overwriting variables on overflow */
+      DEFAULT_RAM             /* all variables, the default RAM location */
+                        INTO  RAM;
+
+
+      DISTRIBUTE        DISTRIBUTE_INTO
+                              NEAR_CODE_ROM, PAGE_C0, PAGE_C1;
+                              
+      CONST_DISTRIBUTE  DISTRIBUTE_INTO
+                              NEAR_DATA_ROM, PAGE_C0, PAGE_C1;
+                              
+      DATA_DISTRIBUTE   DISTRIBUTE_INTO
+                              RAM, RAM_F0;
+END
+
+
+
+STACKSIZE 0x100   /* size of the stack (will be allocated in DEFAULT_RAM) */
+
+VECTOR 0 _Startup /* reset vector: this is the default entry point for a C/C++ application. */

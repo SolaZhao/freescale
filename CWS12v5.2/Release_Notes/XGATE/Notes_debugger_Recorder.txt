@@ -1,0 +1,41 @@
+========================================
+  Recorder Component Release Notes
+========================================
+
+
+========================================
+Recorder Component recorder.wnd v6.1.11
+========================================
+
+List of New Features
+--------------------
+- none.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+========================================
+Recorder Component recorder.wnd v6.1.10
+========================================
+
+List of new Features
+--------------------
+- This new release runs with HI-WAVE 6.1.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.

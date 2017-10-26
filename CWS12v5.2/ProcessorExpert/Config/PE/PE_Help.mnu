@@ -1,0 +1,46 @@
+
+[Menu]
+
+[MenuItem]
+MenuItemName=Embedded Components Index
+MenuItemType=File
+MenuCommand=DOCs\BEANindex.html
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=Components Categories
+MenuItemType=File
+MenuCommand=DOCs\BeanCategories.html
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=Supported CPUs, Compilers and Debuggers
+MenuItemType=File
+MenuCommand=DOCs\CPUindex.html
+MenuHotKey=8304
+
+[MenuItem]
+MenuItemName=View Read Me and Revision History
+MenuItemType=File
+MenuCommand=README.html
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=User Guide
+MenuItemType=File
+MenuCommand=..\Help\pdf\Processor_Expert_User_Guide.pdf
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=Embedded Component Store
+MenuItemType=File
+MenuCommand=http://www.freescale.com/beanstore
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=MISRA C 2004 Compliance Deviations
+MenuItemType=File
+MenuCommand=DOCs\Misra2004Compliance.html
+MenuHotKey=0
+
+[MenuEnd]

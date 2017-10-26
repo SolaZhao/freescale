@@ -1,0 +1,24 @@
+<!DOCTYPE WIZARD SYSTEM "../wizard.dtd" [
+	<!ENTITY % SHORTCUTS SYSTEM "../shortcuts.dtd">
+	%SHORTCUTS;
+]>
+<WIZARD>
+	<WIZARDELEMENTLIST>
+		<WIZARDELEMENT name="" term="" id="ID_CHIP_LIST">
+  		<WIZARDELEMENTLIST>
+				<WIZARDELEMENT name="Family" term="HCS12" id="ID_CHIP_FAMILY_hcs12" requireSubItems="Yes">
+					<DESCRIPTION>HCS12
+
+M68HC12, HCS12 and HCS12X represent three generations of 16-bit controllers with all of them being derived from the industry standard M68HC11.</DESCRIPTION>
+					<WIZARDELEMENTLIST>
+						<WIZARDELEMENT name="HCS12VR" term="HCS12VR Family" id="ID_CHIP_hcs12_SUBFAMILY_VR" requireSubItems="Yes">
+							<DESCRIPTION>HCS12VR Family
+
+The S12VR family integrates an S12 microcontroller with a LIN Physical interface, a 5V regulator system to supply the microcontroller, and analog blocks to control other elements of the system which operate at vehicle battery level (e.g. relay drivers, high-side driver outputs, wake up inputs).</DESCRIPTION>
+						</WIZARDELEMENT>
+					</WIZARDELEMENTLIST>
+  			</WIZARDELEMENT>  			
+			</WIZARDELEMENTLIST>		
+		</WIZARDELEMENT>    
+	</WIZARDELEMENTLIST>
+</WIZARD>

@@ -1,0 +1,376 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Properties
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>IntEEPROM</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="IntEEPROM.html">General Info</a><br />
+<i>Properties</i><br />
+<a href="IntEEPROMMethods.html">Methods</a><br />
+<a href="IntEEPROMEvents.html">Events</a><br />
+<a href="IntEEPROMUser Types.html">Types and constants</a><br />
+<a href="IntEEPROMTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="IntEEPROM_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+<!--      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td class="titlebox">-->
+          
+           <div class="titlebox">
+              <div class="beanname">
+                Component
+                
+                
+                IntEEPROM
+              </div>
+              <div class="descrtext">Internal EEPROM</div>
+              <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Memory</a>
+                
+                </span>
+              </div>
+            </div>
+                      
+<!--
+            </td>
+        </tr>
+
+        <tr>        
+-->  
+            
+<!--            <td align="left"> -->
+<!--                   <br /> -->                  
+     <div class="text_title">
+          Properties:
+		 </div>		 
+		 <div class="descr_line">                  
+                  (Properties are parameters of the component. Please see the <a href="../../DOCs/EmbeddedBeans.html">Embedded Components page</a> for more information.)                   
+     </div>
+                  
+<div class="user_text">
+<ul>
+<li>
+<a name="DeviceName">
+<b>Component name</b></a> - Component name
+</li>
+<li>
+<a name="EEPROM">
+<b>EEPROM</b></a> - Internal on-chip EEPROM peripheral name
+</li>
+<li>
+<a name="IntService">
+<b>Interrupt service/event</b></a> - If the interrupt support is required. <br/>
+If the interrupt support is disabled a polling is used for EEPROM control. If this property is set to "Enabled", the component functionality (e.g. writing data to EEPROM) depends on the interrupt service and will not operate if the CPU interrupts are disabled. For details please refer to chapter "interrupt service in the component's generated code".<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="Int">
+  <b>Interrupt</b></a> - Interrupt vector name
+  </li>
+  <li>
+  <a name="IntPrior">
+  <b>Interrupt priority</b></a> - Interrupt priority (if supported)
+  </li>
+    <li class="versionspecdetail">
+  <a name="DfalshGrp">
+  </a><i>Settings only if IntFALSH support P-FLASH</i>
+  <ul>
+    <li>
+    <a name="ErrInt">
+    <b>Error Interrupt</b></a> - Interrupt vector name
+    </li>
+    <li>
+    <a name="ErrIntPrior">
+    <b>Interrupt priority</b></a> - Interrupt priority (if supported)
+    </li>
+  </ul>
+  </li>
+  </ul>
+</li>
+<li>
+<a name="WriteMethod">
+<b>Write method</b></a> - Method of write operation to D-Flash memory.<br />
+  - Write (without erase) - method writes data to the address. The area must already be erased.<br />
+  - Destructive write (with sector erase) - method checks if the area is erased, and if not, it performs the sector erase operation before the data is written. Previous content of the sector is deleted without any backup.<br />
+  - Safe write - method checks if the area is erased, and if not, it backup the content of the sector, erases the sector and restores the content of the sector together with new data.
+</li>
+<li class="versionspec">
+<a name="CPUCond7">
+<span class="versionspeclabel">Settings supported for Freescale HCS08, HCS12 and HCS12X derivatives only.</span></a>
+<ul>
+  <li>
+  <a name="WatchDogReset">
+  <b>WatchDog reset</b></a> - If 'yes' is selected and  WatchDog or Init_COP component is in the project and enabled, then the wait loop in write/erase methods of IntEEPROM component contain COP timer resets. Note: No code is generated if COP operates in the 'window mode'.
+  </li>
+</ul>
+</li>
+<li>
+<a name="_AddrRangeGrp">
+<b>Address range</b></a> - Used EEPROM memory area
+<ul>
+  <li>
+  <a name="EEPROM_StartAddr">
+  <b>Start address</b></a> - Start address of the used internal EEPROM block.
+  </li>
+  <li>
+  <a name="EEPROM_UsedSize">
+  <b>Used size</b></a> - Size of EEPROM block in bytes which is used by the component (max size depends on the CPU derivative).
+  </li>
+  <li>
+  <a name="EEPROM_Allocate">
+  <b>Used exclusively</b></a> - Selected EEPROM memory area will be allocated by this component, which means that it will NOT be available for another components/compiler
+  </li>
+  <li>
+  <a name="PageSize">
+  <b>Page size</b></a> - The size of the virtual page in minimal addressable units (bytes). Please refer to page
+<a href="IntEEPROM.html">General Info</a> for more details about virtual page.
+  </li>
+</ul>
+</li>
+<li class="versionspecdetail">
+<a name="EEEfeatureGrp1">
+</a><i>Settings only if EEPROM supports Emulated EEPROM feature.</i>
+<ul>
+  <li>
+  <a name="EmulEEPROMgrp">
+  <b>Emulated EEPROM</b></a> - Settings related to Emulated EEPROM partitioning.
+  <ul>
+  </ul>
+  </li>
+</ul>
+</li>
+<li>
+<a name="_InitGrp">
+<b>Initialization</b></a> - Initialization of the component
+<ul>
+  <li>
+  <a name="InitEnableEvent">
+  <b>Events enabled in init.</b></a> - Events enabled in the initialization code
+  </li>
+  <li>
+  <a name="InitEnableWait">
+  <b>Wait enabled in init.</b></a> - Wait enabled in initialization code (yes/no). If the Wait is enabled the driver always stays in the loop until the end of the operation and data is verified at the end of writing method.<br />
+This behavior of methods can also be controlled by SetWait method at runtime.
+  </li>
+    <li class="versionspecdetail">
+  <a name="EEEfeatureGrp">
+  </a><i>Settings only if EEPROM supports Emulated EEPROM feature.</i>
+  <ul>
+    <li>
+    <a name="PartitionInit">
+    <b>Partition D-Flash in init</b></a> - If yes, user selected partitioning of D-Flash memory is completed in init. If no, user must call Partition method in the application to complete partitioning of D-Flash. Please refer to Partition method description for more details.
+    </li>
+  </ul>
+  </li>
+  </ul>
+</li>
+<li class="versionspec">
+<a name="CPUCond50">
+<span class="versionspeclabel">Settings supported for Freescale HCS08, HCS12 and HCS12X derivatives only.</span></a>
+<ul>
+  <li>
+  <a name="_SpeedGrp">
+  <b>CPU clock/speed selection</b></a> - Settings for the CPU speed modes: identified whether the component is supported or not.
+<br />For details about speed modes please refer to page <a href="../../DOCs/SpeedModes.html">Speed Modes Support</a>.
+  <ul>
+    <li>
+    <a name="EEclock">
+    <b>EEPROM clock</b></a> - EEPROM internal timing clock frequency. For information only.
+    </li>
+    <li>
+    <a name="HighSpeed">
+    <b>High speed mode</b></a> - The component is enabled/disabled in the high speed mode.
+    </li>
+    <li>
+    <a name="LowSpeed">
+    <b>Low speed mode</b></a> - The component is enabled/disabled in the low speed mode.
+    </li>
+    <li>
+    <a name="SlowSpeed">
+    <b>Slow speed mode</b></a> - The component is enabled/disabled in the slow speed mode.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+     </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+</div>
+           <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2011 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

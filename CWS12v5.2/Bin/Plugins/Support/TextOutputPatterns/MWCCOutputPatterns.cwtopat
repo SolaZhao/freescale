@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<text-output-patterns-file>
+	<text-output-patterns>
+		<!-- The next 2 patterns are for matching mwcc errors/warning with the gcc message style -->
+		<text-output-pattern>
+			<pattern-type>warning</pattern-type>
+			<match-pattern>^(.*):([0-9]+): warning</match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>^(.*):([0-9]+): </match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+		</text-output-pattern>
+		<!-- The next 3 patterns are for matching mwcc errors/warning with the mpw message style -->
+		<text-output-pattern>
+			<pattern-type>info</pattern-type>
+			<match-pattern>File \"(.*)\"; Line ([0-9]+)</match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>warning</pattern-type>
+			<match-pattern>mwcc Compiler Warning:</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>mwcc Compiler Error:</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<!-- The next 3 patterns are for matching mwcc errors/warning with the IDE message style -->
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>^(.*) line ([0-9]+)</match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>warning</pattern-type>
+			<match-pattern>^ *Warning :</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>^ *Error :</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<!-- The next 3 patterns are for matching mwcc errors/warning with the mpw message style -->
+		<text-output-pattern>
+			<pattern-type>info</pattern-type>
+			<match-pattern>File \"(.*)\"; Line ([0-9]+)</match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>warning</pattern-type>
+			<match-pattern>mwcc Compiler Warning:</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>mwcc Compiler Error:</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<!-- The next 3 patterns are for matching mwcc errors/warning with the parseable message style -->
+		<text-output-pattern>
+			<pattern-type>info</pattern-type>
+			<match-pattern>^\((.*)\|([0-9]+)\|[0-9]+\|[0-9]+\|[0-9]+\|[0-9]+\)</match-pattern>
+			<file-path>\1</file-path>
+			<line-number>\2</line-number>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>warning</pattern-type>
+			<match-pattern>mwcc\|Compiler\|Warning</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+		<text-output-pattern>
+			<pattern-type>error</pattern-type>
+			<match-pattern>mwcc\|Compiler\|Error</match-pattern>
+			<case-sensitive>true</case-sensitive>
+		</text-output-pattern>
+	</text-output-patterns>
+</text-output-patterns-file>

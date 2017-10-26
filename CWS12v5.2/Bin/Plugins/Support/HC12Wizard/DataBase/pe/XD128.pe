@@ -1,0 +1,9 @@
+[create_PE_project]
+CPUs=#DEF-LIST-CPUS-FOR-MASTER-MCU-NAME:MC9S12XD128
+
+%define CW_MCU_NAME MC9S12XD128
+
+%include ..\Config\PE\CPE\HCS12.cpe
+
+
+[_end_]

@@ -1,0 +1,355 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>PPG</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="PPG.html">General Info</a><br />
+<a href="PPGProperties.html">Properties</a><br />
+<a href="PPGMethods.html">Methods</a><br />
+<a href="PPGEvents.html">Events</a><br />
+<a href="PPGUser Types.html">Types and constants</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="PPG_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              PPG
+            </div>
+            <div class="descrtext">Programmable pulse generation</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Timer</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+Required component name is "PPG1".<BR/>
+There are the following four typical usage modes:
+</FONT>
+
+<!--- 1 -->
+
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(1)</B><BR/>
+The easiest usage of the component is simple output signal generation with predefined period and duty.
+    It's possible to change duty using method SetRatio.
+</FONT>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+void main(void)
+{
+  unsigned int i, j;
+  for( i = 0; i&lt;65535; ++i ) {
+    PPG1_SetRatio16( i );      //change duty
+    for( j=0; j&lt;65535; ++j );  //delay
+  }
+  for(;;);
+}
+</PRE>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<U>Note:</U> The component may be also used without any method and event - only for settings of the output signal period and duty.
+</FONT>
+
+<!--- 2 -->
+
+</P><P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(2)</B><BR/>
+Usually it's better to change duty after the end of period, because this helps to avoid noises in the output signal.
+The property "Interrupt service/event" must be enabled for the support of OnEnd event.
+</FONT>
+<PRE>
+ <I><U>EVENTS.C</U></I>
+
+unsigned ratio = 0;
+void PPG1_OnEnd(void)
+{
+  PPG1_SetRatio16( ++ratio );  //change duty
+}
+</PRE>
+
+<!--- 3 -->
+
+</P><P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(3)</B><BR/>
+   There are other advanced methods for changing the period and duty at runtime.
+   It is possible to select one duty from the predefined list using SetRatioMode method
+   or set the value from interval using SetDutyTicks and SetDuty<I>Time</I> methods (please refer to <a href="../../DOCs/Beantiming.html">Timing dialog box</a>).
+   <BR/>
+   It is possible to select one period from the predefined list using SetPeriodMode method
+   or set the value from interval using SetPeriod and SetFreq methods (please refer to <a href="../../DOCs/Beantiming.html">Timing dialog box</a>).
+   <BR/>
+   In the following example the period is switched after each 255 period.
+   The period mode is set sequentially from three predefined values.
+</FONT>
+<PRE>
+ <I><U>EVENTS.C</U></I>
+
+int rpt_cntr = 255, mode = 0;
+
+void PPG1_OnEnd(void)
+{
+
+  if( --rpt_cntr==0 ) {  // If the event was generated 255times
+    if( ++mode==3 ) mode = 0; // Select next mode of the period
+    PPG1_SetPeriodMode( mode );// Set new period mode
+    rpt_cntr = 255; // Set repeat counter
+  }
+}
+</PRE>
+
+<!--- 4 -->
+
+</P><P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(4)</B><BR/>
+Component initial level of the output signal can be changed using SetValue and ClrValue methods.
+These methods may be only used when the component is disabled.
+</FONT>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+void main(void)
+{
+  /* output signal synchronization */
+  PPG1_Disable();  /* disable the component */
+  PPG1_ClrValue(); /* set output level to LOW */
+  PPG1_Enable();   /* enable the component */
+}
+</PRE>
+</P>
+
+<hr size="1"/>
+<p>
+<B CLASS="VSP">
+Version specific information for HCS12, HCS12X derivatives
+</B>
+</p><P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>Emergency shutdown case</B><BR/>
+When the <a href="PPGProperties.html">Emergency shutdown</a> and <a href="PPGProperties.html#IntService">Interrupt service/event</a> are enabled
+the component generates <a href="PPGEvents.html#OnShutdown">OnShutdown</a> event.<br/>
+The component provides two methods for the PWM status detection and restarting signal generation.
+</FONT>
+<PRE>
+ <I><U>EVENTS.C</U></I>
+
+void PPG1_OnShutdown(void)
+{
+  /* Test current shutdown status */
+  if (PPG1_GetShutdownStatus()) {
+
+    /* Emergency shutdown is asserted,
+       PPG signal generation is stopped! */
+
+    ...
+
+
+  } else {
+
+    /* Emergency shutdown is de-asserted,
+       signal generation can be restarted */
+
+    PPG1_RestartPWM();
+  }
+}
+</PRE>
+</P>
+
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

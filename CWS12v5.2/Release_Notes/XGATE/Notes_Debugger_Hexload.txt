@@ -1,0 +1,138 @@
+======================================
+  HEX object file loader Release Notes
+======================================
+
+============================================
+  HEX object file loader hexload.dll  6.1.17
+============================================
+
+List of new Features
+--------------------	
+  - Two new environment variables (these variables should never be used at the same time):
+
+   . HCS12 srecord linear to logical conversion support with SRECISHCS12LINEARADR variable in HI-WAVE section.
+     N.B: The variable must be set to 1 (e.g. SRECISHCS12LINEARADR=1) to be active.  
+
+   . HCS12X srecord global to logical conversion support with SRECISS12XGLOBALADR variable in HI-WAVE section.
+     N.B: The variable must be set to 1 (e.g. SRECISS12XGLOBALADR=1) to be active.  
+
+List of Fixed Bugs
+--------------------
+- none.
+
+List of Known Bugs
+--------------------
+- none.
+
+============================================
+  HEX object file loader hexload.dll  6.1.16
+============================================
+
+List of new Features
+-------------------	
+- none.
+
+List of Fixed Bugs
+--------------------
+- Fixed handling of segment entries in Intel Hex files.
+  Such entries could cause 2 additional random bytes to be read at the segment start address.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+============================================
+  HEX object file loader hexload.dll  6.1.15
+============================================
+
+List of new Features
+-------------------	
+- Internal upgrade: 
+- Loaded application code alignment can be forced with new environment variables to be set
+  in the [HI-WAVE] section of the current project:
+  .ALIGNMENT: The alignment size/boundary. This parameter value can only be a power of 2. 
+              By default, alignment is "1", except for HCS12 devices where alignment is "2".
+  .FILLPATTERN: The pattern to add to complete aligned code blocks and fill "holes". Default is 0xFF.
+
+  Usage example:
+  [HI-WAVE]
+  ALIGNMENT=8
+  FILLPATTERN=0xA5
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+============================================
+  HEX object file loader hexload.dll  6.1.14
+============================================
+
+List of New Features
+--------------------
+- Internal upgrade.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+============================================
+  HEX object file loader hexload.dll  6.1.13
+============================================
+
+List of new Features
+--------------------
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a license for the former
+ version, you need to upgrade your license. Additionally be aware that in compliance with other Metrowerks tools
+ the license (license.dat) file in the installation root (e.g. c:\metrowerks\license.dat, the installation script
+ has created a shortcut to this file) is used. If such a license.dat exists, this file is used to check out the
+ license. Only if this file does not exist, the one in C:\FLEXlm is used. 
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+============================================
+  HEX object file loader hexload.dll  6.1.12
+============================================
+
+List of new Features
+--------------------
+- None.
+
+
+List of fixed Bugs
+--------------------
+- Internal improvements.
+
+
+List of known Bugs
+--------------------
+- None.
+
+	
+
+
+
+

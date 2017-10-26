@@ -1,0 +1,4568 @@
+<SupportedDerivatives filever="1.003">
+<!--List of PE supported derivatives, this file is generated from PE-->
+<CPU vrnt="MC9S12A128BCFU">
+  <BEAN name="MC9S12A128_80"/>
+  <CPUDB file="_MC9S12A128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A128B"/>
+</CPU>
+<CPU vrnt="MC9S12A128BCPV">
+  <BEAN name="MC9S12A128_112"/>
+  <CPUDB file="_MC9S12A128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A128B"/>
+</CPU>
+<CPU vrnt="MC9S12A256BCFU">
+  <BEAN name="MC9S12A256_80"/>
+  <CPUDB file="_MC9S12A256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A256B"/>
+</CPU>
+<CPU vrnt="MC9S12A256BCPV">
+  <BEAN name="MC9S12A256_112"/>
+  <CPUDB file="_MC9S12A256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A256B"/>
+</CPU>
+<CPU vrnt="MC9S12A32BCFU">
+  <BEAN name="MC9S12A32_80"/>
+  <CPUDB file="_MC9S12A32_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A32"/>
+</CPU>
+<CPU vrnt="MC9S12A512BCPV">
+  <BEAN name="MC9S12A512_112"/>
+  <CPUDB file="_MC9S12A512_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A512"/>
+</CPU>
+<CPU vrnt="MC9S12A64BCFU">
+  <BEAN name="MC9S12A64_80"/>
+  <CPUDB file="_MC9S12A64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A64"/>
+</CPU>
+<CPU vrnt="MC9S12A64BCPV">
+  <BEAN name="MC9S12A64_112"/>
+  <CPUDB file="_MC9S12A64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12A64"/>
+</CPU>
+<CPU vrnt="MC9S12B128CFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128CFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128CPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128CPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128MFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128MFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128MPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128MPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128VFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128VFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128VPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B128VPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B128"/>
+</CPU>
+<CPU vrnt="MC9S12B64CFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64CFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64CPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64CPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64MFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64MFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64MPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64MPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64VFU16">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64VFU25">
+  <BEAN name="MC9S12B128_80"/>
+  <CPUDB file="_MC9S12B128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64VPV16">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12B64VPV25">
+  <BEAN name="MC9S12B128_112"/>
+  <CPUDB file="_MC9S12B128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12B64"/>
+</CPU>
+<CPU vrnt="MC9S12C128CFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128CFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128CFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128CFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128CPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128CPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128MPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C128VPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C128"/>
+</CPU>
+<CPU vrnt="MC9S12C32CFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32CFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32CFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32CFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32CPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32CPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32MPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C32VPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C32"/>
+</CPU>
+<CPU vrnt="MC9S12C64CFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64CFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64CFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64CFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64CPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64CPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64MPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C64VPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C64"/>
+</CPU>
+<CPU vrnt="MC9S12C96CFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96CFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96CFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96CFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96CPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96CPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96MPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VFA16">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VFA25">
+  <BEAN name="MC9S12C32_48"/>
+  <CPUDB file="_MC9S12C32_48" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VFU16">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VFU25">
+  <BEAN name="MC9S12C32_80"/>
+  <CPUDB file="_MC9S12C32_80" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VPB16">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12C96VPB25">
+  <BEAN name="MC9S12C32_52"/>
+  <CPUDB file="_MC9S12C32_52" fam="HCS12" subFam="MC9S12C" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12C96"/>
+</CPU>
+<CPU vrnt="MC9S12D32BCFU">
+  <BEAN name="MC9S12D32_80"/>
+  <CPUDB file="_MC9S12D32_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D32"/>
+</CPU>
+<CPU vrnt="MC9S12D32BMFU">
+  <BEAN name="MC9S12D32_80"/>
+  <CPUDB file="_MC9S12D32_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D32"/>
+</CPU>
+<CPU vrnt="MC9S12D32BVFU">
+  <BEAN name="MC9S12D32_80"/>
+  <CPUDB file="_MC9S12D32_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D32"/>
+</CPU>
+<CPU vrnt="MC9S12D64BCFU">
+  <BEAN name="MC9S12D64_80"/>
+  <CPUDB file="_MC9S12D64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12D64BCPV">
+  <BEAN name="MC9S12D64_112"/>
+  <CPUDB file="_MC9S12D64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12D64BMFU">
+  <BEAN name="MC9S12D64_80"/>
+  <CPUDB file="_MC9S12D64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12D64BMPV">
+  <BEAN name="MC9S12D64_112"/>
+  <CPUDB file="_MC9S12D64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12D64BVFU">
+  <BEAN name="MC9S12D64_80"/>
+  <CPUDB file="_MC9S12D64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12D64BVPV">
+  <BEAN name="MC9S12D64_112"/>
+  <CPUDB file="_MC9S12D64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12D64"/>
+</CPU>
+<CPU vrnt="MC9S12DB128BCPV">
+  <BEAN name="MC9S12DB128_112"/>
+  <CPUDB file="_MC9S12DB128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DB128B"/>
+</CPU>
+<CPU vrnt="MC9S12DB128BMPV">
+  <BEAN name="MC9S12DB128_112"/>
+  <CPUDB file="_MC9S12DB128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DB128B"/>
+</CPU>
+<CPU vrnt="MC9S12DB128BVPV">
+  <BEAN name="MC9S12DB128_112"/>
+  <CPUDB file="_MC9S12DB128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DB128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BCFU">
+  <BEAN name="MC9S12DG128_80"/>
+  <CPUDB file="_MC9S12DG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BCPV">
+  <BEAN name="MC9S12DG128_112"/>
+  <CPUDB file="_MC9S12DG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BMFU">
+  <BEAN name="MC9S12DG128_80"/>
+  <CPUDB file="_MC9S12DG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BMPV">
+  <BEAN name="MC9S12DG128_112"/>
+  <CPUDB file="_MC9S12DG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BVFU">
+  <BEAN name="MC9S12DG128_80"/>
+  <CPUDB file="_MC9S12DG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG128BVPV">
+  <BEAN name="MC9S12DG128_112"/>
+  <CPUDB file="_MC9S12DG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG128B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256CFU">
+  <BEAN name="MC9S12DG256_80"/>
+  <CPUDB file="_MC9S12DG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256CPV">
+  <BEAN name="MC9S12DG256_112"/>
+  <CPUDB file="_MC9S12DG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256MFU">
+  <BEAN name="MC9S12DG256_80"/>
+  <CPUDB file="_MC9S12DG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256MPV">
+  <BEAN name="MC9S12DG256_112"/>
+  <CPUDB file="_MC9S12DG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256VFU">
+  <BEAN name="MC9S12DG256_80"/>
+  <CPUDB file="_MC9S12DG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DG256VPV">
+  <BEAN name="MC9S12DG256_112"/>
+  <CPUDB file="_MC9S12DG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DG256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BCFU">
+  <BEAN name="MC9S12DJ128_80"/>
+  <CPUDB file="_MC9S12DJ128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BCPV">
+  <BEAN name="MC9S12DJ128_112"/>
+  <CPUDB file="_MC9S12DJ128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BMFU">
+  <BEAN name="MC9S12DJ128_80"/>
+  <CPUDB file="_MC9S12DJ128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BMPV">
+  <BEAN name="MC9S12DJ128_112"/>
+  <CPUDB file="_MC9S12DJ128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BVFU">
+  <BEAN name="MC9S12DJ128_80"/>
+  <CPUDB file="_MC9S12DJ128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ128BVPV">
+  <BEAN name="MC9S12DJ128_112"/>
+  <CPUDB file="_MC9S12DJ128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ128B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BCFU">
+  <BEAN name="MC9S12DJ256_80"/>
+  <CPUDB file="_MC9S12DJ256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BCPV">
+  <BEAN name="MC9S12DJ256_112"/>
+  <CPUDB file="_MC9S12DJ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BMFU">
+  <BEAN name="MC9S12DJ256_80"/>
+  <CPUDB file="_MC9S12DJ256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BMPV">
+  <BEAN name="MC9S12DJ256_112"/>
+  <CPUDB file="_MC9S12DJ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BVFU">
+  <BEAN name="MC9S12DJ256_80"/>
+  <CPUDB file="_MC9S12DJ256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ256BVPV">
+  <BEAN name="MC9S12DJ256_112"/>
+  <CPUDB file="_MC9S12DJ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ256B"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BCFU">
+  <BEAN name="MC9S12DJ64_80"/>
+  <CPUDB file="_MC9S12DJ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BCPV">
+  <BEAN name="MC9S12DJ64_112"/>
+  <CPUDB file="_MC9S12DJ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BMFU">
+  <BEAN name="MC9S12DJ64_80"/>
+  <CPUDB file="_MC9S12DJ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BMPV">
+  <BEAN name="MC9S12DJ64_112"/>
+  <CPUDB file="_MC9S12DJ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BVFU">
+  <BEAN name="MC9S12DJ64_80"/>
+  <CPUDB file="_MC9S12DJ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DJ64BVPV">
+  <BEAN name="MC9S12DJ64_112"/>
+  <CPUDB file="_MC9S12DJ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DJ64"/>
+</CPU>
+<CPU vrnt="MC9S12DP256BCPV">
+  <BEAN name="MC9S12DP256_112"/>
+  <CPUDB file="_MC9S12DP256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP256B"/>
+</CPU>
+<CPU vrnt="MC9S12DP256BMPV">
+  <BEAN name="MC9S12DP256_112"/>
+  <CPUDB file="_MC9S12DP256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP256B"/>
+</CPU>
+<CPU vrnt="MC9S12DP256BVPV">
+  <BEAN name="MC9S12DP256_112"/>
+  <CPUDB file="_MC9S12DP256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP256B"/>
+</CPU>
+<CPU vrnt="MC9S12DP512BCPV">
+  <BEAN name="MC9S12DP512_112"/>
+  <CPUDB file="_MC9S12DP512_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP512"/>
+</CPU>
+<CPU vrnt="MC9S12DP512BMPV">
+  <BEAN name="MC9S12DP512_112"/>
+  <CPUDB file="_MC9S12DP512_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP512"/>
+</CPU>
+<CPU vrnt="MC9S12DP512BVPV">
+  <BEAN name="MC9S12DP512_112"/>
+  <CPUDB file="_MC9S12DP512_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DP512"/>
+</CPU>
+<CPU vrnt="MC9S12DT128BCPV">
+  <BEAN name="MC9S12DT128_112"/>
+  <CPUDB file="_MC9S12DT128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT128B"/>
+</CPU>
+<CPU vrnt="MC9S12DT128BMPV">
+  <BEAN name="MC9S12DT128_112"/>
+  <CPUDB file="_MC9S12DT128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT128B"/>
+</CPU>
+<CPU vrnt="MC9S12DT128BVPV">
+  <BEAN name="MC9S12DT128_112"/>
+  <CPUDB file="_MC9S12DT128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT128B"/>
+</CPU>
+<CPU vrnt="MC9S12DT256BCPV">
+  <BEAN name="MC9S12DT256B_112"/>
+  <CPUDB file="_MC9S12DT256B_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256B"/>
+</CPU>
+<CPU vrnt="MC9S12DT256BMPV">
+  <BEAN name="MC9S12DT256B_112"/>
+  <CPUDB file="_MC9S12DT256B_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256B"/>
+</CPU>
+<CPU vrnt="MC9S12DT256BVPV">
+  <BEAN name="MC9S12DT256B_112"/>
+  <CPUDB file="_MC9S12DT256B_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256B"/>
+</CPU>
+<CPU vrnt="MC9S12DT256CFU">
+  <BEAN name="MC9S12DT256_80"/>
+  <CPUDB file="_MC9S12DT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12DT256CPV">
+  <BEAN name="MC9S12DT256_112"/>
+  <CPUDB file="_MC9S12DT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12DT256MFU">
+  <BEAN name="MC9S12DT256_80"/>
+  <CPUDB file="_MC9S12DT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12DT256MPV">
+  <BEAN name="MC9S12DT256_112"/>
+  <CPUDB file="_MC9S12DT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12DT256VFU">
+  <BEAN name="MC9S12DT256_80"/>
+  <CPUDB file="_MC9S12DT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12DT256VPV">
+  <BEAN name="MC9S12DT256_112"/>
+  <CPUDB file="_MC9S12DT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12DT256"/>
+</CPU>
+<CPU vrnt="MC9S12E128BCPV">
+  <BEAN name="MC9S12E128_112"/>
+  <CPUDB file="_MC9S12E128_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E128"/>
+</CPU>
+<CPU vrnt="MC9S12E128CFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E128"/>
+</CPU>
+<CPU vrnt="MC9S12E128MFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E128"/>
+</CPU>
+<CPU vrnt="MC9S12E128MPV">
+  <BEAN name="MC9S12E128_112"/>
+  <CPUDB file="_MC9S12E128_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E128"/>
+</CPU>
+<CPU vrnt="MC9S12E256CFU">
+  <BEAN name="MC9S12E256_80"/>
+  <CPUDB file="_MC9S12E256_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E256"/>
+</CPU>
+<CPU vrnt="MC9S12E256CPV">
+  <BEAN name="MC9S12E256_112"/>
+  <CPUDB file="_MC9S12E256_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E256"/>
+</CPU>
+<CPU vrnt="MC9S12E256MFU">
+  <BEAN name="MC9S12E256_80"/>
+  <CPUDB file="_MC9S12E256_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E256"/>
+</CPU>
+<CPU vrnt="MC9S12E256MPV">
+  <BEAN name="MC9S12E256_112"/>
+  <CPUDB file="_MC9S12E256_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E256"/>
+</CPU>
+<CPU vrnt="MC9S12E32CFC">
+  <BEAN name="MC9S12E32_64"/>
+  <CPUDB file="_MC9S12E32_64" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E32"/>
+</CPU>
+<CPU vrnt="MC9S12E32CFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E32"/>
+</CPU>
+<CPU vrnt="MC9S12E32MFC">
+  <BEAN name="MC9S12E32_64"/>
+  <CPUDB file="_MC9S12E32_64" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E32"/>
+</CPU>
+<CPU vrnt="MC9S12E32MFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E32"/>
+</CPU>
+<CPU vrnt="MC9S12E64BCPV">
+  <BEAN name="MC9S12E128_112"/>
+  <CPUDB file="_MC9S12E128_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E64"/>
+</CPU>
+<CPU vrnt="MC9S12E64CFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E64"/>
+</CPU>
+<CPU vrnt="MC9S12E64MFU">
+  <BEAN name="MC9S12E128_80"/>
+  <CPUDB file="_MC9S12E128_80" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E64"/>
+</CPU>
+<CPU vrnt="MC9S12E64MPV">
+  <BEAN name="MC9S12E128_112"/>
+  <CPUDB file="_MC9S12E128_112" fam="HCS12" subFam="MC9S12E" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12E64"/>
+</CPU>
+<CPU vrnt="MC9S12G128CLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128CLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128CLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128MLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128MLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128MLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128VLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128VLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G128VLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G128"/>
+</CPU>
+<CPU vrnt="MC9S12G192CLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192CLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192CLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192MLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192MLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192MLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192VLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192VLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G192VLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G192"/>
+</CPU>
+<CPU vrnt="MC9S12G240CLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240CLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240CLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240MLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240MLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240MLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240VLF">
+  <BEAN name="MC9S12G240_48"/>
+  <CPUDB file="_MC9S12G240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240VLH">
+  <BEAN name="MC9S12G240_64"/>
+  <CPUDB file="_MC9S12G240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G240VLL">
+  <BEAN name="MC9S12G240_100"/>
+  <CPUDB file="_MC9S12G240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G240"/>
+</CPU>
+<CPU vrnt="MC9S12G48CLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48CLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48CLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48MLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48MLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48MLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48MLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48MLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48VLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48VLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48VLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48VLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G48VLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G48"/>
+</CPU>
+<CPU vrnt="MC9S12G64CLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64CLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64CLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64MLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64MLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64MLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64MLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64MLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64VLC">
+  <BEAN name="MC9S12G64_32"/>
+  <CPUDB file="_MC9S12G64_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64VLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64VLF">
+  <BEAN name="MC9S12G64_48"/>
+  <CPUDB file="_MC9S12G64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64VLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G64VLH">
+  <BEAN name="MC9S12G64_64"/>
+  <CPUDB file="_MC9S12G64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G64"/>
+</CPU>
+<CPU vrnt="MC9S12G96CLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96CLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96CLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96MLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96MLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96MLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96VLF">
+  <BEAN name="MC9S12G128_48"/>
+  <CPUDB file="_MC9S12G128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96VLH">
+  <BEAN name="MC9S12G128_64"/>
+  <CPUDB file="_MC9S12G128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12G96VLL">
+  <BEAN name="MC9S12G128_100"/>
+  <CPUDB file="_MC9S12G128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12G96"/>
+</CPU>
+<CPU vrnt="MC9S12GA128CLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128CLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128CLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128MLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128MLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128MLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128VLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128VLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA128VLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA128"/>
+</CPU>
+<CPU vrnt="MC9S12GA192CLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192CLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192CLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192MLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192MLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192MLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192VLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192VLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA192VLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA192"/>
+</CPU>
+<CPU vrnt="MC9S12GA240CLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240CLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240CLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240MLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240MLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240MLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240VLF">
+  <BEAN name="MC9S12GA240_48"/>
+  <CPUDB file="_MC9S12GA240_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240VLH">
+  <BEAN name="MC9S12GA240_64"/>
+  <CPUDB file="_MC9S12GA240_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA240VLL">
+  <BEAN name="MC9S12GA240_100"/>
+  <CPUDB file="_MC9S12GA240_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA240"/>
+</CPU>
+<CPU vrnt="MC9S12GA48CLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA48"/>
+</CPU>
+<CPU vrnt="MC9S12GA48CLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA48"/>
+</CPU>
+<CPU vrnt="MC9S12GA64CLF">
+  <BEAN name="MC9S12GA64_48"/>
+  <CPUDB file="_MC9S12GA64_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA64"/>
+</CPU>
+<CPU vrnt="MC9S12GA64CLH">
+  <BEAN name="MC9S12GA64_64"/>
+  <CPUDB file="_MC9S12GA64_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA64"/>
+</CPU>
+<CPU vrnt="MC9S12GA96CLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96CLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96CLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96MLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96MLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96MLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96VLF">
+  <BEAN name="MC9S12GA128_48"/>
+  <CPUDB file="_MC9S12GA128_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96VLH">
+  <BEAN name="MC9S12GA128_64"/>
+  <CPUDB file="_MC9S12GA128_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GA96VLL">
+  <BEAN name="MC9S12GA128_100"/>
+  <CPUDB file="_MC9S12GA128_100" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GA96"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128CPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128MPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC128VPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC128"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16CPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16MPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC16VPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC16"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32CPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32MPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC32VPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC32"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64CPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64MPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VFA16">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VFA25">
+  <BEAN name="MC9S12GC16_48"/>
+  <CPUDB file="_MC9S12GC16_48" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VFU16">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VFU25">
+  <BEAN name="MC9S12GC16_80"/>
+  <CPUDB file="_MC9S12GC16_80" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VPB16">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GC64VPB25">
+  <BEAN name="MC9S12GC16_52"/>
+  <CPUDB file="_MC9S12GC16_52" fam="HCS12" subFam="MC9S12GC" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GC64"/>
+</CPU>
+<CPU vrnt="MC9S12GN16CFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16CLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16CLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16CTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16MFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16MLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16MLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16MTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16VFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16VLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16VLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN16VTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN16"/>
+</CPU>
+<CPU vrnt="MC9S12GN32CFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32CLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32CLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32CTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32MFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32MLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32MLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32MTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32VFT">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32VLC">
+  <BEAN name="MC9S12GN32_32"/>
+  <CPUDB file="_MC9S12GN32_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32VLF">
+  <BEAN name="MC9S12GN32_48"/>
+  <CPUDB file="_MC9S12GN32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN32VTJ">
+  <BEAN name="MC9S12GN32_20"/>
+  <CPUDB file="_MC9S12GN32_20" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN32"/>
+</CPU>
+<CPU vrnt="MC9S12GN48CLC">
+  <BEAN name="MC9S12GN48_32"/>
+  <CPUDB file="_MC9S12GN48_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48CLF">
+  <BEAN name="MC9S12GN48_48"/>
+  <CPUDB file="_MC9S12GN48_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48CLH">
+  <BEAN name="MC9S12GN48_64"/>
+  <CPUDB file="_MC9S12GN48_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48MLC">
+  <BEAN name="MC9S12GN48_32"/>
+  <CPUDB file="_MC9S12GN48_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48MLF">
+  <BEAN name="MC9S12GN48_48"/>
+  <CPUDB file="_MC9S12GN48_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48MLH">
+  <BEAN name="MC9S12GN48_64"/>
+  <CPUDB file="_MC9S12GN48_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48VLC">
+  <BEAN name="MC9S12GN48_32"/>
+  <CPUDB file="_MC9S12GN48_32" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48VLF">
+  <BEAN name="MC9S12GN48_48"/>
+  <CPUDB file="_MC9S12GN48_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GN48VLH">
+  <BEAN name="MC9S12GN48_64"/>
+  <CPUDB file="_MC9S12GN48_64" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GN48"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16CFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16CLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16MFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16MLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16VFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA16VLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA16"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32CFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32CLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32MFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32MLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32VFT">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12GNA32VLF">
+  <BEAN name="MC9S12GNA32_48"/>
+  <CPUDB file="_MC9S12GNA32_48" fam="HCS12" subFam="MC9S12G" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12GNA32"/>
+</CPU>
+<CPU vrnt="MC9S12H256CFV">
+  <BEAN name="MC9S12H256_144"/>
+  <CPUDB file="_MC9S12H256_144" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12H256CPV">
+  <BEAN name="MC9S12H256_112"/>
+  <CPUDB file="_MC9S12H256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12H256MFV">
+  <BEAN name="MC9S12H256_144"/>
+  <CPUDB file="_MC9S12H256_144" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12H256MPV">
+  <BEAN name="MC9S12H256_112"/>
+  <CPUDB file="_MC9S12H256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12H256VFV">
+  <BEAN name="MC9S12H256_144"/>
+  <CPUDB file="_MC9S12H256_144" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12H256VPV">
+  <BEAN name="MC9S12H256_112"/>
+  <CPUDB file="_MC9S12H256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12H256"/>
+</CPU>
+<CPU vrnt="MC9S12HA32CLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA32CLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA32MLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA32MLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA32VLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA32VLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA32"/>
+</CPU>
+<CPU vrnt="MC9S12HA48CLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA48CLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA48MLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA48MLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA48VLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA48VLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA48"/>
+</CPU>
+<CPU vrnt="MC9S12HA64CLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HA64CLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HA64MLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HA64MLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HA64VLH">
+  <BEAN name="MC9S12HA64_64"/>
+  <CPUDB file="_MC9S12HA64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HA64VLL">
+  <BEAN name="MC9S12HA64_100"/>
+  <CPUDB file="_MC9S12HA64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HA64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64CAA">
+  <BEAN name="MC9S12HN64_80"/>
+  <CPUDB file="_MC9S12HN64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64CAL">
+  <BEAN name="MC9S12HN64_112"/>
+  <CPUDB file="_MC9S12HN64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64MAA">
+  <BEAN name="MC9S12HN64_80"/>
+  <CPUDB file="_MC9S12HN64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64MAL">
+  <BEAN name="MC9S12HN64_112"/>
+  <CPUDB file="_MC9S12HN64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64VAA">
+  <BEAN name="MC9S12HN64_80"/>
+  <CPUDB file="_MC9S12HN64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HN64VAL">
+  <BEAN name="MC9S12HN64_112"/>
+  <CPUDB file="_MC9S12HN64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HN64"/>
+</CPU>
+<CPU vrnt="MC9S12HY32CLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY32CLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY32MLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY32MLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY32VLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY32VLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY32"/>
+</CPU>
+<CPU vrnt="MC9S12HY48CLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY48CLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY48MLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY48MLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY48VLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY48VLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY48"/>
+</CPU>
+<CPU vrnt="MC9S12HY64CLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HY64CLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HY64MLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HY64MLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HY64VLH">
+  <BEAN name="MC9S12HY64_64"/>
+  <CPUDB file="_MC9S12HY64_64" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HY64VLL">
+  <BEAN name="MC9S12HY64_100"/>
+  <CPUDB file="_MC9S12HY64_100" fam="HCS12" subFam="MC9S12HY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HY64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ128CAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ128"/>
+</CPU>
+<CPU vrnt="MC9S12HZ128MAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ128"/>
+</CPU>
+<CPU vrnt="MC9S12HZ128VAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ128"/>
+</CPU>
+<CPU vrnt="MC9S12HZ256CAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ256"/>
+</CPU>
+<CPU vrnt="MC9S12HZ256MAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ256"/>
+</CPU>
+<CPU vrnt="MC9S12HZ256VAL">
+  <BEAN name="MC9S12HZ256_112"/>
+  <CPUDB file="_MC9S12HZ256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ256"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64CAA">
+  <BEAN name="MC9S12HZ64_80"/>
+  <CPUDB file="_MC9S12HZ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64CAL">
+  <BEAN name="MC9S12HZ64_112"/>
+  <CPUDB file="_MC9S12HZ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64MAA">
+  <BEAN name="MC9S12HZ64_80"/>
+  <CPUDB file="_MC9S12HZ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64MAL">
+  <BEAN name="MC9S12HZ64_112"/>
+  <CPUDB file="_MC9S12HZ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64VAA">
+  <BEAN name="MC9S12HZ64_80"/>
+  <CPUDB file="_MC9S12HZ64_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12HZ64VAL">
+  <BEAN name="MC9S12HZ64_112"/>
+  <CPUDB file="_MC9S12HZ64_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12HZ64"/>
+</CPU>
+<CPU vrnt="MC9S12KC128CFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC128CPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC128MFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC128MPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC128VFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC128VPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC128"/>
+</CPU>
+<CPU vrnt="MC9S12KC64CFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KC64CPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KC64MFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KC64MPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KC64VFU">
+  <BEAN name="MC9S12KC128_80"/>
+  <CPUDB file="_MC9S12KC128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KC64VPV">
+  <BEAN name="MC9S12KC128_112"/>
+  <CPUDB file="_MC9S12KC128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KC64"/>
+</CPU>
+<CPU vrnt="MC9S12KG128CFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG128CPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG128MFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG128MPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG128VFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG128VPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG128"/>
+</CPU>
+<CPU vrnt="MC9S12KG256CFU">
+  <BEAN name="MC9S12KG256_80"/>
+  <CPUDB file="_MC9S12KG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG256CPV">
+  <BEAN name="MC9S12KG256_112"/>
+  <CPUDB file="_MC9S12KG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG256MFU">
+  <BEAN name="MC9S12KG256_80"/>
+  <CPUDB file="_MC9S12KG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG256MPV">
+  <BEAN name="MC9S12KG256_112"/>
+  <CPUDB file="_MC9S12KG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG256VFU">
+  <BEAN name="MC9S12KG256_80"/>
+  <CPUDB file="_MC9S12KG256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG256VPV">
+  <BEAN name="MC9S12KG256_112"/>
+  <CPUDB file="_MC9S12KG256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG256"/>
+</CPU>
+<CPU vrnt="MC9S12KG64CFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KG64CPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KG64MFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KG64MPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KG64VFU">
+  <BEAN name="MC9S12KG128_80"/>
+  <CPUDB file="_MC9S12KG128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KG64VPV">
+  <BEAN name="MC9S12KG128_112"/>
+  <CPUDB file="_MC9S12KG128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KG64"/>
+</CPU>
+<CPU vrnt="MC9S12KL128CFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL128CPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL128MFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL128MPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL128VFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL128VPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL128"/>
+</CPU>
+<CPU vrnt="MC9S12KL64CFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KL64CPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KL64MFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KL64MPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KL64VFU">
+  <BEAN name="MC9S12KL128_80"/>
+  <CPUDB file="_MC9S12KL128_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KL64VPV">
+  <BEAN name="MC9S12KL128_112"/>
+  <CPUDB file="_MC9S12KL128_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KL64"/>
+</CPU>
+<CPU vrnt="MC9S12KT128CFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT128CPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT128MFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT128MPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT128VFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT128VPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT128"/>
+</CPU>
+<CPU vrnt="MC9S12KT256CFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12KT256CPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12KT256MFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12KT256MPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12KT256VFU">
+  <BEAN name="MC9S12KT256_80"/>
+  <CPUDB file="_MC9S12KT256_80" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12KT256VPV">
+  <BEAN name="MC9S12KT256_112"/>
+  <CPUDB file="_MC9S12KT256_112" fam="HCS12" subFam="" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12KT256"/>
+</CPU>
+<CPU vrnt="MC9S12NE64CFU">
+  <BEAN name="MC9S12NE64_80"/>
+  <CPUDB file="_MC9S12NE64_80" fam="HCS12" subFam="MC9S12NE" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12NE64"/>
+</CPU>
+<CPU vrnt="MC9S12NE64CPV">
+  <BEAN name="MC9S12NE64_112"/>
+  <CPUDB file="_MC9S12NE64_112" fam="HCS12" subFam="MC9S12NE" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12NE64"/>
+</CPU>
+<CPU vrnt="MC9S12P128CFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128CLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128CQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128MFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128MLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128MQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128VFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128VLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P128VQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P128"/>
+</CPU>
+<CPU vrnt="MC9S12P32CFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32CLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32CQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32MFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32MLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32MQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32VFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32VLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P32VQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P32"/>
+</CPU>
+<CPU vrnt="MC9S12P64CFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64CLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64CQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64MFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64MLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64MQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64VFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64VLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P64VQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P64"/>
+</CPU>
+<CPU vrnt="MC9S12P96CFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96CLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96CQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96MFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96MLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96MQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96VFT">
+  <BEAN name="MC9S12P128_48"/>
+  <CPUDB file="_MC9S12P128_48" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96VLH">
+  <BEAN name="MC9S12P128_64"/>
+  <CPUDB file="_MC9S12P128_64" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12P96VQK">
+  <BEAN name="MC9S12P128_80"/>
+  <CPUDB file="_MC9S12P128_80" fam="HCS12" subFam="MC9S12P" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12P96"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128CPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128MPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q128VPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q128"/>
+</CPU>
+<CPU vrnt="MC9S12Q32CFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32CFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32CPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32CPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32MFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32MFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32MPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32MPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32VFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32VFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32VPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q32VPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q32"/>
+</CPU>
+<CPU vrnt="MC9S12Q64CFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64CFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64CPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64CPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64MFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64MFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64MPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64MPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64VFA16">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64VFA8">
+  <BEAN name="MC9S12Q64_48"/>
+  <CPUDB file="_MC9S12Q64_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64VPB16">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q64VPB8">
+  <BEAN name="MC9S12Q64_52"/>
+  <CPUDB file="_MC9S12Q64_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q64"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96CPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96MPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VFA16">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VFA8">
+  <BEAN name="MC9S12Q128_48"/>
+  <CPUDB file="_MC9S12Q128_48" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VFU16">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VFU8">
+  <BEAN name="MC9S12Q128_80"/>
+  <CPUDB file="_MC9S12Q128_80" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VPB16">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12Q96VPB8">
+  <BEAN name="MC9S12Q128_52"/>
+  <CPUDB file="_MC9S12Q128_52" fam="HCS12" subFam="MC9S12Q" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12Q96"/>
+</CPU>
+<CPU vrnt="MC9S12UF32PB">
+  <BEAN name="MC9S12UF32_64"/>
+  <CPUDB file="_MC9S12UF32_64" fam="HCS12" subFam="MC9S12UF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12UF32"/>
+</CPU>
+<CPU vrnt="MC9S12UF32PU">
+  <BEAN name="MC9S12UF32_100"/>
+  <CPUDB file="_MC9S12UF32_100" fam="HCS12" subFam="MC9S12UF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12UF32"/>
+</CPU>
+<CPU vrnt="MC9S12VR16CLC">
+  <BEAN name="MC9S12VR32_32"/>
+  <CPUDB file="_MC9S12VR32_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR16"/>
+</CPU>
+<CPU vrnt="MC9S12VR48CLC">
+  <BEAN name="MC9S12VR64_32"/>
+  <CPUDB file="_MC9S12VR64_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR48"/>
+</CPU>
+<CPU vrnt="MC9S12VR48CLF">
+  <BEAN name="MC9S12VR64_48"/>
+  <CPUDB file="_MC9S12VR64_48" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR48"/>
+</CPU>
+<CPU vrnt="MC9S12VR16MLC">
+  <BEAN name="MC9S12VR32_32"/>
+  <CPUDB file="_MC9S12VR32_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR16"/>
+</CPU>
+<CPU vrnt="MC9S12VR48MLC">
+  <BEAN name="MC9S12VR64_32"/>
+  <CPUDB file="_MC9S12VR64_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR48"/>
+</CPU>
+<CPU vrnt="MC9S12VR48MLF">
+  <BEAN name="MC9S12VR64_48"/>
+  <CPUDB file="_MC9S12VR64_48" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR48"/>
+</CPU>
+<CPU vrnt="MC9S12VR32CLC">
+  <BEAN name="MC9S12VR32_32"/>
+  <CPUDB file="_MC9S12VR32_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR32"/>
+</CPU>
+<CPU vrnt="MC9S12VR64CLC">
+  <BEAN name="MC9S12VR64_32"/>
+  <CPUDB file="_MC9S12VR64_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR64"/>
+</CPU>
+<CPU vrnt="MC9S12VR64CLF">
+  <BEAN name="MC9S12VR64_48"/>
+  <CPUDB file="_MC9S12VR64_48" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR64"/>
+</CPU>
+<CPU vrnt="MC9S12VR32MLC">
+  <BEAN name="MC9S12VR32_32"/>
+  <CPUDB file="_MC9S12VR32_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR32"/>
+</CPU>
+<CPU vrnt="MC9S12VR64MLC">
+  <BEAN name="MC9S12VR64_32"/>
+  <CPUDB file="_MC9S12VR64_32" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR64"/>
+</CPU>
+<CPU vrnt="MC9S12VR64MLF">
+  <BEAN name="MC9S12VR64_48"/>
+  <CPUDB file="_MC9S12VR64_48" fam="HCS12" subFam="MC9S12VR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12VR64"/>
+</CPU>
+<CPU vrnt="MC9S12XA128CFU">
+  <BEAN name="MC9S12XA128_80"/>
+  <CPUDB file="_MC9S12XA128_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA128CPV">
+  <BEAN name="MC9S12XA128_112"/>
+  <CPUDB file="_MC9S12XA128_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA128MFU">
+  <BEAN name="MC9S12XA128_80"/>
+  <CPUDB file="_MC9S12XA128_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA128MPV">
+  <BEAN name="MC9S12XA128_112"/>
+  <CPUDB file="_MC9S12XA128_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA128VFU">
+  <BEAN name="MC9S12XA128_80"/>
+  <CPUDB file="_MC9S12XA128_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA128VPV">
+  <BEAN name="MC9S12XA128_112"/>
+  <CPUDB file="_MC9S12XA128_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA128"/>
+</CPU>
+<CPU vrnt="MC9S12XA256CFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256CFV">
+  <BEAN name="MC9S12XA256_144"/>
+  <CPUDB file="_MC9S12XA256_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256CPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256MFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256MFV">
+  <BEAN name="MC9S12XA256_144"/>
+  <CPUDB file="_MC9S12XA256_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256MPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256VFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256VFV">
+  <BEAN name="MC9S12XA256_144"/>
+  <CPUDB file="_MC9S12XA256_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA256VPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA256"/>
+</CPU>
+<CPU vrnt="MC9S12XA512CFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512CFV">
+  <BEAN name="MC9S12XA512_144"/>
+  <CPUDB file="_MC9S12XA512_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512CPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512MFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512MFV">
+  <BEAN name="MC9S12XA512_144"/>
+  <CPUDB file="_MC9S12XA512_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512MPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512VFU">
+  <BEAN name="MC9S12XA512_80"/>
+  <CPUDB file="_MC9S12XA512_80" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512VFV">
+  <BEAN name="MC9S12XA512_144"/>
+  <CPUDB file="_MC9S12XA512_144" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XA512VPV">
+  <BEAN name="MC9S12XA512_112"/>
+  <CPUDB file="_MC9S12XA512_112" fam="HCS12X" subFam="MC9S12XA" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XA512"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BCFU">
+  <BEAN name="MC9S12XD128_80"/>
+  <CPUDB file="_MC9S12XD128_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BCPV">
+  <BEAN name="MC9S12XD128_112"/>
+  <CPUDB file="_MC9S12XD128_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BMFU">
+  <BEAN name="MC9S12XD128_80"/>
+  <CPUDB file="_MC9S12XD128_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BMPV">
+  <BEAN name="MC9S12XD128_112"/>
+  <CPUDB file="_MC9S12XD128_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BVFU">
+  <BEAN name="MC9S12XD128_80"/>
+  <CPUDB file="_MC9S12XD128_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD128BVPV">
+  <BEAN name="MC9S12XD128_112"/>
+  <CPUDB file="_MC9S12XD128_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD128"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BCFU">
+  <BEAN name="MC9S12XD256_80"/>
+  <CPUDB file="_MC9S12XD256_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BCFV">
+  <BEAN name="MC9S12XD256_144"/>
+  <CPUDB file="_MC9S12XD256_144" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BCPV">
+  <BEAN name="MC9S12XD256_112"/>
+  <CPUDB file="_MC9S12XD256_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BMFU">
+  <BEAN name="MC9S12XD256_80"/>
+  <CPUDB file="_MC9S12XD256_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BMFV">
+  <BEAN name="MC9S12XD256_144"/>
+  <CPUDB file="_MC9S12XD256_144" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BMPV">
+  <BEAN name="MC9S12XD256_112"/>
+  <CPUDB file="_MC9S12XD256_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BVFU">
+  <BEAN name="MC9S12XD256_80"/>
+  <CPUDB file="_MC9S12XD256_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BVFV">
+  <BEAN name="MC9S12XD256_144"/>
+  <CPUDB file="_MC9S12XD256_144" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD256BVPV">
+  <BEAN name="MC9S12XD256_112"/>
+  <CPUDB file="_MC9S12XD256_112" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD256"/>
+</CPU>
+<CPU vrnt="MC9S12XD64BCFU">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XD64BMFU">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XD64BVFU">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XD64CAA">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XD64MAA">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XD64VAA">
+  <BEAN name="MC9S12XD64_80"/>
+  <CPUDB file="_MC9S12XD64_80" fam="HCS12X" subFam="MC9S12XD" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XD64"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BCFU">
+  <BEAN name="MC9S12XDG128_80"/>
+  <CPUDB file="_MC9S12XDG128_80" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BCPV">
+  <BEAN name="MC9S12XDG128_112"/>
+  <CPUDB file="_MC9S12XDG128_112" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BMFU">
+  <BEAN name="MC9S12XDG128_80"/>
+  <CPUDB file="_MC9S12XDG128_80" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BMPV">
+  <BEAN name="MC9S12XDG128_112"/>
+  <CPUDB file="_MC9S12XDG128_112" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BVFU">
+  <BEAN name="MC9S12XDG128_80"/>
+  <CPUDB file="_MC9S12XDG128_80" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDG128BVPV">
+  <BEAN name="MC9S12XDG128_112"/>
+  <CPUDB file="_MC9S12XDG128_112" fam="HCS12X" subFam="MC9S12XDG" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDG128"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BCFV">
+  <BEAN name="MC9S12XDP512_144"/>
+  <CPUDB file="_MC9S12XDP512_144" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BCPV">
+  <BEAN name="MC9S12XDP512_112"/>
+  <CPUDB file="_MC9S12XDP512_112" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BMFV">
+  <BEAN name="MC9S12XDP512_144"/>
+  <CPUDB file="_MC9S12XDP512_144" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BMPV">
+  <BEAN name="MC9S12XDP512_112"/>
+  <CPUDB file="_MC9S12XDP512_112" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BVFV">
+  <BEAN name="MC9S12XDP512_144"/>
+  <CPUDB file="_MC9S12XDP512_144" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDP512BVPV">
+  <BEAN name="MC9S12XDP512_112"/>
+  <CPUDB file="_MC9S12XDP512_112" fam="HCS12X" subFam="MC9S12XDP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDP512"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BCFU">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BCFV">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BCPV">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BMFU">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BMFV">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BMPV">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BVFU">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BVFV">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256BVPV">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256CAA">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256CAG">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256CAL">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256MAA">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256MAG">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256MAL">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256VAA">
+  <BEAN name="MC9S12XDQ256_80"/>
+  <CPUDB file="_MC9S12XDQ256_80" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256VAG">
+  <BEAN name="MC9S12XDQ256_144"/>
+  <CPUDB file="_MC9S12XDQ256_144" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDQ256VAL">
+  <BEAN name="MC9S12XDQ256_112"/>
+  <CPUDB file="_MC9S12XDQ256_112" fam="HCS12X" subFam="MC9S12XDQ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDQ256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BCFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BCFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BCPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BMFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BMFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BMPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BVFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BVFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT256BVPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT256"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BCFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BCFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BCPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BMFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BMFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BMPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BVFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BVFV">
+  <BEAN name="MC9S12XDT384_144"/>
+  <CPUDB file="_MC9S12XDT384_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT384BVPV">
+  <BEAN name="MC9S12XDT384_112"/>
+  <CPUDB file="_MC9S12XDT384_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT384"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BCFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BCFV">
+  <BEAN name="MC9S12XDT512_144"/>
+  <CPUDB file="_MC9S12XDT512_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BCPV">
+  <BEAN name="MC9S12XDT512_112"/>
+  <CPUDB file="_MC9S12XDT512_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BMFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BMFV">
+  <BEAN name="MC9S12XDT512_144"/>
+  <CPUDB file="_MC9S12XDT512_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BMPV">
+  <BEAN name="MC9S12XDT512_112"/>
+  <CPUDB file="_MC9S12XDT512_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BVFU">
+  <BEAN name="MC9S12XDT512_80"/>
+  <CPUDB file="_MC9S12XDT512_80" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BVFV">
+  <BEAN name="MC9S12XDT512_144"/>
+  <CPUDB file="_MC9S12XDT512_144" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XDT512BVPV">
+  <BEAN name="MC9S12XDT512_112"/>
+  <CPUDB file="_MC9S12XDT512_112" fam="HCS12X" subFam="MC9S12XDT" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XDT512"/>
+</CPU>
+<CPU vrnt="MC9S12XEA128CAA">
+  <BEAN name="MC9S12XEA128_80"/>
+  <CPUDB file="_MC9S12XEA128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA128"/>
+</CPU>
+<CPU vrnt="MC9S12XEA128MAA">
+  <BEAN name="MC9S12XEA128_80"/>
+  <CPUDB file="_MC9S12XEA128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA128"/>
+</CPU>
+<CPU vrnt="MC9S12XEA128VAA">
+  <BEAN name="MC9S12XEA128_80"/>
+  <CPUDB file="_MC9S12XEA128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA128"/>
+</CPU>
+<CPU vrnt="MC9S12XEA256CAA">
+  <BEAN name="MC9S12XEA256_80"/>
+  <CPUDB file="_MC9S12XEA256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA256"/>
+</CPU>
+<CPU vrnt="MC9S12XEA256MAA">
+  <BEAN name="MC9S12XEA256_80"/>
+  <CPUDB file="_MC9S12XEA256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA256"/>
+</CPU>
+<CPU vrnt="MC9S12XEA256VAA">
+  <BEAN name="MC9S12XEA256_80"/>
+  <CPUDB file="_MC9S12XEA256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEA256"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128CAA">
+  <BEAN name="MC9S12XEG128_80"/>
+  <CPUDB file="_MC9S12XEG128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128CAL">
+  <BEAN name="MC9S12XEG128_112"/>
+  <CPUDB file="_MC9S12XEG128_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128MAA">
+  <BEAN name="MC9S12XEG128_80"/>
+  <CPUDB file="_MC9S12XEG128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128MAL">
+  <BEAN name="MC9S12XEG128_112"/>
+  <CPUDB file="_MC9S12XEG128_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128VAA">
+  <BEAN name="MC9S12XEG128_80"/>
+  <CPUDB file="_MC9S12XEG128_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG128VAL">
+  <BEAN name="MC9S12XEG128_112"/>
+  <CPUDB file="_MC9S12XEG128_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG128"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384CAA">
+  <BEAN name="MC9S12XEG384_80"/>
+  <CPUDB file="_MC9S12XEG384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384CAG">
+  <BEAN name="MC9S12XEG384_144"/>
+  <CPUDB file="_MC9S12XEG384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384CAL">
+  <BEAN name="MC9S12XEG384_112"/>
+  <CPUDB file="_MC9S12XEG384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384MAA">
+  <BEAN name="MC9S12XEG384_80"/>
+  <CPUDB file="_MC9S12XEG384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384MAG">
+  <BEAN name="MC9S12XEG384_144"/>
+  <CPUDB file="_MC9S12XEG384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384MAL">
+  <BEAN name="MC9S12XEG384_112"/>
+  <CPUDB file="_MC9S12XEG384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384VAA">
+  <BEAN name="MC9S12XEG384_80"/>
+  <CPUDB file="_MC9S12XEG384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384VAG">
+  <BEAN name="MC9S12XEG384_144"/>
+  <CPUDB file="_MC9S12XEG384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEG384VAL">
+  <BEAN name="MC9S12XEG384_112"/>
+  <CPUDB file="_MC9S12XEG384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEG384"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100CAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100CAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100CVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100MAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100MAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100MVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100VAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100VAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP100VVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP100"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768CAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768CAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768CVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768MAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768MAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768MVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768VAG">
+  <BEAN name="MC9S12XEP100_144"/>
+  <CPUDB file="_MC9S12XEP100_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768VAL">
+  <BEAN name="MC9S12XEP100_112"/>
+  <CPUDB file="_MC9S12XEP100_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEP768VVL">
+  <BEAN name="MC9S12XEP100_208"/>
+  <CPUDB file="_MC9S12XEP100_208" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEP768"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384CAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384CAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384CAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384MAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384MAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384MAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384VAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384VAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ384VAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ384"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512CAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512CAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512CAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512MAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512MAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512MAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512VAA">
+  <BEAN name="MC9S12XEQ512_80"/>
+  <CPUDB file="_MC9S12XEQ512_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512VAG">
+  <BEAN name="MC9S12XEQ512_144"/>
+  <CPUDB file="_MC9S12XEQ512_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XEQ512VAL">
+  <BEAN name="MC9S12XEQ512_112"/>
+  <CPUDB file="_MC9S12XEQ512_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XEQ512"/>
+</CPU>
+<CPU vrnt="MC9S12XES384CAA">
+  <BEAN name="MC9S12XES384_80"/>
+  <CPUDB file="_MC9S12XES384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384CAG">
+  <BEAN name="MC9S12XES384_144"/>
+  <CPUDB file="_MC9S12XES384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384CAL">
+  <BEAN name="MC9S12XES384_112"/>
+  <CPUDB file="_MC9S12XES384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384MAA">
+  <BEAN name="MC9S12XES384_80"/>
+  <CPUDB file="_MC9S12XES384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384MAG">
+  <BEAN name="MC9S12XES384_144"/>
+  <CPUDB file="_MC9S12XES384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384MAL">
+  <BEAN name="MC9S12XES384_112"/>
+  <CPUDB file="_MC9S12XES384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384VAA">
+  <BEAN name="MC9S12XES384_80"/>
+  <CPUDB file="_MC9S12XES384_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384VAG">
+  <BEAN name="MC9S12XES384_144"/>
+  <CPUDB file="_MC9S12XES384_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XES384VAL">
+  <BEAN name="MC9S12XES384_112"/>
+  <CPUDB file="_MC9S12XES384_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XES384"/>
+</CPU>
+<CPU vrnt="MC9S12XET256CAA">
+  <BEAN name="MC9S12XET256_80"/>
+  <CPUDB file="_MC9S12XET256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256CAG">
+  <BEAN name="MC9S12XET256_144"/>
+  <CPUDB file="_MC9S12XET256_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256CAL">
+  <BEAN name="MC9S12XET256_112"/>
+  <CPUDB file="_MC9S12XET256_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256MAA">
+  <BEAN name="MC9S12XET256_80"/>
+  <CPUDB file="_MC9S12XET256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256MAG">
+  <BEAN name="MC9S12XET256_144"/>
+  <CPUDB file="_MC9S12XET256_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256MAL">
+  <BEAN name="MC9S12XET256_112"/>
+  <CPUDB file="_MC9S12XET256_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256VAA">
+  <BEAN name="MC9S12XET256_80"/>
+  <CPUDB file="_MC9S12XET256_80" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256VAG">
+  <BEAN name="MC9S12XET256_144"/>
+  <CPUDB file="_MC9S12XET256_144" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XET256VAL">
+  <BEAN name="MC9S12XET256_112"/>
+  <CPUDB file="_MC9S12XET256_112" fam="HCS12X" subFam="MC9S12XEP" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XET256"/>
+</CPU>
+<CPU vrnt="MC9S12XF128CAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128CLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128CLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128MAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128MLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128MLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128VAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128VLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF128VLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF128"/>
+</CPU>
+<CPU vrnt="MC9S12XF256CAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256CLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256CLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256MAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256MLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256MLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256VAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256VLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF256VLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF256"/>
+</CPU>
+<CPU vrnt="MC9S12XF384CAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384CLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384CLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384MAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384MLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384MLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384VAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384VLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF384VLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF384"/>
+</CPU>
+<CPU vrnt="MC9S12XF512CAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512CLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512CLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512MAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512MLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512MLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512VAG">
+  <BEAN name="MC9S12XF512_144"/>
+  <CPUDB file="_MC9S12XF512_144" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512VLH">
+  <BEAN name="MC9S12XF512_64"/>
+  <CPUDB file="_MC9S12XF512_64" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XF512VLM">
+  <BEAN name="MC9S12XF512_112"/>
+  <CPUDB file="_MC9S12XF512_112" fam="HCS12X" subFam="MC9S12XF" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XF512"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128CFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128CPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128CPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128MFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128MPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128MPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128VFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128VPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR128VPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR128"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64CFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64CPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64CPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64MFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64MPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64MPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64VFVE">
+  <BEAN name="MC9S12XFR128_144"/>
+  <CPUDB file="_MC9S12XFR128_144" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64VPPFE">
+  <BEAN name="MC9S12XFR128_64"/>
+  <CPUDB file="_MC9S12XFR128_64" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XFR64VPVE">
+  <BEAN name="MC9S12XFR128_112"/>
+  <CPUDB file="_MC9S12XFR128_112" fam="HCS12X" subFam="MC9S12XFR" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XFR64"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128CLL">
+  <BEAN name="MC9S12XHY128_100"/>
+  <CPUDB file="_MC9S12XHY128_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128CLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128MLL">
+  <BEAN name="MC9S12XHY128_100"/>
+  <CPUDB file="_MC9S12XHY128_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128MLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128VLL">
+  <BEAN name="MC9S12XHY128_100"/>
+  <CPUDB file="_MC9S12XHY128_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY128VLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY128"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256CLL">
+  <BEAN name="MC9S12XHY256_100"/>
+  <CPUDB file="_MC9S12XHY256_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256CLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256MLL">
+  <BEAN name="MC9S12XHY256_100"/>
+  <CPUDB file="_MC9S12XHY256_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256MLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256VLL">
+  <BEAN name="MC9S12XHY256_100"/>
+  <CPUDB file="_MC9S12XHY256_100" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHY256VLM">
+  <BEAN name="MC9S12XHY256_112"/>
+  <CPUDB file="_MC9S12XHY256_112" fam="HCS12X" subFam="MC9S12XHY" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHY256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256CAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256CAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256MAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256MAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256VAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ256VAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ256"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384CAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384CAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384MAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384MAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384VAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ384VAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ384"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512CAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512CAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512MAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512MAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512VAG">
+  <BEAN name="MC9S12XHZ512_144"/>
+  <CPUDB file="_MC9S12XHZ512_144" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XHZ512VAL">
+  <BEAN name="MC9S12XHZ512_112"/>
+  <CPUDB file="_MC9S12XHZ512_112" fam="HCS12X" subFam="MC9S12XHZ" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XHZ512"/>
+</CPU>
+<CPU vrnt="MC9S12XS128CAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128CAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128CAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128MAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128MAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128MAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128VAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128VAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS128VAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS128"/>
+</CPU>
+<CPU vrnt="MC9S12XS256CAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256CAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256CAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256MAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256MAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256MAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256VAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256VAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS256VAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS256"/>
+</CPU>
+<CPU vrnt="MC9S12XS64CAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64CAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64CAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64MAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64MAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64MAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64VAA">
+  <BEAN name="MC9S12XS256_80"/>
+  <CPUDB file="_MC9S12XS256_80" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64VAE">
+  <BEAN name="MC9S12XS256_64"/>
+  <CPUDB file="_MC9S12XS256_64" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+<CPU vrnt="MC9S12XS64VAL">
+  <BEAN name="MC9S12XS256_112"/>
+  <CPUDB file="_MC9S12XS256_112" fam="HCS12X" subFam="MC9S12XS" prod="Freescale"/>
+  <MASTER_TOOL CPUname="MC9S12XS64"/>
+</CPU>
+</SupportedDerivatives>

@@ -1,0 +1,299 @@
+RELEASE NOTES Libmaker
+
+RELEASE NOTES Libmaker V5.0.11
+List of New Features
+- Environment variable expansion in the command line (also applies to command line arguments provided via the -ArgFile option).
+  The syntax is $(ENV_VAR) or ${ENV_VAR}. Example: libmaker -Cmd${COMMANDS}.
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+RELEASE NOTES Libmaker V5.0.10
+List of New Features
+- Support for providing additional command-line arguments in an input file (the -ArgFile<file_name> option).
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+RELEASE NOTES Libmaker V5.0.9
+List of New Features
+- license checkouts have been removed for features included in special edition license file.
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+RELEASE NOTES Libmaker V5.0.8
+List of New Features
+- none.
+List of Fixed Bugs
+- MTWX20634: when the license file is accessed using the path from the LM_LICENSE_FILE environment variable (i.e. there is no license.dat in the
+  tool's directory or its parent, nor is there a hiware.dat license file), and a required feature expires in less than 10 days, a crash occurs.
+  This bug is fixed for build numbers greater than 6088.
+- MTWX19885: The message file was not set to the environment value of ERRORFILE, so errors were always dumped to EDOUT (or ERR.TXT). The error message
+             file is now set right after parsing the command-line options. However, if ERRORFILE contains format specifiers such as %n, %p, %f the 
+             name of the output file will still default to EDOUT (or ERR.TXT).
+List of Known Bugs
+- none.
+
+RELEASE NOTES Libmaker V5.0.7
+
+List of New Features
+- Mapping unknown messages is now treated as warning and no longer as error. This change allows to maintain compatibility with old build tools when removing no longer used messages.
+- 1-54681434: New option -LicWait. If set and used with floating license configuration, if no license is available from the license server,
+  it will wait until a license is available. This is useful if you want to wait until a license is free, e.g. with batch jobs.
+- New option -Mar (Metrowerks Archive) to support ar like syntax.
+  The syntax is -Mar(library {members ...}), e.g.
+  -Mar(library.lib a.o b.o c.o) which creates a library named 'library.lib' with the objects a.o, b.o and c.o.
+  This is useful in order using GNU make utilities and if you have '+' or '-' present in your file names
+  ('+' and '-' otherwise are treated as libmaker commands.
+  Note that instead of (..) you can use as well "..", '..', [..] or {..}.
+  If you have file names with spaces: double quote the file name, e.g.
+  -Mar["my library.lib" a.o "other object.o"]
+- The about box (and option -Lic) shows now as well borrowing status (same as lmborrow.exe -status)
+- New option -LicBorrow:
+  -LicBorrow    Borrow license feature (-LicBorrow<feature>:<Date>, <Date> in dd-mmm-yyyy[:hh:mm] format and 
+  time in 24-hour hh:mm format)
+  It enables selective borrowing of features (supported by the application). Note that borrowing is only supported
+  if enabled in the license file by the BORROW keyword.
+- In case of an expire/evaluation license, you are now warned 10 days before the license expires.
+  The warning dialog box pops up once every day.
+- FLEXlm support for BORROWING. Note that BORROWING is only available for floating licenses, and may be sold
+  as a separate product or for an additional fee. BORROWING is used so you can work with a floating license
+  even if you are disconnected from the licensing server. See FLEXlm user manuals for details on BORROWING.
+  Note that this product needs a FLEXlm daemon (metrowks.exe on the licensing server) with following
+  version information:
+  FLEXlm v8.4a (lmgr.lib), Copyright (c) 1988-2003 by Macrovision Corporation. All rights reserved.
+  The latest FLEXlm floating server software can as well be downloaded from the www.metrowerks.com
+  web page, or get in touch with support to get the latest version.
+
+List of Fixed Bugs
+- Opening files from the builtin Windows GUI with double clicking did cause a crash 
+  if the File->Configuration->Editor Settings dialog was configured as "CodeWarrior (with COM)" and if an old IDE 4.1 was 
+  configured as current CodeWarrior IDE to be used. It did work as expected with if any
+  more recent CodeWarrior IDE was registered.
+
+List of Known Bugs
+- none.
+
+RELEASE NOTES Libmaker V5.0.6
+List of New Features
+- none
+List of Fixed Bugs
+- none
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Libmaker V5.0.5
+List of New Features
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a 
+  license for the former version, you need to upgrade your license. Additionally be aware that 
+  in compliance with other Metrowerks tools the license (license.dat) file in the installation 
+  root (e.g. c:\metrowerks\license.dat, the installation script has created a shortcut to this file) 
+  is used. If such a license.dat exists, this file is used to check out the license. Only if this file 
+  does not exist, the one in C:\FLEXlm is used.
+- Following special macros are supported now in the environment too: {Compiler}, {Project} 
+  and {System}.
+  Note: Those macros are newly available during environment variable substitution.
+  They are not automatically supported in filenames in general.
+- R2652: It is possible now to change the color for messages in the tool window. It can be 
+  changed for WARNING, INFORMATION, ERROR, FATAL and for user messages as 
+  well. Following options are available for this: -WmsgCW, -WmsgCI, -WmsgCE, -
+  WmsgCF and -WmsgCU. See manual for details.
+- Online help is available now
+List of Fixed Bugs
+- none
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Libmaker V5.0.4
+List of New Features
+- New option -ShowAboutDialog to show the about dialog
+- All tools have now a dialog to edit the environment (File->Configuration). E.g. to modify the 
+  GENPATH.  Note that this affects the project file only (and does NOT support the 
+  default.env)
+- The binary has now splitted into an *.exe and a *.dll part. This allows it to use as 
+  CodeWarrior plug-in.
+- The license file is searched in following order: 
+- license.dat in the directory where the executable is (this was already the case) 
+- hiware.lic in the directory where the executable is (this was already the case) 
+- license.dat in one directory up from the where the executable is (this is new. E.g. if  the 
+  executable is in c:\metrowerks\prog, the license file in c:\metrowerks is searched too) 
+- the license file using the normal FLEXlm way (usually c:\flexlm, this was already the case)
+- R2526: file names with spaces and command characters (e.g. '-') are supported now. 
+  Example: -Cmd("My long file name with spaces.o" "this-is-my-file.o" = "my Library.lib"
+List of Fixed Bugs
+- none
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Libmaker V5.0.3
+List of New Features
+- R2103: New option  -WmsgNu to supress user messages (e.g. included files). See 
+  manual/help file for details.
+- Color for output is now used: e.g. error messages are written in red
+- New startup option –NoEnv which disables the usage of the environment (default.env, tips 
+  file and project.ini)
+List of Fixed Bugs
+- none
+List of Known Bugs
+- This libmaker does not support spaces in filenames specified on the command line or in a 
+  command file. However spaces in filenames in the default.env, in the filename of the current 
+  path or in the path of the executable are allowed.
+
+
+RELEASE NOTES Libmaker V5.0.2
+List of New Features
+- There is now a -View option which allows to specify if the application window runs as 
+  normal window, full screen, minimized, maximized or hidden. See manual for details.
+- The Libmaker has now a new icon, so it is much easier now to identify the Libmaker if the 
+  window is minimized in the task bar.
+List of Fixed Bugs
+- none
+List of Known Bugs
+- This libmaker does not support spaces in filenames specified on the command line or in a 
+  command file. However spaces in filenames in the default.env, in the filename of the current 
+  path or in the path of the executable are allowed.
+
+
+RELEASE NOTES Libmaker V5.0.1
+List of New Features
+- New option -NoBeep to disable the beep in case of an error.
+- New option "-cmd". With this version, the build command must be specified with the option 
+-cmd. Specifying the command without "-cmd" does not work. E.g. For libmaker version 
+  2.7 : 
+  libmaker.exe a.o + b.o = mylib.o 
+  For librarian version 5.0 : 
+  librarian.exe -cmd"a.o + b.o = mylib.o"
+- The global and local editor can now be configured also in this tool and not only with the 
+  shell. 
+  Note :  
+  - The global editor is stored globally in the mcutools.ini. The same editor configuration is 
+  used by all tools (decoder, compiler, assembler,....). 
+  Changes to the global mcutools.ini are stored when the application is closed and not when 
+  the save command is chosen from the menu. 
+  -The local editor is shared among all tools using the same project file (usually project.ini). 
+  - which editor type is used is stored in the project file. The default is the global editor.
+  - All error messages are now written to stdout. With WinEdit the 'Capture Output' feature in 
+  the Project->Configure dialog can be used to get the error feedback. In other applications 
+  as Microsoft Visual C++ Developer Studio (MSDEV) or the cmd.exe command shell, it is 
+  necessary to use the new launcher application 'piper.exe' to get direct error feedback. The 
+  libmaker is a Win32 Window application and this type of application is not expected to 
+  have reasonable output. So the command shell 'cmd.exe' or MSDEV do not use the stdout 
+  file. 
+  The 'piper.exe' tool is actually a Win32 command line application and therefore MSDEV 
+  or 'cmd.exe' use the stdout. 
+  The first argument of 'piper.exe' is used as application to be called with the remaining 
+  options. The output of the started application is then written to standard output. 
+  To print the list of option in a command window use :
+	  piper.exe libmaker.exe -h
+  - Note the double quotes to specify the end when a command contains spaces.
+  - Also note there is no equal sign behind "-cmd".
+- New User interface, supporting drag and drop, history,...... .
+- New option -Lic to display license information (note: this information is also displayed in the 
+  about box)
+- New option -Lica to display license information of all modules in the executable directory.
+- Many new options to control the output. 
+List of Fixed Bugs
+- none
+List of Known Bugs
+- This libmaker does not support spaces in filenames specified on the command line or in a 
+  command file. However spaces in filenames in the default.env, in the filename of the current 
+  path or in the path of the executable are allowed.
+
+
+RELEASE NOTES HI-CROSS Libmaker V2.7.09
+List of New Features
+- You can set libmaker options over the environment string LIBMOPTIONS.
+- The first option implemented is  "-nopath" which forces the libmaker to ignore the 
+  path info of the library contents.
+	Example line in "default.env"
+	>   LIBMOPTIONS = -nopath
+
+	Example commands
+	> calc.o = calc.lib 
+	> calc.lib + c:\lib\calc.o = calc.lib
+
+Listing "calc.lst" with the "-nopath"  option set:	
+		Units and locations in library 'calc.lib'
+		Unit name       size     from       to
+		calc.o          1543       59     1602
+
+		EXPORTED OBJECTS
+		_Echo         P   (calc.o)
+		_Eval         P   (calc.o)
+		_Title        V   (calc.o)
+		_a            V   (calc.o)
+		_b            V   (calc.o)
+		_c            V   (calc.o)
+		_main         P   (calc.o)
+
+Listing "calc.lst" without option set:	
+		Units and locations in library 'calc.lib'
+		Unit name                           size     from       to
+		c:\lib\calc.o      1543     1602     3145
+		calc.o                              1543       59     1602
+
+		EXPORTED OBJECTS
+		_Echo         P   (calc.o)
+		_Echo         P   (c:\lib\calc.o)
+		_Eval         P   (calc.o)
+		_Eval         P   (c:\lib\calc.o)
+		_Title        V   (calc.o)
+		_Title        V   (c:\lib\calc.o)
+		_a            V   (calc.o)
+		_a            V   (c:\lib\calc.o)
+		_b            V   (calc.o)
+		_b            V   (c:\lib\calc.o)
+		_c            V   (calc.o)
+		_c            V   (c:\lib\calc.o)
+		_main         P   (calc.o)
+		_main         P   (c:\lib\calc.o)
+List of Fixed Bugs
+- none
+List of Known Bugs
+- none
+
+
+RELEASE NOTES HI-CROSS Libmaker V2.7.08
+List of New Features
+- The Librarian knows a new command:
+	<LibName>  *  <ObjName> 
+	extracts the object file with name <ObjName> from the library. No path is given with 
+	the argument <ObjName>. The object file is written to the same directory as the 
+	library	in the argument is located in. 
+ 	An Object file with the name as the extracted is overwritten without any
+	warning !!!.
+List of Fixed Bugs
+- The Command Window under NT had a crucial appearing, because the line size was cut 
+  to   20 characters on every window size. This happened under NT because the API 
+  function to  ask the own text window size doesn't work correctly under NT.  This 
+  problem was fixed by ignoring the result of this function.
+- Full Support of ELF object file format: Listing of contents (all exported objects and 
+  functions) is now available.
+-  Bug with subtraction of objectfiles from a library fixed.
+List of Known Bugs
+- Version number not printed completely on SUN version.
+
+
+
+RELEASE NOTES HI-CROSS Libmaker V2.7.07
+List of New Features
+- The Libmaker allows now commands with a length of  up to 4000 characters.		
+- The command '@' followed by a command file name could not be called from a 
+  command file itself before. Now nested command files (up to 5 nesting levels) are 
+  possible.	
+- For making a command length of 4000 characters useful, a new escape character has 
+  been implemented. A line terminating with '/' or '\' causes the command file interpreter to 
+  read the next line as part of this line. This allows a splitting of commands  with a huge size 
+  in command files. Remember that this feature is only available for  command files and not 
+  for the librarian prompt window.                                                                              
+List of Fixed Bugs
+- none
+List of Known Bugs
+- none

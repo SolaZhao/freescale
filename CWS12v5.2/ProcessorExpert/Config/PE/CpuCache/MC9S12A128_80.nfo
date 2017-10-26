@@ -1,0 +1,44 @@
+[CpuInfoCache]
+FileVersion=4
+File=CPUs\MC9S12A128_80\MC9S12A128_80.bean
+Age=1030910217
+File=CPUs\_MC9S12A128_80.dat
+Age=1045064580
+File=CPUs\_MC9S12A128_80.ini
+Age=990134592
+
+[NFO]
+DeviceName=MC9S12A128_80
+BaseDevice=
+Author=Processor Expert/MV
+Description=Freescale HC9S12 family: MC9S12A128 in 80 pin package
+IconName=CPU_CHIP2
+Shortcut=
+Category=CPU-Freescale-HCS12-A
+GroupCategory=
+OneBeanInstance=
+BeanLevel=High
+PrphSettingsForCpu=
+OnlyForInheritanceSharing=No
+DefaultLicence=Basic beans
+BeanStatusRelease=Yes
+FullBean=No
+PrphMode=
+Producer=Freescale
+Family=HCS12
+SubFamily=
+CPUDB_FileName=_MC9S12A128_80
+CpuVariants=1
+Line=MC9S12A128BCFU
+CpuPackages=1
+Line=QFP80
+MasterToolMcuNames=1
+Line=MC9S12A128B
+RAM=8192
+ROM=0
+OTP=0
+EPROM=2048
+FLASH=131072
+NumPackagePins=80
+
+[_end_]

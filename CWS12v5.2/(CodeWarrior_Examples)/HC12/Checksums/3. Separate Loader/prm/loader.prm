@@ -1,0 +1,33 @@
+/* When used without the IDE, uncomment the following line */
+/* LINK loader.abs */
+
+/* This is a Prm File to demonstate the checksum feature of the metrowerks linker */ 
+   
+NAMES 
+/* when used without the IDE, add your object files here */
+END
+
+SEGMENTS
+    LOADER_RAM             = NO_INIT             0x0080 TO 0x0081;              // loader private RAM storage
+    ZERP_PAGE_RAM          = READ_WRITE          0x0082 TO 0x00FF;              // zero page RAM. Not used by loader
+    EXTENDED_RAM           = READ_WRITE          0x0100 TO 0x017F;              // extended RAM. Not used by loader
+    STACK_RAM              = NO_INIT             0x0180 TO 0x01FF;              // stack area. Also used by loader
+
+    APP_FIX_IDENT_ROM      = READ_ONLY           0xE000 TO 0xE001;              // some magic number $cafe. Just some additional validity check.
+    APP_AUTO_CHECKSUM_ROM  = READ_ONLY           0xE002 TO 0xE03F FILL 0x00;    // automatic generated checksums.
+    APP_PRM_CHECKSUM_ROM   = READ_ONLY           0xE040 TO 0xE041;              // prm file based CRC checksum.
+    APP_STARTUP_STRUCT_ROM = READ_ONLY           0xE042 TO 0xE0FF FILL 0xFF;    // startup structure of application.
+    APP_ROM                = READ_ONLY           0xE100 TO 0xEFDF FILL 0xFF;    // our application code. Note: at the end are vector copies.
+    APP_ROM_VECTORS        = READ_ONLY           0xEFE0 TO 0xEFFF;              // our application code. Note: at the end are vector copies.
+    LOADER_ROM             = READ_ONLY           0xF000 TO 0xFFFF;              // our loader code. Note: this area does include the vectors.
+END
+
+PLACEMENT
+    LOADER_RAM                   INTO  LOADER_RAM;
+    DEFAULT_ROM                  INTO  LOADER_ROM;
+    DEFAULT_RAM                  INTO  NO_INIT 0 TO 0; // the linker insists in DEFAULT_RAM. So he gets an empty one :-)
+    SSTACK                       INTO  STACK_RAM;
+END
+
+INIT L_FFFE
+MAIN L_FFFE /* avoids linker warning about missing main */

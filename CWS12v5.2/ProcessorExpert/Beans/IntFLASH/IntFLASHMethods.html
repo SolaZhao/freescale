@@ -1,0 +1,758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Methods
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.code {
+  background-color: RGB(243, 242, 230);
+  padding: 10px;
+  white-space: pre;
+  font-family: Courier New, Monospace;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>IntFLASH</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="IntFLASH.html">General Info</a><br />
+<a href="IntFLASHProperties.html">Properties</a><br />
+<i>Methods</i><br />
+<a href="IntFLASHEvents.html">Events</a><br />
+<a href="IntFLASHUser Types.html">Types and constants</a><br />
+<a href="IntFLASHTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="IntFLASH_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%" >
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              IntFLASH
+            </div>
+            <div class="descrtext">Internal FLASH</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Memory</a>
+              
+              </span>
+            </div>
+          </div>
+
+         <div class="text_title">
+              Methods:
+    		 </div>		 
+    		 <div class="descr_line">                  
+              (Methods are user-callable functions/subroutines intended for
+               the component functions control. Please see the <a href="../../DOCs/EmbeddedBeans.html#Methods">Embedded Components page</a> for more information.)                   
+         </div>
+                  
+         <div class="user_text">
+            <ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<li><a name="DisableEvent">
+<b>DisableEvent</b></a>
+ - This method disables all the events except <a href="IntFLASHEvents.html#OnSaveBuffer">OnSaveBuffer</a>, <a href="IntFLASHEvents.html#OnRestoreBuffer">OnRestoreBuffer</a> and <a href="IntFLASHEvents.html#OnEraseError">OnEraseError</a>. The method is available only if any event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte DisableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="EnableEvent">
+<b>EnableEvent</b></a>
+ - This method enables all the events except <a href="IntFLASHEvents.html#OnSaveBuffer">OnSaveBuffer</a>, <a href="IntFLASHEvents.html#OnRestoreBuffer">OnRestoreBuffer</a> and <a href="IntFLASHEvents.html#OnEraseError">OnEraseError</a>. The method is available only if any event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EnableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetWait">
+<b>SetWait</b></a>
+ - Method changes the wait status of writing or erasing methods. This method is available only if property <a href="IntFLASHProperties.html#WaitInRAM">Wait in RAM</a> is not selected.
+<ul>
+<br /><i>ANSIC prototype:</i> void SetWait(bool Wait)<br />
+<li><i>Wait:bool</i> - <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - methods wait till the FLASH write or erase operation is finished, data is verified at the end of writing method <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - methods do not wait for the end of write or erase operation, data is not verified at the end of writing method.</li>
+</ul><br />
+</li>
+<li><a name="Busy">
+<b>Busy</b></a>
+ - This method returns the status of the FLASH device. The method may be required and called from another component methods - in this case it cannot be disabled.
+<ul>
+<br /><i>ANSIC prototype:</i> bool Busy(byte Block)<br />
+<li><i>Block:byte</i> - Number of Flash block. Not used for Freescale 56800, HCS08, HCS12X and ColdFireV1 derivates - any value may be passed.</li>
+<li><i>Return value:bool</i> - <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a>/<a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - FLASH is busy/ready<br/>
+</li>
+</ul><br />
+</li>
+<li class="versionspec"><span class="versionspeclabel">Methods for Freescale HCS12, HCS12X and 56800/E derivatives.</span>
+<ul>
+<li><a name="EraseFlash">
+<b>EraseFlash</b></a>
+ - Erases entire memory array of the selected Flash block.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EraseFlash(byte Block)<br />
+<li><i>Block:byte</i> - Block number of the Flash memory block that will be erased. Number is in range zero to maximum available block number. Not used for Freescale 56800 derivates except for the Program_Boot_Flash on 56F83xx and 56F81xx derivatives. If the flash memory contais only one block, this parameter is ignored.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Block number is out of range</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_VALUE - Flash erase was not successful</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="EraseVerify">
+<b>EraseVerify</b></a>
+ - Verifies entire memory array of the selected Flash block whether it is erased.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EraseVerify(byte Block, bool *Blank)<br />
+<li><i>Block:byte</i> - Block number of the Flash memory block that will be checked. Number is in range zero to maximum available block number. Not used for Freescale 56800 derivates except for the Program_Boot_Flash on 56F83xx and 56F81xx derivatives. If the flash memory contais only one block, this parameter is ignored.</li>
+<li><i>Blank: Pointer to bool</i> - <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> = Flash block verifies as erased, <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> = block is not erased.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Block number is out of range</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspec"><span class="versionspeclabel">Methods for Freescale ColdFireV1/HCS12/HCS12X/HCS08 and 56800/E derivatives.</span>
+<ul>
+<li><a name="EraseSector">
+<b>EraseSector</b></a>
+ - Erases the sector to which address Addr belongs.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EraseSector(<i>ComponentName_</i>TAddress Addr)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address in FLASH.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Address is out of range</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+<li>ERR_VALUE - Flash sector erase was not successful</li>
+</ul>
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for Freescale HCS12, HCS12X, 56F83xx, 56F81xx, 56F80xx, and 56F82xx  derivatives.</span>
+<ul>
+<li><a name="SetGlobalProtection">
+<b>SetGlobalProtection</b></a>
+ - Method makes entire memory array of the selected FLASH protected or unprotected.  The protection state changes are active till system reset.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetGlobalProtection(bool ProtectAll)<br />
+<li><i>ProtectAll:bool</i> - <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - The whole flash memory array of the selected flash is protected; <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - The whole flash memory array of the selected flash is unprotected.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_VALUE - Read value is not equal to written value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+</ul>
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspec"><span class="versionspeclabel">Methods for Freescale HCS12/HCS12X derivatives.</span>
+<ul>
+<li><a name="SetProtection">
+<b>SetProtection</b></a>
+ - Method allows write into the protection register. Please see Flash Block User Guide.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetProtection(bool ProtectType, byte ProtectHigh, byte ProtectLow, byte Block)<br />
+<li><i>ProtectType:bool</i> - Possible values: 0 or 1. Depend on CPU type. Two meanings are possible. <br/>First:<br/>
+<ul>
+<li>0 = whole Flash array is protected. In this case other parameters are ignored.<br/>
+</li><li>1 = protection size depend on ProtectHigh and ProtectLow parameters.
+</li></ul>
+Second:<br/>
+<ul>
+<li>0 = ProtectHigh and ProtectLow parameters define range to be protected .<br/>
+</li><li>1 = ProtectHigh and ProtectLow parameters define range to be unprotected .<br/>
+</li></ul></li>
+<li><i>ProtectHigh:byte</i> - Flash higher address range protection. Possible values:<br/>
+<ul>
+<li>0 - 3 - defines range (size of range depend on CPU type)
+</li><li>4 - Protection disabled<br/>
+</li></ul></li>
+<li><i>ProtectLow:byte</i> - Flash lower address range protection. Possible values:<br/>
+<ul>
+<li>0 - 3 - defines range (size of range depend on CPU type)
+</li><li>4 - Protection disabled<br/>
+</li></ul></li>
+<li><i>Block:byte</i> - Flash block number. The number of blocks depends on CPU type. When the CPU has only one block or block is not required for protection setting, the value is don't care.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Requested value not available</li>
+<li>ERR_RANGE – The value is out of range</li>
+<li>ERR_VALUE - Parameter of incorrect value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+</ul>
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li><a name="SetByteFlash">
+<b>SetByteFlash</b></a>
+ - Writes a byte to an address in FLASH. The operation of this method depends on the &quot;Write method&quot; property and state of the flash. Please see more details on general info page of the help.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetByteFlash(<i>ComponentName_</i>TAddress Addr, byte Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.
+</li>
+<li><i>Data:byte</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Address is out of range</li>
+<li>ERR_VALUE - Read value is not equal to written value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetByteFlash">
+<b>GetByteFlash</b></a>
+ - Gets byte from an address in FLASH.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetByteFlash(<i>ComponentName_</i>TAddress Addr, byte *Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.
+</li>
+<li><i>Data: Pointer to byte</i> - A pointer to the returned 8-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetWordFlash">
+<b>SetWordFlash</b></a>
+ - Writes a word to an address in FLASH. The operation of this method depends on the &quot;Write method&quot; property and state of the flash. Please see more details on general info page of the help.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetWordFlash(<i>ComponentName_</i>TAddress Addr, word Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.<br/>
+</li>
+<li><i>Data:word</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Address is out of range</li>
+<li>ERR_VALUE - Read value is not equal to written value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetWordFlash">
+<b>GetWordFlash</b></a>
+ - Gets a word from an address in FLASH.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetWordFlash(<i>ComponentName_</i>TAddress Addr, word *Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.<br/>
+</li>
+<li><i>Data: Pointer to word</i> - A pointer to the returned 16-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE - Address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetLongFlash">
+<b>SetLongFlash</b></a>
+ - Writes a long word to an address in FLASH. The operation of this method depends on the &quot;Write method&quot; property and state of the flash. Please see more details on general info page of the help.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetLongFlash(<i>ComponentName_</i>TAddress Addr, dword Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.<br/>
+</li>
+<li><i>Data:dword</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_VALUE – The read value is not equal to the written value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetLongFlash">
+<b>GetLongFlash</b></a>
+ - Gets a long word from an address in FLASH.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetLongFlash(<i>ComponentName_</i>TAddress Addr, dword *Data)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.<br/>
+</li>
+<li><i>Data: Pointer to dword</i> - A pointer to the returned 32-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetBlockFlash">
+<b>SetBlockFlash</b></a>
+ - Writes data to FLASH. The operation of this method depends on the &quot;Write method&quot; property and state of the flash. Please see more details on general info page of the help.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetBlockFlash(<i>ComponentName_</i>TDataAddress Source, <i>ComponentName_</i>TAddress Dest, word Count)<br />
+<li><i>Source:<a href="IntFLASHUser Types.html#TDataAddress"><i>ComponentName_</i>TDataAddress</a></i> - Source address of the data.
+</li>
+<li><i>Dest:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Destination address in FLASH.
+</li>
+<li><i>Count:word</i> - Count of the data fields (in the smallest addressable units).
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+<li>ERR_VALUE - Read value is not equal to written value</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetBlockFlash">
+<b>GetBlockFlash</b></a>
+ - Reads data from FLASH.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetBlockFlash(<i>ComponentName_</i>TAddress Source, <i>ComponentName_</i>TDataAddress Dest, word Count)<br />
+<li><i>Source:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Destination address in FLASH.
+</li>
+<li><i>Dest:<a href="IntFLASHUser Types.html#TDataAddress"><i>ComponentName_</i>TDataAddress</a></i> - Source address of the data.
+</li>
+<li><i>Count:word</i> - Count of the data fields (in the smallest addressable units).
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetBytePage">
+<b>SetBytePage</b></a>
+ - Writes a byte to an address of the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetBytePage(word Index, byte Data)<br />
+<li><i>Index:word</i> - Index to virtual page.
+</li>
+<li><i>Data:byte</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li> ERR_RANGE - Index is out of range</li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetWordPage">
+<b>SetWordPage</b></a>
+ - Writes a word to an address in the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetWordPage(word Index, word Data)<br />
+<li><i>Index:word</i> - Index to virtual page.
+</li>
+<li><i>Data:word</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Index is out of range<br/></li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetBytePage">
+<b>GetBytePage</b></a>
+ - Gets a byte from an address in the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetBytePage(word Index, byte *Data)<br />
+<li><i>Index:word</i> - Index to a virtual page.
+</li>
+<li><i>Data: Pointer to byte</i> - A pointer to the returned 8-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Index is out of range<br/></li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetWordPage">
+<b>GetWordPage</b></a>
+ - Gets a word from an address in the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetWordPage(word Index, word *Data)<br />
+<li><i>Index:word</i> - Index to virtual page.
+</li>
+<li><i>Data: Pointer to word</i> - A pointer to the returned 16-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Index is out of range</li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetLongPage">
+<b>SetLongPage</b></a>
+ - Writes a long word to an address in the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetLongPage(word Index, dword Data)<br />
+<li><i>Index:word</i> - Index to virtual page.
+</li>
+<li><i>Data:dword</i> - Data to write.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Index is out of range<br/></li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetLongPage">
+<b>GetLongPage</b></a>
+ - Gets a long word from an address in the virtual page. This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.<br/>
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetLongPage(word Index, dword *Data)<br />
+<li><i>Index:word</i> - Index to virtual page.
+</li>
+<li><i>Data: Pointer to dword</i> - A pointer to the returned 32-bit data.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE - Index is out of range</li>
+<li>ERR_NOTAVAIL - Virtual page address not set by the user</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetVirtualPageAddr">
+<b>SetVirtualPageAddr</b></a>
+ - Sets up an address of the virtual page in RAM.<br/>This method is only available when <a href="IntFLASHProperties.html">Virtual page</a> property is enabled and <a href="IntFLASHProperties.html">Allocated</a> property is set to "By the user".
+<ul>
+<br /><i>ANSIC prototype:</i> void SetVirtualPageAddr(<i>ComponentName_</i>TDataAddress Addr)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TDataAddress"><i>ComponentName_</i>TDataAddress</a></i> - Virtual page address in RAM.</li>
+</ul><br />
+</li>
+<li><a name="RestoreToFlash">
+<b>RestoreToFlash</b></a>
+ - This method should be used in the <a href="IntFLASHEvents.html">OnRestoreBuffer</a> event to write the data back to FLASH. This method is only available when the <a href="IntFLASHProperties.html">Write method</a> item is set to "Safe write ..." value. It can be called more then once to write all data required by OnRestoreBuffer, but every byte of the flash sector may be written only once.
+<ul>
+<br /><i>ANSIC prototype:</i> byte RestoreToFlash(<i>ComponentName_</i>TAddress Addr, byte *Data, word Size)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address to FLASH.<br/></li>
+<li><i>Data: Pointer to byte</i> - A pointer to the data to write.<br/></li>
+<li><i>Size:word</i> - The size of the buffer to restore.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - The method is not available, because event OnRestoreBuffer is not active</li>
+<li>ERR_VALUE - Parameter of incorrect value - data was not restored into flash correctly</li>
+<li>ERR_RANGE – Parameter <tt>Addr</tt> is out of range</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetPage">
+<b>SetPage</b></a>
+ - Writes a virtual page to an address in FLASH.
+This method is enabled only if <a href="IntFLASHProperties.html">Virtual page</a> property is enabled. The operation of this method depends on the "Write method" property and state of the flash. Please see more details on general info page of the help.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetPage(<i>ComponentName_</i>TAddress Addr)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address in FLASH.<br/>
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired program/erase operation is not available</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_VALUE – The read value is not equal to the written value</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+<li>ERR_PROTECT - Flash is write protect</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="GetPage">
+<b>GetPage</b></a>
+ - Gets the virtual page from FLASH.
+This method is enabled only if <a href="IntFLASHProperties.html">Virtual page</a> property is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetPage(<i>ComponentName_</i>TAddress Addr)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address in FLASH.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_RANGE – The address is out of range</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for Freescale HCS12 K/E256 family.</span>
+<ul>
+<li><a name="DataCompress">
+<b>DataCompress</b></a>
+ - Method is used to check the Flash code integrity by compressing data from a selected portion of the Flash block into a signature analyzer.
+<ul>
+<br /><i>ANSIC prototype:</i> byte DataCompress(<i>ComponentName_</i>TAddress Addr, word Length)<br />
+<li><i>Addr:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - The starting address for the data compress.</li>
+<li><i>Length:word</i> - The number of consecutive word addresses compressed.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired operation is not available</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SectorEraseAbort">
+<b>SectorEraseAbort</b></a>
+ - The sector erase abort command is used to terminate the sector erase operation, so that other sectors in the Flash block are available for read and program operations without waiting for the sector erase operation to complete.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SectorEraseAbort(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+<li>ERR_OK - OK</li>
+<li>ERR_NOTAVAIL - Desired operation is not available</li>
+<li>ERR_SPEED - This device does not work in the active speed mode</li>
+<li>ERR_BUSY - Device is busy</li>
+</ul>
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li><a name="DataPtr2Addr">
+<b>DataPtr2Addr</b></a>
+ - This method converts data pointer to format of a component's method address parameter. Generally a data pointer format is different from format of a method Addr parameter.
+<ul>
+<br /><i>ANSIC prototype:</i> <i>ComponentName_</i>TAddress DataPtr2Addr(void* Addr)<br />
+<li><i>Addr:void*</i> - Data pointer.</li>
+<li><i>Return value:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address in the format used in the component methods.
+</li>
+</ul><br />
+</li>
+<li><a name="FuncPtr2Addr">
+<b>FuncPtr2Addr</b></a>
+ - This method converts function pointer to format of a component's method address parameter. Generally a function pointer format is different from format of a method Addr parameter.
+<ul>
+<br /><i>ANSIC prototype:</i> <i>ComponentName_</i>TAddress FuncPtr2Addr(void(*Addr)())<br />
+<li><i>Addr:void*</i> - Function pointer.</li>
+<li><i>Return value:<a href="IntFLASHUser Types.html#TAddress"><i>ComponentName_</i>TAddress</a></i> - Address in the format used in the component methods.
+</li>
+</ul><br />
+</li>
+
+           </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<p>
+<br />
+Note: Some methods can be implemented as macros.
+</p>
+          </div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2011 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

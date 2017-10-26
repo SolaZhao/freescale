@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Methods
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>PWMMC</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="PWMMC.html">General Info</a><br />
+<a href="PWMMCProperties.html">Properties</a><br />
+<i>Methods</i><br />
+<a href="PWMMCEvents.html">Events</a><br />
+<a href="PWMMCUser Types.html">Types and constants</a><br />
+<a href="PWMMCApplication Notes.html">Application Notes</a><br />
+<a href="PWMMCTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="PWMMC_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%" >
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              PWMMC
+            </div>
+            <div class="descrtext">Pulse width modulation for motor control</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">Low</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Timer</a>
+              
+              </span>
+            </div>
+          </div>
+
+         <div class="text_title">
+              Methods:
+    		 </div>		 
+    		 <div class="descr_line">                  
+              (Methods are user-callable functions/subroutines intended for
+               the component functions control. Please see the <a href="../../DOCs/EmbeddedBeans.html#Methods">Embedded Components page</a> for more information.)                   
+         </div>
+                  
+         <div class="user_text">
+            <ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<li><a name="Enable">
+<b>Enable</b></a>
+ - Enable the component - it starts the signal generation. Events can be disabled/enabled by <a href="#DisableEvent">DisableEvent</a>/<a href="#EnableEvent">EnableEvent</a>.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Enable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="Disable">
+<b>Disable</b></a>
+ - Disable the component - it stops signal generation and events calling. When the timer is disabled, it is still possible to call method <a href="#SetOutput">SetOutput</a> to control the output value on corresponding pin.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Disable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="EnableEvent">
+<b>EnableEvent</b></a>
+ - Enable the events. The method is available only if interrupt service/event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EnableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="DisableEvent">
+<b>DisableEvent</b></a>
+ - Disable the events. The method is available only if interrupt service/event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte DisableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="SetPeriod">
+<b>SetPeriod</b></a>
+ - Setting PWM modulo register. The value is loaded after calling <a href="#Load">Load</a> method. 
+<p/>Period is valid for actual speed mode only, initial value is restored after speed mode change.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetPeriod(word Period)<br />
+<li><i>Period:word</i> - Value for setting PWM period register. Range of the value depends on supported range in the corresponding register, usually it is 15 bits or 16 bits (12 bits on HC08 family).
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_RANGE - Parameter period is out of range
+</li>
+</ul><br />
+</li>
+<li><a name="SetDuty">
+<b>SetDuty</b></a>
+ - Setting duty (value) register(s) of selected channel. The value is loaded after calling <a href="#Load">Load</a> method.
+<br/><div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale 56800/E and HC08 and HCS12 and HCS12X derivatives
+</B>
+<br/>
+Setting is valid for actual speed mode only, initial value is restored after speed mode change.
+</div>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetDuty(byte Channel, <i>ComponentName_</i>TPWMMC_Duty Duty)<br />
+<li><i>Channel:byte</i> - Channel number (0 - 5). The number corresponds to the logical channel number assigned in the component settings, which may not correspond to channel number of the peripheral. 
+<br/><div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale HCS12 and HCS12X derivatives
+</B>
+<br/>
+Writing to even channel  in complementary mode is possible only.
+</div>
+</li>
+<li><i>Duty:<a href="PWMMCUser Types.html#TPWMMC_Duty"><i>ComponentName_</i>TPWMMC_Duty</a></i> - Duty value for selected channel. 
+<br/>Writing a number less than or equal to 0 causes the PWM to be off for the entire PWM period. Writing a number greater than or equal to the 15 bit (12-bit on HC08MR32 CPU) modulus causes the PWM to be on for the entire PWM period.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+   <li>ERR_OK - OK</li>
+   <li>ERR_NOTAVAIL - Channel is disabled</li>
+   <li>ERR_RANGE - Parameter Channel is out of range</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetDutyPercent">
+<b>SetDutyPercent</b></a>
+ - Setting duty (value) in percent of selected channel. The value is loaded after calling <a href="#Load">Load</a> method.
+<br/><div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale 56800/E and HC08 and HCS12 and HCS12X derivatives
+</B>
+<br/>
+Setting is valid for actual speed mode only, initial value is restored after speed mode change.
+</div>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetDutyPercent(byte Channel, byte Duty)<br />
+<li><i>Channel:byte</i> - channel number (0 - 5). The number corresponds to the logical channel number assigned in the component settings, which may not correspond to channel number of the peripheral. <br/>
+<div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale HCS12 and HCS12X derivatives
+</B>
+<br/>
+Writing to even channel  in complementary mode is possible only.
+</div>
+</li>
+<li><i>Duty:byte</i> - Duty value in percents for selected channel in range 0 .. 100.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<ul>
+     <li>ERR_OK - OK</li>
+     <li>ERR_NOTAVAIL - Channel is disabled</li>
+     <li>ERR_RANGE - Parameter Channel or Duty is out of range</li>
+</ul>
+</li>
+</ul><br />
+</li>
+<li><a name="SetPrescaler">
+<b>SetPrescaler</b></a>
+ - Set prescaler value which is loaded after calling <a href="#Load">Load</a> method.
+<p/>Setting is valid for actual speed mode only, initial value is restored after speed mode change.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetPrescaler(byte Presc)<br />
+<li><i>Presc:byte</i> - Prescaler control value, range depends on the selected peripheral.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_RANGE - Parameter out of range
+</li>
+</ul><br />
+</li>
+<li><a name="Load">
+<b>Load</b></a>
+ - Apply last setting of the methods <a href="#SetDuty">SetDuty</a>, <a href="#SetDutyPercent">SetDutyPercent</a>, both <a href="#SetRatio16">SetRatio*</a>, <a href="#SetPeriod">SetPeriod</a> and <a href="#SetPrescaler">SetPrescaler</a>.
+<ul>
+<br /><i>ANSIC prototype:</i> void Load(void)<br />
+</ul><br />
+</li>
+<li><a name="SetOutput">
+<b>SetOutput</b></a>
+ - PWM Output control. The method is not supported for MC68HC908LB8 derivative.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetOutput(bool OutCTL, TChannels Outputs)<br />
+<li><i>OutCTL:bool</i> - If <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a>, output control is set to manual (channels' outputs are controled by software, resp. by parameter Outputs) and parameter Outputs has sense. If <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a>, PWM takes control of the channels' outputs (could be used for switch off output control).</li>
+<li><i>Outputs:<a href="PWMMCUser Types.html#TChannels">TChannels</a></i> - Output pads are set/cleared according to values in Outputs structure. Parameter has sense only if OutCTL is <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a>.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK
+</li>
+</ul><br />
+</li>
+<li class="versionspec"><span class="versionspeclabel">Method(s) not supported for Freescale HC08 derivatives.</span>
+<ul>
+<li><a name="SetRatio16">
+<b>SetRatio16</b></a>
+ - This method sets a new duty-cycle ratio for selected channel. The value is loaded after calling <a href="#Load">Load</a> method.
+<br/><div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale 56800/E and HC08 and HCS12 and HCS12X derivatives
+</B>
+<br/>
+Setting is valid for actual speed mode only, initial value is restored after speed mode change.
+</div>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetRatio16(byte Channel, word Ratio)<br />
+<li><i>Channel:byte</i> - channel number (0 - 5). The number corresponds to the logical channel number assigned in the component settings, which may not correspond to channel number of the peripheral. <br/>
+<div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale HCS12 and HCS12X derivatives
+</B>
+<br/>
+Writing to even channel  in complementary mode is possible only.
+</div>
+
+</li>
+<li><i>Ratio:word</i> - Ratio is expressed as an 16-bit unsigned integer number. 0 - 65535 value is proportional to ratio 0 - 100%.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_NOTAVAIL - Channel is disabled<br />     ERR_RANGE - Parameter Channel is out of range
+</li>
+</ul><br />
+</li>
+<li><a name="SetRatio15">
+<b>SetRatio15</b></a>
+ - This method sets a new duty-cycle ratio for selected channel. The value is loaded after calling <a href="#Load">Load</a> method.
+<br/> <div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale 56800/E and HC08 and HCS12 and HCS12X derivatives
+</B>
+<br/>
+Setting is valid for actual speed mode only, initial value is restored after speed mode change.
+</div>
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetRatio15(byte Channel, int16_t Ratio)<br />
+<li><i>Channel:byte</i> - channel number (0 - 5). The number corresponds to the logical channel number assigned in the component settings, which may not correspond to channel number of the peripheral. <br/>
+<div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale HCS12 and HCS12X derivatives
+</B>
+<br/>
+Writing to even channel  in complementary mode is possible only.
+</div>
+
+</li>
+<li><i>Ratio:int16_t</i> - Ratio is expressed as an 16-bit signed integer number. 0 - 32767 value is proportional to ratio 0 - 100%. Value under 0 corresponds to 0% ratio.
+</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_NOTAVAIL - Channel is disabled<br />     ERR_RANGE - Parameter Channel or Ratio is out of range
+</li>
+</ul><br />
+</li>
+<li class="versionspec"><span class="versionspeclabel">Method not supported for Freescale ColdFireV1 and HCS08 derivatives.</span>
+<ul>
+<li><a name="Swap">
+<b>Swap</b></a>
+ - Swap channel pairs.
+<br/><div class="versionspec">
+<B CLASS="VSP">
+Version specific information for Freescale HCS12 and HCS12X derivatives
+</B>
+<br/>
+This method is available only if hardware acceleration is enabled and the complementary mode is selected. 
+</div>
+<ul>
+<br /><i>ANSIC prototype:</i> byte Swap(TChannelPairs SwapPair)<br />
+<li><i>SwapPair:<a href="PWMMCUser Types.html#TChannelPairs">TChannelPairs</a></i> - Logical 1 swaps channel pair from its base position. Logical 0 doesn't swap pair from its base position.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a name="ClearFaultFlag">
+<b>ClearFaultFlag</b></a>
+ - This method clears fault flag. Method is available only if interrupt service/event is enabled and any Fault with &quot;manual clearing mode&quot; is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte ClearFaultFlag(byte Flag)<br />
+<li><i>Flag:byte</i> - Number of the flag.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_RANGE - Parameter Flag is out of range
+</li>
+</ul><br />
+</li>
+
+           </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<p>
+<br />
+Note: Some methods can be implemented as macros.
+</p>
+          </div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

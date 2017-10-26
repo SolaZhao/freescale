@@ -1,0 +1,95 @@
+========================================
+  Stimulation Component Release Notes
+========================================
+
+================================================
+  Stimulation Component stimulation .wnd v6.1.13
+================================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- scroll wheel bug on WinXP fixed.
+
+List of known Bugs
+------------------
+- None.	
+
+
+================================================
+  Stimulation Component stimulation .wnd v6.1.12
+================================================
+
+List of New Features
+--------------------
+- Support for filename with double quotes in openfile command.
+
+
+List of Fixed Bugs
+--------------------
+- None.
+
+
+List of Known Bugs
+--------------------
+- None.
+
+
+================================================
+  Stimulation Component stimulation .wnd v6.1.11
+================================================
+
+List of new Features
+--------------------
+- 64 bits cycle counter support.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+================================================
+  Stimulation Component stimulation .wnd v6.1.10
+================================================
+
+List of new Features
+--------------------
+- This component now has an additional horizontal scrollbar if required.
+
+
+List of fixed Bugs
+--------------------
+- None.
+
+
+List of known Bugs
+--------------------
+- None.
+
+
+================================================
+  Stimulation Component stimulation .wnd v6.1.9
+================================================
+
+List of new Features
+--------------------	
+- This new release runs with HI-WAVE 6.1.
+
+	
+List of fixed Bugs
+--------------------	
+- None.
+
+
+List of known Bugs
+--------------------
+- None.

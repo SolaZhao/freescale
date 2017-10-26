@@ -1,0 +1,147 @@
+=======================================================
+RELEASE NOTES FOR VISUALIZATION TOOL COMPONENT
+=======================================================
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.8
+==========================================================
+
+List of new Features
+--------------------
+- None.	
+
+List of fixed Bugs
+------------------
+- scroll wheel bug on WinXP fixed.
+- Chart bug fixed.
+- MTWX18112: if the command string had double quotes in it (like 'run "c:\program files\b.cmd"'), the string was not reloaded correctly.
+
+List of known Bugs
+------------------
+- None.	
+
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.7
+==========================================================
+
+List of new Features
+------------------------------
+- Internal upgrade.
+ 
+List of fixed Bugs
+------------------------------
+- None.	
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.6
+==========================================================
+
+List of new Features
+------------------------------
+- New instrument: the switch instrument, which is available in the form of Slide switch, Toggle 
+switch, Jumper and Push button. It has the ability to simulate bounces.
+- New instrument: the DIL switch instrument.
+This instrument is also known as Dual-in-Line Switch. It is mainly used for configuration purpose. You 
+can use it for viewing or setting bits of one to four bytes.
+- Nicer look of the knob instrument.
+ 
+List of fixed Bugs
+------------------------------
+- None.	
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.5
+==========================================================
+
+List of new Features
+------------------------------
+- Addition of support for drag and drop of the items defined in the I/O Register files.
+- Visualization tool help file is now integrated in the main debugger help file.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.4
+==========================================================
+
+List of new Features
+------------------------------
+- Internal upgrade
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.3
+==========================================================
+
+List of new Features
+------------------------------
+- 64 bits cycle counter support.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.2
+==========================================================
+
+List of new Features
+------------------------------
+- Visualization tool help file is now available.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+
+==========================================================
+VISUALIZATION TOOL COMPONENT VisualizationTool.wnd V 6.1.1
+==========================================================
+
+List of new Features
+------------------------------
+- This is the first release of this Component.
+
+List of fixed Bugs
+------------------------------
+- This is the first release of this Component.
+
+List of known Bugs
+------------------------------
+- None.

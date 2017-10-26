@@ -1,0 +1,1439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+CPU documentation - General info
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>MC9S12XDG128_80</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<i>General Info</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<!--#LINKS-->
+<a href="../../DOCs/CPUindexMCUInit.html">CPU beans</a><br />
+<br /><br /><br />
+<center>
+<img src="MC9S12XDG128_80_b.gif" alt="CPU icon"/>
+<br /><i>Component icon</i>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+           <div class="titlebox">
+              <div class="beanname">
+                CPU
+                
+                
+                MC9S12XDG128_80
+              </div>
+              <div class="descrtext">Freescale HC9S12X family: MC9S12XDG128 in 80 pin package</div>
+            </div>
+
+           <div class="text_title">
+                Device Initialization
+                
+      		 </div>		 
+      		 <div class="descr_line">                  
+                (Description of the CPU component parameters.)                   
+           </div>
+                        
+           <div class="user_text">
+<!---DESCBEG DON'T CHANGE THIS-->
+  <!--here you can write text that BW will let live during generation process-->
+  <!--sem je mozno napsat popis, ktery BW pri pregenerovani zachova-->
+<!---DESCEND DON'T CHANGE THIS-->
+<ul>
+<a name="CPU_SharedClockSettings">
+</a>
+  <li>
+  <a name="ClockSettingGrp">
+  <b>Clock settings</b></a> - MCU clock settings
+  <ul>
+    <li>
+    <a name="InputClockGrp">
+    <b>Input clock</b></a> - Settings of the input clock signals.
+    <ul>
+      <li>
+      <a name="OSCtype">
+      <b>Clock type</b></a> - This property determines allowed range of the input clock frequency. It should be set according to your hardware configuration. <br />
+The allowed range for the selected clock type is shown in the third column of this property.<br />
+This property doesn't modify any registers, it is used only for input clock range checking.
+      </li>
+      <li>
+      <a name="Xtal">
+      <b>Clock frequency [MHz]</b></a> - Frequency of the main clock. The crystal or external (square wave) clock generator can be used as a clock source. The allowed range of frequency depends on <a href="#OSCtype">clock  type</a> and is shown in the third column of the <a href="#OSCtype">clock  type</a> property.
+      </li>
+      <li>
+      <a name="OSC1_Grp">
+      <b>Clock input pin</b></a> - Clock input properties.
+      <ul>
+        <li>
+        <a name="EXTALPin">
+        <b>Pin</b></a> - Clock input pin name (for information only).
+        </li>
+      </ul>
+      </li>
+      <li>
+      <a name="OSC2_Grp">
+      <b>Clock output pin</b></a> - Clock output properties.
+      <ul>
+        <li>
+        <a name="XTALPin">
+        <b>Pin</b></a> - Clock output pin name (for information only).
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="OutputClockGrp">
+    <b>Output clock</b></a> - Settings of the output clock signals.
+    <ul>
+      <li>
+      <a name="ECLK">
+      <b>External clock</b></a> - This property controls the availability of the clock on the ECLK pin. The clock output is always active in emulation modes and if it is enabled, in all other operating modes as well.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="ECLKpin0">
+        <b>ECLK pin</b></a> - External clock output pin (for information only).
+        </li>
+                <a name="EDIVCpuCondGrp">
+        <span class="versionspeclabel"></span></a>
+          <li>
+          <a name="EDIV">
+          <b>ECLK clock rate</b></a> - This property determines the rate of the free-running clock on the ECLK pin. The divider is always disabled in emulation modes and it is active as it is programmed in all other operating modes.
+          </li>
+              </ul>
+      </li>
+            <a name="ECLKX2CpuCondGrp">
+      <span class="versionspeclabel"></span></a>
+        <li>
+        <a name="ECLKX2">
+        <b>Fixed external clock</b></a> - This property controls the availability of the free-running clock on the ECLKX2 pin. This clock has a fixed rate of twice the internal bus clock. The clock output is always active in emulation modes and in all other operating modes if it is enabled.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+        <ul>
+          <li>
+          <a name="ECLKX2pin">
+          <b>ECLKX2 pin</b></a> - Fixed external clock output pin (for information only).
+          </li>
+        </ul>
+        </li>
+          </ul>
+    </li>
+    <li>
+    <a name="HighBusClock">
+    <b>Internal bus clock</b></a> - Internal bus clock [MHz]. The bus clock(Fbus) is a clock source for internal on-chip peripherals.<BR />
+The Bus clock is derived from <a href="#PLLselectHigh">System clock</a> (Fsys) - Fbus = Fsys/2.<BR />
+Fbus = <a href="#Xtal">Oscillator frequency</a> / 2 if the <a href="#PLLselectHigh">PLL clock</a> property is set to 'Disabled' value.<BR />
+Fbus = <a href="#PLLvalueHigh">PLL clock frequency</a> / 2 if the <a href="#PLLselectHigh">PLL clock</a> property is set to 'Enabled' value.<BR/>
+If both <a href="#HighPE_PLLDivide">Reference divider</a> and <a href="#HighPE_PLLMultiply">PLL multiplication factor</a> are not set to 'Auto select' value or if the PLL clock is disabled, Internal bus clock is calculated by Processor Expert and cannot be directly modified.
+    </li>
+    <li>
+    <a name="PLLselectHigh">
+    <b>PLL clock</b></a> - This property select clock source for the System clock(Fsys).<BR />
+If set to 'Enabled' value then:<BR />
+<OL>
+  <LI>System clocks are derived from the PLL clock (Fsys = Fpll).<BR /></LI>
+  <LI>Fbus = Fsys / 2 = Fpll / 2 = 2 * <a href="#Xtal">Fosc</a> / <a href="#HighPE_PLLDivide">Div</a> * <a href="#HighPE_PLLMultiply">Mult</a> / 2 =  <a href="#Xtal">Fosc</a> / <a href="#HighPE_PLLDivide">Div</a> * <a href="#HighPE_PLLMultiply">Mult</a> .<BR /></LI>
+</OL>
+If set to 'Disabled' value then:<BR />
+<OL>
+  <LI>System clocks are derived from the Oscillator clock (Fsys = Fosc).<BR /></LI>
+  <LI>Fbus = Fsys / 2 = <a href="#Xtal">Fosc</a> / 2</LI>
+</OL><br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="HighPE_PLLDivide">
+      <b>Reference divider</b></a> - This property provides a finer granularity for the PLL multiplier steps. Processor Expert selects the best value for the desired <a href="#HighBusClock">bus clock</a> and the <a href="#Xtal">Oscillator frequency</a>  if the 'Auto select' value is selected.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="HighPE_PLLMultiply">
+      <b>PLL multiplication factor</b></a> - This property controls the multiplication factor of the PLL. Processor Expert selects the best value for the current <a href="#HighBusClock">bus clock</a> and the <a href="#Xtal">Oscillator frequency</a>  if the 'Auto select' value is selected.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="PLLvalueHigh">
+      <b>PLL clock frequency</b></a> - PLL clock frequency [MHz]. This property is for information only. It is calculated by Processor Expert according to the formula:<BR />
+Fpll = 2 * <a href="#Xtal">Fosc</a> / <a href="#HighPE_PLLDivide">Reference divider</a> * <a href="#HighPE_PLLMultiply">PLL multiplication factor</a>
+      </li>
+      <li>
+      <a name="PLLBandwidthHigh">
+      <b>PLL bandwidth control</b></a> - Selects automatic or manual bandwidth control.
+      </li>
+      <li>
+      <a name="PLLModeHigh">
+      <b>PLL mode</b></a> - Selects acquisition or tracking mode.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="LowPowerModesSettingsGrp">
+    <b>Low-power modes settings</b></a> - This group controls the CRG module behavior in low-power modes.
+    <ul>
+            <a name="PseudoStopBitCpuCondGrp">
+      <span class="versionspeclabel"></span></a>
+        <li>
+        <a name="PseudoStopBit">
+        <b>Pseudo stop</b></a> - This property controls the functionality of the oscillator during the stop mode.<br />
+If the value of this property is 'yes' the oscillator continues to run in the stop mode (pseudo stop). The oscillator amplitude is reduced.<br />
+If the value of this property is 'no' the oscillator is disabled in the stop mode.<br />
+NOTE:<br />
+Pseudo-STOP allows for faster STOP recovery and reduces the mechanical stress and aging of the resonator in case of frequent STOP conditions at the expense of slightly increased power consumption. Lower oscillator amplitude exhibits lower power consumption but could have adverse effects during any Electro-Magnetic Susceptibility (EMS) tests.
+        </li>
+                  <a name="FastWakeUpFromFullStopBitCpuCondGrp">
+      <span class="versionspeclabel"></span></a>
+        <li>
+        <a name="FastWakeUpFromFullStopBit">
+        <b>Fast wake-up from full stop mode</b></a> - This property enables/disables fast wake-up from full stop mode.<br />
+If the value of this property is 'yes' the fast wake-up from full stop mode is enabled.<br />
+If the value of this property is 'no' the Fast wake-up from full stop mode is disabled.
+        </li>
+                  <a name="PLLStopsInWaitCpuCondGrp">
+      <span class="versionspeclabel"></span></a>
+        <li>
+        <a name="PLLStopsInWait">
+        <b>PLL stops in wait mode</b></a> - This property determines a behavior of the PLL module in the wait mode<br />
+If the value of this property is 'yes' then the PLL module will operate in the wait mode.<br />
+If the value of this property is 'no' then the PLL module stops in the wait mode.
+        </li>
+          </ul>
+    </li>
+        <a name="ClockMonitorCpuCondGrp">
+    <span class="versionspeclabel"></span></a>
+      <li>
+      <a name="ClockMonitor">
+      <b>Clock monitor</b></a> - This property specifies the behavior of the clock monitor.<br /><br />
+There are 3 options:<br />
+<ul>
+  <li><u>Disabled</u>: Clock monitor is disabled.</li>
+  <li><u>Force reset</u>: If the loss of oscillator/external clock is detected the CRG generates a clock monitor fail reset.</li>
+  <li><u>Enter Self clock mode</u>: If the loss of oscillator/external clock is detected the CRG generates SCM interrupt and enters Self-clock mode.</li>
+</ul><br />
+
+      </li>
+      </ul>
+  </li>
+<a name="CPU_SharedInterruptsSettings">
+</a>
+  <li>
+  <a name="InterruptsSettingsGrp">
+  <b>Interrupts initialization</b></a> - Initial interrupt settings (CCR register)
+  <ul>
+    <li>
+    <a name="InitPriorityNew">
+    <b>Initialization priority</b></a> - Initialization of the Interrupt Processing Level (IPL) and Enabling/Disabling I-maskable interrupts. HCS12X core has seven priority levels.<BR />
+Possible values are:
+<UL>
+  <LI><u>minimal priority</u> - Enables interrupts with minimal and higher priority (1,2,3,4,5,6,7)</LI>
+  <LI><u>low priority</u> - Enables interrupts with low and higher priority (3,4,5,6,7)</LI>
+  <LI><u>medium priority</u> - Enables interrupts with medium and higher priority (4,5,6,7)</LI>
+  <LI><u>high priority</u> - Enables interrupts with high and higher priority (5,6,7)</LI>
+  <LI><u>maximal priority</u> - Enables interrupts with maximal priority (7)</LI>
+  <LI><u>interrupts enabled</u> - Interrupts enabled, IPL not modified, default value</LI>
+  <LI><u>interrupts disabled</u> - Interrupts disabled, IPL not modified</LI>
+  <LI><u>0</u> - Interrupts enabled,  IPL=0 - Enables interrupts of level 1,2,3,4,5,6,7  (all interrupts),</LI>
+  <LI><u>1</u> - Interrupts enabled,  IPL=1 - Enables interrupts of level 2,3,4,5,6,7</LI>
+  <LI><u>2</u> - Interrupts enabled,  IPL=2 - Enables interrupts of level 3,4,5,6,7</LI>
+  <LI><u>3</u> - Interrupts enabled,  IPL=3 - Enables interrupts of level 4,5,6,7</LI>
+  <LI><u>4</u> - Interrupts enabled,  IPL=4 - Enables interrupts of level 5,6,7</LI>
+  <LI><u>5</u> - Interrupts enabled,  IPL=5 - Enables interrupts of level 6,7</LI>
+  <LI><u>6</u> - Interrupts enabled,  IPL=6 - Enables interrupts of level 7</LI>
+  <LI><u>7</u> - Interrupts enabled,  IPL=7 - Only system interrupts are allowed, I-maskable interrupts are disabled by the priority of value 7</LI>
+</UL>
+    </li>
+  </ul>
+  </li>
+<a name="CPU_SharedInternalResourceMapping">
+</a>
+  <li>
+  <a name="HC12_InternalMapping">
+  <b>Internal resource mapping</b></a> - Internal resource mapping setting
+  <ul>
+    <li>
+    <a name="DIRECT_regVal">
+    <b>Direct page mapping</b></a> - This property determines the position of the direct page within the memory map. The CPU when performing accesses using the direct addressing mode uses this value. The value represents the upper eight bits [15:8] of the direct page address.
+    </li>
+    <li>
+    <a name="HC12_INTFLASHON">
+    <b>Internal FLASH</b></a> - If the value of this property is 'yes' the internal FLASH is mapped into the internal address space and has priority over the external address space.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="HalfFlashEn">
+      <b>Int. FLASH in 0x4000-0x7FFF</b></a> - If the value of this property is 'yes' the fixed page of Flash or ROM can be accessed in the lower half of the local memory map. <br />
+Accesses to $4000–$7FFF(Page 0xFD) will be mapped to $7F_4000-$7F_7FFF in the global memory space.
+      </li>
+    </ul>
+    </li>
+        <li>
+    <a name="VectorTablesGrp">
+    <b>Interrupt/Reset vector table</b></a> - This group contains the vector table placement settings.
+    <ul>
+      <li>
+      <a name="ResetVectorGrp">
+      <b>Reset vector table</b></a> - This group contains settings for placement of reset vectors.
+      <ul>
+        <li>
+        <a name="ResetVectorTableAddress">
+        <b>Address</b></a> - Address of the reset vectors part of the interrupt vectors table (IVT). Reset vector part of IVT will be placed on this address. The value doesn't affect any HW resources and it is intended for a bootloader or monitor support. This value only affects the address of the reset vectors part of the interrupt vector table in the Vectors.c file. The default address is 0xFFFA.
+        </li>
+        <li>
+        <a name="ResetVectorTableSize">
+        <b>Size</b></a> - Size of the reset vectors part of the interrupt vector table. (For information only)
+        </li>
+      </ul>
+      </li>
+      <li>
+      <a name="InterruptVectorGrp">
+      <b>Interrupt vector table</b></a> - This group contains settings for placement of interrupt vectors.
+      <ul>
+        <li>
+        <a name="InterruptVectorTableAddress">
+        <b>Address</b></a> - Address of the interrupt vector table (IVT). IVT will be placed on this address. This value affect  <a href="#Init_IVBR_reg">IVBR</a> register, but setting of this register can be suppressed (If the property 'Init IVBR reg.' is set to 'no') for bootloader or monitor support.
+The default address is 0xFF10.
+        </li>
+        <li>
+        <a name="InterruptVectorTableSize">
+        <b>Size</b></a> - Size of the interrupt vector table. (For information only)
+        </li>
+        <li>
+        <a name="Init_IVBR_reg">
+        <b>Init IVBR register</b></a> - Initialization of IVBR (Interrupt Vector Base Register) can be suppressed by setting this property to 'no' value. This feature can be useful for bootloader or monitor support. If enabled, IVBR is initialized with high byte value of interrupt vector table address. Note: Low byte of interrupt vector table should be set to 0x10. 
+        </li>
+      </ul>
+      </li>
+    </ul>
+    </li>
+  </ul>
+  </li>
+<a name="CPU_SharedExternalBusAndUserMode">
+</a>
+  <li>
+  <a name="OperatingModeGrp">
+  <b>External bus and user mode</b></a> - CPU operating mode and external bus settings.
+  <ul>
+    <li>
+    <a name="BootOperationMode">
+    <b>Boot operating mode</b></a> - Set this property according to the CPU operating mode that is set during the reset (respectively before execution of an application). <br />
+The MODA:MODB:MODC pins set this MCU mode during the reset (respectively MODE IS set by debugger).<br />
+Note:<br />
+  Processor Expert needs to known the operating mode to allocate IO pins required for selected mode and to make some settings available.
+    </li>
+    <li>
+    <a name="SWModeSwitching">
+    <b>Operating mode switching</b></a> - This property enables to generate an operating mode switching code, i.e. it enables changing of the boot operating mode by application code. This operating mode is set by the <a href="#RunTimeOperationMode">Target operation mode</a> property (available only if this property is set to 'yes')
+Note:
+  Sometimes it is required to boot into some operation mode and switch to another mode by writing to the MODE register. This property allows user to switch from the boot operating mode into the selected operation mode.
+  If the code for switching of operating mode is undesirable, be aware that most debugging tools provide the ability to self configure the device in the debugging environment (if the part is booted into special signal-chip mode). If the CPU is to be  configured for expanded operation in secure mode, the CPU must exit reset in the expanded mode. No writes to the MOD bits are allowed while operating in the secure mode. However, to release security, special single-chip mode must be possible.
+  For more  information see the Application note AN2287<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+    <ul>
+      <li>
+      <a name="RunTimeOperationMode">
+      <b>Target operation mode</b></a> - This property defines operation mode set by the generated code by writing to the MODA:MODB:MODC bits of the MODE register. This property is available only if the value of the <a href="#SWModeSwitching">Operating mode switching</a> property is set to 'yes'
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="MemMode">
+    <b>Operating mode settings</b></a> - This group contains settings of external bus provided by the current operating mode. Operating mode is defined by the values of the MODA:MODB:MODC pins (property <a href="#BootOperationMode">Boot operating mode</a>)  during reset and can be changed by writing to the MODE register (the property <a href="#RunTimeOperationMode">Target operation mode</a>
+    <br />There are 6 modes:
+    <ul>
+      <li><u><a name="MemMode_0">Special single-chip</a></u> - There are no items in this mode.
+    </li>
+    <li><u><a name="MemMode_1">Emulation single-chip</a></u> - The following items are displayed in this mode:
+  <ul>
+      <li>
+      <a name="ExternalBusGrp">
+      <b>External bus</b></a> - Settings of the external bus.<br />
+The following items are available only if the group is enabled (the value is "Supported"):<br />
+
+      <ul>
+        <li>
+        <a name="DataBusGrp">
+        <b>Data bus</b></a> - Pins associated with data bus.
+        <ul>
+          <li>
+          <a name="DataBusWidthEnum">
+          <b>Data bus width</b></a> - Data bus width.
+          </li>
+          <li>
+          <a name="DataBusWidth">
+          <b>Data bus pins</b></a> - List of pins used as Data bus (for information only). Number of data bus pins can by modified by the <a href="#DataBusWidthEnum">Data bus width</a> property.
+          <br />One Item of the list looks like:<br />
+  <a name="DataBusPinGrp">
+  <b>Data bus pin 0</b></a> - Data bus pin.
+  <ul>
+    <li>
+    <a name="DataBusPin">
+    <b>Pin</b></a> - Data bus pin name (for information only).
+    </li>
+  </ul>
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="AddressBusGrp">
+        <b>Address bus</b></a> - Pins associated with address bus.
+        <ul>
+          <li>
+          <a name="AddrBusWidth">
+          <b>Address bus width</b></a> - List of pins used as Address bus
+          <br />One Item of the list looks like:<br />
+  <a name="AddrBusPinGrp">
+  <b>Address bus pin 0</b></a> - Address bus pin.
+  <ul>
+    <li>
+    <a name="AddrBusPin">
+    <b>Pin</b></a> - Address bus pin name (for information only).
+    </li>
+  </ul>
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="RWGrp">
+        <b>R/W</b></a> - Read/Write pin setting. (Indicates the direction of internal data transfers, R - active high, W - active low)
+        <ul>
+          <li>
+          <a name="RWpin">
+          <b>RW pin</b></a> - Read/Write pin (for information only).
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="LSTRBGrp">
+        <b>LSTRB</b></a> - Low Strobe pin setting. (Indicates valid data on DATA[7:0], active low)
+        <ul>
+          <li>
+          <a name="LSTRBpin">
+          <b>LSTRB pin</b></a> - Low Strobe pin (for information only).
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="TAGGrp">
+        <b>TAGs</b></a> - TAGHx pins are used to tag the high/low half of the instruction word being read into the instruction queue.
+        <ul>
+          <li>
+          <a name="TAGHIpin">
+          <b>TAGHI pin</b></a> - TAGHI pin (for information only).
+          </li>
+          <li>
+          <a name="TAGLOpin">
+          <b>TAGLO pin</b></a> - TAGLO pin (for information only).
+          </li>
+        </ul>
+        </li>
+                        <li>
+        <a name="_ExtMemGrp">
+        <b>External memory</b></a> - External memory block definitions. This list allows the user to define memories accessible on CPU external bus. Once the memory is defined, other components and/or compiler may use it. To add memory block(s) to Segments in the linker command file, it is necessary to update Memory segments on Build options tab of the CPU component by clicking on 'Set default memory segments' property. To create Placement of memory block(s) in the linker command file, enable 'Customize placement' on Build options tab of CPU component, click to 'Set default placement' property then add your placement(s) and link it to corresponding memory segment(s).
+        <br />One Item of the list looks like:<br />
+  <a name="_ExtMemBlckGrp">
+  <b>Memory block0</b></a> - External memory block
+  <ul>
+    <li>
+    <a name="MemAddr">
+    <b>Start address</b></a> - Memory start address
+    </li>
+    <li>
+    <a name="MemSize">
+    <b>Memory size</b></a> - Memory block size
+    </li>
+    <li>
+    <a name="MemType">
+    <b>Memory type</b></a> - Memory type: RAM or ROM
+    </li>
+  </ul>
+        </li>
+      </ul>
+      </li>
+  </ul>
+  </li>
+  <li><u><a name="MemMode_2">Special test</a></u> - The following items are displayed in this mode:
+<ul>
+      <li>
+      <a name="ExternalBusGrp">
+      <b>External bus</b></a> - Settings of the external bus.<br />
+The following items are available only if the group is enabled (the value is "Supported"):<br />
+
+      <ul>
+        <li>
+        <a name="DataBusGrp">
+        <b>Data bus</b></a> - Pins associated with data bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#DataBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="AddressBusGrp">
+        <b>Address bus</b></a> - Pins associated with address bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#AddressBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="CSGrp">
+        <b>Chip selects</b></a> - Properties in this group enables one of the external chip selects CS3, CS2, CS1, and CS0 outputs which are asserted during accesses to specific external addresses. Chip selects are only active if enabled in normal expanded mode, emulation expanded mode and special test mode. The function is disabled in all other operating modes.
+        <ul>
+          <li>
+          <a name="CS0">
+          <b>CS0</b></a> - This property enables external chip select CS0. Global address range associated with this chip select is 0x40_0000–0x7F_FFFF. When the internal NVM is enabled (property Internal Flash) the CS0 is not asserted in the space occupied by this on-chip memory block.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS0pin">
+            <b>CS0 pin</b></a> - Chip select 0 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS1">
+          <b>CS1</b></a> - This property enables external chip select CS1. Global address range associated with this chip select is 0x20_0000–0x3F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS1pin">
+            <b>CS1 pin</b></a> - Chip select 1 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS2">
+          <b>CS2</b></a> - This property enables external chip select CS2. Global address range associated with this chip select is 0x10_0000–0x1F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS2pin">
+            <b>CS2 pin</b></a> - Chip select 2 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS3">
+          <b>CS3</b></a> - This property enables external chip select CS3. Global address range associated with this chip select is 0x00_0800–0x0F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS3pin">
+            <b>CS3 pin</b></a> - Chip select 3 pin (for information only).
+            </li>
+          </ul>
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="RWGrp">
+        <b>R/W</b></a> - Read/Write pin setting. (Indicates the direction of internal data transfers, R - active high, W - active low)
+        <ul>
+<li>
+<i>The content is the same as in <a href="#RWGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="LSTRBGrp">
+        <b>LSTRB</b></a> - Low Strobe pin setting. (Indicates valid data on DATA[7:0], active low)
+        <ul>
+<li>
+<i>The content is the same as in <a href="#LSTRBGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="TAGGrp">
+        <b>TAGs</b></a> - TAGHx pins are used to tag the high/low half of the instruction word being read into the instruction queue.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#TAGGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+                        <li>
+        <a name="_ExtMemGrp">
+        <b>External memory</b></a> - External memory block definitions. This list allows the user to define memories accessible on CPU external bus. Once the memory is defined, other components and/or compiler may use it. To add memory block(s) to Segments in the linker command file, it is necessary to update Memory segments on Build options tab of the CPU component by clicking on 'Set default memory segments' property. To create Placement of memory block(s) in the linker command file, enable 'Customize placement' on Build options tab of CPU component, click to 'Set default placement' property then add your placement(s) and link it to corresponding memory segment(s).
+        <br />One Item of the list looks like:<br />
+  <a name="_ExtMemBlckGrp">
+  <b>Memory block0</b></a> - External memory block
+  <ul>
+    <li>
+    <a name="MemAddr">
+    <b>Start address</b></a> - Memory start address
+    </li>
+    <li>
+    <a name="MemSize">
+    <b>Memory size</b></a> - Memory block size
+    </li>
+    <li>
+    <a name="MemType">
+    <b>Memory type</b></a> - Memory type: RAM or ROM
+    </li>
+  </ul>
+        </li>
+      </ul>
+      </li>
+</ul>
+</li>
+<li><u><a name="MemMode_3">Emulation expanded</a></u> - The following items are displayed in this mode:
+<ul>
+      <li>
+      <a name="ExternalBusGrp">
+      <b>External bus</b></a> - Settings of the external bus.<br />
+The following items are available only if the group is enabled (the value is "Supported"):<br />
+
+      <ul>
+        <li>
+        <a name="ITHRS">
+        <b>Reduced input threshold</b></a> - This property selects reduced input threshold on external data bus pins and specific control input signals which are in use with the external bus interface in order to adapt to external devices with a 3.3 V, 5 V tolerant I/O. If set to 'Enabled' the reduced input threshold level is enabled on pins in use with the external bus interface.
+        </li>
+        <li>
+        <a name="DataBusGrp">
+        <b>Data bus</b></a> - Pins associated with data bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#DataBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="AddressBusGrp">
+        <b>Address bus</b></a> - Pins associated with address bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#AddressBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="CSGrp">
+        <b>Chip selects</b></a> - Properties in this group enables one of the external chip selects CS3, CS2, CS1, and CS0 outputs which are asserted during accesses to specific external addresses. Chip selects are only active if enabled in normal expanded mode, emulation expanded mode and special test mode. The function is disabled in all other operating modes.
+        <ul>
+          <li>
+          <a name="CS0">
+          <b>CS0</b></a> - This property enables external chip select CS0. Global address range associated with this chip select is 0x40_0000–0x7F_FFFF. When the internal NVM is enabled (property Internal Flash) the CS0 is not asserted in the space occupied by this on-chip memory block.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS0pin">
+            <b>CS0 pin</b></a> - Chip select 0 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS1">
+          <b>CS1</b></a> - This property enables external chip select CS1. Global address range associated with this chip select is 0x20_0000–0x3F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS1pin">
+            <b>CS1 pin</b></a> - Chip select 1 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS2">
+          <b>CS2</b></a> - This property enables external chip select CS2. Global address range associated with this chip select is 0x10_0000–0x1F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS2pin">
+            <b>CS2 pin</b></a> - Chip select 2 pin (for information only).
+            </li>
+          </ul>
+          </li>
+          <li>
+          <a name="CS3">
+          <b>CS3</b></a> - This property enables external chip select CS3. Global address range associated with this chip select is 0x00_0800–0x0F_FFFF.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+          <ul>
+                        <li>
+            <a name="CS3pin">
+            <b>CS3 pin</b></a> - Chip select 3 pin (for information only).
+            </li>
+          </ul>
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="RWGrp">
+        <b>R/W</b></a> - Read/Write pin setting. (Indicates the direction of internal data transfers, R - active high, W - active low)
+        <ul>
+<li>
+<i>The content is the same as in <a href="#RWGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="LSTRBGrp">
+        <b>LSTRB</b></a> - Low Strobe pin setting. (Indicates valid data on DATA[7:0], active low)
+        <ul>
+<li>
+<i>The content is the same as in <a href="#LSTRBGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="TAGGrp">
+        <b>TAGs</b></a> - TAGHx pins are used to tag the high/low half of the instruction word being read into the instruction queue.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#TAGGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+                        <li>
+        <a name="_ExtMemGrp">
+        <b>External memory</b></a> - External memory block definitions. This list allows the user to define memories accessible on CPU external bus. Once the memory is defined, other components and/or compiler may use it. To add memory block(s) to Segments in the linker command file, it is necessary to update Memory segments on Build options tab of the CPU component by clicking on 'Set default memory segments' property. To create Placement of memory block(s) in the linker command file, enable 'Customize placement' on Build options tab of CPU component, click to 'Set default placement' property then add your placement(s) and link it to corresponding memory segment(s).
+        <br />One Item of the list looks like:<br />
+  <a name="_ExtMemBlckGrp">
+  <b>Memory block0</b></a> - External memory block
+  <ul>
+    <li>
+    <a name="MemAddr">
+    <b>Start address</b></a> - Memory start address
+    </li>
+    <li>
+    <a name="MemSize">
+    <b>Memory size</b></a> - Memory block size
+    </li>
+    <li>
+    <a name="MemType">
+    <b>Memory type</b></a> - Memory type: RAM or ROM
+    </li>
+  </ul>
+        </li>
+      </ul>
+      </li>
+</ul>
+</li>
+<li><u><a name="MemMode_4">Normal single-chip</a></u> - There are no items in this mode.
+</li>
+<li><u><a name="MemMode_5">Normal expanded</a></u> - The following items are displayed in this mode:
+<ul>
+      <li>
+      <a name="ExternalBusGrp">
+      <b>External bus</b></a> - Settings of the external bus.<br />
+The following items are available only if the group is enabled (the value is "Supported"):<br />
+
+      <ul>
+        <li>
+        <b>Reduced input threshold</b> - <i>See <a href="#ITHRS">previous</a> modes for more details</i>
+        </li>
+        <li>
+        <a name="DataBusGrp">
+        <b>Data bus</b></a> - Pins associated with data bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#DataBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="AddressBusGrp">
+        <b>Address bus</b></a> - Pins associated with address bus.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#AddressBusGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="CSGrp">
+        <b>Chip selects</b></a> - Properties in this group enables one of the external chip selects CS3, CS2, CS1, and CS0 outputs which are asserted during accesses to specific external addresses. Chip selects are only active if enabled in normal expanded mode, emulation expanded mode and special test mode. The function is disabled in all other operating modes.
+        <ul>
+<li>
+<i>The content is the same as in <a href="#CSGrp">previous</a> modes.</i>
+</li>
+        </ul>
+        </li>
+        <li>
+        <a name="WEGrp">
+        <b>WE </b></a> - Write Enable pin setting. (Indicates external write access, active low)
+        <ul>
+          <li>
+          <a name="WEpin">
+          <b>WE pin</b></a> - Write Enable pin (for information only).
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="LDSGrp">
+        <b>LDS</b></a> - Lower Data Select pin setting. (Indicates external access to the low byte DATA[7:0], active low)
+        <ul>
+          <li>
+          <a name="LDSpin">
+          <b>LDS pin</b></a> - Lower Data Select pin (for information only).
+          </li>
+        </ul>
+        </li>
+        <li>
+        <a name="REGrp">
+        <b>RE</b></a> - Read Enable pin setting. (Indicates external read access)
+        <ul>
+          <li>
+          <a name="REpin">
+          <b>RE pin</b></a> - Read Enable pin (for information only).
+          </li>
+        </ul>
+        </li>
+                        <li>
+        <a name="_ExtMemGrp">
+        <b>External memory</b></a> - External memory block definitions. This list allows the user to define memories accessible on CPU external bus. Once the memory is defined, other components and/or compiler may use it. To add memory block(s) to Segments in the linker command file, it is necessary to update Memory segments on Build options tab of the CPU component by clicking on 'Set default memory segments' property. To create Placement of memory block(s) in the linker command file, enable 'Customize placement' on Build options tab of CPU component, click to 'Set default placement' property then add your placement(s) and link it to corresponding memory segment(s).
+        <br />One Item of the list looks like:<br />
+  <a name="_ExtMemBlckGrp">
+  <b>Memory block0</b></a> - External memory block
+  <ul>
+    <li>
+    <a name="MemAddr">
+    <b>Start address</b></a> - Memory start address
+    </li>
+    <li>
+    <a name="MemSize">
+    <b>Memory size</b></a> - Memory block size
+    </li>
+    <li>
+    <a name="MemType">
+    <b>Memory type</b></a> - Memory type: RAM or ROM
+    </li>
+  </ul>
+        </li>
+      </ul>
+      </li>
+</ul>
+</li>
+</ul>
+</li>
+  </ul>
+  </li>
+<li>
+<a name="Intperiphgrp">
+<b>Internal peripherals</b></a> - Internal peripherals setting
+<ul>
+  <a name="SharedSpecialSpeedModeSettings">
+  </a>
+  <a name="SharedBDMModuleSettings">
+  </a>
+  <li>
+  <a name="DbgSupport">
+  <b>BDM Debug support</b></a> - Setting for BDM debugging.
+  <ul>
+    <li>
+    <a name="COP_RTIStopInActiveBDM">
+    <b>Stop COP and RTI in Active BDM mode</b></a> - If the value of this property is 'yes' the COP and RTI module counters are stopped in Active BDM mode.<br />
+Derivatives with CRG or ECRG module: This item modifies the RSBCK bit in the COPCTL register.<br />
+Derivatives with CPMU module: This item modifies the RSBCK bit in the CPMUCOP register.
+    </li>
+  </ul>
+  </li>
+  <a name="InternalPeripherals_IO">
+  </a>
+  <li>
+  <a name="IOmoduleGrp">
+  <b>I/O module</b></a> - I/O ports' settings
+  <ul>
+    <a name="ShrdUnusedIOGrp">
+    </a>
+  <li>
+  <a name="InitUnusedIOpins">
+  <b>Initialize unused I/O pins</b></a> - Initialization for all unused I/O pins ( I/O pins neither used by any component nor reserved in the 'Used' tab of the cpu component).<BR/>
+This property specifies initialization direction for all unused pins . If the given unused pin doesn't support the preferred direction then the pin direction is left in it's default state. 
+Note: Initial state of the unused pins is displayed in Target CPU package window.
+  <br />There are 3 modes:
+  <ul>
+    <li><u><a name="InitUnusedIOpins_0">no initialization</a></u> - There are no items in this mode.
+  </li>
+  <li><u><a name="InitUnusedIOpins_1">input</a></u> - The following items are displayed in this mode:
+<ul>
+    <li>
+    <a name="InitUnusedIOPull">
+    <b>Pull resistor</b></a> - Default initialization of pull resistors for all unused I/O pins. Pull resistor is initialized only if the given unused pin is set to input direction and supports selected pull resistor type. Pull resistor initialization is not done for ports with pull setting common for all pins (A, B, C, D, E and K).
+    </li>
+    <li>
+    <a name="InitUnusedIO_OutputValue">
+    <b>Output value</b></a> - Default initialization of output value for all unused I/O pins. Output value is initialized only if the given unused pin is set to output direction.
+    </li>
+</ul>
+</li>
+<li><u><a name="InitUnusedIOpins_2">output</a></u> - <i>See <u><a href="#InitUnusedIOpins_1">input</a></u> mode for items available in this mode.</i>
+</li>
+</ul>
+</li>
+    <a name="ShrdUnbondedIOGrp">
+    </a>
+  <li>
+  <a name="InitUnbondedIOpins">
+  <b>Initialize not-bonded I/O pins</b></a> - Initialization for all not-bonded I/O pins.<BR/>
+This property specifies initialization direction for all not-bonded pins . If the given not-bonded pin doesn't support the preferred direction then the pin direction is left in it's default state.
+  <br />There are 3 modes:
+  <ul>
+    <li><u><a name="InitUnbondedIOpins_0">no initialization</a></u> - There are no items in this mode.
+  </li>
+  <li><u><a name="InitUnbondedIOpins_1">input</a></u> - The following items are displayed in this mode:
+<ul>
+    <li>
+    <a name="InitUnbondedIOPull">
+    <b>Pull resistor</b></a> - Default initialization of pull resistors for all not-bonded I/O pins. Pull resistor is initialized only if the given not-bonded pin is set to input direction and supports selected pull resistor type. Pull resistor initialization is not done for ports with pull setting common for all pins (A, B, C, D, E and K).
+    </li>
+    <li>
+    <a name="InitUnbondedIO_OutputValue">
+    <b>Output value</b></a> - Default initialization of output value for all not-bonded I/O pins. Output value is initialized only if the given not-bonded pin is set to output direction.
+    </li>
+</ul>
+</li>
+<li><u><a name="InitUnbondedIOpins_2">output</a></u> - <i>See <u><a href="#InitUnbondedIOpins_1">input</a></u> mode for items available in this mode.</i>
+</li>
+</ul>
+</li>
+    <li>
+    <a name="PortAGrp">
+    <b>PORT A</b></a> - Reduced drive setting for pins of PORT A
+    </li>
+    <li>
+    <a name="PortAD1LGrp">
+    <b>PORT AD1L</b></a> - Reduced drive setting for pins of PORT AD1L
+    </li>
+    <li>
+    <a name="PortBGrp">
+    <b>PORT B</b></a> - Reduced drive setting for pins of PORT B
+    </li>
+    <li>
+    <a name="PortEGrp">
+    <b>PORT E</b></a> - Reduced drive setting for pins of PORT E
+    </li>
+    <li>
+    <a name="PortJGrp">
+    <b>PORT J</b></a> - Reduced drive setting for pins of PORT J
+    </li>
+    <li>
+    <a name="PortMGrp">
+    <b>PORT M</b></a> - Reduced drive setting for pins of PORT M
+    </li>
+    <li>
+    <a name="PortPGrp">
+    <b>PORT P</b></a> - Reduced drive setting for pins of PORT P
+    </li>
+    <li>
+    <a name="PortSGrp">
+    <b>PORT S</b></a> - Reduced drive setting for pins of PORT S
+    </li>
+    <li>
+    <a name="PortTGrp">
+    <b>PORT T</b></a> - Reduced drive setting for pins of PORT T
+    </li>
+  </ul>
+  </li>
+  <a name="SharedSecuritySettings">
+  </a>
+  <li>
+  <a name="Flash">
+  <b>FLASH</b></a> - The FLASH memory options.
+  <ul>
+    <li>
+    <a name="Security">
+    <b>Security state</b></a> - If the security state is enabled the content of the memory cannot be read by an instruction from any unsecured source including the background debug interface.<br />
+When the value is set to 'Not initialized', the NVSEC register is not written. When the value is euther 'Enabled' or 'Disabled', the NVSEC register is initialized accordingly.
+    <br />There are 3 modes:
+    <ul>
+      <li><u><a name="Security_0">Not initialized</a></u> - There are no items in this mode.
+    </li>
+    <li><u><a name="Security_1">Enabled</a></u> - The following items are displayed in this mode:
+  <ul>
+      <li>
+      <a name="BackdoorKey">
+      <b>Backdoor key mechanism</b></a> - This property enables/disables security unlocking mechanism. This mechanism uses an 8-byte backdoor security key to unsecure the MCU. You can use SetBackdoorKey() method to unsecure the MCU (Not available in Device Initialization tool).<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="BackdoorKeyVal0">
+        <b>Backdoor key 0</b></a> - <B>7</B> Backdoor key value of the register 0-7.
+        </li>
+      </ul>
+      </li>
+  </ul>
+  </li>
+  <li><u><a name="Security_2">Disabled</a></u> - There are no items in this mode.
+</li>
+</ul>
+</li>
+  </ul>
+  </li>
+  <a name="SharedMMCRAmProtectSettings">
+  </a>
+  <li>
+  <a name="MMCRamProtectGrp">
+  <b>MMC RAM Protection</b></a> - MMC RAM Protection settings
+  <ul>
+    <li>
+    <a name="MMC_RWPE">
+    <b>RAM Write Protection</b></a> - This property controls the RAM write protection mechanism.
+    </li>
+        <li>
+    <a name="MMC_RAMXGU">
+    <b>XGATE area upper boundary</b></a> - This property defines the global memory address that is used as the upper boundary of RAM region allocated to the XGATE module. The value is automatically adjusted to be a 256 bytes multiple.
+    </li>
+    <li>
+    <a name="MMC_RAMSHL">
+    <b>RAM shared area lower boundary</b></a> - This property defines the global memory address that is used as the lower boundary of shared RAM region accessible by CPU and XGATE module. The value is automatically adjusted to be a 256 bytes multiple.
+    </li>
+    <li>
+    <a name="MMC_RAMSHU">
+    <b>RAM shared area upper boundary</b></a> - This property defines the global memory address that is used as the upper boundary of shared RAM region accessible by CPU and XGATE module. The value is automatically adjusted to be a 256 bytes multiple.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<a name="CPU_SharedCPUInterrupts">
+</a>
+  <li>
+  <a name="CPUInterrupts">
+  <b>CPU interrupts/resets</b></a> - Interrupts/Resets vectors allocated by the CPU component.
+  <ul>
+        <a name="MCU_Reset_Vector_Grp">
+    </a>
+      <li>
+      <a name="resetVector">
+      <b>Reset vector</b></a> - Reset vector settings.
+      <ul>
+        <li>
+        <a name="IntVreset">
+        <b>Interrupt</b></a> - Interrupt associated with the reset vector (for information only)
+        </li>
+        <li>
+        <a name="ISRnameReset">
+        <b>ISR name</b></a> - Name of the reset vector - routine, that initializes CPU after reset.
+        </li>
+      </ul>
+      </li>
+            <a name="IntClockMonitorReseCondtGrp">
+    </a>
+      <li>
+      <a name="IntClockMonitorResetGrp">
+      <b>Clock monitor reset</b></a> - This property enables/disables generation of the 'Clock monitor reset' reset vector routine. In case the clock module allows to disable the clock monitor (there is a 'Clock monitor' property in the 'Clock settings' group), this property is enabled only if the property 'Clock monitor' is set to 'Force reset' value. <br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntClockMonitorReset">
+        <b>Interrupt</b></a> - Interrupt associated with clock monitor.
+        </li>
+                <a name="DevInit_ClockMonitorResetGrp">
+        </a>
+          <li>
+          <a name="DevInit_ClockMonitorReset_ISRname">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+            <a name="IntIllegalOpcodeCondGrp">
+    </a>
+      <li>
+      <a name="IntIllegalOpcodeGrp">
+      <b>IllegalOpcode</b></a> - This property enables/disables generation of the 'Illegal operation code' interrupt service routine.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntIllegalOpcode">
+        <b>Interrupt</b></a> - Interrupt associated with illegal opcode detection.
+        </li>
+                <a name="DevInit_IllegalOpcodeGrp">
+        </a>
+          <li>
+          <a name="ISRnameIllegalOpcode">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+                <a name="IntMMCRamAccessViolCondGrp">
+    </a>
+      <li>
+      <a name="IntMMCRamAccessViolGrp">
+      <b>MMC RAM access violation</b></a> - This property enables/disables generation of the 'MMC RAM access violation' interrupt and its ISR.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntMMCRamAccViol">
+        <b>Interrupt</b></a> - Interrupt associated with the MMC RAM access violation.
+        </li>
+        <li>
+        <a name="IntMMCRamAccViolpriority">
+        <b>Interrupt priority</b></a> - Interrupt priority of the MMC RAM access violation. interrupt.
+        </li>
+                <a name="DevInit_IntPLLGrp0">
+        </a>
+          <li>
+          <a name="ISRnameMMCRamAccViol">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+            <a name="IntSWICondGrp">
+    </a>
+      <li>
+      <a name="IntSWIGrp">
+      <b>SWI</b></a> - This property enables/disables generation of SWI interrupt service routine.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntSWI">
+        <b>Interrupt</b></a> - Interrupt associated with the SWI.
+        </li>
+                <a name="DevInit_SWIGrp">
+        </a>
+          <li>
+          <a name="ISRnameSWI">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+            <a name="IntLVDCondGrp">
+    </a>
+      <li>
+      <a name="IntLVDGrp">
+      <b>LVD</b></a> - This property enables/disables generation of the 'LVD status change' interrupt and its ISR.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntLVD">
+        <b>Interrupt</b></a> - Interrupt associated with the LVD.
+        </li>
+        <li>
+        <a name="IntLVDpriority">
+        <b>Interrupt priority</b></a> - Interrupt priority of LVD interrupt.
+        </li>
+                <a name="DevInit_IntLVDGrp">
+        </a>
+          <li>
+          <a name="DevInit_IntLVD_ISRname">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+            <a name="IntPllCondGrp">
+    </a>
+      <li>
+      <a name="IntPllGrp">
+      <b>PLL</b></a> - This property enables/disables generation of the 'PLL LOCK status change' interrupt and its ISR.
+Settings of this property is enabled only if the property <a href="#PLLselectHigh">PLL clock</a>  is set to 'Enabled' value. <br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntPLL">
+        <b>Interrupt</b></a> - Interrupt associated with the PLL.
+        </li>
+        <li>
+        <a name="IntPLLpriority">
+        <b>Interrupt priority</b></a> - Interrupt priority of PLL interrupt.
+        </li>
+                <a name="DevInit_IntPLLGrp">
+        </a>
+          <li>
+          <a name="DevInit_IntPLL_ISRname">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+            <a name="IntSCMCondGrp">
+    </a>
+      <li>
+      <a name="IntSCMGrp">
+      <b>SCM</b></a> - This property enables/disables generation of the 'Self-clock mode state change' interrupt and its ISR. 
+Settings of this property is enabled only if the property <a href="#ClockMonitor">Clock monitor</a>  is set to 'Enter Self clock mode' value. <br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntSCM">
+        <b>Interrupt</b></a> - Interrupt associated with SCM.
+        </li>
+        <li>
+        <a name="IntSCMpriority">
+        <b>Interrupt priority</b></a> - Interrupt priority of SCM interrupt.
+        </li>
+                <a name="DevInit_IntSCMGrp">
+        </a>
+          <li>
+          <a name="DevInit_IntSCM_ISRname">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+                <a name="IntSpuriousCondGrp">
+    </a>
+      <li>
+      <a name="IntSpuriousGrp">
+      <b>Spurious interrupt</b></a> - This property enables/disables generation of 'Spurious interrupt' interrupt service routine.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+      <ul>
+        <li>
+        <a name="IntSpurious">
+        <b>Interrupt</b></a> - Interrupt associated with the spurious interrupt.
+        </li>
+        <li>
+        <a name="IntSpuriouspriority">
+        <b>Interrupt priority</b></a> - Interrupt priority of spurious interrupt.
+        </li>
+                <a name="DevInit_IntSpuriousGrp">
+        </a>
+          <li>
+          <a name="DevInit_IntSpurious_ISRname">
+          <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+          </li>
+              </ul>
+      </li>
+                <a name="DevInitInterruptsGrp">
+    </a>
+                  <a name="IntXSEICondGrp">
+      </a>
+        <li>
+        <a name="IntXSEIGrp">
+        <b>XGATE SW error</b></a> - This property enables/disables generation of XGATE software error interrupt service routine. <br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+        <ul>
+          <li>
+          <a name="IntXSEI">
+          <b>Interrupt</b></a> - Interrupt associated with the XGATE software error
+          </li>
+          <li>
+          <a name="IntXSEIpriority">
+          <b>Interrupt priority</b></a> - Interrupt priority of XGATE software error interrupt (if applicable).
+          </li>
+                    <a name="DevInit_XSEIGrp">
+          </a>
+            <li>
+            <a name="DevInit_IntXSEI_ISRname">
+            <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+            </li>
+                  </ul>
+        </li>
+                  <a name="IntXSTCondGrp">
+      </a>
+        <li>
+        <a name="XSTListGrp">
+        <b>XGATE SW triggers</b></a> - This group contains settings of software interrupt servis routines for XGATE module.
+        <br />One Item of the list looks like:<br />
+  <a name="XST">
+  <b>XGATE SW trigger 0</b></a> - This property enables/disables generation of the corresponding XGATE software trigger interrupt service routine.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+  <ul>
+    <li>
+    <a name="IntXST">
+    <b>Interrupt</b></a> - Interrupt associated with the corresponding XGATE software trigger.
+    </li>
+    <li>
+    <a name="IntXSTpriority">
+    <b>Interrupt priority</b></a> - Interrupt priority of the corresponding XGATE software trigger interrupt.
+    </li>
+        <a name="DevInit_XSTGrp">
+    </a>
+      <li>
+      <a name="DevInit_IntXST_ISRname">
+      <b>ISR name</b></a> - Name of the interrupt service routine (ISR) invoked by this interrupt vector.
+<br/>The user code of the routine should handle all respective interrupt flags correctly. 
+      </li>
+      </ul>
+        </li>
+                  </ul>
+  </li>
+
+</ul>
+           </div>
+            
+           <p class="footer">
+              PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+              <br />
+              Copyright 1997 - 2011 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

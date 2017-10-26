@@ -1,0 +1,450 @@
+RELEASE NOTES Maker
+
+RELEASE NOTES Maker V5.0.12
+
+List of New Features
+- Environment variable expansion in the command line (also applies to command line arguments provided via the -ArgFile option).
+  The syntax is $(ENV_VAR) or ${ENV_VAR}. Example: chc08 -I{INC_PATH} test.c
+
+List of Fixed Bugs
+- none.
+
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. They are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+RELEASE NOTES Maker V5.0.11
+
+List of New Features
+- There is no limiation or license check for the maker any more.
+- Support for maker targets/files with spaces, or in genral double quoted file names. Examples:
+  "main with spaces.o": "main with spaces.c" "c:\my path\file.h" "main.h"
+- Mapping unknown messages is now treated as warning and no longer as error. This change allows to maintain compatibility with old build tools when removing no longer used messages.
+- 1-54681434: New option -LicWait. If set and used with floating license configuration, if no license is available from the license server,
+  it will wait until a license is available. This is useful if you want to wait until a license is free, e.g. with batch jobs.
+- The about box (and option -Lic) shows now as well borrowing status (same as lmborrow.exe -status)
+- New option -LicBorrow:
+  -LicBorrow    Borrow license feature (-LicBorrow<feature>:<Date>, <Date> in dd-mmm-yyyy[:hh:mm] format and 
+  time in 24-hour hh:mm format)
+  It enables selective borrowing of features (supported by the application). Note that borrowing is only supported
+  if enabled in the license file by the BORROW keyword.
+- In case of an expire/evaluation license, you are now warned 10 days before the license expires.
+  The warning dialog box pops up once every day.
+- FLEXlm support for BORROWING. Note that BORROWING is only available for floating licenses, and may be sold
+  as a separate product or for an additional fee. BORROWING is used so you can work with a floating license
+  even if you are disconnected from the licensing server. See FLEXlm user manuals for details on BORROWING.
+  Note that this product needs a FLEXlm daemon (metrowks.exe on the licensing server) with following
+  version information:
+  FLEXlm v8.4a (lmgr.lib), Copyright (c) 1988-2003 by Macrovision Corporation. All rights reserved.
+  The latest FLEXlm floating server software can as well be downloaded from the www.metrowerks.com
+  web page, or get in touch with support to get the latest version.
+
+List of Fixed Bugs
+- MTWX20634: when the license file is accessed using the path from the LM_LICENSE_FILE environment variable (i.e. there is no license.dat in the
+  tool's directory or its parent, nor is there a hiware.dat license file), and a required feature expires in less than 10 days, a crash occurs.
+  This bug is fixed for build numbers greater than 6088.
+- Opening files from the builtin Windows GUI with double clicking did cause a crash 
+  if the File->Configuration->Editor Settings dialog was configured as "CodeWarrior (with COM)" and if an old IDE 4.1 was 
+  configured as current CodeWarrior IDE to be used. It did work as expected with if any
+  more recent CodeWarrior IDE was registered.
+
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. They are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.10
+List of New Features
+- none
+List of Fixed Bugs
+- R2906: rules were not recognized in some rare cases. When this was happening, ".c.o:" 
+  was taken as target instead as rule. This usually caused "M5022: Don't know how to 
+  make <target>" messages.
+- Multiple dollar signs were always replaced with a single $ sign. E.g. "echo $$$$" did print a 
+  single $ sign. Now this prints two dollar signs.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. They are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.9
+List of New Features
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a 
+  license for the former version, you need to upgrade your license. Additionally be aware that 
+  in compliance with other Metrowerks tools the license (license.dat) file in the installation 
+  root (e.g. c:\metrowerks\license.dat, the installation script has created a shortcut to this file) 
+  is used. If such a license.dat exists, this file is used to check out the license. Only if this file 
+  does not exist, the one in C:\FLEXlm is used.
+- Now there is a message in case of the maker uses the 'default.mak' default make file.
+- Following special macros are supported now in the environment too: {Compiler}, {Project} 
+  and {System}.
+  Note: Those macros are newly available during environment variable substitution.
+  They are not automatically supported in filenames in general.
+- R2652: It is possible now to change the color for messages in the tool window. It can be 
+  changed for WARNING, INFORMATION, ERROR, FATAL and for user messages as 
+  well. Following options are available for this: -WmsgCW, -WmsgCI, -WmsgCE, -
+  WmsgCF and -WmsgCU. See manual for details.
+List of Fixed Bugs
+- R2734: The –S command did not work correctly for the 'echo' command
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. They are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.8
+List of New Features
+- New option -ShowAboutDialog to show the about dialog
+- All tools have now a dialog to edit the environment (File->Configuration). E.g. to modify the 
+  GENPATH.  Note that this affects the project file only (and does NOT support the 
+  default.env)
+- The license file is searched in following order: 
+- license.dat in the directory where the executable is (this was already the case) 
+- hiware.lic in the directory where the executable is (this was already the case) 
+- license.dat in one directory up from the where the executable is (this is new. E.g. if  the 
+  executable is in c:\metrowerks\prog, the license file in c:\metrowerks is searched too) 
+- the license file using the normal FLEXlm way (usually c:\flexlm, this was already the case)
+List of Fixed Bugs
+- none
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.7
+List of New Features
+- The message M5012: Include file not found is now a waring message by default (instead an 
+  error message).  This allows to handle an non-existing include file in the same way as a 
+  empty include file.
+- The special handling for some extension is no longer case insensitive for the extension.
+  Extension, now 
+  handled not 
+  case sensitive
+  Searched paths
+  *.Sym
+  GENPATH, HIPATH, LIBPATH, 
+  LIBRARYPATH
+  *.o
+  OBJPATH, GENPATH, HIPATH
+  *.ABS
+  ABSPATH, GENPATH, HIPATH
+  *.h
+  GENPATH, HIPATH, LIBPATH, 
+  LIBRARYPATH
+  *.lib
+  OBJPATH, GENPATH, HIPATH
+  All other files
+  GENPATH, HIPATH
+- Color for output is now used: e.g. error messages are written in red
+- New startup option –NoEnv which disables the usage of the environment (default.env, tips 
+  file and project.ini)
+List of Fixed Bugs
+- In cases of several roles with the same extension, the maker did issue the recursive 
+  dependency error message in not recursive cases.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.6
+List of New Features
+- Called applications are now closes automatically. The called application can also close own 
+  created application. With this feature, it is possible to stop a recursive build process, for 
+  example for the library with the top-level maker. Using the last maker version, the bottom 
+  maker had to be stopped.
+List of Fixed Bugs
+- Windows 95 can now call 16 bit applications with textual output enabled. For the last 
+  version, the output capture feature had to be switched off.
+- R2224, R2240: The last version did rebuild unnecessary cases.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. In addition, filenames with 
+  up to 256-character length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.5
+List of New Features
+- R2103: New option  -WmsgNu to suppress user messages (e.g. included files). See 
+  manual/help file for details.
+- Multiple spaces are no longer replaced by one space during the scanning of a line. This 
+especially makes formatting with the puts command possible. 
+- When an explicit target entry is present, no roles are use to build the target too. 
+  example.mak :
+	  .a.d :
+			  echo cmd1: creating $*.d from $*.a
+	
+	  .b.d :
+			  echo cmd2: creating $*.d $*.b
+	
+	  aa.d :
+			  echo cmd3: creating aa.d special rule
+	
+	  bb.d : bb.h
+	
+  For "maker.exe example.mak aa.d", The previous version of the maker did execute both 
+  the cmd1 (if a file named "aa.a" exists) and cmd3. The new version of the maker does only 
+  execute cmd3. This way it is possible to override rules for specific targets. Of course, to 
+  build "bb.d", still the rules are used as there is only an additional dependency given but no 
+  commands.
+List of Fixed Bugs
+- R2173: stack overflow of the maker for specific cases if the same targets should have been 
+  build with multiple rules several times. 
+- With the previous version, the string written with puts did start with exactly one space. Now 
+  the first space /tab after the filename is removed and the remaining characters are written as 
+  specified. E.g. 
+    puts file.txt no Space at this line start.\n 
+    puts file.txt                     many spaces at this line start.\n 
+  Prints now : 
+  no Space at this line start. 
+                       many spaces at this line start.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. Also filenames with up to 
+  256 characters length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.4
+List of New Features
+- To start 16 bit applications like command.com, use the new modifier '*' in front of the 
+  command. The make will not try to capture the output of these commands. E.g. 
+  .bak.c :  
+    *command.com /c copy $*.c $*.bak 
+  Note : it is recommended to use the 32 bit command processor cmd.exe instead of 
+  command.com. 
+  For simple copy operations, the built-in "copy" could also be used.
+- The new option "-nocapture" sets the no capture mode for all calls. The return value of 
+  called applications is still used, but the standard output is not redirected. "-nocapture" is the 
+  same as specifying "*" on every executable line.
+- With the "*" or -nocapture feature it is now possible to use 16 bit applications.
+- The maker runs faster on Win95/98. 
+List of Fixed Bugs
+- The Maker was slow under Windows 95/98: corrected.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. Also filenames with up to 
+  256 characters length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.3
+List of New Features
+- No error output file is generated by default unless -woutfile is specified. The previous 
+  version did use the default -woutfileon, while this version 
+- When the new option -mkall is specified, all dependent targets are rebuilt. This option is 
+  useful when a file with a older date than the current was copied into the project. Not 
+  dependent objects are not built.
+- The message "M5027: Making target <Target>" is only issued for the special targets 
+  BEFORE and AFTER, if these targets do exist. The Maker has now a new icon, so it is 
+  much easier now to identify the Maker if the window is minimized in the task bar.
+- There is now an option '-Mkall', which allows making all targets regardless if they are 
+  newer than the objects, they depend on. This us very useful if you just want to be sure that 
+  everything is rebuild or because the time was not the same on different PC's.
+List of Fixed Bugs
+- Make Modula 2 applications by using "maker.exe modula.mod"
+- Generate Modula 2 make file with option -m.
+- The option -werrfile works now as expected. Pressing the stop button does no longer 
+  stop the called application. Instead the maker does only wait until this process has 
+  finished. In the old case, applications started by the called application did in some 
+  circumstances not terminate at all.
+- Endless loop could occur when filenames with the $ signs in it were used.
+List of Known Bugs
+- Filenames must not contain special characters as spaces or a $.
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. Also filenames with up to 
+  256 characters length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.2
+List of New Features
+New Options for Error Feedback Control:
+  -WStdout: Writing Error Feedback to stdout. This is the usual Error feedback for new tools 
+  and it should not be necessary to disable it because no physical files are created. This 
+  output is enabled by default.
+  -WOutFile: Writing Error Feedback to external file. The default name is "edout" unless the 
+  ERRORFILE environment variable is set. The maker does not create any file by default, 
+  while all other tools do create the error file by default. When this option is set at the 
+  maker, the ERRORFILE variable should be used, otherwise the maker overwrites the 
+  output of the called applications.
+  -WErrFile: Writing the file "err.log" in case of an error. This file is used to recognize the 
+  failure of called tools in previous versions of HI-WARE tools. All current tools still create 
+  "err.log" to stay compatible with old versions of the maker. The new maker still checks 
+  this file to stay compatible with old versions of called tools. However, new versions of the 
+  tool do report the error-state through the return value. So this file is no longer needed 
+  when only new versions of the tools are involved.
+- New option -NoBeep to disable the beep in case of an error.
+- The global and local editor can now be configured also in this tool and not only with the 
+  shell. 
+  Note:  
+  - The global editor is stored globally in the mcutools.ini. The same editor configuration is 
+  used by all tools (decoder, compiler, assembler,....). 
+  Changes to the global mcutools.ini are stored when the application is closed and not when 
+  the save command is chosen from the menu. 
+  -The local editor is shared among all tools using the same project file (usually project.ini). 
+  - which editor type is used is stored in the project file. The default is the global editor.
+  - All error messages are now written to stdout. With WinEdit the 'Capture Output' feature in 
+  the Project->Configure dialog can be used to get the error feedback. In other applications 
+  as Microsoft Visual C++ Developer Studio (MSDEV) or the cmd.exe command shell, it is 
+  necessary to use the new launcher application 'piper.exe' to get direct error feedback. The 
+  maker is a Win32 Window application and this type of application is not expected to have 
+  reasonable output. So the command shell 'cmd.exe' or MSDEV do not use the stdout file. 
+  The 'piper.exe' tool is actually a Win32 command line application and therefore MSDEV 
+  or 'cmd.exe' use the stdout. 
+  The first argument of 'piper.exe' is used as application to be called with the remaining 
+  options. The output of the started application is then written to standard output. 
+  The maker itself does not need the launcher application "piper.exe" to display the output 
+  directly. Instead the launcher functionality is directly build-in. 
+  To print the list of option in a command window use :
+	  piper.exe maker.exe -h
+- New option -Lic to display license information (note: this information is also displayed in the 
+  about box)
+- The option -N ("Display mode. Do echo the commands without executing them") has been 
+  replaced with -Disp. If your make files contains this option -N, replace it with -Disp. The 
+  option -N displays now a notifier box in case of an error.
+- New option -N to display a notifier box after an error
+- The Maker V5.0.2 does not directly use the stdout/stderr file handles to get the error output 
+  of started tools. The redirection is done by using pipes. No files are needed for error 
+  feedback to the maker. This new feature makes the error reporting of called tools much 
+  more comfortable and safe.
+- The edout file only read by V5.0.1 is no longer accessed. To decide if a called tool had an 
+  error only the return value of the started application and the file err.log for compatibility with 
+  older versions of the tools are used.
+- The output stream of all called application is displayed immediately when the option -
+  WMsgVrb is used. Without this option, the full output stream is displayed after the 
+  application has finished and has reported an error.
+- The command line arguments are now compatible again with the Version 2.7 maker. The 
+  first non option argument is taken to be the make file. All remaining arguments are used as 
+  targets.
+List of fixed Bugs
+- none
+List of Known Bugs
+- Spaces in filenames are not supported inside of make files. The are supported on the 
+  command line, in the default.env file and in the application path. Also filenames with up to 
+  256 characters length are fully supported.
+
+
+RELEASE NOTES Maker V5.0.1
+List of New Features
+- HIWARE migrates Make in the new generation of development tools (V5.0.x)
+	The new generation of development tools includes the following features: 
+- Make is now a native 32 bit Win32 application. 
+- Make runs with Windows 95, Windows NT 3.x, Windows NT 4.0 and Windows 
+  3.11 with Win32s (Note that not all features are available under Win32s due 
+  restrictions of Microsoft) 
+- Fully windows oriented user interface (menus, tool bars, drag & drop)
+- Online help
+- Message Management
+- Smart Sliders
+- Option setting by both graphical and command line
+- Tip of the Day
+- Editable command line with history
+- Direct link between compiler output and editor: Simply double click on Make message 
+  to open the source with the editor of your choice.
+- The Make was extended with the possibility to call itself by command line. This required 
+  the ability to read a called programs output. Make reads now the file EDOUT that is 
+  written by the HI-CROSS Tools:
+- Make reads the output (EDOUT) of HICROSS tools and displays all lines that 
+  contain the string "ERROR", "FATAL", "WARNING" or "INFORMATION" at the 
+  first non blank character after the start of the line or after a ':'.  The whole line 
+  recognized is taken as output line and displayed by Make. Write an output of this 
+  format to EDOUT and your output is noticed by Make.
+- You can handle the messages classified as Error, Fatal, Warning or Information by the 
+  called application as any class of message of the Make you want.
+- You can now specify command line macros with blanks. This is done by bracing the 
+  command line macro with " .. " or  ( .. )  or  { .. }  or [ .. ]. A string braced in "" can't 
+  contain other "'s, because the bracing is as usual for strings only on one level. A string 
+  braced with another pair of braces can contain other braces of the same kind, if it 
+  contains as many left as right braces. 
+  -   	Examples for defining MC = $(CC) $(OPTIONS)  				
+		  -D"MC=$(CC)  $(OPTIONS)"					 
+		  -D(MC=$(CC)  $(OPTIONS))					
+		  -D[MC=$(CC)  $(OPTIONS)]					
+		  -D{MC=$(CC)  $(OPTIONS)}
+  			  Examples for defining MM = $(MK) $(OPTIONS) -D"MC=$(CC) 
+  $(OPTIONS)" 
+   			  Bracing with " is	not allowed because braced string is 
+			  including "'s.
+   			  -D(MM = $(MK) $(OPTIONS) -D"MC=$(CC) $(OPTIONS)")	
+				  -D[MM = $(MK) $(OPTIONS) -D"MC=$(CC) $(OPTIONS)"]	
+			  -D{MM = $(MK) $(OPTIONS) -D"MC=$(CC) $(OPTIONS)"}	
+- New build-in commands:
+  - cd  <directory>
+  Changes temporary the current directory. The scope of the 'cd' command is the command 
+  list of a target where it was called.
+  Do avoid the use of this command whenever possible. The command may lead to 
+  inconsistency with definition of relative paths in the environment. It is only implemented as 
+  a command for cases where you can't do your job another way.
+
+  - puts <file> <text>
+  writes the rest of the command line to the file specified in the first identifier of the command 
+  line. The write mode is appending. If the file does not exist it is created (mode "a+").
+  Example:
+	  puts myOutput.txt This is a text\n
+  Writes the text "This is a text" with line break at the end to the file "myOutput.txt"
+  - fc  <fileName1>  <fileName2>
+  Compares two files byte by byte and stores the result in a temporary boolean, that can be 
+  interpreted by the next command (e.g. the '?' command). The result is TRUE, if the files 
+  are identical and FALSE if not.
+
+  - fctext  <fileName1>  <fileName2>
+  Compares two text files byte by byte, ignoring blanks for compare, and stores the result in a 
+  temporary boolean, that can be interpreted by the next command (e.g. the '?' command). 
+  The result is TRUE, if the files are identical and FALSE if not.
+
+  - ?  <commandIfYes> ':' <commandIfNo>	
+  Evaluates the boolean result of the last command (The result is FALSE by default for all 
+  commands that do not return a boolean result. The only commands that return a boolean 
+  result are the file compare functions 'fc' and 'fctext'. So if you call another command, say 
+  'puts' followed by a '?' command, the second command in the alternative is executed. In 
+  this case a '?' has no sense). If the result is TRUE the command <commandIfYes> is 
+  executed. Else the <commandIfNo> is executed.
+  Example:
+	  fctext  upxcall.c upxcall.old
+	  ? puts log.txt Files are identical : puts log.txt Files are not identical
+	  //or written in two lines with line continuation
+	  fctext  upxcall.c upxcall.old
+	  ? puts log.txt The Files are equal \
+	  : puts log.txt The Files are not equal
+List of Fixed Bugs
+- Recursively called Maker did return errors, even if it worked properly, if network drives 
+  were part of the environment. The windows error codes in special cases are now ignored.
+- The Linker started from the Maker could not open its output file ERR.TXT under Win95. 
+  Now the error file of the maker is named "MEDOUT" or "MERR.TXT" instead of  
+  "EDOUT" or "ERR.TXT" before.
+List of Known Bugs
+- The Maker cannot run under Win32s. This is due the inability of a 32 bit application 
+  running under Win32s with the 32 bit API to recognize if a called application has finished. 
+  The Maker issues an error message, if you try to run a make file under Win32s and stops 
+  execution. 
+  - If the maker has been killed during make process, some tasks of the maker may still run.
+  - You can't use an error output file named "MERR.TXT" in a tool called from the Maker.
+  - The maker message output has too few source position info.
+  - The Parser of the Maker has difficulties with identifiers of 1 character length. Error with 
+  Makefile:                  
+	  all:  a
+	     echo 0
+	
+	  a:
+	     echo 1 
+- The Maker says to replace unknown macros with empty strings, if the option "-E" is set, 
+  but this sometimes leads to the message "command line too long" in a line with such 
+  substitutions.
+- The Maker has problems with roles that contain a suffix that is used before as string in a 
+  macro definition. For example, if you have defined a macro	
+	LIBNAME=cpp	
+	and below a role
+	  .cpp.o:
+	The Maker reports the role to contain an illegal suffix. Do avoid macro assignments that 
+  are suffixes used in a role. (Also on the right side!!!)

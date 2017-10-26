@@ -1,0 +1,40 @@
+=============================
+Metrowerks SourceSafe Plugin Release Notes
+=============================
+
+Version: 1.0.2
+Date:   23 July, 2001
+
+
+This is a maintance release which fixes a bug that prevented the 
+plugin from working with certain version of the CodeWarrior IDE.
+
+This plugin requires Metrowerks CodeWarrior IDE version 3.2 or higher.
+This plulgin also requires that you have installed Microsoft Visual 
+SourceSafe 5.0 or higher.
+
+=========
+Installation
+=========
+Copy mwSourceSafe.dll to Metrowerks\CodeWarrior\Bin\Plugins\Version Control
+Copy PMWSourceSafe.dll to Metrowerks\CodeWarrior\Bin\Plugins\Preference Panel
+If you are running the CodeWarrior IDE, you must exit and restart the 
+IDE before mwSourceSafe can be used.
+
+==========
+Known bugs
+==========
+None.
+
+=====================
+Contacting Metrowerks
+=====================
+
+For bug reports, technical questions, and suggestions, please
+contact us on the web at
+
+http://www.metrowerks.com/contact/bug
+
+or use the forms located in the Release Notes directory on your
+CodeWarrior CD.
+

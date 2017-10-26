@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Methods
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>FreeCntr</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreeCntr.html">General Info</a><br />
+<a href="FreeCntrProperties.html">Properties</a><br />
+<i>Methods</i><br />
+<a href="FreeCntrEvents.html">Events</a><br />
+<a href="FreeCntrUser Types.html">Types and constants</a><br />
+<a href="FreeCntrTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreeCntr_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%" >
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              FreeCntr
+            </div>
+            <div class="descrtext">Time measurement based on counter value (suitable for short time periods)</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">Low</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Timer</a>
+              
+              </span>
+            </div>
+          </div>
+
+         <div class="text_title">
+              Methods:
+    		 </div>		 
+    		 <div class="descr_line">                  
+              (Methods are user-callable functions/subroutines intended for
+               the component functions control. Please see the <a href="../../DOCs/EmbeddedBeans.html#Methods">Embedded Components page</a> for more information.)                   
+         </div>
+                  
+         <div class="user_text">
+            <ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<li><a name="Enable">
+<b>Enable</b></a>
+ - This method enables the component, i.e. timer is enabled and the internal clocks are counted. The method usually also reset the counter (if it is supported by HW). <br />The method is not available if the counter is shared.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Enable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="Disable">
+<b>Disable</b></a>
+ - This method disables the component, i.e. timer is disabled and the internal clocks are stopped. Last counter value is usually preserved in the counter (if it is supported by HW). <br />The method is not available if the counter is shared.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Disable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="EnableEvent">
+<b>EnableEvent</b></a>
+ - This method enables the events. The method is available only if an event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EnableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="DisableEvent">
+<b>DisableEvent</b></a>
+ - This method disables the events. The method is available only if an event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte DisableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="Reset">
+<b>Reset</b></a>
+ - This method resets the timer-counter (sets to zero for up-counting HW or to appropriate value for down-counting HW). The method is available only if the counter register can be set by software and the counter is not shared.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Reset(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="GetCounterValue">
+<b>GetCounterValue</b></a>
+ - This method returns a content of the counter.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetCounterValue(<i>ComponentName_</i>TTimerValue *Value)<br />
+<li><i>Value: Pointer to <a href="FreeCntrUser Types.html#TTimerValue"><i>ComponentName_</i>TTimerValue</a></i> - Pointer to returned value.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="SetCompare">
+<b>SetCompare</b></a>
+ - This method sets the appropriate compare/modulo/reload register.
+The method is available only when compare, modulo or reload register is selected in the <a href="FreeCntrProperties.html#_Cmp">Device</a> property.
+<p/><b>Note:</b>This is low level method, value written using this method is discarded when changing active speed-mode.
+<ul>
+<br /><i>ANSIC prototype:</i> void SetCompare(<i>ComponentName_</i>TTimerValue Value)<br />
+<li><i>Value:<a href="FreeCntrUser Types.html#TTimerValue"><i>ComponentName_</i>TTimerValue</a></i> - This value is stored to compare register.
+</li>
+</ul><br />
+</li>
+<li><a name="GetStatus">
+<b>GetStatus</b></a>
+ - This method gets appropriate interrupt flag, that indicates event from selected timer <a href="FreeCntrProperties.html#_Cmp">Device</a>. If the flag is set, the method clears it.<br/>
+The method is available only if the  <a href="FreeCntrProperties.html#IntService">Interrupt service/events</a> property is disabled. (Otherwise the flag is cleared in interrupt service routine.)
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetStatus(void)<br />
+<li><i>Return value:bool</i> - Status flag (<a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> if flag is set, <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> otherwise)
+</li>
+</ul><br />
+</li>
+
+           </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<p>
+<br />
+Note: Some methods can be implemented as macros.
+</p>
+          </div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

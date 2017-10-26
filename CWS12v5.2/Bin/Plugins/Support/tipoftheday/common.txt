@@ -1,0 +1,58 @@
+Welcome to the Freescale world of embedded systems tools. 
+We've got a lot of great tips for getting the most out of our tools, so leave Tip of the Day turned on for a while.
+If you turn Tip of the Day off, it is available from the Help menu.
+
+You can get access to the online documentation provided with the IDE menu Help > CodeWarrior Help.
+Inside there, you will find as well many FAQs related to the product.
+
+If you have comments about this product or suggestions for future versions, you can send e-mail to 'cw_support@freescale.com'.
+
+If the tool gives an error message, correct it directly in the message window.
+
+In order to clone a build target, switch the project to the Targets view. Then select the menu entry Project->Create target. 
+In the New Target dialog, select Clone existing target and the target to be cloned.
+Don't forget to change the output file name in the Linker preference panel for one of the two build targets.
+
+You can find the latest information about this product on the WorldWide Web at 'http://www.codewarrior.com'.
+
+In the Errors and Warnings window, click on the Information button to hide all informations, so only the warnings and errors remain. 
+Clicking a second time does show them again.
+The same feature also works with the Warning and the Error button for these types of messages.
+
+The recommended way to generate a new project is to use the New Project Wizard. 
+Use File->New (or Ctrl-Shift-N) click on the Project Tab and Select the New Project Wizard for your core.
+
+You can search all online help files with Help->Search.
+This does search in the combined documentation of the IDE, the compiler, linker, the release notes and also of the debugger.
+
+You can configure your own keyboard shortcuts with Edit->Command and Key Bindings.
+
+To start the debugger, simply press F5.
+
+The check box "Save project entries using relative paths" in the Target Settings preference panel configures whether the IDE stores the path together with a source file.
+Use this if multiple directories in the search path do contain a file with the same name. 
+However usually its better to avoid this situation all together.
+
+In the Access Paths preference panel, clicking on a folder symbol just at the left of the directory name means to search also in all subdirectories.
+Choosing a directory with many subdirectories can considerably slow down the compilation.
+
+In the Access Paths preference panel, the user paths are searched for the syntax #include "filename.h".
+The system paths are searched for the #include <incl.h> and for the #include "file.h" syntax.
+
+In the Access Paths preference panel, the first symbol on every access path line can be used to disable an access path without removing it.
+One use of this is to check if a certain path is necessary at all. 
+First build the project, then disable the access path any press Apply. If now the ide wants to rebuild certain files, this access path is used.
+
+In the Access Paths preference panel, paths can be copied between different projects or build targets. 
+Select the src path, Press Ctrl-C, click in the destination panel and press Ctrl-V.
+
+In the Access Paths preference panel, paths can be dragged and dropped between different projects or build targets.
+
+In the IDE Preferences you can configure how many spaces wide one tab should indent.
+Select on Edit->Preferences in the menu and select the Font & Tabs entry for the Editor.
+
+With the Find In Files (Ctrl-Shift-m) you can search and replace in multiple files in a directory,in the files of a project, in the symbolics or in the opened files.
+
+The "Use modification date caching" entry in the Build Extras project preference panel controls whether the ide checks during a build if files were modified externally. If you are using any external build stage, do not check this entry.
+
+If you either want to copy/move a project or to report a problem to technical support, there is the Pack&&Go wizard you can use for this. You find this wizard in the CodeWarrior help menu.

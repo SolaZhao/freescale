@@ -1,0 +1,21 @@
+[Menu]
+
+[MenuItem]
+MenuItemName=List of all supported CPUs
+MenuItemType=File
+MenuCommand=DOCs\CPUindexMCUinit.html
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=List of all supported Peripheral Initialization Components
+MenuItemType=File
+MenuCommand=DOCs\BeanIndexMCUinit.html
+MenuHotKey=0
+
+[MenuItem]
+MenuItemName=View Read Me and Revision History
+MenuItemType=File
+MenuCommand=README.html
+MenuHotKey=0
+
+[MenuEnd]

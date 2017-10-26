@@ -1,0 +1,5 @@
+%if (defined(BOOL) & (BOOL != 'no'))
+  %set Method1 Selection enable
+%else
+  %set Method1 Selection never
+%endif

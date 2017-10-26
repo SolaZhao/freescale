@@ -1,0 +1,44 @@
+[CpuInfoCache]
+FileVersion=4
+File=CPUs\MC9S12NE64_112\MC9S12NE64_112.bean
+Age=1030910250
+File=CPUs\_MC9S12NE64_112.dat
+Age=1017989841
+File=CPUs\_MC9S12NE64_112.ini
+Age=942630945
+
+[NFO]
+DeviceName=MC9S12NE64_112
+BaseDevice=
+Author=Processor Expert/MN
+Description=Freescale HC9S12 family: MC9S12NE64 in 112 pin package
+IconName=CPU_CHIP2
+Shortcut=
+Category=CPU-Freescale-HCS12-NE
+GroupCategory=
+OneBeanInstance=
+BeanLevel=High
+PrphSettingsForCpu=
+OnlyForInheritanceSharing=No
+DefaultLicence=Basic beans
+BeanStatusRelease=Yes
+FullBean=No
+PrphMode=
+Producer=Freescale
+Family=HCS12
+SubFamily=MC9S12NE
+CPUDB_FileName=_MC9S12NE64_112
+CpuVariants=1
+Line=MC9S12NE64CPV
+CpuPackages=1
+Line=LQFP112
+MasterToolMcuNames=1
+Line=MC9S12NE64
+RAM=8192
+ROM=0
+OTP=0
+EPROM=0
+FLASH=65536
+NumPackagePins=112
+
+[_end_]

@@ -1,0 +1,377 @@
+RELEASE NOTES Burner
+
+RELEASE NOTES Burner V5.0.17
+
+List of New Features
+- none
+
+List of Fixed Bugs
+- Using a bbl file with 2 entries(one using as format elf and the second one using as format motorola) causes some re-entrance issue.
+
+	OPENFILE "<path>\<file>.s19"
+	format=motorola
+	busWidth=1
+	origin=0
+	len=0x80000000
+	destination=0
+	SRECORD=Sx
+	SENDBYTE 1 "<path>\<file>.elf"
+	CLOSE
+
+	OPENFILE "<path>\<file>.bin"
+	format=binary
+	busWidth=1
+	origin=0
+	len=0x80000
+	undefByte=0xff
+	SENDBYTE 1 "<path>\<file>.s19"
+	CLOSE
+
+List of Known Bugs
+- none.
+
+RELEASE NOTES Burner V5.0.16
+
+List of New Features
+- Environment variable expansion in the command line (also applies to command line arguments provided via the -ArgFile option). 
+  The syntax is $(ENV_VAR) or ${ENV_VAR}. Example: burner -F{CMD_FILE}
+
+List of Fixed Bugs
+- none
+
+List of Known Bugs
+- none.
+
+Demo Version Limitations
+- If the Burner is running in Demo Mode (e.g. no valid license file), there is following 
+  limitation: Total code size is limited to 1024 bytes for 8/16bit CPU's and 3KByte of 
+  code for 32bit CPUs.
+
+RELEASE NOTES Burner V5.0.15
+
+List of New Features
+- Support for providing additional command-line arguments in an input file (the -ArgFile<file_name> option).
+
+List of Fixed Bugs
+- none
+
+List of Known Bugs
+- none.
+
+Demo Version Limitations
+- If the Burner is running in Demo Mode (e.g. no valid license file), there is following 
+  limitation: Total code size is limited to 1024 bytes for 8/16bit CPU's and 3KByte of 
+  code for 32bit CPUs.
+  
+RELEASE NOTES Burner V5.0.14
+
+List of New Features
+- none
+
+List of Fixed Bugs
+- none
+
+List of Known Bugs
+- none.
+
+Demo Version Limitations
+- If the Burner is running in Demo Mode (e.g. no valid license file), there is following 
+  limitation: Total code size is limited to 1024 bytes for 8/16bit CPU's and 3KByte of 
+  code for 32bit CPUs.  
+
+RELEASE NOTES Burner V5.0.13
+
+List of New Features
+- license checkouts have been removed for features included in special edition license file.
+- Mapping unknown messages is now treated as warning and no longer as error. This change allows to maintain compatibility with old build tools when removing no longer used messages.
+- 1-54681434: New option -LicWait. If set and used with floating license configuration, if no license is available from the license server,
+  it will wait until a license is available. This is useful if you want to wait until a license is free, e.g. with batch jobs.
+- The about box (and option -Lic) shows now as well borrowing status (same as lmborrow.exe -status)
+- New option -LicBorrow:
+  -LicBorrow    Borrow license feature (-LicBorrow<feature>:<Date>, <Date> in dd-mmm-yyyy[:hh:mm] format and 
+  time in 24-hour hh:mm format)
+  It enables selective borrowing of features (supported by the application). Note that borrowing is only supported
+  if enabled in the license file by the BORROW keyword.
+- In case of an expire/evaluation license, you are now warned 10 days before the license expires.
+  The warning dialog box pops up once every day.
+- FLEXlm support for BORROWING. Note that BORROWING is only available for floating licenses, and may be sold
+  as a separate product or for an additional fee. BORROWING is used so you can work with a floating license
+  even if you are disconnected from the licensing server. See FLEXlm user manuals for details on BORROWING.
+  Note that this product needs a FLEXlm daemon (metrowks.exe on the licensing server) with following
+  version information:
+  FLEXlm v8.4a (lmgr.lib), Copyright (c) 1988-2003 by Macrovision Corporation. All rights reserved.
+  The latest FLEXlm floating server software can as well be downloaded from the www.metrowerks.com
+  web page, or get in touch with support to get the latest version.
+
+List of Fixed Bugs
+- MTWX20634: when the license file is accessed using the path from the LM_LICENSE_FILE environment variable (i.e. there is no license.dat in the
+  tool's directory or its parent, nor is there a hiware.dat license file), and a required feature expires in less than 10 days, a crash occurs.
+  This bug is fixed for build numbers greater than 6088.
+- Opening files from the builtin Windows GUI with double clicking did cause a crash 
+  if the File->Configuration->Editor Settings dialog was configured as "CodeWarrior (with COM)" and if an old IDE 4.1 was 
+  configured as current CodeWarrior IDE to be used. It did work as expected with if any
+  more recent CodeWarrior IDE was registered.
+- 1-49543661: undefByte was only used for the first SENDBYTE if the content of multiple SENDBYTE's was put into the same binary output file.
+
+List of Known Bugs
+- none.
+
+Demo Version Limitations
+- If the Burner is running in Demo Mode (e.g. no valid license file), there is following 
+  limitation: Total code size is limited to 1024 bytes for 8/16bit CPU's and 3KByte of 
+  code for 32bit CPUs.
+
+RELEASE NOTES Burner V5.0.12
+List of New Features
+- none.
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Burner V5.0.11
+List of New Features
+- new option -Ns=p to remove the path out of the file name present in the S0 record.
+List of Fixed Bugs
+- Fixed memory overwrite bug for macro expansion which generated lines > 256 chars. 
+  E.g. for CW projects with very long abs file names
+- R2917: comments in the burner files, if there was a '*' inside the comment like '/***/', 
+  the rest of the file was handled to be in comment too.
+List of Known Bugs
+- The burner does not allow to use files/paths with a # in their name. The burner does 
+  automatically replace any occurrence of a # with the current value of the built-in 
+  variable i. Note: This behavior is documented in the manual. Its purpose is to handle 
+  automatically multiple files.
+
+
+RELEASE NOTES Burner V5.0.10
+List of New Features
+- This version uses a new FLEXlm daemon (the Metrowerks one). If you already have a 
+  license for the former version, you need to upgrade your license. Additionally be 
+  aware that in compliance with other Metrowerks tools the license (license.dat) file in 
+  the installation root (e.g. c:\metrowerks\license.dat, the installation script has created 
+  a shortcut to this file) is used. If such a license.dat exists, this file is used to check out 
+  the license. Only if this file does not exist, the one in C:\FLEXlm is used.
+- R2856: HEX386 (32bit Intel HEX files were only supported up to 20bit addresses). 
+  This release supports now up to 32bit addresses. Note that to handle this 32bit Intel 
+  Hex files you need a Decoder V5.0.11 (or later) and in the simulator/debugger a 
+  Hexloader V6.1.13 (or later).
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Burner V5.0.09
+List of New Features
+- New option –Ns. With this option the S0, S7, S8 or S9 records can be suppressed in 
+  the generated S-Record file. As an example this option can be used together with a 
+  non-standard S-Record that does not understand the S0 record.
+- This version of the burner contains the feature that the code size limitation can be 
+  controlled by FLEXlm. In this case and if such a license is present, this will show up 
+  in the about box.
+List of Fixed Bugs
+- Handling of ELF files with sections of size 0.
+- In case of running into demo limitation, the Burner did not issue correctly a message 
+  under CodeWarrior.
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Burner V5.0.08
+List of New Features
+- The new macro ABS_FILE is supported in burner environment. This macro will be 
+  automatically replaced by the application filename.
+  Example:  
+  OPENFILE "%ABS_FILE%.s19" 
+  SENDBYTE 1 "%ABS_FILE%"
+  In this way, when the application filename is modified in the generic settings of the 
+  linker in Code Warrior, the input and output of the burner stay coherent. 
+- Following special macros are supported now in the environment too: {Compiler}, 
+  {Project} and {System}.
+  Note: Those macros are newly available during environment variable substitution.
+  They are not automatically supported in filenames in general.
+- R2652: It is possible now to change the color for messages in the tool window. It can 
+  be changed for WARNING, INFORMATION, ERROR, FATAL and for user 
+  messages as well. Following options are available for this: -WmsgCW, -WmsgCI, -
+  WmsgCE, -WmsgCF and -WmsgCU. See manual for details.
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+Demo Version Limitations
+- If the Burner is running in Demo Mode (e.g. no valid license file), there is following 
+  limitation: Total code size is limited to 1024 bytes
+
+
+RELEASE NOTES Burner V5.0.07
+List of New Features
+- New option -ShowAboutDialog to show the about dialog
+- All tools have now a dialog to edit the environment (File->Configuration). E.g. to 
+  modify the GENPATH.  Note that this affects the project file only (and does NOT 
+  support the default.env)
+- The license file is searched in following order: 
+- license.dat in the directory where the executable is (this was already the case) 
+- hiware.lic in the directory where the executable is (this was already the case) 
+- license.dat in one directory up from the where the executable is (this is new. E.g. if  
+  the executable is in c:\metrowerks\prog, the license file in c:\metrowerks is searched 
+  too) 
+- the license file using the normal FLEXlm way (usually c:\flexlm, this was already 
+  the case)
+List of Fixed Bugs
+- none.
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Burner V5.0.06
+List of New Features
+- R2401: The "show dialog" speed button on the toolbar does now have fly-by-help (tool tip).
+- R2402: The "select destination file" dialog launched from the burner dialog 
+  input/output tab does have now a file type filter for intel hex (.hex).
+- R2403: In the "select destination file" dialog, the default file type filter always sets to 
+  the format (SRecord, binary or intel hex) which has been set in the Content Tab.
+List of Fixed Bugs
+- R2447: Burner crash for binary format sent to COM ports.
+List of Known Bugs
+- none.
+
+
+RELEASE NOTES Burner V5.0.05
+List of New Features
+- The SRECORD command is now supported in the graphical dialog too
+- New command SLINELEN to specify the length of each S-Record
+- Color for output is now used: e.g. error messages are written in red
+- New startup option –NoEnv which disables the usage of the environment 
+  (default.env, tips file and project.ini)
+List of Fixed Bugs
+- R2336: "-F=fibo.bbl" did not work. However, the form "–F fibo.bbl" did work. 
+  Now the following forms are legal: 
+  Direct all commands on the command line: 'OPENFILE "fibo.out" format=motorola 
+  busWidth=4 origin=0 len=0x10000000 destination=0 swapByte=yes SENDBYTE 1 
+  "fibo.abs" CLOSE' 
+– option –f with argument '-f=fibo.bbl' 
+– option –f separated with argument: '-f fibo.bbl' 
+  Anything before a –f, which is not an option is taken as command. Once a command 
+  started, the rest of the command line is used as additional commands. 
+  So 'fibo.bbl –f' does not work because there is no command 'fibo.bbl'. To burn 
+  fibo.bbl, use '-f=fibo.bbl'.
+- R2294: All entries on page one of the burner dialog did become active only after 
+  closing the dialog or selecting another page.
+- The parity communication setting does not work on all PC machines.
+- R2372: The serial port feature did not work.
+List of Known Bugs
+- None.
+
+
+RELEASE NOTES Burner V5.0.04
+List of New Features
+- R2298: Wish, burner does now generate SRecord file with sorted address 
+  entries in HIWARE format. For the ELF format, also previous versions of the 
+  burner did order their output.
+List of Fixed Bugs
+- R2240: Endless loop for illegal absolute file.
+- Burner V5.0.2 did write empty files.
+- Files dragged onto the burner and files selected with the menu entry file->Burn are 
+  now treated as command file.
+List of Known Bugs
+- The parity communication setting does not work on all PC machines.
+
+
+RELEASE NOTES Burner V5.0.03
+List of New Features
+- The number of bytes in a SRecord file is configured with the new 
+  command SLINELEN. This setting can also be configured in the user interface.
+- The SRecord type can now be configured in the user interface.
+List of Fixed Bugs
+- R2240: Endless loop for illegal absolute file.
+- Burner V5.0.2 did write empty files.
+List of Known Bugs
+- The parity communication setting does not work on all PC machines.
+
+
+RELEASE NOTES Burner V5.0.02
+List of New Features
+- R2103: New option  -WmsgNu to suppress user messages (e.g. included files). See 
+  manual/help file for details.
+- The Burner does now check the number of bytes written
+List of Fixed Bugs
+- R2240: Endless loop for illegal absolute file.
+List of Known Bugs
+- The parity communication setting does not work on all PC machines.
+
+
+RELEASE NOTES Burner V5.0.01
+List of New Features
+- HIWARE introduces a new generation of burner utility (V5.0.x) 
+  The new generation includes the following features: 
+- The burner is now a native 32 bit Win32 application. It is about two times faster 
+  than older 16 bit 2.7.x version on a Win32 system. 
+- Fully windows oriented user interface (menus, tool bars, drag & drop)
+- Online help
+- Message Management
+- Rich set of compiler options both with graphical and command line setting
+- Tip of the Day
+- Direct link between burner output and editor: simply double click on burner 
+  message to open the source with the editor of your choice
+- Editable command line with history
+- The graphical dialog to enter the burner parameters has been redesigned. See 
+  manual/online help/online manual for details
+- The manual has been extended with additional information about GUI, option 
+  settings and environment files.
+- Many new options (message management, …), see manual for details
+List of Fixed Bugs
+- None.
+List of Known Bugs
+- The parity communication setting does not work on all PC machines.
+
+
+RELEASE NOTES HI-CROSS Burner V2.7.13
+List of New Features
+- None.
+List of Fixed Bugs
+- Hex numbers with lower case digits are correctly handled. (e.g. 0xf000)
+- The burner version 2.7.12 did write some files very slowly. This version does not 
+  have these exceptions.
+List of Known Bugs
+- None.
+
+
+RELEASE NOTES HI-CROSS Burner V2.7.12
+List of New Features
+- New Variable 'undefByte' defined for the batch mode of the burner (option -w) and 
+  for command files. In binary output mode you can define the value for an undefined 
+  byte over this variable. Default is 0xFF.
+  Example 	
+	  undefByte := 0	/* Sets the undefined byte value for binary output to 0 */
+  This feature is not available for the interactive mode of the Burner.
+List of Fixed Bugs
+- None.
+List of Known Bugs
+- None.
+
+RELEASE NOTES HI-CROSS Burner V2.7.11
+List of New Features
+- New MCUTOOLS.INI: All tools store now their global information instead in the 
+  HICROSS.INI file in the windows directory in a file called MCUTOOLS.INI. 
+  Below a short extract from the manual:
+	  MCUTOOLS.INI File (PC only)
+	  All tools may store some global data into the MCUTOOLS.INI. The tool first 
+  searches for this file in the directory of the tool itself (path of the executable). If 
+  there is no MCUTOOLS.INI file in this directory, the tool looks for a 
+  MCUTOOLS.INI file located in the MS Windows installation directory (e.g. 
+  C:\WINDOS).
+	  Example:
+	  C:\WINDOWS\MCUTOOLS.INI
+	  D:\INSTALL\PROG\MCUTOOLS.INI
+	  If a tool is started in the D:\INSTALL\PROG\DIRECTOY, the project file in the 
+  same directory than the tool is used (D:\INSTALL\PROG\MCUTOOLS.INI).
+	  But if the tool is started outside the D:\INSTALL\PROG directory, the project 
+  file in the Windows directory is used (C:\WINDOWS\MCUTOOLS.INI).
+- The HICROSS.INI file is not used any more. It can be renamed to 
+  MCUTOOLS.INI, because the format remains the same.
+List of Fixed Bugs
+- None.
+List of Known Bugs
+- None.

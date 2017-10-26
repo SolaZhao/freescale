@@ -1,0 +1,358 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>IntEEPROM</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="IntEEPROM.html">General Info</a><br />
+<a href="IntEEPROMProperties.html">Properties</a><br />
+<a href="IntEEPROMMethods.html">Methods</a><br />
+<a href="IntEEPROMEvents.html">Events</a><br />
+<a href="IntEEPROMUser Types.html">Types and constants</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="IntEEPROM_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              IntEEPROM
+            </div>
+            <div class="descrtext">Internal EEPROM</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Memory</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+In our examples we expect that 'Write method' property is set to 'Safe write'. In case that this porperty is not supported, components runs in 'Safe write' mode.
+Required component name for all examples below is <tt>IEE1</tt> and property <a href="IntEEPROMProperties.html#InitEnableWait">Wait enabled in init.</a> to be set to <tt>yes</tt>.
+<P/><B>Typical usage examples:</B><br/>
+</FONT>
+<!--- 1 -->
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(1)</B>
+<BR/>The easiest usage of the component is a single byte read and write.
+    
+</FONT>    
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+byte Data;
+
+void main(void)
+{
+  /* Write number 28 to address IEE1_AREA_START */
+  IEE1_SetByte(IEE1_AREA_START, 28);
+  /* Read contents of EEPROM array at address IEE1_AREA_START and write it to Data variable */
+  IEE1_GetByte(IEE1_AREA_START, &amp;Data);
+}
+</PRE>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+    Note: The Address of EEPROM is an absolute address, not an index within the EEPROM area.
+</FONT>
+    
+    
+<!--- 2 -->
+</P>
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(2)</B>
+<p>
+When the property <a href="IntEEPROMProperties.html#PageSize">Page size</a> is set up to different value than 0, methods using virtual page
+are available. The following example reads data content of some EEPROM area, modifies it,
+and stores it to another location in the EEPROM.
+</p>
+<p>
+Required component settings:<br/>
+<UL>
+<LI> Page size: 0xC</LI>
+</UL>
+</p>
+</FONT>   
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+void main(void)
+{
+  /* Store 0x44 on IEE1_AREA_START address */
+  err = IEE1_SetByte(IEE1_AREA_START,0x44U);
+  /* Fill virtual page with actual data content on address IEE1_AREA_START */
+  err = IEE1_GetPage(IEE1_AREA_START);
+  /* Write number 23 to second cell of page (range is 0..IEE1_VIRTUAL_PAGE_SIZE) */
+  err = IEE1_SetBytePage(1,23U);
+  /* Write number 0 to second cell */
+  err = IEE1_SetActBytePage(0U);
+  /* Write number 255 to tenth cell */
+  err = IEE1_SetBytePage(9U, 0xFFU);
+  /* Rest of page fill with ff */
+  while (IEE1_SetActBytePage(0xFFU) == ERR_OK) {}
+  /* Store data content of virtual page to EEPROM on address IEE1_AREA_START + 0x30 - For HCS12(X) derivatives or derivatives with D-Flash */
+  /* Store data content of virtual page to EEPROM on address IEE1_AREA_START + 0x18 - For derivatives without D-Flash */
+  err = IEE1_SetPage(IEE1_AREA_START + 0x18U);
+}
+</PRE>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+    Note: Methods SetBytePage, GetBytePage use index within the range 0 to (<a href="IntEEPROMProperties.html#PageSize">PageSize</a> - 1).
+</FONT>
+
+<!--- 3 -->
+
+</P>
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B>(3)</B>
+<p>
+This example shows how to properly use large virtual page. Required value 'Start address', 'Used size', and 'Page size' could differ in dependence on selected derivative.
+</p>
+<p>
+Required component settings for HCS12X derivatives or derivatives with D-flash:<br/>
+<UL>
+<LI> Start address: 0x13F000</LI>
+<LI> Used size: 0xE00</LI>
+<LI> Page size: 0xE00</LI>
+</UL>
+</p>
+<p>
+Required component settings for HCS12 derivatives without D-flash module:<br/>
+<UL>
+<LI> Start address: 0x4000 <i>(To enter this value it´s necessary to set 'Internal EEPROM mapping' property in CPU component to $4000)</i></LI>
+<LI> Used size: 0xFF0</LI>
+<LI> Page size: 0xFF0</LI>
+</UL>
+</p>
+</FONT>   
+<PRE>
+ <I><U>MAIN.C</U></I>
+  
+   const byte data_wr = 0x44;
+   byte data_rd;
+   word i;
+   byte err;
+
+  /* Erase whole EEPROM memory ~150 ms */
+  err = IEE1_EraseEeprom(IEE1_AREA_START);
+  
+  /* Load data into virtual page 3,5 kB */
+  for (i=0;i&lt;(IEE1_VIRTUAL_PAGE_SIZE-1);i++) {
+    err = IEE1_SetBytePage(i,data_wr);
+  }
+  /* Store data content of virtual page to EEPROM on address 0x13F000 */
+  /* This actions takes ~100ms becuase whole EEPROM memory is errased and 
+  there is no erassing process */
+  err = IEE1_SetPage(IEE1_AREA_START);
+  /* Load data from EEPROM to RAM, change it and save it back */
+  /* Fill virtual page with actual data content on address 0x13F000 */
+  err = IEE1_GetPage(IEE1_AREA_START);
+  /* Dummy read of virtual page to set adress pointer to origin of virtual page */  
+  err = IEE1_GetBytePage(0,&data_rd);
+  /* Write number 23 to first cell of page */
+  err = IEE1_SetActBytePage(23);
+  /* Write number 0 to second cell */
+  err = IEE1_SetActBytePage(0);
+  /* Write number 255 to tenth cell */
+  err = IEE1_SetBytePage(9, 0xFF);
+  /* Rest of page fill with 0x55 */
+  while (IEE1_SetActBytePage(0x55) == ERR_OK) {}
+  /* Store data content of virtual page to EEPROM on address 0x13F000 */
+  /* This action takes time according to among changed data. The user should
+  decide that it´s not more optional to use mass erase command - otherwise this
+  action could take even several seconds and could hang */
+  err = IEE1_SetPage(IEE1_AREA_START);
+
+}
+</PRE>
+</P>
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2011 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

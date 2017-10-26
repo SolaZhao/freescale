@@ -1,0 +1,55 @@
+=======================================
+ RELEASE NOTES FOR HC12 CPU AWARENESS
+=======================================
+
+
+===================================
+HC12 CPU AWARENESS hc12.cpu V 6.1.16
+===================================
+
+List of new Features
+--------------------
+- none.
+
+List of fixed Bugs
+------------------
+- fixed bug with independent components invalidating the call chain state of each other. 
+   E.g. the symbolic disassembly of the assembly window setting could affect the display in the data window.
+
+List of known Bugs
+------------------
+- None.	
+
+
+===================================
+HC12 CPU AWARENESS hc12.cpu V 6.1.15
+===================================
+
+List of new Features
+--------------------
+- HCS12XE support
+
+List of fixed Bugs
+------------------
+- None.	
+
+List of known Bugs
+------------------
+- None.	
+
+
+===================================
+HC12 CPU AWARENESS hc12.cpu V 6.1.14
+===================================
+
+List of new Features
+--------------------
+- Internal upgrade.
+
+List of fixed Bugs
+------------------
+- None.	
+
+List of known Bugs
+------------------
+- None.	

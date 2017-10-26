@@ -1,0 +1,486 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Properties
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>FreescaleCAN</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreescaleCAN.html">General Info</a><br />
+<i>Properties</i><br />
+<a href="FreescaleCANMethods.html">Methods</a><br />
+<a href="FreescaleCANEvents.html">Events</a><br />
+<a href="FreescaleCANUser Types.html">Types and constants</a><br />
+<a href="FreescaleCANTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreescaleCAN_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+<!--      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td class="titlebox">-->
+          
+           <div class="titlebox">
+              <div class="beanname">
+                Component
+                
+                
+                FreescaleCAN
+              </div>
+              <div class="descrtext">CAN communication for Freescale implementation</div>
+              <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+                
+                </span>
+              </div>
+            </div>
+                      
+<!--
+            </td>
+        </tr>
+
+        <tr>        
+-->  
+            
+<!--            <td align="left"> -->
+<!--                   <br /> -->                  
+     <div class="text_title">
+          Properties:
+		 </div>		 
+		 <div class="descr_line">                  
+                  (Properties are parameters of the component. Please see the <a href="../../DOCs/EmbeddedBeans.html">Embedded Components page</a> for more information.)                   
+     </div>
+                  
+<div class="user_text">
+<ul>
+<li>
+<a name="DeviceName">
+<b>Component name</b></a> - Component name
+</li>
+<li>
+<a name="CAN">
+<b>CAN channel</b></a> - CAN channel
+</li>
+<li>
+<a name="IntService">
+<b>Interrupt service/event</b></a> - Component may or may not be implemented using interrupts. If this property is set to "Enabled", the component functionality (e.g. sending and receiving data) depends on the interrupt service and will not operate if the CPU interrupts are disabled. For details please refer to chapter <a href="..\..\DOCs\InterruptsEvents.html#InterruptsUsage">"interrupt service in the component's generated code"</a>.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="CANintTxD">
+  <b>Interrupt TxD</b></a> - Interrupt from transmitter
+  </li>
+  <li>
+  <a name="CANIntTxPrior">
+  <b>Interrupt TxD priority</b></a> - Priority of interrupt
+  </li>
+  <li>
+  <a name="CANintRxD">
+  <b>Interrupt RxD</b></a> - Interrupt from receiver
+  </li>
+  <li>
+  <a name="CANprior">
+  <b>Interrupt RxD priority</b></a> - Priority of interrupt
+  </li>
+    <li>
+  <a name="CANintError">
+  <b>Interrupt Error</b></a> - Error interrupt
+  </li>
+  <li>
+  <a name="CANIntErrorPrior">
+  <b>Interrupt Error priority</b></a> - Priority of interrupt
+  </li>
+    <li>
+  <a name="CANintWakeup">
+  <b>Interrupt Wakeup</b></a> - Wakeup interrupt
+  </li>
+  <li>
+  <a name="CANIntWakeupPrior">
+  <b>Interrupt Wakeup priority</b></a> - Priority of interrupt
+  </li>
+    </ul>
+</li>
+<li>
+<a name="_Settings">
+<b>Settings</b></a> - Settings of the CAN
+<ul>
+  <li>
+  <a name="Inp">
+  <b>Rx pin</b></a> - Receive pin
+  </li>
+  <li>
+  <a name="InpSignal">
+  <b>Rx pin signal</b></a> - Input signal name
+  </li>
+  <li>
+  <a name="Out">
+  <b>Tx pin</b></a> - Transmit pin
+  </li>
+  <li>
+  <a name="TxSignal">
+  <b>Tx pin Signal</b></a> - Output signal name
+  </li>
+      <li class="versionspecdetail">
+  <a name="DSPgrp1000">
+  <span class="versionspeclabel">The settings not supported for DSP83x derivatives.</span></a>
+  <ul>
+            <li class="versionspec">
+    <a name="Not_HC08grp">
+    <span class="versionspeclabel">Settings not supported for HC08 derivatives.</span></a>
+    <ul>
+      <li>
+      <a name="AccMode">
+      <b>Acceptance mode</b></a> - The CPU sets these flags to define the identifier’s acceptance filter organization (see documentation about this chip). In &quot;Filter closed&quot; mode no messages will be accepted, thus the foreground buffer will never be reloaded.
+      </li>
+    </ul>
+    </li>
+        <li>
+    <a name="Symbol">
+    <b>Acceptance codes</b></a> - Contains settings of the receive acceptance codes for the message filtering.
+    <ul>
+      <li>
+      <a name="AccCode">
+      <b>Acceptance code 1</b></a> - Acceptance code for message filtering. On reception, each identifier of the message is compared with this acceptance code. Reception of a new message is signaled only if it passes the criteria in the identifier acceptance and identifier mask registers (see also Acceptance mask). This code will be written to the acceptance code registers (e.g. IDAR0-IDAR3) after a reset. The most significant byte of the acceptance code will be written to the (e.g. IDAR0) register and the least significant byte of the acceptance code will be written to the (e.g. IDAR3 register).
+      </li>
+            <li class="versionspec">
+      <a name="N_hc08">
+      <span class="versionspeclabel">Settings not supported for HC08 derivatives.</span></a>
+      <ul>
+        <li>
+        <a name="AccCode2">
+        <b>Acceptance code 2</b></a> - Acceptance code for message filtering. On reception, each identifier of the message is compared with this acceptance code. Reception of a new message is signaled only if it passes the criteria in the identifier acceptance and identifier mask registers (see also Acceptance mask). This mask will be written to the acceptance code registers (e.g. IDAR4-IDAR7) after a reset. The most significant byte of the acceptance code will be written to the (e.g. IDAR4) register and the least significant byte of the acceptance code will be written to the (e.g. IDAR7 register).
+        </li>
+      </ul>
+      </li>
+          </ul>
+    </li>
+    <li>
+    <a name="Symbol0">
+    <b>Acceptance masks</b></a> - Contains settings of the receive acceptance mask for the message filtering.
+    <ul>
+      <li>
+      <a name="AccMask">
+      <b>Acceptance mask 1</b></a> - Acceptance mask for message filtering. If a particular bit in this register is cleared, this indicates that the corresponding bit in the identifier’s acceptance register must be the same as its identifier bit before a match is detected. This mask will be written to the acceptance mask registers (e.g. IDMR0-IDMR3) after a reset. The most significant byte of the acceptance mask will be written to the (e.g. IDMR0) register and the least significant byte of the acceptance mask will be written to the (e.g. IDMR3 register).
+      </li>
+            <li class="versionspec">
+      <a name="Non_HC08">
+      <span class="versionspeclabel">Settings not supported for HC08 derivatives.</span></a>
+      <ul>
+        <li>
+        <a name="AccMask2">
+        <b>Acceptance mask 2</b></a> - Acceptance mask for message filtering. If a particular bit in this register is cleared, this indicates that the corresponding bit in the identifier’s acceptance register must be the same as its identifier bit before a match is detected. This mask will be written to the acceptance mask registers (e.g. IDMR4-IDMR7) after a reset. The most significant byte of the acceptance mask will be written to the (e.g. IDMR4) register and the least significant byte of the acceptance mask will be written to the (e.g. IDMR7 register).
+        </li>
+      </ul>
+      </li>
+          </ul>
+    </li>
+  </ul>
+  </li>
+    <li>
+  <a name="LoopMode">
+  <b>Loop mode</b></a> - When this bit is set, the CAN module performs an internal loop back which can be used for self test operation. The bit stream output of the transmitter is fed back to the receiver internally. The RXCAN input pin is ignored and the TXCAN output goes to the recessive state (logic ‘1’). The CAN module behaves as it does normally when transmitting and treats its own transmitted message as a message received from a remote node. In this state, the CAN module ignores the bit sent during the ACK slot in the CAN frame Acknowledge field to ensure proper reception of its own message. Both transmit and receive interrupts are generated.
+  </li>
+    <li class="versionspecdetail">
+  <a name="HCS12Xgrp">
+  <span class="versionspeclabel">Settings supported for Freescale 56800/E 56F803x and 56F82xx and HCS08 and HCS12 G, HY and P and HCS12X and ColdFireV1 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="BusOffRecovery">
+    <b>Bus-Off recovery mode</b></a> - The property configures the bus-off recovery mode. See also BusOffRecoveryRequest method.<br /><br />
+There are 2 options:<br />
+<ul>
+  <li><u>Automatic</u>: Automatic bus-off recovery</li>
+  <li><u>User</u>: Bus-off recovery upon user request</li>
+</ul><br />
+
+    </li>
+  </ul>
+  </li>
+      <li class="versionspecdetail">
+  <a name="DSPgrp10010">
+  <span class="versionspeclabel">Settings supported for Freescale 56800/E 56F802x, 56F803x, 56F82xx and 56F83x and HCS08 and HCS12 and HCS12X and ColdFireV1 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="ListenMode">
+    <b>Listen only mode</b></a> - This property configures the CAN module as a bus monitor. When this property is set to &quot;yes&quot;, all valid CAN messages with matching ID are received, but no acknowledgement or error frames are sent out. In addition, the error counters are frozen. Listen Only Mode supports applications which require &quot;hot plugging&quot; or throughput analysis. The CAN module is unable to transmit any messages, when Listen Only Mode is active.
+    </li>
+  </ul>
+  </li>
+      <li class="versionspecdetail">
+  <a name="HCS12grp0">
+  <span class="versionspeclabel">Settings supported for Freescale 56800/E 56F802x, 56F803x and 56F82xx and HCS08 and HCS12 and HCS12X and ColdFireV1 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="TimerStamp">
+    <b>Time stamp</b></a> - This bit activates an internal 16-bit wide free running timer which is clocked by the bit clock. If the timer is enabled, a 16-bit time stamp will be assigned to each transmitted/received message within the active Tx/Rx buffer. As soon as a message is acknowledged on CAN, the time stamp will be written to the highest bytes ($_E, $_F) in the appropriate buffer.
+    </li>
+  </ul>
+  </li>
+    <li>
+  <a name="Wakeup">
+  <b>Wakeup</b></a> - Enables wakeup function.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+  <ul>
+        <li class="versionspecdetail">
+    <a name="DSPgrp10000">
+    <span class="versionspeclabel">The settings not supported for DSP83x derivatives.</span></a>
+    <ul>
+      <li>
+      <a name="WakeupMode">
+      <b>Wakeup mode</b></a> - The type of a wakeup edge. Wakeup of the CAN module will be achieved by the selected edge.
+      </li>
+    </ul>
+    </li>
+      </ul>
+  </li>
+</ul>
+</li>
+<li>
+<a name="_Timing">
+<b>Timing</b></a> - Timing of the CAN
+<ul>
+  <li>
+  <a name="TimingWizard">
+  <b>CAN timing wizard</b></a> - CAN timing wizard allows to set the communication speed and then the wizard calculates all necessary timing properties.
+  </li>
+    <li>
+  <a name="timeSeg1">
+  <b>Time segment 1</b></a> - The length of the time segment 1 of a nominal bit time. It determines the sample point. Number of time quanta is equal to entered value + 1.
+  </li>
+  <li>
+  <a name="timeSeg2">
+  <b>Time segment 2</b></a> - The length of the time segment 2 of a nominal bit time. It determines the sample point. Number of time quanta is equal to entered value + 1.
+  </li>
+  <li>
+  <a name="RSJW">
+  <b>RSJ</b></a> - Resynchronization jump width.
+  </li>
+  <li>
+  <a name="Samples">
+  <b>Samples per bit</b></a> - This bit determines the number of serial bus samples to be taken per bit time.
+  </li>
+  <li>
+  <a name="NumTimeQuanta">
+  <b>Time quanta per bit</b></a> - Number of time quanta per bit. The formula used to calculate the value is:
+ Time quanta per bit = (PropSeg+1) +  (TSeg1) + (TSeg2) + 1. 
+<br/><b>Note:</b> The propagation segment property may not be available on all CAN devices. It depends on HW implementation of the CAN module.
+<br/>This property is for information only.
+  </li>
+  <li>
+  <a name="Rate">
+  <b>Bit rate</b></a> - Communication clock rate.
+  </li>
+</ul>
+</li>
+<li>
+<a name="_InitGrp">
+<b>Initialization</b></a> - Initialization of the CAN
+<ul>
+  <li>
+  <a name="InitEnable">
+  <b>Enabled in init. code</b></a> - Enabled in initialization code
+  </li>
+  <li>
+  <a name="InitEnableEvents">
+  <b>Events enabled in init.</b></a> - Events enabled in initialization
+  </li>
+</ul>
+</li>
+<li>
+<a name="_SpeedGrp">
+<b>CPU clock/speed selection</b></a> - Settings for the CPU speed modes: if the component is supported or not
+<br />For details about speed modes please refer to page <a href="../../DOCs/SpeedModes.html">Speed Modes Support</a>.
+<ul>
+  <li>
+  <a name="HighSpeed">
+  <b>High speed mode</b></a> - High speed mode
+  </li>
+  <li>
+  <a name="LowSpeed">
+  <b>Low speed mode</b></a> - Low speed mode
+  </li>
+  <li>
+  <a name="SlowSpeed">
+  <b>Slow speed mode</b></a> - Slow speed mode
+  </li>
+</ul>
+</li>
+
+     </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+</div>
+           <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

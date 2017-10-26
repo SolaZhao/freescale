@@ -1,0 +1,324 @@
+==============================
+ Data Component Release Notes
+==============================
+
+=================================
+ Data Component data.wnd v6.1.43
+=================================
+
+List of new Features
+--------------------
+- External scope was added to Data window to show all project global variables
+
+List of fixed Bugs
+------------------
+- MTWX35301: User Data window component erasing structure variables
+- MTWX38999: variables disappearing in watch window
+
+List of known Bugs
+------------------
+- None.	
+
+
+=================================
+ Data Component data.wnd v6.1.42
+=================================
+
+List of new Features
+--------------------
+- a "Refresh" popup/context menu entry has been added to give a way to refresh the Data window cache and display.
+
+List of fixed Bugs
+------------------
+- None.
+
+List of known Bugs
+------------------
+- None.	
+
+
+=================================
+ Data Component data.wnd v6.1.41
+=================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- MTWX20714: for some setups, expressions were dublicated each time there were loaded. This exponential groth did cause delays very quickly.
+             Now every expression is only loaded once by default.
+
+List of known Bugs
+------------------
+- None.	
+
+=================================
+ Data Component data.wnd v6.1.40
+=================================
+
+List of new Features
+--------------------
+- each value can have its own formatting
+
+List of fixed Bugs
+------------------
+- none.
+
+List of known Bugs
+------------------
+- None.	
+
+
+=================================
+ Data Component data.wnd v6.1.39
+=================================
+
+List of new Features
+--------------------
+- Implementation of alphabetical ordering or order by value
+
+List of fixed Bugs
+------------------
+- none.
+
+List of known Bugs
+------------------
+- None.	
+=================================
+ Data Component data.wnd v6.1.38
+=================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- MTWX9165, MTWX12247: HIWAVE.exe crashed if context menu was opened. Note: Late V6.1.37 builds do contain this fix already.
+
+List of known Bugs
+------------------
+- None.	
+
+=================================
+ Data Component data.wnd v6.1.37
+=================================
+
+List of new Features
+--------------------
+- None.
+
+List of fixed Bugs
+------------------
+- scroll wheel bug on WinXP fixed.
+
+List of known Bugs
+------------------
+- None.	
+
+
+=================================
+ Data Component data.wnd v6.1.36
+=================================
+
+List of New Features
+--------------------
+Added Markpoint support:
+It is now possible to set markpoints in Source, Assembly, Data and Memory 
+component windows. Markpoints are user friendly visible marks that have no
+effect on the debugging session (except special target markpoints like triggers). 
+Markpoints are set, deleted like breakpoints through context sensitive popup
+menus. In the debugger "Run" menu, the "Control Points" give now the lists
+of Breakpoints, Watchpoints and Markpoints.
+Note that markpoints set in the Source and Assembly components are automatically
+qualified as "Instruction" type of markpoints, whereas markpoints set in the Data 
+and Memory components are automatically qualified as "R/W Access" type.
+However, this qualification can be changed within the dialog described above
+and markpoints are always visible in all component windows listed here above.
+Note also that only one single markpoint can be set for a given memory address.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.35
+=================================
+
+List of New Features
+--------------------
+- Real Time Awareness support.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.34
+=================================
+
+List of New Features
+--------------------
+- none.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.33
+=================================
+
+List of New Features
+--------------------
+- the data window is displaying shorter text for long addresses. E.g. instead of "Address: DDDDDDDD Size: 123456789" it does 
+only display "DDDDDDDD 123456789". For short address/size pairs, the old display is still used.
+
+List of Fixed Bugs
+--------------------
+- General improvement of the component’s layout.
+- Improvement of expression file handling (duplication of expressions do not occur anymore). The user expression file (*.xpr) 
+is now saved at the same location as the application file (*.abs, *.elf).
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.32
+=================================
+
+List of New Features
+--------------------
+- There is a new option available in the data component that allows changing the display width of variable names. Thus larger 
+names will not be cut off anymore if they are longer than 16 characters. To use this feature press the right mouse button in 
+the data component and choose Options…->Name Width… from the context menu. Alternatively you can activate this option in the menubar. 
+In the following dialog choose the required length in characters.
+- The contents visible in the components window can now be written to the command line with the new command line command “DUMP”.
+- It is now possible to modify an enumeration directly with a symbolic name. 
+
+
+List of Fixed Bugs
+--------------------
+- General improvement of the component’s layout.
+- Improvement of expression file handling (duplication of expressions do not occur anymore). The “*.xpr” file is now saved at the 
+same location as the application file.
+- R2599 : In case of an undefined variable, the Data component was previously displaying the address of the variable in the value 
+field instead of ‘undefined’.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+=================================
+ Data Component data.wnd v6.1.31
+=================================
+
+List of New Features
+--------------------
+- It is now possible to modify an enumeration directly with a symbolic name.
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.30
+=================================
+
+List of New Features
+--------------------
+- none.
+
+List of Fixed Bugs
+--------------------
+- Scrolling through variables with the keyboard was too slow due to a bug introduced in the previous release. This is fixed now.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.29
+=================================
+
+List of New Features
+--------------------
+- There is a new option available in the data component that allows changing the display width of variable names. Thus larger names 
+will not be cut off anymore if they are longer than 16 characters. To use this feature press the right mouse button in the data 
+component and choose Options…->Name Width… from the context menu. Alternatively you can activate this option in the menubar. In the 
+following dialog choose the required length in characters.
+- The contents visible in the components window can now be written to the command line with “DUMP”.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+
+
+=================================
+ Data Component data.wnd v6.1.28
+=================================
+
+List of New Features
+--------------------
+- New Bit Reverse functionality, which computes the 1'complement for all displayed data. This functionality is accessible through 
+a 'check-mark' entry called ‘BitReverse’ in the Format entry of the PopUp Menu. The current status of the bit Reverse is displayed 
+in the head line of the Data Component (prefix “Rev”). This new state is saved in the layout file (*.hwl) through a new argument in 
+the ATTRIBUTES command: COMPLEMENT(none|one) enables or disables this feature in the Data Component according to the given parameter. 
+Example of layout file:
+
+OPEN Data:1 0 55 60 23
+Data:1 < attributes SCOPE global,COMPLEMENT One,FORMAT Symb,MODE automatic,UPDATERATE 10		(<- Bit Reverse enabled)
+OPEN Data:2 0 78 60 22
+
+- New Drag and Drop function to the Memory Component: displays the memory area corresponding of the high-level language source code selected. 
+  The memory area corresponding to the selected instructions are grayed in the memory component.
+- R2525: user defined expression in Hex format are now displaying with a 0x prefix.
+
+
+List of Fixed Bugs
+--------------------
+- none.
+
+
+List of Known Bugs
+--------------------
+- none.
+

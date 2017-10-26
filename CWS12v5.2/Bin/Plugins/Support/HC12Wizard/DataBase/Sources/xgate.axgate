@@ -1,0 +1,174 @@
+
+  INCLUDE "xgate.inc"
+  XDEF XGATE_VectorTable
+  XDEF XGATE_Counter
+  
+
+DEFAULT_RAM:      SECTION
+
+; put your variables here  
+  ALIGN 2
+MyData:
+XGATE_Counter: DS   2  
+
+/*$RAMFLASH_AXGATE1$*/
+
+; interrupt handler for the software trigger 0
+  ALIGN 2
+SoftwareTrigger0_Handler:
+    LDW   R2,(R1,#(XGATE_Counter - MyData))   ; load counter
+    INC   R2
+    STW   R2,(R1,#(XGATE_Counter - MyData))   ; store counter
+    RTS
+
+/*$RAMFLASH_AXGATE2$*/
+
+; interrupt handler for all others
+ErrorHandler:
+    ; The channel number is in R1
+    BRK
+    RTS
+
+;XGATE_VectorTable: is conceptionally here, but in real defined below because we only allocate used vector tables.
+; Channel_# = Vector address / 2                       
+ if 0 ; reserved (and spurious)
+Channel_00: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  0)          ; Reserved
+Channel_01: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  1)          ; Reserved
+Channel_02: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  2)          ; Reserved
+Channel_03: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  3)          ; Reserved
+Channel_04: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  4)          ; Reserved
+Channel_05: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  5)          ; Reserved
+Channel_06: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  6)          ; Reserved
+Channel_07: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  7)          ; Reserved
+Channel_08: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  8)          ; Spurious Interrupt
+Channel_09: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(  9)          ; Reserved
+Channel_0A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 10)          ; Reserved
+Channel_0B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 11)          ; Reserved
+Channel_0C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 12)          ; Reserved
+Channel_0D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 13)          ; Reserved
+Channel_0E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 14)          ; Reserved
+Channel_0F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 15)          ; Reserved
+Channel_10: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 16)          ; Reserved
+Channel_11: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 17)          ; Reserved
+Channel_12: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 18)          ; Reserved
+Channel_13: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 19)          ; Reserved
+Channel_14: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 20)          ; Reserved
+Channel_15: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 21)          ; Reserved
+Channel_16: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 22)          ; Reserved
+Channel_17: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 23)          ; Reserved
+Channel_18: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 24)          ; Reserved
+Channel_19: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 25)          ; Reserved
+Channel_1A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 26)          ; Reserved
+Channel_1B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 27)          ; Reserved
+Channel_1C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 28)          ; Reserved
+Channel_1D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 29)          ; Reserved
+Channel_1E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 30)          ; Reserved
+Channel_1F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 31)          ; Reserved
+Channel_20: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 32)          ; Reserved
+Channel_21: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 33)          ; Reserved
+Channel_22: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 34)          ; Reserved
+Channel_23: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 35)          ; Reserved
+Channel_24: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 36)          ; Reserved
+Channel_25: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 37)          ; Reserved
+Channel_26: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 38)          ; Reserved
+Channel_27: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 39)          ; Reserved
+Channel_28: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 40)          ; Reserved
+Channel_29: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 41)          ; Reserved
+Channel_2A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 42)          ; Reserved
+Channel_2B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 43)          ; Reserved
+Channel_2C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 44)          ; Reserved
+Channel_2D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 45)          ; Reserved
+Channel_2E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 46)          ; Reserved
+Channel_2F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 47)          ; Reserved
+ endif ; reserved (and spurious)
+ if 0 ; unused. Enable if needed
+Channel_30: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 48)          ; XSRAM20K Access Violation
+Channel_31: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 49)          ; XGATE Software Error Interrupt     
+Channel_32: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 50)          ; XGATE Software Trigger 7           
+Channel_33: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 51)          ; XGATE Software Trigger 6           
+Channel_34: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 52)          ; XGATE Software Trigger 5           
+Channel_35: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 53)          ; XGATE Software Trigger 4           
+Channel_36: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 54)          ; XGATE Software Trigger 3           
+Channel_37: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 55)          ; XGATE Software Trigger 2           
+Channel_38: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 56)          ; XGATE Software Trigger 1           
+ endif ; unused. Enable if needed
+Channel_39: DC.W %XGATE_16(SoftwareTrigger0_Handler),   %XGATE_16(MyData)       ; XGATE Software Trigger 0           
+ if 0 ; unused. Enable if needed
+Channel_3A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 58)          ; Periodic Interrupt Timer           
+Channel_3B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 59)          ; Periodic Interrupt Timer           
+Channel_3C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 60)          ; Periodic Interrupt Timer           
+Channel_3D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 61)          ; Periodic Interrupt Timer           
+Channel_3E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 62)          ; Reserved                           
+Channel_3F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 63)          ; Autonomous Periodical interrupt API
+Channel_40: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 64)          ; Low Voltage interrupt LVI
+Channel_41: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 65)          ; IIC1 Bus                 
+Channel_42: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 66)          ; SCI5                     
+Channel_43: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 67)          ; SCI4                     
+Channel_44: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 68)          ; SCI3                     
+Channel_45: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 69)          ; SCI2                     
+Channel_46: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 60)          ; PWM Emergency Shutdown   
+Channel_47: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 71)          ; Port P Interrupt         
+Channel_48: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 72)          ; CAN4 transmit            
+Channel_49: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 73)          ; CAN4 receive             
+Channel_4A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 74)          ; CAN4 errors              
+Channel_4B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 75)          ; CAN4 wake-up             
+Channel_4C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 76)          ; CAN3 transmit            
+Channel_4D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 77)          ; CAN3 receive             
+Channel_4E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 78)          ; CAN3 errors              
+Channel_4F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 79)          ; CAN3 wake-up             
+Channel_50: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 80)          ; CAN2 transmit
+Channel_51: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 81)          ; CAN2 receive 
+Channel_52: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 82)          ; CAN2 errors  
+Channel_53: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 83)          ; CAN2 wake-up 
+Channel_54: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 84)          ; CAN1 transmit
+Channel_55: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 85)          ; CAN1 receive 
+Channel_56: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 86)          ; CAN1 errors  
+Channel_57: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 87)          ; CAN1 wake-up 
+Channel_58: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 88)          ; CAN0 transmit
+Channel_59: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 89)          ; CAN0 receive 
+Channel_5A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 90)          ; CAN0 errors  
+Channel_5B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 91)          ; CAN0 wake-up 
+Channel_5C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 92)          ; FLASH 
+Channel_5D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 93)          ; EEPROM
+Channel_5E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 94)          ; SPI2  
+Channel_5F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 95)          ; SPI1
+Channel_60: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 96)          ; IIC0 Bus                         
+Channel_61: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 97)          ; Reserved                         
+Channel_62: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 98)          ; CRG Self Clock Mode              
+Channel_63: DC.W %XGATE_16(ErrorHandler),               %XGATE_16( 99)          ; CRG PLL lock                     
+Channel_64: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(100)          ; Pulse Accumulator B Overflow     
+Channel_65: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(101)          ; Modulus Down Counter underflow   
+Channel_66: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(102)          ; Port H                           
+Channel_67: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(103)          ; Port J                           
+Channel_68: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(104)          ; ATD1                             
+Channel_69: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(105)          ; ATD0                             
+Channel_6A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(106)          ; SCI1                             
+Channel_6B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(107)          ; SCI0
+Channel_6C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(108)          ; SPI0                             
+Channel_6D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(109)          ; Pulse accumulator input edge     
+Channel_6E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(110)          ; Pulse accumulator A overflow     
+Channel_6F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(111)          ; Enhanced Capture Timer overflow  
+Channel_70: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(112)          ; Enhanced Capture Timer channel 7                                 
+Channel_71: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(113)          ; Enhanced Capture Timer channel 6
+Channel_72: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(114)          ; Enhanced Capture Timer channel 5
+Channel_73: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(115)          ; Enhanced Capture Timer channel 4
+Channel_74: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(116)          ; Enhanced Capture Timer channel 3
+Channel_75: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(117)          ; Enhanced Capture Timer channel 2
+Channel_76: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(118)          ; Enhanced Capture Timer channel 1
+Channel_77: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(119)          ; Enhanced Capture Timer channel 0
+Channel_78: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(120)          ; Real Time Interrupt
+ endif ; unused. Enable if needed
+ if 0 ; reserved
+Channel_79: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(121)          ; Reserved
+Channel_7A: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(122)          ; Reserved
+Channel_7B: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(123)          ; Reserved
+Channel_7C: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(124)          ; Reserved
+Channel_7D: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(125)          ; Reserved
+Channel_7E: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(126)          ; Reserved
+Channel_7F: DC.W %XGATE_16(ErrorHandler),               %XGATE_16(127)          ; Reserved  
+ endif ; reserved
+
+; we define the vector table relative to one we do use. Make sure all other
+; interrupts are allocated without gaps before or after this one.
+XGATE_VectorTable: EQU Channel_39 - $39 * 4
+  

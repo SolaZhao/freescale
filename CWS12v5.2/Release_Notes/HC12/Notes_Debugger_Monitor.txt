@@ -1,0 +1,45 @@
+====================================
+  Monitor Component Release Notes
+====================================
+
+The Monitor Component has been discontinued in the CodeWarrior for HC(S)12 V4.7.
+It is not included into a product package.
+
+=========================================
+Monitor Component Monitor.wnd v6.1.3
+=========================================
+
+List of New Features
+--------------------
+- Vertical size of channels and space between channels is reduced. Allow to display more
+ channels in the monitor component.
+
+
+List of Fixed Bugs
+--------------------
+- None.
+
+
+List of Known Bugs
+--------------------
+- None.
+
+
+=========================================
+Monitor Component Monitor.wnd v6.1.1.0
+=========================================
+
+List of New Features
+--------------------
+- This is the first release of this component. For further information, see the help file.
+
+
+List of Fixed Bugs
+--------------------
+- None.
+
+
+List of Known Bugs
+--------------------
+- None.
+

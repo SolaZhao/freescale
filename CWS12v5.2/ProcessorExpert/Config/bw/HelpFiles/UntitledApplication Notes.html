@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+<#BEAN> <#INS text="template " template="y">documentation - Application Notes
+</title>
+<#INCLUDE file="inline_css.txt">
+</head>
+
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b><#BEANNAME short="y" template="n" initreplace=""><#TEMPLATENAME short="y" template="y"></b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<#LINKS>
+<br /><br /><br />
+<center>
+<img src="<#GICON>" alt="<#BEAN> icon"/>
+<#ins text="<br />" template="y">
+<#ABEANREF levelBack="2" template="y">
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+           <div class="titlebox">
+              <div class="beanname">
+                <#BEAN template="n" alt="Template">
+                <#TEMPLATENAME template="y">
+                <#INS text="from component" template="y">
+                <#BEANNAME initreplace=" for %%ext">
+              </div>
+              <div class="descrtext"><#Description></div>
+              <div class="info_name">Component Level: <span class="info_text"><#BEAN_LEVEL prefix="<a href=~!../../DOCs/BeanCategoriesInfo.html#LevelAbstraction~!>" postfix="</a>"></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <#BEAN_CATEGORY prefix="<a href=~!../../DOCs/BeanCategoriesInfo.html~!>" postfix="</a>">
+                <#BEAN_CATEGORIES prefix="<a href=~!../../DOCs/BeanCategoriesInfo.html~!>" postfix="</a>" li_tag="no" separator=", " >
+                </span>
+              </div>
+            </div>
+            
+            <div class="text_title">
+                  Application Notes:
+       		  </div>		 
+      		  <div class="descr_line">                  
+                  (Examples, notes and hints for the component usage.)                   
+            </div>            
+<!---DESCBEG DON'T CHANGE THIS-->
+<div class="user_text">
+   *** Component author must write Application Note here ***
+</div>
+<PRE>
+  *** Component author must write preformated code here ***
+</PRE>
+<!---DESCEND DON'T CHANGE THIS-->
+            <p class="footer">
+              PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+              <br />
+              <#COPYRIGHT text="Copyright 1997 - %%YEAR Freescale Semiconductor, Inc." level="devel" crypt="n"><#COPYRIGHT text="Copyright 1997 - %%YEAR Freescale Semiconductor, Inc." crypt="y">
+            </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

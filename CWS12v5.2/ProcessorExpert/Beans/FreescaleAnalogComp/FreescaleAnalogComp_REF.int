@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+  <Name>FreescaleAnalogComp_REF</Name>
+  <Description>Description</Description>
+  <Author>Processor Expert/MFi</Author>
+  <Version>01.000</Version>
+  <FileVersion>2</FileVersion>
+  <MethodList>
+    <EmptySection_DummyValue/>
+  </MethodList>
+  <EventList>
+    <EmptySection_DummyValue/>
+  </EventList>
+  <Registration>
+    <Template>DAC</Template>
+    <Template>Init_REF_56800</Template>
+  </Registration>
+  <UserTypes>
+    <EmptySection_DummyValue/>
+  </UserTypes>
+</Interface>

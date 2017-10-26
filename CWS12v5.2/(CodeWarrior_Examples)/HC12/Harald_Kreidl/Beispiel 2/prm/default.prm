@@ -1,0 +1,29 @@
+/****************************************
+*	CPU12 Interrupt-Programm-Beispiel	*
+*	Linker-Command-File (PRM-Datei)		*
+*	MC9S12DP256							*
+*****************************************/
+
+NAMES   END 
+
+SEGMENTS
+    MY_RAM = READ_WRITE 0x1000 TO 0x37FF;
+    MY_ROM = READ_ONLY  0xC000 TO 0xFEFF;
+/* Definition des Speicherbereichs für die Vektortabelle */
+	Vector = READ_ONLY	0xFF80 TO 0xFFFF;
+	MY_STK = READ_WRITE 0x3800 TO 0x3FFF;
+END
+
+PLACEMENT
+    DEFAULT_ROM     INTO	MY_ROM;
+    DEFAULT_RAM     INTO	MY_RAM;
+/* Die Section ‘VectorTable’ wird an die entsprechende	*/
+/* Adresse gelegt										*/
+	VectorTable		INTO	Vector;
+	SSTACK			INTO	MY_STK;
+END
+
+INIT main
+ENTRIES
+	*
+END

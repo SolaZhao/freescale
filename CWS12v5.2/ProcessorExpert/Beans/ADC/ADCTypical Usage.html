@@ -1,0 +1,543 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.code {
+  background-color: RGB(243, 242, 230);
+  padding: 10px;
+  white-space: pre;
+  font-family: Courier New, Monospace;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>ADC</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="ADC.html">General Info</a><br />
+<a href="ADCProperties.html">Properties</a><br />
+<a href="ADCMethods.html">Methods</a><br />
+<a href="ADCEvents.html">Events</a><br />
+<a href="ADCUser Types.html">Types and constants</a><br />
+<a href="ADCApplication Notes.html">Application Notes</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="ADC_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              ADC
+            </div>
+            <div class="descrtext">A/D converter</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Converter-ADC</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<P>The examples are accompanied by sequence charts which demonstrate the sequence of calling the methods and events and internal processing of the A/D conversion.
+These charts show detailed information about ADC component algorithm for typical usage of this component.
+Each chart is composed of three processes.
+The first ADC peripheral process represents a function of the internal ADC peripheral module of CPU.
+Second ADC component process represents a generated ADC component code (interrupt routines, methods).
+Third User application process represents a user written code.
+Second and third processes are processed by CPU core, thus they cannot be performed concurrently and the control flow of CPU core is divided into these processes.</P>
+<p>The meaning of the colors used in the diagrams:
+<br />
+<table><tr><td><img src="ADC_ChartText.gif"/></td></tr></table>
+</p>
+
+ <hr size="1" color="#BOBOBO"/>
+ <!-- MENU -->
+<br /><b>Typical settings and usage of ADC component</b>
+<p>
+  <UL>
+<LI><B><a href="#Continuous conversion">(1) Continuous conversion of all channels, with interrupt service</a></B>
+<br />
+</LI><LI><B><a href="#One conversion of all channels">(2) One conversion of all channels, with interrupt service</a></B>
+<br />
+</LI><LI><B><a href="#One conversion specified channel">(3) One conversion of a specified channel, with interrupt service</a></B>
+<br />
+</LI><LI><B><a href="#One conversion all channels polling mode">(4) One conversion of all channels, in polling mode</a></B>
+<br />
+</LI><LI><B><a href="#One conversion of all channels of each component shared mode">(5) One conversion of all channels of each component, in shared mode</a></B>
+<br />
+  </LI></UL>
+ </p>
+ <hr size="1" color="#BOBOBO"/>
+<br />
+</FONT>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<p>
+<B>(1) <a name="Continuous conversion">Continuous conversion of all channels, with interrupt service</a></B>
+<br />Conversion of all channels/samples is performed repeatedly (using interrupts).
+<br />Property <a href="ADCProperties.html#IntService">Interrupt service</a> is enabled, <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> is set to 1.
+Conversion is started using <a href="ADCMethods.html#Start">Start</a> method.
+When a conversion of all channels/samples is finished the <a href="ADCEvents.html#OnEnd">OnEnd</a> event is invoked and a new set of measured values is available.
+All these measured values are available for reading until the next measurement cycle is finished.
+Conversion can be stopped using <a href="ADCMethods.html#Stop">Stop</a> method.
+</p>
+<p>The example demonstrates the continuous conversion of three channels/samples.</p>
+<p>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+#define NUM_MEASUREMENTS 10
+
+
+unsigned int EvnCnt = 0;
+byte Values[3];
+void main(void)
+{
+  . . .
+  AD1_Start();        // Run measurements
+  //measured data are processed in the events
+  //this cycle waits for end
+  for(;;) {
+    if (EvnCnt == NUM_MEASUREMENTS) {
+       //after 10 cycles the conversion is stopped
+       AD1_Stop();
+    }
+    . . .
+}
+}
+
+ <I><U>EVENTS.C</U></I>
+
+extern unsigned int EvnCnt;
+extern byte Values[3];
+
+void AD1_OnEnd(void)
+{
+  EvnCnt++;           // Increment counter
+  //measured values are available and may be read:
+  AD1_GetValue((byte *)Values);  // Get AD conversion results
+}</PRE>
+</p>
+<P>
+<i>This chart shows a sequence of continuous conversion of all channels if an A/D peripheral does not support measuring all channels at once.</i>
+<table><tr><td><img src="ADC_Chart1.gif"/></td></tr></table>
+</P>
+<P>
+<i>This chart shows a sequence of continuous conversion of all channels if an A/D peripheral supports measuring all channels simultaneously.</i>
+<table><tr><td><img src="ADC_Chart4.gif"/></td></tr></table>
+</P>
+<P>
+<i>This chart shows a sequence of continuous conversion of all channels if an A/D peripheral supports measuring all channels simultaneously and in addition continuous mode.</i>
+<table><tr><td><img src="ADC_Chart9.gif"/></td></tr></table>
+</P>
+
+
+<hr size="1"/>
+
+
+</FONT>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<p>
+<B><a name="One conversion of all channels">(2) One conversion of all channels, with interrupt service</a></B>
+<br />All channels are measured after <a href="ADCMethods.html#Measure">Measure</a> method is invoked. 
+Property <a href="ADCProperties.html#IntService">Interrupt service</a> is enabled, <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> is set to 1.
+When a conversion of all channels/samples is finished the <a href="ADCEvents.html#OnEnd">OnEnd</a> event is invoked and measured values are available (at least until the next conversion is started).</p>
+<P>The following example demonstrates conversion of all channels.</P>
+<P>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+bool ValuesAvailable = FALSE;  // control variable
+byte Values[3];
+void main(void)
+{
+  AD1_Measure(TRUE);
+  AD1_GetValue((byte *)Values);  // Get AD conversion results
+  . . .
+  for(;;) {
+    if (ValuesAvailable) {
+      ValuesAvailable = FALSE;   // clear the control variable
+      AD1_Measure(FALSE);  //start next measurement
+    }
+    . . .
+  }
+}
+
+ <I><U>EVENTS.C</U></I>
+
+extern bool ValuesAvailable;
+extern byte Values[3];
+
+void AD1_OnEnd(void)
+{
+  AD1_GetValue((byte *)Values);  // Get AD conversion results
+  ValuesAvailable = TRUE;        // set control variable
+}</PRE>
+</P>
+<P>
+<i>This chart shows a sequence of measurements on all channels if an A/D peripheral does not support measuring all channels simultaneously.</i>
+<table><tr><td><img src="ADC_Chart2.gif"/></td></tr></table>
+</P>
+<P>
+<i>This chart shows a sequence of measurements on all channels if an A/D peripheral supports measuring all channels simultaneously. Number of measurement is set to 2.</i>
+<table><tr><td><img src="ADC_Chart5.gif"/></td></tr></table>
+</P>
+
+
+<hr size="1"/>
+
+
+</FONT>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<p>
+<B><a name="One conversion specified channel">(3) One conversion of a specified channel, with interrupt service</a></B>
+<br />The conversion of single channel can be done using <a href="ADCMethods.html#MeasureChan">MeasureChan</a> method.
+Property <a href="ADCProperties.html#IntService">Interrupt service</a> is enabled, <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> is set to 1.
+When a conversion of a channel/sample is finished the <a href="ADCEvents.html#OnEnd">OnEnd</a> event is invoked and the measured value is available by until the next conversion is started.</p>
+<P>The following example demonstrates periodic measurement of three channels in the loop.
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+bool ValueAvailable = FALSE;  // control variable
+byte Value;
+byte channel = 0;
+
+void main(void)
+{
+  . . .
+  AD1_MeasureChan(TRUE, channel);
+  AD1_GetChanValue(channel, &amp;Value);
+  for(;;) {
+    if (ValueAvailable) {
+      ValueAvailable = FALSE;   // clear the control variable
+      // an action, i.e. process the measured value
+      ++channel;
+      if (channel &gt; 3) channel = 0;
+      AD1_MeasureChan(FALSE, channel);
+    }
+    . . .
+  }
+}
+
+ <I><U>EVENTS.C</U></I>
+
+extern bool ValueAvailable;
+extern byte Value;
+extern byte channel;
+
+void AD1_OnEnd(void)
+{
+  // Get AD conversion results of the specified channel
+  AD1_GetChanValue(channel, &amp;Value);
+  ValueAvailable = TRUE;          // set control variable
+}</PRE>
+</P>
+<P>
+<i>The following chart shows single conversion of selected channel, the first conversion without waiting for a result and the second conversion with waiting for a result.</i>
+<table><tr><td><img src="ADC_Chart3.gif"/></td></tr></table>
+</P>
+
+
+<hr size="1"/>
+
+
+
+
+</FONT>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<p>
+<B><a name="One conversion all channels polling mode">(4) One conversion of all channels, in polling mode</a></B>
+<br />The measurement on all channels is performed in <a href="ADCMethods.html#Measure">Measure</a> method, i.e., <a href="ADCMethods.html#Measure">Measure</a> method does not finish until the conversion
+of all channels is finished. 
+Property <a href="ADCProperties.html#IntService">Interrupt service</a> is disabled, <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> is set to 1.</p>
+<P>
+</P>
+<P>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+bool ValuesAvailable = FALSE;  // control variable
+byte Values[3];
+
+void main(void)
+{
+  . . .
+  AD1_Measure(FALSE);  // measure all channel, not wait for result
+  while (AD1_GetValue((byte *)Values) == ERR_NOTAVAIL);  // Wait for result
+  . . .
+  AD1_Measure(TRUE);  // measure all channel, wait for result
+  AD1_GetValue((byte *)Values);  // Get AD conversion results
+  .
+. .
+}</PRE>
+</P>
+<P>
+<i>This chart shows a sequence of conversion of all channels if an A/D peripheral does not support measuring all channels simultaneously.</i>
+<table><tr><td><img src="ADC_Chart6.gif"/></td></tr></table>
+</P>
+<P>
+<i>This chart shows a sequence of conversion of all channels if an A/D peripheral supports measuring all channels at once.</i>
+<table><tr><td><img src="ADC_Chart7.gif"/></td></tr></table>
+</P>
+<P>
+<i>This chart shows a sequence of conversion of all channels if an A/D peripheral supports measuring all channels simultaneously. <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> is set to 2.</i>
+<table><tr><td><img src="ADC_Chart8.gif"/></td></tr></table>
+</P>
+
+<hr size="1"/>
+
+</FONT>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<P>
+<B><a name="One conversion of all channels of each component shared mode">(5) One conversion of all channels of each component, in shared mode</a></B>
+<br />Several ADC components can be used for one ADC device. This example assumes
+that two AD converter components 'AD1' and 'AD2' in the project share one ADC device
+    (<a href="ADCProperties.html#Sharing">Sharing properties</a> set to enabled).
+    Two channels (AN0 and AN2 pins) are set in the component 'AD1' and one channel (AN1 pin) is set in the component 'AD2'.
+    <a href="ADCProperties.html#NumMeasurements">Number of conversion</a> of each component is set to 1.
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+bool ADResult1;       // Flag for component 'AD1'
+bool ADResult2;       // Flag for component 'AD2'
+byte Values[2];       // component 'AD1' is set to two channels measurement
+byte Value;           // component 'AD2' is set to one channels measurement
+void main(void)
+{
+  ADResult1 = FALSE;
+  ADResult2 = FALSE;
+  AD1_Measure(FALSE); // Run measurement of two channels from component 'AD1'
+  AD2_Measure(FALSE); // Run measurement of two channels from component 'AD2'
+  .
+. .
+  while (!ADResult1);            // Wait for measurement complete
+  AD1_GetValue8((byte *)Values); // Get AD conversion results of component 'AD1'
+  while (!ADResult2);            // Wait for measurement complete
+  AD1_GetValue8(&amp;Value);         // Get AD conversion result of component 'AD2'
+}
+
+ <I><U>EVENTS.C</U></I>
+
+extern bool ADResult1;
+extern bool ADResult2;
+void AD1_OnEnd(void)
+{
+  /* Measurement of two channels from component 'AD1' is completed */
+  ADResult1 = TRUE;
+}
+
+void AD2_OnEnd(void)
+{
+  /* Measurement of one channel from component 'AD2' is completed */
+  ADResult2 = TRUE;
+}</PRE>
+</P>
+<!--
+<P>
+<i>This chart shows sequence of conversion of all channels from AD1 and AD2 components.</i>
+<table><tr><td><img src="ADC_Chart10.gif"></td></tr></table>
+</P>
+-->
+</FONT>
+
+
+<hr size="1"/>
+
+
+
+<!--
+ADC1 - Start  a Stop metody (Number of conversion = 1, the periphery nepodporuje ani Queue nebo ani Autoscan mode nebo je zakazany, jsou nastaveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+ADC2 - Measure metoda s ruzne nastavenym parametrem (Number of conversion = 1, the periphery nepodporuje ani Queue nebo ani Autoscan mode nebo je zakazany, jsou nastaveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+ADC3 - MeasureChan metoda s ruzne nastavenymi parametry (Number of conversion = 1, the periphery nepodporuje ani Queue nebo ani Autoscan mode nebo je zakazany, jsou nastaveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+ADC4 - Start  a Stop metody (Number of conversion = 1, the periphery podporuje Queue nebo Autoscan mode,ktery je povoleny, jsou nataveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+ADC5 - Measure metoda s ruzne nastavenym parametrem (Number of conversion = 2, the periphery podporuje Queue nebo Autoscan mode,ktery je povoleny, jsou nastaveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+ADC6 - Measure metoda s ruzne nastavenym parametrem (Number of conversion =1, the periphery nepodporuje ani Queue nebo ani Autoscan mode nebo je zakazany, jsou nastaveny tri kanaly/samply, interrupt service je zakazan)
+ADC7 - Measure metoda s ruzne nastavenym parametrem (Number of conversion =1, the periphery podporuje Queue nebo Autoscan mode,ktery je povoleny, jsou nastaveny tri kanaly/samply, interrupt service je zakazan)
+ADC8 - Measure metoda s ruzne nastavenym parametrem (Number of conversion =2, the periphery podporuje Queue nebo Autoscan mode,ktery je povoleny, jsou nastaveny tri kanaly/samply, interrupt service je zakazan)
+ADC9 - Start  a Stop metody (Number of conversion = 1, the periphery podporuje Queue nebo Autoscan mode,ktery je povoleny, navic podporuje continuous (loop) mode jsou nataveny tri kanaly/samply, interrupt service a OnEnd event jsou povoleny)
+-->
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2011 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

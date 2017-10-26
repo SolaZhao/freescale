@@ -1,0 +1,481 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Properties
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>FreescaleEMAC</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreescaleEMAC.html">General Info</a><br />
+<i>Properties</i><br />
+<a href="FreescaleEMACMethods.html">Methods</a><br />
+<a href="FreescaleEMACEvents.html">Events</a><br />
+<a href="FreescaleEMACUser Types.html">Types and constants</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Components Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreescaleEMAC_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+<!--      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td class="titlebox">-->
+          
+           <div class="titlebox">
+              <div class="beanname">
+                Component
+                
+                
+                FreescaleEMAC
+              </div>
+              <div class="descrtext">Configuration modes for MC9S12NE64 EMAC start-up</div>
+              <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">Low</a></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+                
+                </span>
+              </div>
+            </div>
+                      
+<!--
+            </td>
+        </tr>
+
+        <tr>        
+-->  
+            
+<!--            <td align="left"> -->
+<!--                   <br /> -->                  
+     <div class="text_title">
+          Properties:
+		 </div>		 
+		 <div class="descr_line">                  
+                  (Properties are parameters of the component. Please see the <a href="../../DOCs/EmbeddedBeans.html">Embedded Components page</a> for more information.)                   
+     </div>
+                  
+<div class="user_text">
+<ul>
+<li>
+<a name="DeviceName">
+<b>Component name</b></a> - Name of the component.
+</li>
+<li>
+<a name="BUFMAP">
+<b>Buffer mapping</b></a> - Buffer Mapping Configuration
+</li>
+<li>
+<a name="MemoryGrp">
+<b>Memory occupation</b></a> - Occupation of memory - for information only
+<ul>
+  <li>
+  <a name="RAM_START_ADDR">
+  <b>Buffer start addr</b></a> - Base address in RAM for RX and TX buffers. For information only. It can be set in the CPU.
+  </li>
+  <li>
+  <a name="RAM_START_LEN">
+  <b>Buffer size</b></a> - Total sum of RX and TX buffers - for information only
+  </li>
+</ul>
+</li>
+<li>
+<a name="EPHYdevice">
+<b>EPHY device</b></a> - Selected Ethernet Transceiver device.
+</li>
+<li>
+<a name="EMACdevice">
+<b>EMAC device</b></a> - Selected Ethernet Media Access Controller device.
+</li>
+<li>
+<a name="MACAddress">
+<b>MAC address</b></a> - Unique address of device. Enter as hexadecimal number (12 digits required).
+</li>
+<li>
+<a name="EphyAddr">
+<b>Physical address</b></a> - EPHY address for MII requests
+</li>
+<li>
+<a name="BusClock">
+<b>Bus clock</b></a> - Bus clock setting - for information only. This can be set in the cpu.
+</li>
+<li>
+<a name="AutoNeg">
+<b>Auto negotiation</b></a> - Enable auto negotiation<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="Half100">
+  <b>Half 100</b></a> - Advertise Half duplex at speed 100 MBps
+  </li>
+  <li>
+  <a name="Full100">
+  <b>Full 100</b></a> - Advertise Full duplex at speed 100 MBps
+  </li>
+  <li>
+  <a name="Half10">
+  <b>Half 10</b></a> - Advertise Half duplex at speed 10 MBps
+  </li>
+  <li>
+  <a name="Full10">
+  <b>Full 10</b></a> - Advertise Full duplex at speed 10 MBps
+  </li>
+</ul>
+</li>
+<li>
+<a name="ManualGrp">
+<b>Manual settings</b></a> - If Auto negotiation is disabled, set communication speed and mode
+<ul>
+  <li>
+  <a name="Speed100">
+  <b>Speed 100</b></a> - Enable 100 MBps. Available if the <a href="FreescaleEMACProperties.html#AutoNeg">Auto negotiation</a> is disabled.
+  </li>
+  <li>
+  <a name="FullDuplex">
+  <b>Full duplex</b></a> - Enable full duplex. Available if the <a href="FreescaleEMACProperties.html#AutoNeg">Auto negotiation</a> is disabled.
+  </li>
+</ul>
+</li>
+<li>
+<a name="EmacControlGrp">
+<b>EMAC control</b></a> - Setting for EMAC controlling (broadcast, multicast, etc.)
+<ul>
+  <li>
+  <a name="RXPollMode">
+  <b>RX poll mode</b></a> - RX mode - poll or interrupt driven (Not implemented into Viola Stack)
+  </li>
+  <li>
+  <a name="DeleteBFrames">
+  <b>Delete babbling frames</b></a> - If enabled, packets larger the maximum frame length (babbling error) will be deleted.
+  </li>
+  <li>
+  <a name="RX_MAX_FL">
+  <b>RX max. frame length</b></a> - Receive maximum frame length (Values from range 0-1536)
+  </li>
+  <li>
+  <a name="BrodRej">
+  <b>Broadcast reject</b></a> - All broadcast address frames are rejected.
+  </li>
+  <li>
+  <a name="MultiHash">
+  <b>Multicast hash table</b></a> - Multicast hash table is used for checking multicast addresses.
+  </li>
+  <li>
+  <a name="PromMode">
+  <b>Prom mode</b></a> - All frames are received regardless of address.
+  </li>
+  <li>
+  <a name="EtherTypeGrp">
+  <b>Ethertype control</b></a> - Filtering based on the ethertype.
+  <ul>
+    <li>
+    <a name="ETYPE_ALL">
+    <b>Accept all ethertypes</b></a> - All frames are received regardless of address.
+    </li>
+    <li>
+    <a name="ETYPE_PETGrp">
+    <b>Programmable ethertype</b></a> - Accept Programmable Ethertype, 'etype' parameter is used.<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+    <ul>
+      <li>
+      <a name="ETYPE_PRG">
+      <b>Programmable Ethertype</b></a> - Programmable Ethertype value (16bit value). Used when <a href="FreescaleEMACProperties.html#ETYPE_PRG">Programmable Ethertype</a> is enabled.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="ETYPE_EMW">
+    <b>Emware ethertype</b></a> - Accept Emware Ethertype. Enabled when the <a href="FreescaleEMACProperties.html#ETYPE_ALL">Accept all ethertypes</a> is set to "no"
+    </li>
+    <li>
+    <a name="ETYPE_IPV6">
+    <b>IPV6 version</b></a> - Accept Internet IP version (IPV6) Ethertype. Enabled when the <a href="FreescaleEMACProperties.html#ETYPE_ALL">Accept all ethertypes</a> is set to "no"
+    </li>
+    <li>
+    <a name="ETYPE_IPV4">
+    <b>IPV4 version</b></a> - Accept Internet IP version (IPV4) Ethertype. Enabled when the <a href="FreescaleEMACProperties.html#ETYPE_ALL">Accept all ethertypes</a> is set to "no"
+    </li>
+    <li>
+    <a name="ETYPE_ARP">
+    <b>ARP ethertype</b></a> - Accept Address Resolution Protocol (ARP) Ethertype. Enabled when the <a href="FreescaleEMACProperties.html#ETYPE_ALL">Accept all ethertypes</a> is set to "no"
+    </li>
+    <li>
+    <a name="ETYPE_IEEE">
+    <b>IEEE802.3 length field ethertype</b></a> - Accept IEEE802.3 Length Field Ethertype. Enabled when the <a href="FreescaleEMACProperties.html#ETYPE_ALL">Accept all ethertypes</a> is set to "no"
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="FlowControlGrp">
+  <b>Flow control</b></a> - Flow control settings
+  <ul>
+    <li>
+    <a name="FlowControl">
+    <b>Flow control</b></a> - Enable flow control in full duplex
+    </li>
+    <li>
+    <a name="PauseTime">
+    <b>Pause time</b></a> - Enter value for PAUSE duration parameter in units of slot times (512 bit times)
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<li>
+<a name="OptimalizeGrp">
+<b>Optimalizations</b></a> - Other settings which have influence on effectivity of generated code
+<ul>
+  <li>
+  <a name="ZeroCopy">
+  <b>Zero copy</b></a> - Zero Copy Mode. Setting this mode not only can conserve RAM but can also increase performance.  In this mode, no copy of the receive buffer is created, so the data is processed in the buffer.<br />
+This property can be set in the parent component.
+  </li>
+  <li>
+  <a name="WordAccess">
+  <b>Word Access</b></a> - Word Access Mode. This mode allows word access to buffers instead of byte access to increase overall system performance.<br />
+This property can be set in the parent component.
+  </li>
+</ul>
+</li>
+<li>
+<a name="UseSWLEDGrp">
+<b>SW LED control</b></a> - Use user software to drive EPHY status indicators on port L. Otherwise (when disabled) use EPHY hardware LED drive function to drive 5 EPHY status indicators.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="ACTLEDGrp">
+  <b>Activity LED</b></a> - Use software to drive an EPHY activity LED<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+  <ul>
+    <li>
+    <a name="Symbol0">
+    <b>Pin</b></a> - Pin for activity LED. For information only.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="LNKLEDGrp">
+  <b>Link LED</b></a> - Use software to drive an EPHY link LED<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+  <ul>
+    <li>
+    <a name="Symbol00">
+    <b>Pin</b></a> - Pin for link LED. For information only.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="SPDLEDGrp">
+  <b>Speed LED</b></a> - Use software to drive an EPHY speed LED<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+  <ul>
+    <li>
+    <a name="Symbol000">
+    <b>Pin</b></a> - Pin for link LED. For information only.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="DUPLEDGrp">
+  <b>Duplex LED</b></a> - Use software to drive an EPHY duplex LED<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+  <ul>
+    <li>
+    <a name="Symbol0000">
+    <b>Pin</b></a> - Pin for link LED. For information only.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="COLLEDGrp">
+  <b>Collision LED</b></a> - Use software to drive an EPHY collision LED<br />
+The following items are available only if the group is enabled (the value is "yes"):<br />
+
+  <ul>
+    <li>
+    <a name="Symbol00000">
+    <b>Pin</b></a> - Pin for link LED. For information only.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+
+     </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+</div>
+           <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

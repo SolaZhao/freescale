@@ -1,0 +1,100 @@
+RELEASE NOTES XGATE Assembler
+
+RELEASE NOTES AXGATE V5.0.4
+
+  List of new Features
+  - license checkouts have been removed for features included in special edition license file.
+
+  List of fixed Bugs
+  - MTWX20634: when the license file is accessed using the path from the LM_LICENSE_FILE environment variable (i.e. there is no license.dat in the
+    tool's directory or its parent, nor is there a hiware.dat license file), and a required feature expires in less than 10 days, a crash occurs.
+    This bug is fixed for build numbers greater than 6088.
+  - fixed "TFR RX,PC" instruction. The previous assembler did not accept "PC" as register name.
+  - Fixed: the inline assembler did not handle pseudo-instructions with 16-bit immediates (e.g. LDW RD, #IMM16)
+
+  Demo Version Limitations
+    If the assembler is running in demo mode (e.g. because there is no license file), there are following limitations:
+    - Total code size for source file is limited to 1K.
+
+
+RELEASE NOTES AXGATE V5.0.3
+
+  List of new Features
+  - support of the XGATE "TFR RX,PC" instruction.
+  - default address space has been changed to the XGATE address space
+
+  List of fixed Bugs
+  - Opening files from the builtin Windows GUI with double clicking did cause a crash 
+    if the File->Configuration->Editor Settings dialog was configured as "CodeWarrior (with COM)" and if an old IDE 4.1 was 
+    configured as current CodeWarrior IDE to be used. It did work as expected with if any
+    more recent CodeWarrior IDE was registered.
+  - fixups to 5 bit offsets were checked as signed and therefore the linker issued overflow messages for offsets 16..31 which are legal.
+  - branch offset fixups were off by 2 in the previous version. Offsets computed by the assembler on its own were correct.
+    But as soon as a link time fixup was necessary for a relative branch, the offset was not correctly issued by the assembler.
+  - relative branch fixups were calculated in the HCS12X logical address space. 
+    This caused incorrect out of range errors of the objects were on different logical HC12 pages (but actually close enough in the XGATE address space).
+    Note: this change requires the use of a recent linker. Older linkers will issue "unknown fixup" errors.
+
+RELEASE NOTES AXGATE V5.0.2
+
+  List of new Features
+  - The assembler supports now license lingering. Lingering time is 10 minutes to allow caching of licenses (to reduce compilation time).
+  - Mapping unknown messages is now treated as warning and no longer as error. This change allows to maintain compatibility with old build tools when removing no longer used messages.
+
+  List of fixed Bugs
+  - none.
+
+
+RELEASE NOTES AXGATE V5.0.1
+
+  List of new Features since alpha 2
+  - 1-54681434: New option -LicWait. If set and used with floating license configuration, if no license is available from the license server,
+    it will wait until a license is available. This is useful if you want to wait until a license is free, e.g. with batch jobs.
+  - the assembler now uses the official ELF ID EM_XGATE with value 115.
+  - the assembler generated DWARF debug information does now contain a user defined attribute with number 0x3120 with content "XGATE" in the compilation unit tag.
+    This attribute can be used to differentiate HCS12X compilation units from XGATE compilation units in ELF files containing code from
+    both cores.
+
+  List of new Features
+  - This is the first, initial release of the XGATE Assembler.
+  - For absolute assembly use Logical addresses:
+     ORG $1000 LOGICAL
+    For extensibility with future releases the LOGICAL is mandatory in this alpha release.
+    This could possibly change in future releases.
+    (Note: without logical addresses especially the debug information won't work as expected).
+  - Use the following syntax to load a XGATE address space address:
+    %XGATE_8(label)    : bit 0..7 address of XGATE address space from logical address space label
+    %XGATE_8_H(label)  : bit 8..15 address of XGATE address space from logical address space label
+    %XGATE_16(label)   : bit 0..15 address of XGATE address space from logical address space label
+
+    E.g.
+    label:
+    LDL R2,#%XGATE_8(label)
+    LDH R2,#%XGATE_8_H(label)
+  - The same syntax exists also for GLOBAL and Logical addresses (%GLOBAL_8(label), %LOGICAL_8(label), ....).
+  - the XGATE compiler does automatically add a __X_ prefix to every function name. 
+    Assembly code calling C functions or exporting functions for use in C have to add this prefix manually.
+    Note: This is done for linking with a HC12 application to avoid name collisions with HC12 code.
+
+  - Support of absolute assembly
+  - Support for relocatable assembly.
+  - the generated object files can be linked with HCS12X initialization code into one application containing the complete code.
+  - FLEXlm support for BORROWING. Note that BORROWING is only available for floating licenses, and may be sold
+    as a separate product or for an additional fee. BORROWING is used so you can work with a floating license
+    even if you are disconnected from the licensing server. See FLEXlm user manuals for details on BORROWING.
+    Note that this product needs a FLEXlm daemon (metrowks.exe on the licensing server) with following
+    version information:
+    FLEXlm v8.4a (lmgr.lib), Copyright (c) 1988-2003 by Macrovision Corporation. All rights reserved.
+    The latest FLEXlm floating server software can as well be downloaded from the www.metrowerks.com
+    web page, or get in touch with support to get the latest version.
+  - In case of an expire/evaluation license, you are now warned 10 days before the license expires.
+    The warning dialog box pops up once every day.
+  - The about box (and option -Lic) shows now as well borrowing status (same as lmborrow.exe -status)
+  - New option -LicBorrow:
+    -LicBorrow    Borrow license feature (-LicBorrow<feature>:<Date>, <Date> in dd-mmm-yyyy[:hh:mm] format and 
+    time in 24-hour hh:mm format)
+    It enables selective borrowing of features (supported by the application). Note that borrowing is only supported
+    if enabled in the license file by the BORROW keyword.
+
+  List of fixed Bugs
+  - None, this is the initial release.

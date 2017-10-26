@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+<title>
+Processor Expert Priority System
+</title>
+<LINK href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body  style="margin-top:0px;margin-left:0px;margin-right:0px;"><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
+  <tr>
+  <td valign="top" width="150" >
+    <table cellspacing="0" border="0">
+      <tr>
+        <td style="width:150;height:30;text-align:center;" class="leftTitleBox" >
+          <span class="lefttitle" >User manual</span><br />
+        </td>        
+      </tr>
+      <tr><td>&nbsp;<br/>
+        <span class="leftmenu">
+        </span>           
+      </td>
+      </tr>      
+    </table>                
+    <div style=";text-align:left;vertical-align:top;margin-left:4px;" >                                                
+    <br/>
+    </div>        
+
+    </td>      
+    <td width="1" class="splitterLine" valign="top">
+      <div style="width:1px;height:100%"></div>
+    </td>
+    <td width="4">
+    </td>
+    <td style="vertical-align:top;padding-left:15px;padding-right:15px;padding-top:0px;">
+<p class="pagetitle">Processor Expert Priority System</p>
+<div class="normal">
+<p>Some CPUs support selectable <b>interrupts priorities</b>. The user may select a priority for each interrupt vector. The interrupt with a higher priority number can interrupt a service routine with the lower one.</p><p> Processor Expert supports the following settings in design-time: <a href="priorities.html#intprior">interrupt priority</a> and <a href="priorities.html#intprior">priority of the event code</a>. <br /> Priority can also be changed in the user code. The user may use a CPU component method to adjust the priority to a requested value. </p><a name="intprior"></a><h2>Interrupt Priority</h2><p>The user may select interrupt priority in the component properties, just below the interrupt vector name. Processor Expert offers the following values, which are supported for all microcontrollers: <ul><li class="normli"><b>minimum priority</b></li><li class="normli"><b>low priority</b></li><li class="normli"><b>medium priority</b></li><li class="normli"><b>high priority</b></li><li class="normli"><b>maximum priority</b></li></ul></p><p>The selected value is automatically mapped to the priority supported by the target microcontroller. It is indicated in the third column of the Component Inspector.<br /> The user may also select a target-specific numeric value (such as priority 255), if portability of the application to another architecture is not required.<br /> Peripheral Initialization components on some platforms also allow to set the value <b>default</b> that means that the user doesn't have any requirement on it so the priority value will be the default after-reset value. </p><a name="evntprior"></a><h2>Priority of Event Code</h2><p>The user can also select a priority for the processing of the event code. This setting is available for the events that are invoked from the Interrupt Service Routines. This priority may be different from the interrupt priority. However, the meaning of the number is the same - the event may be interrupted only by the interrupts with the higher priority. Processor Expert offers the following architecture independent values: <ul><li class="normli"><b>same as interrupt</b> - default value which means that Processor Expert doesn't generate any code affecting the priority of the event - the priority is in the state determined by the default hardware behavior. </li><li class="normli"><b>minimum priority</b></li><li class="normli"><b>low priority</b></li><li class="normli"><b>medium priority</b></li><li class="normli"><b>high priority</b></li><li class="normli"><b>maximum priority</b></li><li class="normli"><b>interrupts disabled</b><i> - For example the highest priority supported by the microcontroller, which may be interrupted only by non-maskable interrupts.</i></li></ul></p><p>The selected value is automatically mapped to the priority supported by the target microcontroller and the selected value is displayed in the third column of the Component Inspector. <br /> Please see version specific information below. The user may also select a target-specific value, if portability of the application to another architecture is not required. </p><p><span class="note">Note: Some events do not support priorities, because their invocation is not caused by the interrupt processing. </span></p><a name="Reentrant"></a><p><span class="note"><b>Warning:</b> Please note that Processor Expert does not allow the user decrease an event code priority (with the exception of 'Interrupts enabled' value on some platforms, please see below). This is because Processor Expert event routines are not generally reentrant so there is a risk that the interrupt would be able to interrupt itself during the processing. If there is such functionality requested, the user has to do it manually (e.g. by calling a appropriate CPU component method setting a priority) and carefully check possible problems. </span></p><div style="margin-top:3mm; margin-bottom:3mm; padding:1mm; background-color:#f7f3bd" tag="div"><b>Version specific information for HCS12X derivatives</b><br /><p>Processor Expert offers the following event priority options:</p><ul><li class="normli"><b>interrupts enabled</b> - Interrupts are enabled and the interrupts with the higher priority than the current interrupt priority can interrupt the event code. (The state of the register CCRH is not changed.)</li><li class="normli"><b>interrupts disabled</b> - All maskable interrupts are disabled. (The state of the register CCRH is not changed.)</li><li class="normli"><b>0</b> - The same as 'interrupts disabled'</li><li class="normli"><b>1..7</b> - Priorities from lowest (1) to highest (7). The code generated by Processor Expert before the event invocation sets the event code priority to the specified value (by writing to the CCRH register) and enables interrupts. </li><li class="normli"><b>same as interrupt</b> - Default behavior of the architecture - no interrupts can interrupt the event. The same as Interrupts Disabled.</li><li class="normli">Other values are mapped to the priorities 1..7.</li></ul></div><div style="margin-top:3mm; margin-bottom:3mm; padding:1mm; background-color:#f7f3bd" tag="div"><b>Version specific information for HCS12 derivatives</b><br /><p>Processor Expert offers the following event priority options:</p><ul><li class="normli"><b>interrupts disabled</b> - All maskable interrupts are disabled.</li><li class="normli"><b>interrupts enabled</b> - All maskable interrupts are enabled. Please note that this settings might lead to possible problems, see the warning within this chapter. </li><li class="normli"><b>same as interrupt</b> - Default behavior of the architecture - no interrupts can interrupt the event. The same as Interrupts Disabled.</li></ul></div></div>
+<div class="copyright" style="text-align:center"> Copyright 2011 Freescale Semiconductor, Inc.<br /> PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc. </div>
+
+  </td>
+  </tr>
+</table>
+
+</body>
+</html>

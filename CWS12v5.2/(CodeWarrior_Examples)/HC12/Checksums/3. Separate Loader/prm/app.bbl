@@ -1,0 +1,9 @@
+OPENFILE "bin\app.abs.s19"
+format=motorola
+busWidth=1
+origin=0
+len=0x10000
+destination=0
+SRECORD=Sx
+SENDBYTE 1 "bin\app.abs"
+CLOSE

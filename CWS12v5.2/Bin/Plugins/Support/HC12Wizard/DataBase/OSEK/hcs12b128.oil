@@ -1,0 +1,65 @@
+/*
+ * OSEK implementation file (OIL file)
+ */
+
+OIL_VERSION = "2.3";
+
+#include "ost2212.oin"
+
+CPU cpu1 {
+
+    OS os1 {
+        CC = AUTO;
+        TargetMCU = S12B128 {
+            HCBasePage = FALSE;
+            HCBankCode = TRUE;
+            SysTimer = HWCOUNTER {
+                ISRPRIORITY = 0;
+                COUNTER = SYSTEMTIMER;
+                TimerHardware = TIMOC0 {
+                    Prescaler = OS {
+                        Value = 4;
+                    };
+                };
+            };
+        };
+        STATUS = EXTENDED;
+        DEBUG_LEVEL = 2;
+        STARTUPHOOK = FALSE;
+        ERRORHOOK = FALSE;
+        SHUTDOWNHOOK = FALSE;
+        PRETASKHOOK = FALSE;
+        POSTTASKHOOK = FALSE;
+        ResourceScheduler = FALSE;
+        USEGETSERVICEID = FALSE;
+        USEPARAMETERACCESS = FALSE;
+    };
+
+    COUNTER SYSTEMTIMER {
+        MAXALLOWEDVALUE = 0xffff;
+        TICKSPERBASE = 1;
+        MINCYCLE = 0;
+    };
+    TASK InitTask {
+        SCHEDULE = FULL;
+        AUTOSTART = TRUE;
+        ACTIVATION = 1;
+        PRIORITY = 5;
+    };
+    TASK CyclicTask {
+        SCHEDULE = FULL;
+        AUTOSTART = FALSE;
+        ACTIVATION = 1;
+        PRIORITY = 0;
+    };
+    ALARM CyclicAlarm {
+        COUNTER = SYSTEMTIMER;
+        ACTION = ACTIVATETASK {
+            TASK = CyclicTask;
+        };
+        AUTOSTART = FALSE;
+    };
+
+    APPMODE Mode;
+
+};

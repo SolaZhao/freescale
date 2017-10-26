@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component documentation - Typical Usage
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>FreescaleCAN</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreescaleCAN.html">General Info</a><br />
+<a href="FreescaleCANProperties.html">Properties</a><br />
+<a href="FreescaleCANMethods.html">Methods</a><br />
+<a href="FreescaleCANEvents.html">Events</a><br />
+<a href="FreescaleCANUser Types.html">Types and constants</a><br />
+<i>Typical Usage</i><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreescaleCAN_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              FreescaleCAN
+            </div>
+            <div class="descrtext">CAN communication for Freescale implementation</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+              
+              </span>
+            </div>
+          </div>
+          
+          <div class="text_title">
+              Typical Usage:
+      		</div>		 
+    		  <div class="descr_line">                  
+              (Examples of a typical usage of the component in user code.
+               For more information please 
+               see the page <a href="..\..\DOCs\BeanCodeTypicalUsage.html">Component Code 
+               Typical Usage</a>.)                   
+          </div>          
+
+<div class="user_text">   
+<br/>       
+<!---DESCBEG DON'T CHANGE THIS-->
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<!--- 1 -->
+ <hr size="1" color="#BOBOBO"/>
+ <!-- MENU -->
+<br /><b>Typical settings and usage of FreescaleCAN component. Required component name is "CAN"</b>
+<p>
+  <UL>
+<LI><B><a href="#Acceptance">(1) Acceptance code filtering</a></B>
+<br />
+</LI><LI><B><a href="#Polling">(2) Communication without using interrupts (polling mode).</a></B>
+<br />
+</LI><LI><B><a href="#ID">(3) Standard and Extended identifier sending</a></B>
+<br />
+</LI><LI><B><a href="#interrupts">(4) Communication with interrupts and using communication events.</a></B>
+<br />
+  </LI></UL>
+ </p>
+ <hr size="1" color="#BOBOBO"/>
+<br />
+</FONT>
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Acceptance">(1) Acceptance code filtering</a></B>
+<br /><br />
+It is necessary to set acceptance filter properly, before a message can be successively received.
+Acceptance filtering may be derivative dependent and property names or method parameters may
+differ from the example below (see <a href="FreescaleCANProperties.html">Properties</a> and <a href="FreescaleCANMethods.html">Methods</a> page). Each message has an identifier (ID)
+when sent over CAN bus. The ID of sent message is specified in a parameter of <a href="FreescaleCANMethods.html#SendFrame">SendFrame</a> method (transmitter node).
+The acceptance filter on a receiver node must be set to the same ID to pass the received message to receive buffer.
+On the receiver node acceptance filter is set by following:
+<UL>
+<LI><a href="FreescaleCANProperties.html#AccCode">Acceptance Code</a> property - The ID of received message is set in the initialization code of the component</LI>
+<LI><a href="FreescaleCANMethods.html#SetAcceptanceCode">SetAcceptanceCode</a> method - The ID of received message may be changed at runtime.</LI>
+</UL>
+The messages with different ID can be received using an acceptance mask. The acceptance mask specifies which bits
+in the acceptance code are ignored.
+<UL>
+<LI><a href="FreescaleCANProperties.html#AccMask">Acceptance Mask</a> property - The mask for ID of received message is set in the initialization code of the component</LI>
+<LI><a href="FreescaleCANMethods.html#SetAcceptanceMask">SetAcceptanceMask</a> method - The mask for ID of received message may be changed at runtime.</LI>
+</UL>
+</FONT>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+void main(void)
+{
+  //Sets the code of accepted message.
+  CAN_SetAcceptanceCode(0x15263740);
+  //Set the acceptance mask to 3, i.e. messages with IDs
+  //0x15263740,0x15263741,0x15263742 and 0x15263743 are accepted
+  CAN_SetAcceptanceMask(0x00000003);
+
+  //...
+
+  //All messages are accepted
+  CAN_SetAcceptanceMask(0xFFFFFFFF);
+
+  //...
+
+}</PRE>
+
+</P>
+<!--- 2 -->
+
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="Polling">(2) Communication without using interrupts (polling mode).</a></B>
+<br /><br />
+Set <a href="FreescaleCANProperties.html#IntService">Interrupt service/event</a> property to Disabled.
+<a href="FreescaleCANMethods.html#SendFrame">SendFrame</a> method sends a frame with data to CAN bus.
+Method
+</FONT>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+byte buff[]={1,2,3,4,5,6,7,8};
+void main(void)
+{
+  for(;;) {
+    //Send data frame via buffer 0 with ID=0x512.
+    //The buffer consists of 8 bytes.
+    CAN_SendFrame(0, 0x512, DATA_FRAME, 8, buff);
+  }
+}</PRE>
+
+<!--- 3 -->
+
+</P><P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="ID">(3) Standard and Extended identifier sending</a></B>
+<br /><br />
+The message ID passed to <a href="FreescaleCANMethods.html#SendFrame">SendFrame</a> method is either standard or extended type.
+The extended ID is marked by the most significant bit set
+(CAN_EXTENDED_FRAME_ID symbol is defined, see example below).
+</FONT>
+<PRE>
+ <I><U>MAIN.C</U></I>
+
+byte buff[]={1,2,3,4,5,6,7,8};
+dword messageID = 0x512;
+void main(void)
+{
+ //Send data frame via buffer 0 with extended ID=0x512.
+ CAN_SendFrame(0,(messageID|CAN_EXTENDED_FRAME_ID),DATA_FRAME,8,buff);
+ //Send data frame via buffer 0 with standart ID=0x512.
+ CAN_SendFrame(0,messageID, DATA_FRAME, 8, buff);
+}</PRE>
+
+<!--- 4 -->
+
+</P>
+<P>
+<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+<B><a name="interrupts">(4) Communication with interrupts and using communication events.</a></B>
+<br /><br />
+<a href="FreescaleCANEvents.html#OnFullRxBuffer">OnFullRxBuffer</a> event is called when a frame is successfully received.
+<a href="FreescaleCANMethods.html#SendFrame">SendFrame</a> method sends a frame with data to CAN bus.
+<a href="FreescaleCANMethods.html#ReadFrame">ReadFrame</a> method reads a received frame from buffer.
+</FONT>
+<PRE>
+ <I><U>EVENTS.C</U></I>
+
+void CAN1_OnFullRxBuffer(void)
+{
+  dword ID;
+  byte tupe, len;
+  byte buff[];
+  word bufferMask;
+
+  //Test what message buffer have received data.
+  //Only for HW CAN implementations with more than one receive buffer
+  if (CAN1_GetStateRX() &amp; CAN_MB0_MASK) {
+    //Read received data in message buffer 0 configured as receive
+    //Note: the first parameter "BufferNum" in method ReadFrame
+    //is valid for FlexCAN modules only
+    //if they have more than one receive buffer
+    CAN_ReadFrame(0, &amp;ID, &amp;type, &amp;len, buff);
+    //Send data back via message buffer 1 configured as transmit
+    CAN_SendFrame(1, ID, type, len, buff);
+  }
+
+}<FONT style="COLOR: #000000; FONT: 12px/18px Verdana, Geneva, Arial, Helvetica, sans-serif">
+</FONT>
+</PRE>
+</P>
+<!---DESCEND DON'T CHANGE THIS-->
+</div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

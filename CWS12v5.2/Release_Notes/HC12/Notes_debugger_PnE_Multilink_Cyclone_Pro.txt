@@ -1,0 +1,1112 @@
+===================================================
+P&E Multilink/Cyclone Pro Connection Release Notes
+===================================================
+
+==========================
+icd12.tgt version V6.1.20
+==========================
+
+List of New Features
+--------------------
+- Possibility to pass specific commands to P&E layer via debugger.
+
+Improvements
+------------
+- None
+
+List of fixed Bugs
+------------------
+- None.
+
+==========================
+icd12.tgt version V6.1.19
+==========================
+
+List of New Features
+--------------------
+- Hot Plug-in support implemented.
+
+Improvements
+------------
+- New improved version of P&E connection manager.
+
+List of fixed Bugs
+------------------
+- None.
+
+==========================
+icd12.tgt version V6.1.18
+==========================
+
+List of New Features
+--------------------
+- HCS12XS series support.
+
+Improvements
+------------
+- None.
+
+List of fixed Bugs
+------------------
+- None.
+
+==========================
+icd12.tgt version V6.1.17
+==========================
+
+List of New Features
+--------------------
+-The "FLASH NOUNSECURE" command can be used from a Startup or Preload command file to assert that the 
+ Flash Programmer does NOT program the security byte to "unsecured" state.
+ The security byte is then free to be setup by the user code without any risk of overprogramming.
+
+-The Trigger Module Settings/Onchip DBG GUI provide the support for the "Pure PC" mode for silicons
+ with the latest onchip DBG module including this mode. Also the "Pure PC" mode is the default recording 
+ mode in Trace window when onchip available.
+
+-Four new predefined sequences for S12X devices with DBG V3 module available:
+ -"A then D (C restarts)"
+ -"(C odd number of times) then D"
+ -"A | B | C then D"
+ -"C then A | B | D"
+
+-Debugging Memory Map dialog and Manager
+ ---------------------------------------
+--The Debugging Memory Map dialog and Manager provide now an access kind scheme (R/W, write only, read only, none) 
+  which is no more merged with the type.
+  By consequence, the "read protected", "write protected" and "r/w protected" types have
+  been removed and setup matching these types has been casted to "physical" type, with the corresponding
+  equivalent access kind.
+
+
+--The "DMM OPENGUI" command opens directly the Debugging Memory Map dialog according to current MCUID.
+
+--new command: "DMM SETAHEADREADSIZE". Sets data size to read before and after seeked address by the debugger.
+  syntax: DMM SETAHEADREADSIZE <front size when halted> <back size when halted> <front size when running> <back size when running>
+
+--When editing a data (in Data window or in Memory window), the debugger reads back only the modified data and 
+  does not flush the current module cache.
+
+--new command: "DMM WRITEREADBACKON". Enables the feature here above (default).
+
+--new command: "DMM WRITEREADBACKOFF". Disables the feature here above. The debugger behaves like in previous
+  releases and reads back the entire affected memory block.
+
+
+Improvements
+------------
+-Changing options in "Special Setup" tab in "Communication" dialog does not re-initialize the connection.
+ It is therefore possible to keep on debugging from the same position as before changing options.
+
+
+List of fixed Bugs
+------------------
+-The Debugging Memory Map dialog and Manager new access kind scheme provides a way to protect the FIFO DBG
+ Registers in all memory spaces, i.e. in "global" and "xgate". 
+ This will prevent the Trace program flow rebuild from erroneous rebuilds.
+
+-S12XE devices onchip flash erasing problematic on latest silicon masks.
+
+
+==========================
+icd12.tgt version V6.1.16
+==========================
+
+List of New Features
+--------------------
+
+-Hardware resets (also COP resets) detection can be intercepted with the 
+ "Resynchronize from hardware reset (COP, etc)." special setup option, and S12X series rebuild
+ flows are supported in this case. Note that this option is disabled by default due to heavier
+ PC processor bandwidth usage.
+
+-HCS12XE Series MMCCTL1 register, ROMHM and RAMHM flags setup support:
+
+--New command: HCS12X_MAP4000
+
+ Syntax: HCS12X_MAP4000 FLASH|RAM|EXTERNAL
+
+ Purpose: This command overrides the HCS12X_MAP4000 project environment variable. The variable and command
+          can be used to indicate to the debugger, for S12X series, on what the $4000-$7FFF memory range is
+          mapped. By default, it is mapped to FLASH.
+          When used, the command should be placed in a Startup command file.
+
+--New supported environment variable: HCS12X_MAP4000
+ Syntax: HCS12X_MAP4000 = (0 | 1 | 2) 
+   with:
+   0 = FLASH (default)
+   1 = RAM
+   2 = EXTERNAL
+
+
+-The Debugging Memory Map dialog and Manager provide now a protection scheme (none/read/write/read+write) 
+ which is no more merged with the type.
+ By consequence, the "read protected", "write protected" and "r/w protected" types have
+ been removed and setup mathing these types has been casted to "physical" type, with the corresponding
+ equivalent protection.
+
+-The Trigger Module Settings/Onchip DBG GUI provide the support for the "Pure PC" mode for silicons
+ with the latest onchip DBG module including this mode. Also the "Pure PC" mode is the default recording 
+ mode in Trace window when onchip available.
+
+
+Improvements
+------------
+
+-Breakpoints and Watchpoint support for S12XE series.
+
+List of fixed Bugs
+------------------
+
+-The Debugging Memory Map dialog and Manager new protection scheme provides a way to protect the FIFO DBG
+ Registers in all memory spaces, i.e. in "global" and "xgate". This protection should be setup by the user
+ in copying the current protection in "physical" memory in both memory spaces here above.
+ This will prevent the Trace program flow rebuild from erroneous rebuilds.
+
+-The HCS12X_MAP4000 environment variable and command handling fix controlpoints setup when S12X series
+ have the onchip $4000-$7FFF memory range remapped to RAM or external memory (HCS12XE Series MMCCTL1 register, 
+ ROMHM and RAMHM flags setup support).
+
+-"MultilinkCyclonePro" menu, "Select Core" entry, "HCS12X" and "XGATE" selections switching fixed.
+
+
+==========================
+icd12.tgt version V6.1.15
+==========================
+
+List of New Features
+--------------------
+
+-Immediate unsecuring GUI.
+
+Improvements
+------------
+
+-Watchpoint support.
+
+List of fixed Bugs
+------------------
+
+-S12XE series unsecuring crash fixed.
+
+
+==========================
+icd12.tgt version V6.1.14
+==========================
+
+
+List of New Features
+--------------------
+
+-The ICD12 Target interface has been renamed "P&E Multilink/Cyclone Pro" connection, and
+ the concept of "Target interfaces" has been requalified "Connections".
+ The "ICD12" menu entry has been renamed "MultilinkCyclonePro".
+
+-DBG S12X onchip module support, providing S12X devices triggering and program flow rebuild.
+
+-Contiguous/flat flash programming support over the bank window for HCS12 devices, like
+ programming from $4000 to $FFFF as a single flash block.
+ The project setup should be changed by the user, as this way of using flash resource
+ does not take advantage of the entire size of the flash (therefore, not the default setup). 
+
+-Flash bank window visible in range $8000-bfff according to the current PPAGE, as the CPU would
+ see it. This new display style can be changed with the Debugging Memory Map Manager to
+ display as in previous releases the "PPAGE 0" flash in the range.  
+
+-"FLASH NVMIF2WORKSPACE" command.
+ Syntax: FLASH NVMIF2WORKSPACE <address> <address>
+ Purpose: Inform the flash programmer that flash driver must be loaded in ram
+          to a different place than default (default is start of onchip ram).
+          The command will also resize the workspace, as a range must be passed as parameter.
+          The command is therefore more powerful than "FLASH NVMIF2RELOCATE", however,
+          the range must be correctly setup to match the targeted part.
+          "FLASH NVMIF2RELOCATE 0" resets any setup made with "FLASH NVMIF2WORKSPACE" or 
+          "FLASH NVMIF2RELOCATE" command.
+          The command should be executed by preference from a "Startup" cmd file.
+          e.g.: FLASH NVMIF2WORKSPACE 0x3800 0x3FFF
+          The command implies that onchip ram is available at relocation position and range prior 
+          any flash driver is loaded.
+          This command can provide more flexibility for EB386 "Example 1 Layout" device ram memory relocation.
+
+
+-HexLoader debugger srecord files loading new commands:
+
+   Two new environment variables (these variables should never be used at the same time):
+
+   . HCS12 srecord linear to logical conversion support with SRECISHCS12LINEARADR variable in HI-WAVE section.
+     N.B: The variable must be set to 1 (e.g. SRECISHCS12LINEARADR=1) to be active.  
+
+   . HCS12X srecord global to logical conversion support with SRECISS12XGLOBALADR variable in HI-WAVE section.
+     N.B: The variable must be set to 1 (e.g. SRECISS12XGLOBALADR=1) to be active.  
+
+
+- Debugging Memory Map Manager command set
+------------------------------------------
+ 
+ The Debugging Memory Map Manager (DMM) has been extended with commands. The commands provide the 
+ possibility to fully script the debugging device memory mapping. However, the usage of these
+ commands should be limited to special debugging purposes, as the default mapping is typically
+ sufficient, and a script setup being complex and possibly leading to debugger disfunctions.
+
+ List of new commands:
+
+ DMM
+ DMM ADD <parameters>
+ DMM DEL <module handle>
+ DMM SAVE <mcuid>
+ DMM DELETEALLMODULES
+ DMM RELEASECACHES
+ DMM CACHINGON|CACHINGOFF
+ DMM HCS12MERHANDLINGON|HCS12MERHANDLINGOFF
+
+ -"DMM" command.
+ Syntax: DMM
+ Purpose: Displays in the Command window the current DMM "Memory Types", "Overlap Priorities" and
+          memory modules.
+ 
+ -"DMM ADD" command.
+ Syntax: DMM ADD <comment> <address> <size> <handle> <type> <cache locking> <priority> <mapping> <access while running>
+   with: 
+    -<comment> a string for Comment field; "£" must be used for " " (space).
+    -<address> the start address of the module
+	-<size> the size of the module
+	-<handle> a long value for the DMM to handle the module (duplicated handled is not allowed).
+	 Important: User defined handles must be a value superior or equal to 100.
+	-<type> a value corresponding to a memory type handle, as given/listed with the DMM command.
+	-<cache locking> a "0" or "1" value, "0" forcing the module to be refreshed after each debugger halting.
+	-<priority> a value corresponding to an overlap priority handle/value, as given/listed with the DMM command.
+	-<mapping> a "0" or "1" value, "1" enabling the module mapping.
+	-<access while running> a "0" or "1" value, "1" enabling the module access while running.
+	 This last parameter can be internally disabled according to the memory type.
+ 
+ Purpose: insert a new module in the DMM, as if added via the DMM dialog/user interface.
+
+ -"DMM DEL" command.
+ Syntax: DEL <module handle>
+  with <module handle>, a module handle as given/listed with the DMM command.
+ Purpose: Delete one specific DMM module by handle reference.
+ 
+ -"DMM SAVE" command.
+ Syntax: DMM SAVE <mcuid>
+  with <mcuid>, a part/device mcuid value in range $0-$FFFF.
+ Purpose: saves the DMM current setup in current project ini file, under "DMM_MCUIDxxxx_MODULEn=..." keys.
+
+ -"DMM DELETEALLMODULES" command.
+ Syntax: DMM DELETEALLMODULES
+ Purpose: removes all current DMM modules. Useful to start a scripted DMM setup.
+
+ -"DMM RELEASECACHES" command.
+ Syntax: DMM RELEASECACHES
+ Purpose: flushes once all currently cached data for each module, even if the cache locking is 
+          active, i.e. no refresh on halting is active.
+
+ -"DMM CACHINGON" command.
+ Syntax: DMM CACHINGON
+ Purpose: data caching is engaged (default DMM setup). No refresh on halting is active for modules defined
+          with this option.
+
+ -"DMM CACHINGOFF" command.
+ Syntax: DMM CACHINGOFF
+ Purpose: data caching  is disabled. The debugger flushes all caches even for modules defined
+          without this option. Each time the debugger halts, the memory data are retrieve from 
+		  the target hardware for all modules.
+
+ -"DMM HCS12MERHANDLINGON" command.
+ Syntax: DMM HCS12MERHANDLINGON
+ Purpose: enables the handling of Memory Expansion Registers for HCS12 devices, i.e. INITRM, INITRG and
+          INITEE. The DMM remaps automatically module addresses according to the real value
+		  of these registers when halting.
+		  Note that the debugger does not poll these registers while running. Also the remapping
+		  is performed only on factory defined modules, not user defined modules.
+          
+ -"DMM HCS12MERHANDLINGOFF" command.
+ Syntax: DMM HCS12MERHANDLINGOFF
+ Purpose: disables completely the feature here above. 
+
+
+Improvements
+------------
+
+-Early CPU12 devices program counter fixed for devices without banked memory.
+
+-The Debugging Memory Map provides now for HCS12 and HCS12X parts, by default, the physical bank window(s) visibility 
+ in $0000-$FFFF memory range (in Memory window), i.e. according to current page(s) register(s) value(s). 
+ Above this range, the logical memory is displayed.
+
+-The Communication setup dialog is refreshed at each opening with latest found hardware/cables.
+
+
+List of fixed Bugs
+------------------------------
+
+- "Search Pattern" feature in the Memory window.
+- COM ports availability is checked before attempting to connect to a COM port/device.
+- HCS12 DBG module upgrade support.
+- "Disable maskable ISR's when stepping" for HCS12X devices.
+
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.13
+==========================================================
+
+List of New Features
+--------------------
+
+-None.
+
+Improvements
+------------
+
+-Early CPU12 devices program counter fixed for devices without banked memory.
+
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.12
+==========================================================
+
+List of New Features
+--------------------
+
+-None.
+
+Improvements
+------------
+
+-The Debugging Memory Map is updated at stops and steps according to current INIT registers' value.
+
+-FLASH NVMIF2RELOCATE command got fixed, also caring of the "data to flash" buffer move.
+
+-Registers block registers access below address 0x10 fixed.
+
+-Other Flash Programmer internal improvements.
+
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.11
+==========================================================
+
+List of New Features
+--------------------
+
+1-Connection and communication improvement
+------------------------------------------
+
+The following options have been added in "Communication..." dialog, "Special Setup" tab:
+
+-"At connection, the target is running (hot plugging)":
+ When set, this option overrides the "At connection, detect if the target is running." option.
+ This option must be set of the target processor is running in standalone.
+ The debugger will then make a "quiet" connection without read/write access to processor
+ and process information will be retrieved only when the debugger is stopped.
+
+-"When running, insert controlpoints to hardware onchip break module 
+ without halting the cpu.":
+ This option is available with some HCS12 devices. When available, the debugger
+ will overwrite the current onchip break module with the breakpoint just inserted by the
+ user in the Source or Assembly window, while the processor is running.
+ The processor/cpu is not halted and the breakpoint added "live".
+
+-"When running, discard all memory read accesses.":
+ This legacy option can be used to guaranty no access to device memory while running.
+ The same assertion can be performed within the Debugging Memory Map interface. 
+
+-"Resynchronize from COP/watchdog reset.":
+ This option enables the debugger resynchronization from processor COP watchdog reset.
+ As it slows down debugging while checking the processor state, this resynchronization
+ is optional, as COP/watchdog reset is not a typical program flow behavior.
+
+ The following function code be associated to the "COP failure reset" vector ($FFFA-$FFFB)
+ to halted the target processor on COP reset:
+
+#pragma CODE_SEG __NEAR_SEG NON_BANKED
+interrupt void COP_ISR(void) {
+   asm {
+    //initialize the onchip break module to break here below 
+    //in the "BRA *" never ending loop.
+    MOVB #0x00,0x29 
+    MOVB #0x3F,0x2A
+    LDD  #COP_ISR
+    ADDD #23 // offset to BRA here below
+    STD  0x2B
+    MOVB #0xB0,0x28 //enable breakpoint
+    BRA  * //debugger breaks here
+   }
+}	
+
+2-Flash programming improvement
+-------------------------------
+
+-The Flash programmer will halt application loading and programming has soon as 
+ it cannot run flash status sequence, and will display an error report message.
+
+-Flash programming algorithms have been updated for performance improvement
+ and relocation support when moving the onchip ram to a different place than
+ default/reset position (please see NVMIF2RELOCATE parameter here below).
+
+The following new commands have been created:
+-"FLASH NVMFREQUENCY" command.
+ Syntax: NVMFREQUENCY <frequency in Hz>
+ Purpose: Specify the Non Volatile Memory programming frequency, typically the device
+          bus speed after reset. When used, the Flash Programmer does not try to evaluate
+          this speed and the debugger will gain 2-3 seconds at application loading time.
+
+-"FLASH SKIPSTATUSON" command.
+ Syntax: FLASH SKIPSTATUSON
+ Purpose: Skip Flash Programmer device Non Volatile Memory blocks diagnostic.
+          This can be used to speed up project application loading and programming 
+          from the IDE "debug" run: The Flash Programmer will NOT check if blocks
+          are programmed or erased.
+
+-"FLASH SKIPSTATUSOFF" command.
+ Syntax: FLASH SKIPSTATUSOFF
+ Purpose: Revert SKIPSTATUSON to default (diagnostic performed again).
+
+-"FLASH NVMIF2RELOCATE" command.
+ Syntax: FLASH NVMIF2RELOCATE <address>
+ Purpose: Inform the flash programmer that flash driver must be loaded in ram
+          to a different place than default (default is start of onchip ram).
+          This will provide more flexibility for EB386 "Example 1 Layout" device ram memory relocation.
+
+-"FLASH PROTOCOLON" command.
+ Syntax: FLASH PROTOCOLON
+ Purpose: Enable Flash Programmer protocol display in Command line window. 
+          This command is for debugger Support only.
+
+-"FLASH PROTOCOLOFF" command.
+ Syntax: FLASH PROTOCOLOFF
+ Purpose: Disable Flash Programmer protocol display in Command line window. 
+          This command is for debugger Support only.
+
+Reminder:
+-When used, the "FLASH AEFSKIPERASING" command should be placed in the "Preload" 
+ command file.
+
+3-Debugging Memory Map dialog and Manager
+-----------------------------------------
+The Debugging Memory Map dialog user interface replaces the "banked Memory Location" dialog
+("Set Bank..." menu entry). This interface provides a global approach for all different
+CPU families, each family having its own method for memory access and its own memory
+onchip layout and memory module priorities.
+By the way, the "BANKWINDOW" command has been completely removed, as banks handling is
+now transparently handled by the Debugging Memory Map Manager. In case of error due to this
+command execution, please remove/comment this command. In case of any further debugging problem
+due to this command removal, please contact Metrowerks support team.
+
+The graphical user interface is flexible enough to be handled without much text description
+here, and live diagnostic is displayed within the dialog. Anytime, it is possible to revert
+to default (factory) setup, and most of the time, the user does not need to edit/change settings
+within this dialog.
+
+Functionalities:
+
+-Pressing "New" button will create a new module, and open directly the edition dialog to
+ setup this new module.
+-Pressing "Modify" opens the edition dialog of the selected module in list.
+ More module information are displayed here, and an enhanced diagnostic is also displayed.
+-Pressing "Delete" button will lead to module removing, after a warning dialog.
+-Pressing "Revert to default" will remove the current setup (usually saved into current project)
+ and retrieve the default (factory) setup for an internal database.
+
+Module edition:
+
+-"Enable memory module" options maps the module in the debugger. Unchecking this option
+ makes the module completely "transparent" for the debugger.
+-The "Type" drop down list provides all kinds of memory type available for this processor.
+-The "Priority" drop down list provides all kinds of memory overlap priority available 
+ for this processor. The debugger can have a bigger priority ("highest") to setup an upper
+ module that can overlap an onchip module, this to make a display filter, e.g. creating
+ an "no read access while running" memory range.
+-The "Refresh memory when halting" option controls debugger memory cache. When this option
+ is checked, internal image/cache of memory data are always deleted and the data is always
+ retrieved from hardware when required by the debugger. When unchecked (usually by default
+ for Non Volatile Memory areas) the debugger keeps a copy of the data and does not retrieve
+ the data from hardware until next application loading/programming.
+-The "no memory access while running" option can be used to discard debugger access to a
+ memory range which can regularly be accessed while running. This feature is useful to protect
+ onchip register flags from being triggered by debugger reads.
+
+Remark: 
+
+-Modules range/boundary are always limited to an overlapped module with a bigger priority.
+ For example, if 2 bytes have been defined in a module which overlaps another module, accessing
+ these 2 bytes will be performed using the 2-byte module properties. 
+ The memory on both sides of these 2 bytes will be accessed using the overlapped module properties.
+
+4-P&E USB Multilink and Cyclone Pro firmwares automatic upgrade
+---------------------------------------------------------------
+-This new release includes support for the USB 2.0 Multilink  cable (USB-ML-12 rev. B).
+-Latest P&E firmware will be downloaded to cables automatically.
+
+
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.10
+==========================================================
+
+List of New Features
+--------------------
+
+- HCS12X devices support with:
+. MC9S12XDP512 device support including flash programming,
+. XGATE breakpoints,
+. 4 hardware breakpoints (ROM/Flash),
+. Global, Logical and XGATE view Memory display selectable from Memory window popup menus, Address Space entry, 
+. HCS12x and XGATE cores switching from ICD-12 menus and several windows popup menus, Select Core menu entry.
+
+- New commands:
+
+. STEPBOTHCORES: Single step XGATE and HCS12X cores at the same time. Disabled by default.
+   Important: This is a simulation and does not match with standalone behavior.
+   The command syntax is:
+   STEPBOTHCORES <ON|OFF> 
+
+. XGATECODERANGE: Defines the XGATE code memory area in RAM. This command is required
+   to properly insert breakpoints in XGATE code.
+   Up to 64 ranges can be inserted.
+   The command syntax is:
+   XGATECODERANGE <first address> <last address>
+
+   NB: Address values can be extended with quotes to specify address spaces with 'L for logical,
+    'X for XGATE and 'G for global.
+   Example:
+
+   XGATECODERANGE 0x800'X 0xFFFF'X
+  
+ 
+. XGATECODERANGESRESET: Removes all XGATE code memory ranges inserted with the XGATECODERANGE command. 
+   The command syntax is:
+   XGATECODERANGESRESET
+
+Limitations: 
+
+- XGATE breakpoints cannot be handled before XGATE code is settled in RAM.
+  A warning message is displayed in Command windows about this issue.
+
+- The DBG module is only exploited for hardware breakpoints. All over
+  features are not implemented.
+
+- in NVMC dialog, FLASH_4000 and FLASH_C000 blocks cannot be erased. No error is reported.
+
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.9
+==========================================================
+
+List of New Features
+--------------------
+
+- This release supports the P&E Microcomputer Systems CYCLONE PRO, "Automated Programmer And 
+  Debug Interface".
+
+- It is now possible to disable maskable interrupts while stepping, when checking the
+  "Disable maskable ISR's when stepping" checkbox in "Communication"|"Special Setup" dialog. 
+
+- The new command AEFSKIPERASING has been created to specify non volatile memory blocks 
+  to protect from mass erasing at application loading.
+  The command should be placed in a "Startup" command file. 
+  The command syntax is:
+  FLASH AEFSKIPERASING <blockNo>
+  with blockNo = {number["-"number][","]}
+  
+  For example, "FLASH AEFSKIPERASING 0,2-4" avoids erasing flash blocks 0,2,3,4.
+  
+  Reminder: Flash (and non volatile memory) modules and numbers can be displayed when
+   typing the FLASH command in the Command window. Also the Flash/Non Volatile Memory
+   dialog list displays all modules starting from block number 0.
+
+Improvements
+------------
+
+- DBG12 code program flow rebuild:
+. CALL instruction execution with destination outside bank/page window range ($8000-$BFFF) is 
+  now also supported. 
+. Code execution rebuild from $FFFx to $000x is now also supported.
+
+- Flash programming/Download to non volatile memory:
+. The flash programming download speed has been improved.
+. It is now possible to download an application in "RAM and Flash", without interferences
+  between the programming runtime/algorithm and the code to be placed in RAM. 
+  If this improvement is transparent for users via Load dialog and Flash/Non Volatile Memory dialog,
+  new commands "FLASH OVLBACKUP" and "FLASH OVLRESTORE" have been created to backup then restore 
+  application code overlap with programming runtime/algorithm, when programming is performed through
+  debugger commands batch files. "FLASH OVLBACKUP" should be executed before the application/file
+  loading and "FLASH OVLRESTORE" should be executed after last (FLASH) command.
+
+- Non Volatile Memory automatic mass erasing and flashing (NVMAEF):
+. Programmation "Arming" + "Disarming" explicit progress bars are now displayed. 
+. AEFSKIPERASING added to specify and protect blocks from NVMAEF mass erase.
+
+- It is now possible to debug with several projects and debuggers with several USB Multilink cables,
+ as cables' serial number is saved in the project when closing affirmatively the "Communication" dialog .
+ Therefore, a project can securely address always the same USB Multilink cable connected to single
+ hardware. 
+
+ Onchip DBG module limitation
+ ----------------------------
+ . Real time code profiling and coverage is limited to non banked memory applications/code.
+
+ Demo version limitations
+ ------------------------
+ - The DBG support is limited:
+ . Code reconstruction is limited to the 20 latest instructions when in demo mode,
+ . No Profiling nor coverage when in demo mode,
+ . No Predefined triggers allowed when in demo mode.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.8
+==========================================================
+
+List of New Features
+--------------------
+
+- The ICD12 Target Interface provides now a direct application loading and flashing feature within
+ the application Load menu. It is no more required to play flash handling commands from preload
+ and postload command files: The "Load Code to onchip Non Volatile Memory" option plays in background
+ required flash commands. When this option is selected, it is possible to choose an "All Bytes" verification
+ option which will compare (after programming) the original code with the device programmed code (read back).
+ Note that this option performs a device "mass erase". For partial code loading, eeprom data loading,
+ the Flash/NVMC dialog and regular flash commands are still 100% available to specify special/selective 
+ Non Volatile Memory operations to perform.
+
+- This target interface works with P&E USB and Parallel HCS12 Multilink BDM cables. The communication
+ setup dialog has been slightly modified in this purpose, providing the same features as before plus
+ a drop down list to choose the kind of cable if not automatically detected.
+
+- HCS12 devices onchip DBG module support (for devices including this module):
+
+ A complete graphical user interface is provided, using a dialog
+ combined with context sensitive popup menus (mouse right-click) in Source, 
+ Assembly, Data and Memory component windows to set the DBG module and triggers.
+
+ This graphical interface is automatically enabled or disabled, according to the selected device
+ (not all HCS12 devices provide the DBG module).
+
+ The Metrowerks 8/16 bits debugger ICD12 Target Interface provides thanks to the DBG module:
+ . Hardware breakpoints and watchpoints,
+ . Predefined Triggers,
+ . Expert Triggers,
+ . Program flow rebuild from DBG data capture within the Trace component which should be opened if desired,
+ . Real time code profiling and coverage (periodical program counter capture) within Profiler
+   and Coverage components which should be opened if desired.
+
+ Using the ICD12 Target Interface, three modes are available:
+ .Default: Automatic (triggers, breakpoints, watchpoints, and trace possible)
+ DBG Module used to set up 2 breakpoints or one watchpoint 
+ or to set up triggers selected by the user from a Predefined list.
+ The triggers comparator addresses can be set from the debugger Source, Assembly, Memory and Data component 
+ using Set Trigger A or Set Trigger B pop up menu entry.
+ The Trigger condition can be set using the Trigger Module Settings dialog Trigger settings property page 
+ or using the pop up menu entries. 
+
+ .Expert (triggers through Expert triggers property page, trace possible)
+ User does need strong DBG module specific knowledge to use this mode. 
+ The HCS12 core manual is needed, to understand the meaning of the flags.
+ The triggers comparator addresses can be set from the debugger Source, Assembly, Memory and Data component 
+ using Set DBGCA or Set DBGCB.
+ To setup Expert triggers mode the Trigger Module Settings dialog Expert triggers property page must be used.
+
+ .Profiling and coverage (no triggers, trace not possible)
+ Choosing this mode, the DBG module is setup to code execution profiling and coverage.
+ The Profiler and/or Coverage components should be opened to display results.
+ No trigger nor DBG based controlpoints can be set, the debugger must be stopped on the user request 
+ (the BDC breakpoint or software breakpoints can still be used).
+
+ - Updated status bar:
+ When the ICD12 Target Interface has been loaded, if the current device supplies a DBG debug module,
+ specific Trigger Module Settings information are given in the debugger status bar.
+
+ Onchip DBG module limitation
+ ----------------------------
+ . Real time code profiling and coverage is limited to non banked memory applications/code.
+
+ Demo version limitations
+ ------------------------
+ - The DBG support is limited:
+ . Code reconstruction is limited to the 20 latest instructions when in demo mode,
+ . No Profiling nor coverage when in demo mode,
+ . No Predefined triggers allowed when in demo mode.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.7
+==========================================================
+
+List of new Features
+------------------------------
+- Register block moving handling: On MC9S12 derivatives, the target interface can automatically
+  track device Registers block ($0-$3FF) relocated via INITRG register setup. For HC12
+  derivatives, a new command has been implemented to specify the new location of the register
+  block: REGBLKADR
+  Command syntax:
+  REGBLKADR <new register block address>
+  -At connection the register block address is 0
+  -When a reset command is issued, the register block address is set to 0
+  -When REGBLKADR is executed, the information is passed to the target and the debugger is
+   updated.
+  This command must be performed after the register block address has been changed by the user
+  application.
+- When typing the VER command in the Command Line window, the P&E cable revision is also
+  displayed.
+- At connection, the target interface can detect if the target processor is running. The target
+  processor is not reset and can be halted later. Then application file (.ABS) Symbols can be
+  reloaded to match current code with initial application file and keep on debugging. This
+  option can be enabled/disabled(default) in the "Communication Device Specification" dialog,
+  "At connection, detect if the target is running" checkbox.
+- New command " LISTALLMCUIDS" added , as “MCU Selection” dialog lists NOW by default only
+  HC(S)12 derivatives.
+  Command syntax: LISTALLMCUIDS  OFF | ON | STATE 
+- New command " HWBREAKONLY" added , to force the debugger use only hardware breakpoint without
+  attempting to use first SWI software breakpoint.
+  Command syntax: HWBREAKONLY OFF | ON | STATE 
+- New command "BDMAREASUPPORT" added to be able to step in BDM ROM range. Typically not useful,
+  as no program code should be stored in this area.
+  Command syntax: BDMAREASUPPORT STATE | OFF | ON [<first address > <last address >]
+- Improvements
+  1-24853661, bug number WB1-37294: REGBLKADR to set the register block address
+  debugger synchronization with device speed change via PLL 
+  Device unsecuring/unlocking management
+
+List of fixed Bugs
+------------------------------
+- Call chain display problem fixed (banked code only)  
+- 1-25217872, bug number WB1-38590: flash applet code no more counted in demo/evaluation.
+- The SHOWPROT command is also saved in the project.
+- 1-24044055, bug number WB1-37293:
+- If you put a breakpoint after a mov instruction setting the PPAGE bit, 
+  and run to it, the PPAGE does not contain the correct value: corrected.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.6
+==========================================================
+
+List of new Features
+------------------------------
+- This target release of the ICD12 Target Interface is using P&E DLL version 2.22. A version of
+  this DLL is installed in your windows directory when installing the Metrowerks software. If
+  problems occur using this target interface with old Rev. D of the P&E Cable12 and this new
+  DLL, please contact P&E or technical support.
+  
+  Baracuda 2 (MC9S12DP256 mask: 0K79X) PLL Problem: 
+  Problem: when the PLL is enabled and the BDC is set to use the external oscillator frequency
+  (this is the default, CLKSW=0), the BDC will no longer operate properly (chip defect).
+  This problem did not affect the original Baracuda device. 
+Solution: Before the user code
+  enables the PLL, the CLKSW bit in the BDCSCR must be set. 
+
+  This can now be done using the corresponding checkbox in the Communication Setup dialog. We do
+  not set this automatically because it may affect other devices. 
+
+  Unsecure HCS12 derivatives: 
+  Some of the HCS12 derivatives can be unsecured while in Special mode (this is not possible
+  with all MC9S12DP256 derivatives.
+  A specific menu entry (and corresponding command line command CHIPSECURE UNSECURE) is now
+  available in the ICD12 Target Interface that allows to connect to the target and to play a
+  command file in order to unsecure the connected derivative (Unsecure command file). Note that
+  the Unsecure feature of the ICD12 Target Interface may not work in all cases. In some case we
+  were not able to unsecure some of the chips. 
+
+  In order to connect to the chip, the correct IO_DELAY_COUNT must be entered. The Unsecure
+  derivative dialog offers to connect using the last use IO_DELAY_COUNT, please check its
+  value:
+  For Cable12:   IO_DELAY_COUNT = 16/(oscillator frequency in MHz)
+  For Cable12HS: IO_DELAY_COUNT =  (200 / (oscillator frequency in MHz)) - 1
+
+  The unsecure process checks first if it has read/write access to RAM (not possible on some
+  derivatives, skipped in this case): it first reads a value in RAM, saves it, complements it,
+  writes it to RAM and tries to read it again.
+  If this test is successful or skipped, it checks the security byte to see if the device is
+  secured, according to a mask and a compare value:
+  if (((value in security byte)& mask) == compare value)) then chip is secured.
+
+  The address of the RAM byte and of the security register, the mask and the compare value can
+  be modified using command CHIPSECURE SETUP (those parameters are then stored in the project
+  file.):
+
+  CHIPSECURE SETUP <addr. in RAM> <addr. reg to check> <mask> <compare value>
+  <addr. in RAM> : address use to test the RAM access if possible on derivative (by default 0x1000) 
+  <addr. reg to check> : address of the security register (by default 0xFF0F)
+  <mask> : comparison mask for the security register (by default 0x03)
+  <compare value> : comparison value for the security register (by default 0x02)
+
+  If the debugger find out the connected derivative is secured, the Unsecure command file is executed
+  and the secured derivative check process is once again performed.
+
+  The Unsecure command file can be set up using the ICD12 Command Files dialog.
+  Here is an example of command file to unsecure the Barracuda2 (MC9S12DP256 mask: 0K79X)
+
+  // MC9S12DP256 erasing + unsecuring command file:
+  // These commands mass erase the chip then program the security byte to 0xFE (unsecured state).
+
+  FLASH MEMUNMAP   // do not interact with regular flash programming monitor
+
+  //mass erase flash
+  wb 0x100 0x49    // set FCLKDIV clock divider for a 16 MHz oscillator
+  wb 0x103 0       // FCFNG select block 0
+  wb 0x104 0xa4    // FPROT all protection disabled.
+  wb 0x105 0x30    // clear PVIOL and ACCERR in FSTAT register 
+  ww 0x9000 0xFFFF // (dummy) write to flash array to buffer address and data
+  wb 0x106 0x41    // write MASS ERASE command in FCMD register
+  wb 0x105 0xC0    // clear CBEIF in FSTAT register to execute the command 
+  wait 10
+
+  //mass erase eeprom
+  wb 0x12  0x01    // set EEPROM at 0-$1000 in INITEE
+  wb 0x110 0x49    // set ECLKDV clock divider for a 16 MHz oscillator
+  wb 0x114 0x88    // EPROT all protection disabled
+  wb 0x115 0x30    // clear PVIOL and ACCERR in ESTAT register 
+  ww 0x800 0xFFFF  // (dummy) write to eeprom array to buffer address and data
+  wb 0x116 0x41    // write MASS ERASE command in ECMD register
+  wb 0x115 0xC0    // clear CBEIF in ESTAT register to execute the command
+  wait 10
+
+  //reprogram Security byte to Unsecure state
+  wb 0x100 0x49    // set FCLKDIV clock divider for a 16 MHz oscillator
+  wb 0x103 0       // FCFNG select block 0 
+  wb 0x104 0xa4    // FPROT all protection disabled. 
+  wb 0x105 0x30    // clear PVIOL and ACCERR in FSTAT register  
+  ww 0xFF0E 0xFFFE // write security byte to "Unsecured" state
+  wb 0x106 0x20    // write MEMORY PROGRAM command in FCMD register
+  wb 0x105 0xC0    // clear CBEIF in FSTAT register to execute the command 
+  wait 10
+
+  reset
+
+  FLASH MEMMAP     // restore regular flash programming monitor
+
+
+  // Evaluate the clock divider to set in ECLKDIV/FCLKDIV registers:
+
+  // An average programming clock of 175 kHz is chosen.
+
+  // If the oscillator frequency is less than 10 MHz, the value to store
+  // in ECLKDIV/FCLKDIV is equal to " oscillator frequency (kHz) / 175 ".
+
+  // If the oscillator frequency is higher than 10 MHz, the value to store
+  // in ECLKDIV/FCLKDIV is equal to " oscillator frequency (kHz) / 1400  + 0x40 (to set PRDIV8 flag)".
+
+  // Datasheet proposed values:
+  //
+  // oscillator frequency     ECLKDIV/FCLKDIV value (hexadecimal)
+  // 
+  //  16 MHz            		$49
+  //   8 MHz            		$27
+  //   4 MHz            		$13
+  //   2 MHz             		$9
+  //   1 MHz             		$4
+ 
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.5
+==========================================================
+
+List of new Features
+------------------------------
+- This target supports the newest ICD cables from P&E  for STAR12 cpu core.
+  Flash Programming Utility: onchip EEPROM programming is available for the HC812A4, HC912B32,
+  HC912D60, HC912D60A and HC912Dx128.
+
+  The BANKWINDOW commands has now the following syntax:
+  BANKWINDOW (PPAGE | DPAGE | EPAGE) [OFF|ON] [<range> <reg address> <num of pages>]
+
+  Important Remark: The Banked Memory Location dialog  (ICD-12 | Set Bank… menu entry) is a
+  user-friendly graphical user interface to setup banks without using the BANKWINDOW command.
+
+  Typing BANKWINDOW without any parameter lists the current settings:
+
+  in>bankwindow
+  PPAGE Settings:
+  Status: enabled
+  Reg. Adr: 0xff
+  Range: 0x8000 to 0xbfff
+  Number of Pages: 8
+
+  DPAGE Settings:
+  Status: disabled
+  Reg. Adr: 0x34
+  Range: 0x7000 to 0x7fff
+  Number of Pages: 0
+
+  EPAGE Settings:
+  Status: disabled
+  Reg. Adr: 0x36
+  Range: 0x400 to 0x7ff
+  Number of Pages: 0
+
+  Typing "BANKWINDOW ON" enables the banked memory managing and typing "BANKWINDOW OFF" disables it.
+
+  The regular way to set banks calling the BANKWINDOW command is: 
+  BANKWINDOW <control register> <activity> <range> <reg address> <num of pages>
+
+  <control register>: "PPAGE", "EPAGE" or "DPAGE", as defined in the CPU12 register block of the derivative.
+  <activity>: "ON" or "OFF". "ON" enables this page handling and "OFF" disables it.
+  <range>: a memory address range matching the bank location. Regular debugger syntax, like "0x8000..0xBFFF".
+  <reg address>: the address of the control register, like "0xFF" for PPAGE register address on the
+  HC912DG128 derivative.
+  <num of pages>: the number of pages/banks.
+
+  For example, for the HC912DG128 derivative:
+  BANKWINDOW PPAGE ON 0x8000..0xBFFF 0xFF 8
+
+  The “activity” parameter can be omitted. The activity will be by default “ON”. 
+ 
+  Important Remark: The Banked Memory Location dialog  (ICD-12 | Set Bank… menu entry) is a
+  user-friendly graphical user interface to setup banks without using the BANKWINDOW command.
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.4
+==========================================================
+
+List of new Features
+------------------------------
+- Flash Programming Utility:
+  The “Non Volatile Memory Control” dialog (opened with the “ICD12 | Flash...” menu entry) displays
+  now also the “runtime evaluated” MCU bus speed in Mhz.
+- Two new commands for flash programming are now available.
+  "FLASH MEMUNMAP": disables the flash memory mapping by the Flash Programming utility. Writing to
+                    addresses mapped by the Flash Programming utility is no more filtered and turns
+                    like writing directly to the device memory.
+  "FLASH MEMMAP": enables addresses mapping by the Flash Programming utility, if the FLASH command is
+                  been previously executed or the NVMC dialog has been opened. The command is relevant
+                  only if "FLASH MEMUNMAP" was used before, as by default, the Flash Programming
+                  utility maps automatically Non Volatile Memory addresses.
+- The "FLASH INIT <fileNameAndPath>" has been extended. Indeed, <fileNameAndPath> is first searched
+  in the “\prog\fpp” directory. Therefore, the path is no more required if the FPP file is located in
+  this directory. 
+
+  Example:
+  in>flash init mcu03c4.fpp
+  FLASH parameters loaded for M68HC912DG128 from mcu03c4.fpp
+  Block Module Name      Address Range   Status
+  ...
+  ...
+- Improvements
+  If the GIVEIO driver is not found under NT, there is no more crash of the debugger. The message
+  below is displayed before the debugger is closed:
+  "No GIVEIO driver is installed! Please install the NT parallel port driver for IC12 before running
+  the ICD12 target interface. This created an unrecoverable exception in the P&E Unit_12z.dll. The
+  debugger is going to be closed."
+
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.3
+==========================================================
+
+List of new Features
+------------------------------
+- This new release supports MCS912DP256 derivative.
+- Hardware Breakpoint Configuration Dialog: The Hardware Breakpoints Configuration dialog has been
+  modified to support also 22-bits Hardware Breakpoint Modules. Two different hardware breakpoints
+  module are now available: 16-bits (M68HC12DG128, M68HC12B32…) or 22-bits (MCS912DP256…). 
+- Banked Hardware Breakpoint on HC912DG128: When selecting the “Continue on illegal break” check box
+  in the Hardware Breakpoints Configuration dialog, it is possible to overcome the deficient 2-byte
+  address size onchip break module which does not handle the PPAGE. Note that internally, the target
+  will be halted by the hardware breakpoint, compared with the breakpoint that you set, then
+  relaunched if not (bank) matching.
+- Banked Memory Location Dialog: When selecting the menu entry "ICD12 | Set Bank…", you can set up the
+  banked memory location you are using (same as command BANKWINDOW). The bank memory settings are
+  stored in the project file (Note: if you were using the BANKWINDOW command in the startup.cmd
+  command file to set up the memory banking, this mechanism is still supported but override the dialog
+  settings at startup).
+- Dynamic Control Points: it is now possible to set dynamic breakpoints and watchpoints in the ICD12
+  Target Interface (i.e. set breakpoints and wacthpoints while the target is running). Note that
+  internally, the target will be halted and then restarted after the control point has been set.
+ 
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.1.2
+==========================================================
+
+List of new Features
+------------------------------
+- This new release runs with HI-WAVE 6.1.
+ 
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.
+
+==========================================================
+ICD12 Target Interface icd12.tgt V6.0.1
+==========================================================
+
+List of new Features
+------------------------------
+- This is the first release of the ICD12 Target Interface.
+- The ICD (In-Circuit Debugger) CABLE12 BDM interface designed by P&E interfaces your PC with hardware
+  target boards featured with BDM connectors as specified by Freescale. 
+- This target interface is used to perform the communication between HI-WAVE and the P&E CABLE12
+  interface, and from the cable to CPU12 microprocessors via the BDM port, like on Freescale’s
+  evalution boards for HC12 B32, BC32, D60, DA128 and DG128.
+- With this interface, you can down load an executable program from the HI-WAVE environment to the
+  target board which will execute it. You will also have the feedback of the real target system
+  behaviour to HI-WAVE. You can read and write in memory, single-step/run/stop the CPU, set
+  breakpoints in the code.
+- The ICD12 Target Interface from HIWARE allows you:
+- C Source Level debugging on the target board,
+- High down load speed: - 4.1 kbyte/s to RAM, 3.4 kbyte/s to FLASH, with flash programming interface
+  integrated in the debugger,
+- Up to 64 breakpoints can be set in the Code (Run to cursor, Counting, Condi­tional breakpoints ...),
+- 2 hardware breakpoints exor 1 watchpoint available, automatically handled by the debugger or user
+  configurable via a graphical user interface,
+- C Source Level banked code debugging on HC12DG128 derivative.
+- NT Parallel Port Installation
+- You might need to reboot your PC to make NT load the parallel port driver for the CABLE12 interrface.
+ 
+List of fixed Bugs
+------------------------------
+- None.
+
+List of known Bugs
+------------------------------
+- None.

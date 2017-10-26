@@ -1,0 +1,477 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Properties
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>SynchroMaster</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="SynchroMaster.html">General Info</a><br />
+<i>Properties</i><br />
+<a href="SynchroMasterMethods.html">Methods</a><br />
+<a href="SynchroMasterEvents.html">Events</a><br />
+<a href="SynchroMasterUser Types.html">Types and constants</a><br />
+<a href="SynchroMasterTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="SynchroMaster_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+<!--      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td class="titlebox">-->
+          
+           <div class="titlebox">
+              <div class="beanname">
+                Component
+                
+                
+                SynchroMaster
+              </div>
+              <div class="descrtext">Master for synchronous serial communication</div>
+              <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+                
+                </span>
+              </div>
+            </div>
+                      
+<!--
+            </td>
+        </tr>
+
+        <tr>        
+-->  
+            
+<!--            <td align="left"> -->
+<!--                   <br /> -->                  
+     <div class="text_title">
+          Properties:
+		 </div>		 
+		 <div class="descr_line">                  
+                  (Properties are parameters of the component. Please see the <a href="../../DOCs/EmbeddedBeans.html">Embedded Components page</a> for more information.)                   
+     </div>
+                  
+<div class="user_text">
+<ul>
+<li>
+<a name="DeviceName">
+<b>Component name</b></a> - Name of the component.
+</li>
+<li>
+<a name="Ser">
+<b>Channel</b></a> - Channel used for a serial synchronous communication.
+</li>
+<li>
+<a name="IntService">
+<b>Interrupt service/event</b></a> - Component may or may not be implemented using interrupts. If this property is set to "Enabled", the component functionality (e.g. sending and receiving data) depends on the interrupt service and will not operate if the CPU interrupts are disabled. For details please refer to chapter <a href="..\..\DOCs\InterruptsEvents.html#InterruptsUsage">"interrupt service in the component's generated code"</a>.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="SerInt">
+  <b>Interrupt</b></a> - Special interrupt generated by the communication process.
+  </li>
+  <li>
+  <a name="InpInt">
+  <b>Interrupt from input</b></a> - Interrupt from the serial receiver.
+  </li>
+  <li>
+  <a name="InitPriority">
+  <b>Interrupt input priority</b></a> - Receiver interrupt priority.
+  </li>
+    <li>
+  <a name="OutInt">
+  <b>Interrupt from output</b></a> - Interrupt from serial transmitter.
+  </li>
+  <li>
+  <a name="InitOutPriority">
+  <b>Interrupt output priority</b></a> - Transmitter interrupt priority.
+  </li>
+    <li>
+  <a name="InpBufferSize">
+  <b>Input buffer size</b></a> - Input buffer size in characters.
+<p>
+For information about SW overrun behavior please see <a href="SynchroMaster.html#SW_overrun_behavior">General info page</a>.
+</p>
+  </li>
+  <li>
+  <a name="OutBufferSize">
+  <b>Output buffer size</b></a> - Output buffer size in characters.
+  </li>
+</ul>
+</li>
+<li>
+<a name="_SettingsGrp">
+<b>Settings</b></a> - Common component settings.
+<ul>
+      <li class="versionspecdetail">
+  <a name="width16">
+  </a><i>Settings only if SPI support 16 bit width of data.</i>
+  <ul>
+    <li>
+    <a name="SerWidth16">
+    <b>Width</b></a> - Number of information bits.
+    </li>
+  </ul>
+  </li>
+        <li class="versionspec">
+  <a name="HCS12grp0">
+  <span class="versionspeclabel">Settings supported for Freescale ColdFireV1, HCS08, HCS12, HCS12X and RS08 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="BidirMode">
+    <b>Bidirectional mode</b></a> - Allows enabling/disabling a bidirectional mode. If bidirectional mode enabled, only output pin is used for the communication. If it is disabled, both input and output pins are used. The bidirectional mode affects only pin connection to the peripheral, the other component behaviour like sending and receiving data from buffer and invoking events is not affected, even if the corresponding pin is not available.
+    </li>
+  </ul>
+  </li>
+      <li>
+  <a name="InpGrp">
+  <b>Input pin</b></a> - Allows enabling or disabling of the input pin signal.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+  <ul>
+    <li>
+    <a name="Inp">
+    <b>Pin</b></a> - Input pin for data.
+    </li>
+    <li>
+    <a name="InpPinSignal">
+    <b>Pin signal</b></a> - Signal name of an input pin.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="OutGrp">
+  <b>Output pin</b></a> - Allows enabling or disabling of the output pin signal.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+  <ul>
+    <li>
+    <a name="Out">
+    <b>Pin</b></a> - Output pin for data.
+    </li>
+    <li>
+    <a name="OutPinSignal">
+    <b>Pin signal</b></a> - Signal name of an output pin.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="ClkGrp">
+  <b>Clock pin</b></a> - Group of properties for clock signal.
+  <ul>
+    <li>
+    <a name="Clk">
+    <b>Pin</b></a> - Output pin for the clock.
+    </li>
+    <li>
+    <a name="ClkPinSignal">
+    <b>Pin signal</b></a> - Signal name of the clock pin.
+    </li>
+  </ul>
+  </li>
+  <li>
+  <a name="SSgrp">
+  <b>Slave select pin</b></a> - Allows enabling or disabling of the Slave select pin signal - available when supported by HW.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+  <ul>
+    <li>
+    <a name="SSpin">
+    <b>Pin</b></a> - Pin reserved for the selection of Master/Slave mode.
+    </li>
+    <li>
+    <a name="SSpinSignal">
+    <b>Pin signal</b></a> - Signal name of the slave select pin.
+    </li>
+    <li>
+    <a name="SSdir">
+    <b>Direction</b></a> - Allows selecting of the Select slave pin signal direction - available when supported by HW.
+    </li>
+              </ul>
+  </li>
+    <li>
+  <a name="ClockEdge">
+  <b>Clock edge</b></a> - Shift edge of the clock signal. Output data will be shifted on the selected edge polarity.<br />
+For more information please see <a href="SynchroMaster.html#Clock settings">Configuring Clock edge and Shift clock idle polarity properties</a>.<br /><br />
+There are 6 options:<br />
+<ul>
+  <li><u>rising or falling edge</u>: One of the following edge type will be selected: rising or falling</li>
+  <li><u>rising edge</u>: Rising edge required</li>
+  <li><u>falling edge</u>: Falling edge required</li>
+  <li><u>both edges</u>: Both edges (rising and falling) required</li>
+  <li><u>high level</u>: High level of the signal</li>
+  <li><u>low level</u>: Low level of the signal</li>
+</ul><br />
+
+  </li>
+  <li>
+  <a name="_Tmg">
+  <b>Shift clock rate</b></a> - Communication shift clock rate (e.g. period of shift clock signal). <p/>It is necessary to enter a value and an unit (see <a href="../../DOCs/Units.html">Timing Setting Syntax</a>). The setting can be made with a help of the <a href="../../DOCs/Beantiming.html">Timing dialog box</a> that opens when clicking on button <img src="../../DOCs/images/icon1.gif" border="0"/> (...).
+  </li>
+    <li>
+  <a name="EOF">
+  <b>Empty character</b></a> - A character that can be ignored if <a href="#IgnoreEOF">Ignore empty char.</a> is set to "yes".
+  </li>
+  <li>
+  <a name="IgnoreEOF">
+  <b>Ignore empty char.</b></a> - When an empty character is received, it is ignored.
+  </li>
+  <li>
+  <a name="MSB_first">
+  <b>Send MSB first</b></a> - Order in which bits are transmitted (MSB: most significant bit, LSB: less significant bit).
+  </li>
+        <li class="versionspec">
+  <a name="HC08S12grp">
+  <span class="versionspeclabel">Settings supported for Freescale 56800/E, ColdFireV1, HC08, HCS08, HCS12, HCS12X, MCF and RS08 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="SKpolarityHC">
+    <b>Shift clock idle polarity</b></a> - If the communication does not run, the clock signal will be set to selected level either low or high.<br />
+For more information please see <a href="SynchroMaster.html#Clock settings">Configuring Clock edge and Shift clock idle polarity properties</a>.
+    </li>
+  </ul>
+  </li>
+      <li class="versionspec">
+  <a name="FaultModeFeature">
+  <span class="versionspeclabel">Settings supported for Freescale 56800/E, ColdFireV1, HC08, HCS08, HCS12, HCS12X and RS08 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="FaultMode">
+    <b>Fault mode</b></a> - Enables/Disables the fault mode. If enabled, a mode fault error may invoke OnFault event. If enabled, the Enable method is generated always. This setting depends on enabling/disabling of the Slave select pin and on selecting the Slave select pin direction as well.
+When the mode fault error occurs, the component is automatically disabled. Use <a href="SynchroMasterMethods.html#Enable">Enable</a> method to re-enable it.
+    </li>
+  </ul>
+  </li>
+      <li class="versionspec">
+  <a name="HCS12grp">
+  <span class="versionspeclabel">Settings supported for Freescale ColdFireV1, HCS08, HCS12, HCS12X and RS08 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="StopInWait">
+    <b>Stop in wait mode</b></a> - If this property is set to 'yes', the power of the device is allowed to be down in Wait mode and the power consumption of MCU will reduce.
+    </li>
+  </ul>
+  </li>
+  </ul>
+</li>
+<li>
+<a name="Symbol_10">
+<b>Initialization</b></a> - Initial settings (after power-on or reset).
+<ul>
+    <li class="versionspec">
+  <a name="HCS12grp1">
+  <span class="versionspeclabel">Settings supported for Freescale ColdFireV1, HCS08, HCS12, HCS12X and RS08 derivatives only.</span></a>
+  <ul>
+    <li>
+    <a name="OutBuf">
+    <b>Direction in init.</b></a> - Selects a direction of serial I/O pin ('Output pin' property) for bidirectional mode. The property is only available when 'Bidirectional mode' property is set to 'Enabled'.
+    </li>
+  </ul>
+  </li>
+      <li>
+  <a name="InitEnable">
+  <b>Enabled in init. code</b></a> - Enabled in initialization code.
+  </li>
+  <li>
+  <a name="InitEnableEvents">
+  <b>Events enabled in init.</b></a> - Events enabled in initialization.
+  </li>
+</ul>
+</li>
+<li>
+<a name="_SpeedGrp">
+<b>CPU clock/speed selection</b></a> - Settings for the CPU speed modes: identifies whether the component is supported or not.
+<br />For details about speed modes please refer to page <a href="../../DOCs/SpeedModes.html">Speed Modes Support</a>.
+<ul>
+  <li>
+  <a name="HighSpeed">
+  <b>High speed mode</b></a> - The component is enabled/disabled in high speed mode.
+  </li>
+  <li>
+  <a name="LowSpeed">
+  <b>Low speed mode</b></a> - The component is enabled/disabled in low speed mode.
+  </li>
+  <li>
+  <a name="SlowSpeed">
+  <b>Slow speed mode</b></a> - The component is enabled/disabled in slow speed mode.
+  </li>
+</ul>
+</li>
+
+     </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+</div>
+           <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

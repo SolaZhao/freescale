@@ -1,0 +1,349 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Methods
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>Byte4IO</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="Byte4IO.html">General Info</a><br />
+<a href="Byte4IOProperties.html">Properties</a><br />
+<i>Methods</i><br />
+<a href="Byte4IOEvents.html">Events</a><br />
+<a href="Byte4IOTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Components Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="Byte4IO_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%" >
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              Byte4IO
+            </div>
+            <div class="descrtext">General Four-Bytes Input/Output</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Port I/O</a>
+              
+              </span>
+            </div>
+          </div>
+
+         <div class="text_title">
+              Methods:
+    		 </div>		 
+    		 <div class="descr_line">                  
+              (Methods are user-callable functions/subroutines intended for
+               the component functions control. Please see the <a href="../../DOCs/EmbeddedBeans.html#Methods">Embedded Components page</a> for more information.)                   
+         </div>
+                  
+         <div class="user_text">
+            <ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+<u><b>Direction methods</b></u> - These methods concern the direction of the component (encapsulation of
+the direction of the allocated physical device).<br/>
+The direction is expressed as a boolean value:<br/>
+<tt>FALSE</tt> = <b>input</b>, <tt>TRUE</tt> = <b>output</b>.<br/>
+<u><b>Value methods</b></u> - These methods work with the whole width of the component (with all the 32 bits together).<br/>
+<u><b>Bit methods</b></u> - These methods work with a single bit of the component. The bit is specified
+as a number from 0 to 31.
+<br/>
+The bit value is expressed  as a boolean value:
+<tt>FALSE</tt> corresponds to logical "0" or "Low", <tt>TRUE</tt> corresponds to logical "1" or "High".
+<br/>
+<br/>
+<!---USEREND DON'T CHANGE THIS LINE-->
+<li><a name="GetDir">
+<b>GetDir</b></a>
+ - Returns selected direction.
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetDir(void)<br />
+<li><i>Return value:bool</i> - Possible values:<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - Input<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - Output
+</li>
+</ul><br />
+</li>
+<li><a name="SetDir">
+<b>SetDir</b></a>
+ - Sets a port direction (available only if the Direction = <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void SetDir(bool Dir)<br />
+<li><i>Dir:bool</i> - Direction to set. Possible values:<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - Input<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - Output</li>
+</ul><br />
+</li>
+<li><a name="SetInput">
+<b>SetInput</b></a>
+ - Sets a port direction to input (available only if the Direction = <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void SetInput(void)<br />
+</ul><br />
+</li>
+<li><a name="SetOutput">
+<b>SetOutput</b></a>
+ - Sets a port direction to output (available only if the Direction = <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void SetOutput(void)<br />
+</ul><br />
+</li>
+<li><a name="GetVal">
+<b>GetVal</b></a>
+ - Returns the value of the Input/Output component. If the direction is <b>input</b> then it reads the input value of the pins and returns it. If the direction is <b>output</b> then it returns the last written value (see <a href="Byte4IOProperties.html#SafeMode">Safe mode</a> property for limitations).
+<ul>
+<br /><i>ANSIC prototype:</i> dword GetVal(void)<br />
+<li><i>Return value:dword</i> - Input value
+</li>
+</ul><br />
+</li>
+<li><a name="PutVal">
+<b>PutVal</b></a>
+ - Specified value is passed to the Input/Output component. If the direction is <b>input</b> it saves the value to a memory or a register, this value will be written to the pins after switching to the output mode - using <tt>SetDir(TRUE)</tt> (see <a href="Byte4IOProperties.html#SafeMode">Safe mode</a> property for limitations). If the direction is <b>output</b> it writes the value to the port. (Method is available only if the Direction = <u><tt>output</tt></u> or <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void PutVal(dword Val)<br />
+<li><i>Val:dword</i> - Output value</li>
+</ul><br />
+</li>
+<li><a name="GetBit">
+<b>GetBit</b></a>
+ - Returns the value of the specified bit/pin of the Input/Output component. If the direction is <b>input</b> then it reads the input value of the pin and returns it. If the direction is <b>output</b> then it returns the last written value (see <a href="Byte4IOProperties.html#SafeMode">Safe mode</a> property for limitations).
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetBit(byte Bit)<br />
+<li><i>Bit:byte</i> - Bit/pin number to read (0 to 31)</li>
+<li><i>Return value:bool</i> - Bit value. Possible values:<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - logical "0" (Low level)<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - logical "1" (High level)
+</li>
+</ul><br />
+</li>
+<li><a name="PutBit">
+<b>PutBit</b></a>
+ - Specified value is passed to the specified bit/pin of the Input/Output component. If the direction is <b>input</b> it saves the value to a memory or a register, this value will be written to the pin after switching to the output mode - using <tt>SetDir(TRUE)</tt> (see <a href="Byte4IOProperties.html#SafeMode">Safe mode</a> property for limitations). If the direction is <b>output</b> it writes the value to the pin. (Method is available only if the Direction = <u><tt>output</tt></u> or <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void PutBit(byte Bit, bool Val)<br />
+<li><i>Bit:byte</i> - Bit/pin number (0 to 31)</li>
+<li><i>Val:bool</i> - New value of the bit. Possible values:<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - logical "0" (Low level)<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - logical "1" (High level)</li>
+</ul><br />
+</li>
+<li><a name="SetBit">
+<b>SetBit</b></a>
+ - Sets (to one) the specified bit of the Input/Output component. It is the same as <tt>PutBit(Bit, TRUE)</tt>. (Method is available only if the Direction = <u><tt>output</tt></u> or <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void SetBit(byte Bit)<br />
+<li><i>Bit:byte</i> - Bit/pin number to set (0 to 31)</li>
+</ul><br />
+</li>
+<li><a name="ClrBit">
+<b>ClrBit</b></a>
+ - Clears (to zero) the specified bit of the Input/Output component. It is the same as <tt>PutBit(Bit, FALSE)</tt>. (Method is available only if the Direction = <u><tt>output</tt></u> or <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void ClrBit(byte Bit)<br />
+<li><i>Bit:byte</i> - Bit/pin number to clear (0 to 31)</li>
+</ul><br />
+</li>
+<li><a name="NegBit">
+<b>NegBit</b></a>
+ - Negates (inverts) the specified bit of the Input/Output component. It is the same as <tt>PutBit(Bit,!GetBit(Bit))</tt>. (Method is available only if the Direction = <u><tt>output</tt></u> or <u><tt>input/output</tt></u>).
+<ul>
+<br /><i>ANSIC prototype:</i> void NegBit(byte Bit)<br />
+<li><i>Bit:byte</i> - Bit/pin number to invert (0 to 31)</li>
+</ul><br />
+</li>
+<li class="versionspec"><span class="versionspeclabel">Methods for HCS12 , HCS12X, 56800/E, MCF and ColdFireV1 derivatives.</span>
+<ul>
+<li><a name="GetRawVal">
+<b>GetRawVal</b></a>
+ - Returns the value of the ports. The method uses raw data input register, i.e., a register that always reads back the status of the port regardless of the port direction. The method is available only if raw data input is supported by all selected ports. 
+<ul>
+<br /><i>ANSIC prototype:</i> dword GetRawVal(void)<br />
+<li><i>Return value:dword</i> - Input value
+</li>
+</ul><br />
+</li>
+<li><a name="GetRawBit">
+<b>GetRawBit</b></a>
+ - Returns the value of the specified bit/pin. The method uses raw data input register, i.e., a register that always reads back the status of the port regardless of the port direction. The method is available only if raw data input is supported by all selected ports. 
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetRawBit(byte Bit)<br />
+<li><i>Bit:byte</i> - Bit/pin number to read.</li>
+<li><i>Return value:bool</i> - Input value. Possible values:<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - logical "0" (Low level)<br />     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - logical "1" (High level)
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+           </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<p>
+<br />
+Note: Some methods can be implemented as macros.
+</p>
+          </div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

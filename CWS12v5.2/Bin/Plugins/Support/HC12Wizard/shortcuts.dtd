@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<!-- The following elements are used as shortcuts for certain expressions.
+     If this definition file is included by a xml file, every shortcut will
+     be replaced automatically with the corresponding value. -->
+
+<!-- shortcuts are used for the naming of
+     the .ini files and as prefix for the .cmd files -->
+<!ENTITY SI "Full_Chip_Simulation">
+<!ENTITY PEHW "P&amp;E_Multilink_CyclonePro">
+<!ENTITY PEHW_USB "P&amp;E_Multilink_USB">
+<!ENTITY CYC_USB "CyclonePro_USB">
+<!ENTITY CYC_SER "CyclonePro_Serial">
+<!ENTITY CYC_TCPIP "CyclonePro_TCPIP">
+<!--ENTITY OSBDM "OpenSourceBDM">
+<!ENTITY HT "Hitex">
+<!ENTITY LB "Lauterbach">
+<!ENTITY AB "Abatron_BDI">
+<!ENTITY NL "Noral">
+<!ENTITY SDI "SDI">
+<!ENTITY DB12 "DBug12">
+<!ENTITY SM "HCS12_Serial_Monitor">
+<!ENTITY ST "SofTec_HCS12">
+<!ENTITY TBDML "TBDML"-->
+
+<!-- shortcuts are used for the CodeWarrior Project Target names. -->
+<!ENTITY T_SI "Full Chip Simulation">
+<!ENTITY T_PEHW "P&amp;E Multilink CyclonePro">
+<!--ENTITY T_HT "Hitex">
+<!ENTITY T_LB "Lauterbach">
+<!ENTITY T_AB "Abatron BDI">
+<!ENTITY T_NL "Noral BDM">
+<!ENTITY T_SDI "SDI">
+<!ENTITY T_DB12 "D-Bug12">
+<!ENTITY T_SM "HCS12 Serial Monitor">
+<!ENTITY T_PCL "PC-lint">
+<!ENTITY T_ST "SofTec HCS12">
+<!ENTITY T_TBDML "TBDML"-->
+
+<!-- shortcuts are used as instance expressions passed to HIWAVE. -->
+<!ENTITY INS_SI "sim">
+<!ENTITY INS_PEHW "icd12">
+<!--ENTITY INS_OSBDM "osbdm12">
+<!ENTITY INS_HT "hitex">
+<!ENTITY INS_LB "trace32">
+<!ENTITY INS_AB "bdik">
+<!ENTITY INS_NL "noral">
+<!ENTITY INS_SDI "sdi">
+<!ENTITY INS_DB12 "dbug12">
+<!ENTITY INS_SM "smon">
+<!ENTITY INS_ST "softec">
+<!ENTITY INS_TBDML "tbdml"-->
+

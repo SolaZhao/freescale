@@ -1,0 +1,703 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Properties
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>OSEK_OS</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="OSEK_OS.html">General Info</a><br />
+<i>Properties</i><br />
+<a href="OSEK_OSMethods.html">Methods</a><br />
+<a href="OSEK_OSEvents.html">Events</a><br />
+<a href="OSEK_OSTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Components Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="OSEK_OS_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%">
+
+<!--      <table border="0" cellPadding="0" cellSpacing="0" width="100%">
+        <tbody>
+        <tr>
+          <td class="titlebox">-->
+          
+           <div class="titlebox">
+              <div class="beanname">
+                Component
+                
+                
+                OSEK_OS
+              </div>
+              <div class="descrtext">Encapsulation of OSEK/VDX compliant OS - HW specific configuration</div>
+              <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+              <div class="info_name">Category: 
+                <span class="info_text">
+                <a href="../../DOCs/BeanCategoriesInfo.html">SW-Operating System</a>
+                
+                </span>
+              </div>
+            </div>
+                      
+<!--
+            </td>
+        </tr>
+
+        <tr>        
+-->  
+            
+<!--            <td align="left"> -->
+<!--                   <br /> -->                  
+     <div class="text_title">
+          Properties:
+		 </div>		 
+		 <div class="descr_line">                  
+                  (Properties are parameters of the component. Please see the <a href="../../DOCs/EmbeddedBeans.html">Embedded Components page</a> for more information.)                   
+     </div>
+                  
+<div class="user_text">
+<ul>
+<li>
+<a name="DeviceName">
+<b>Component name</b></a> - Name of the component.
+</li>
+<li>
+<a name="CC">
+<b>Conformance class</b></a> - The attribute specifies the conformance class which is supported by the OS.
+<br />There are 2 modes:
+<ul>
+  <li><u><a name="CC_0">BCC1</a></u> - Basic conformance class 1 There are no items in this mode.
+</li>
+<li><u><a name="CC_1">ECC1</a></u> - Extended conformance class 1 The following items are displayed in this mode:
+<ul>
+  <li>
+  <a name="IntSWI">
+  <b>Interrupt</b></a> - OSEK uses this interrupt vector in Extended conformance class 1 (for information only)
+  </li>
+  <li>
+  <a name="ISRstackSize">
+  <b>ISR stack size</b></a> - Specifies ISR stack size in bytes. The stack is used in ISR category 2. In this case current status of the cpu is saved onto the current stack, and stack is switched to the interrupt stack.
+  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a name="HCBasePage">
+<b>HC Base page</b></a> - OS system variables will be allocated in base page or in non-volatile registers. This may reduce the OS code size by means of the direct addressing mode usage when possible. <br />HC08 derivatives:<br />Size of ROM/RAM areas RAM and Z_PAGE in the CPU component (Build options) should be decreased in order to create space for this area.<br />HCS12 derivatives: <br />Property Internal RAM mapping in the CPU component should be set to 0x0000 address to enable access to base page. Also Registers block mapping property in the Cpu component should be set properly. <br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="OSzeroAreaName">
+  <b>Name</b></a> - Memory area name.
+  </li>
+  <li>
+  <a name="OSzeroAreaAddr">
+  <b>Address</b></a> - Start address of the area. This address must be in internal or external memory (if an external bus is supported by the selected derivative).
+  </li>
+  <li>
+  <a name="OSzeroAreaSize">
+  <b>Size</b></a> - Size of the memory area.
+  </li>
+  <li>
+  <a name="OSzeroAreaQal">
+  <b>Qualifier</b></a> - Memory access qualifier.
+  </li>
+</ul>
+</li>
+<li>
+<a name="OSmemAreaEnable">
+<b>OS code in separate mem. segment</b></a> - Place OS code into separate memory segment called .ostext. Macro OSCODESEC must be defined in compiler options (-DOSCODESEC).<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+<ul>
+  <li>
+  <a name="OSmemAreaName">
+  <b>Name</b></a> - Memory area name.
+  </li>
+  <li>
+  <a name="OSmemAreaAddr">
+  <b>Address</b></a> - Start address of the area. This address must be in internal or external memory (if an external bus is supported by the selected derivative).
+  </li>
+  <li>
+  <a name="OSmemAreaSize">
+  <b>Size</b></a> - Size of the memory area.
+  </li>
+  <li>
+  <a name="OSmemAreaQal">
+  <b>Qualifier</b></a> - Memory access qualifier.
+  </li>
+</ul>
+</li>
+<li>
+<a name="SysTimer">
+<b>System Timer</b></a> - Specifies whether OSEK system timer is used or not. If so, SWCOUNTER or HWCOUNTER mode can be selected for Cpus with direct OSEK support. The Cpus not directly supported by OSEK can use USER SWCOUNTER. In this case inherited TimerInt component is used to handle selected timer peripheral. See help for list of Cpus directly supported by OSEK.
+<br />There are 4 modes:
+<ul>
+  <li><u><a name="SysTimer_0">NONE</a></u> - No timer selected. There are no items in this mode.
+</li>
+<li><u><a name="SysTimer_1">HWCOUNTER</a></u> - Timer implemented as HWCOUNTER The following items are displayed in this mode:
+<ul>
+  <li>
+  <a name="SysCtrName">
+  <b>OSEK System Counter name</b></a> - Name of OSEK Counter object which is attached to this timer. It can be changed to any name.
+  </li>
+  <li>
+  <a name="SysMinCycle">
+  <b>System counter min cycle</b></a> - The property specifies the minimum allowed number of counter ticks for a cyclic alarm linked to the counter.
+  </li>
+  <li>
+  <a name="SysTickPerBase">
+  <b>System counter ticks per base</b></a> - The number of ticks that are required to reach a counter-specific value. The interpretation is up to the user.
+  </li>
+  <li>
+  <a name="SysHW">
+  <b>HWCOUNTER</b></a> - Timer used for SystemTimer as HWCOUNTER.
+  <ul>
+    <li>
+    <a name="Cmp">
+    <b>Timer</b></a> - Periodic interrupt source: compare register, reload register, (the pull-down menu propose the possible timers).
+    </li>
+    <li>
+    <a name="Tmr">
+    <b>Counter</b></a> - Name of the counter used by this component (for information only).
+    </li>
+    <li>
+    <a name="IntService">
+    <b>Interrupt service</b></a> - Component uses the interrupt service for the counter function (always enabled). If enabled, the component functionality (e.g. timer interrupt) depends on the interrupt service and will not operate if the CPU interrupts are disabled. For details please refer to chapter <a href="..\..\DOCs\InterruptsEvents.html#InterruptsUsage">"interrupt service in the component's generated code"</a>.<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="CmpInt">
+      <b>Interrupt</b></a> - Interrupt vector invoked from the timer (for information only).
+      </li>
+      <li>
+      <a name="CmpInitPriority">
+      <b>Interrupt priority</b></a> - Priority of the interrupt associated with the timer.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="InitPrescaler">
+    <b>Prescaler</b></a> - Prescaler selected for the timer. There is also a possibility to let Processor Expert decide which prescaler is the best - just select <tt>Auto selected prescaler</tt>.
+    <ul>
+      <li>
+      <a name="InternPrescaler">
+      <b>Internal prescaler</b></a> - Internal prescaler value.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="InternCompare">
+      <b>Internal compare</b></a> - Internal compare prescaler value.
+      <ul>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="Tmg">
+    <b>Initial period</b></a> - Time before reinitialize counter. It is necessary to type here both value and unit (see <a href="../../DOCs/Units.html">Timing Setting Syntax</a>). The setting may be made with the help of the <a href="../../DOCs/Beantiming.html">Timing dialog box</a> that gets open when clicking on button <img src="../../DOCs/images/icon1.gif" border="0" /> (...).
+    </li>
+    <li>
+    <a name="EntireTimer">
+    <b>Component uses entire timer</b></a> - If set, the component occupies the entire timer with all its compares, captures and so on. The advantage is that the compare can reset the timer - a shorter event period can be reached. The disadvantage is that no other component can use this timer.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<li><u><a name="SysTimer_2">SWCOUNTER</a></u> - Timer implemented as SWCOUNTER The following items are displayed in this mode:
+<ul>
+  <li>
+  <b>OSEK System Counter name</b> - <i>See <a href="#SysCtrName">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="SysMaxAlVal">
+  <b>System counter max allowed value</b></a> - The property defines maximum allowed counter value. After the counter reaches this value it rolls over and starts to count again from zero.
+  </li>
+  <li>
+  <b>System counter min cycle</b> - <i>See <a href="#SysMinCycle">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>System counter ticks per base</b> - <i>See <a href="#SysTickPerBase">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="SysSW">
+  <b>SWCOUNTER</b></a> - Timer used for SystemTimer as SWCOUNTER.
+  <ul>
+    <li>
+    <a name="CmpS">
+    <b>Timer</b></a> - Periodic interrupt source: compare register, reload register, (the pull-down menu propose the possible timers).
+    </li>
+    <li>
+    <a name="TmrS">
+    <b>Counter</b></a> - Name of the counter used by this component (for information only).
+    </li>
+    <li>
+    <a name="IntServiceS">
+    <b>Interrupt service</b></a> - Component uses the interrupt service for the counter function (always enabled).<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="CmpIntS">
+      <b>Interrupt</b></a> - Interrupt vector invoked from the timer (for information only).
+      </li>
+      <li>
+      <a name="CmpInitPriorityS">
+      <b>Interrupt priority</b></a> - Priority of the interrupt associated with the timer.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="InitPrescalerS">
+    <b>Prescaler</b></a> - Prescaler selected for the timer. There is also a possibility to let Processor Expert decide which prescaler is the best - just select <tt>Auto selected prescaler</tt>.
+    <ul>
+      <li>
+      <a name="InternPrescalerS">
+      <b>Internal prescaler</b></a> - Internal prescaler value.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="InternCompareS">
+      <b>Internal compare</b></a> - Internal compare prescaler value.
+      <ul>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="TmgS">
+    <b>Initial period</b></a> - Time before reinitialize counter. It is necessary to type here both value and unit (see <a href="../../DOCs/Units.html">Timing Setting Syntax</a>). The setting may be made with the help of the <a href="../../DOCs/Beantiming.html">Timing dialog box</a> that gets open when clicking on button <img src="../../DOCs/images/icon1.gif" border="0" /> (...).
+    </li>
+    <li>
+    <a name="EntireTimerS">
+    <b>Component uses entire timer</b></a> - If set, the component occupies the entire timer with all its compares, captures and so on. The advantage is that the compare can reset the timer - a shorter event period can be reached. The disadvantage is that no other component can use this timer.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<li><u><a name="SysTimer_3">USER SWCOUNTER</a></u> - Timer support for derivatives without direct OSEK support. The following items are displayed in this mode:
+<ul>
+  <li>
+  <b>OSEK System Counter name</b> - <i>See <a href="#SysCtrName">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>System counter max allowed value</b> - <i>See <a href="#SysMaxAlVal">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>System counter min cycle</b> - <i>See <a href="#SysMinCycle">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>System counter ticks per base</b> - <i>See <a href="#SysTickPerBase">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="UserSysCntr">
+  <b>User System counter</b></a> - Settings of inherited component used as User SWCOUNTER. User SW Counter should be used for derivatives without direct OSEK support (for details about settings see <a href="../../DOCs/InheritanceAndSharing.html">Component Inheritance &amp; Component Sharing</a>).
+  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a name="SecondTimer">
+<b>Second Timer</b></a> - Specifies whether OSEK second timer is used or not. If so, SWCOUNTER or HWCOUNTER mode can be selected for Cpus with direct OSEK support. The Cpus not directly supported by OSEK can use USER SWCOUNTER. In this case inherited TimerInt component is used to handle selected timer peripheral. See help for list of Cpus directly supported by OSEK.
+<br />There are 4 modes:
+<ul>
+  <li><u><a name="SecondTimer_0">NONE</a></u> - No timer selected. There are no items in this mode.
+</li>
+<li><u><a name="SecondTimer_1">HWCOUNTER</a></u> - Timer implemented as HWCOUNTER The following items are displayed in this mode:
+<ul>
+  <li>
+  <a name="SecCtrName">
+  <b>OSEK Second Counter name</b></a> - Name of OSEK Counter object which is attached to this timer. It can be changed to any name.
+  </li>
+  <li>
+  <a name="SecMinCycle">
+  <b>Second counter min cycle</b></a> - The property specifies the minimum allowed number of counter ticks for a cyclic alarm linked to the counter.
+  </li>
+  <li>
+  <a name="SecTickPerBase">
+  <b>Second counter ticks per base</b></a> - The number of ticks that are required to reach a counter-specific value. The interpretation is up to the user.
+  </li>
+  <li>
+  <a name="SysHW1">
+  <b>HWCOUNTER</b></a> - Timer used for SecondTimer as HWCOUNTER.
+  <ul>
+    <li>
+    <a name="Cmp1">
+    <b>Timer</b></a> - Periodic interrupt source: compare register, reload register, (the pull-down menu propose the possible timers).
+    </li>
+    <li>
+    <a name="Tmr1">
+    <b>Counter</b></a> - Name of the counter used by this component (for information only).
+    </li>
+    <li>
+    <a name="IntService1">
+    <b>Interrupt service</b></a> - Component uses the interrupt service for the counter function (always enabled).<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="CmpInt1">
+      <b>Interrupt</b></a> - Interrupt vector invoked from the timer (for information only).
+      </li>
+      <li>
+      <a name="CmpInitPriority1">
+      <b>Interrupt priority</b></a> - Priority of the interrupt associated with the timer.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="InitPrescaler1">
+    <b>Prescaler</b></a> - Prescaler selected for the timer. There is also a possibility to let Processor Expert decide which prescaler is the best - just select <tt>Auto selected prescaler</tt>.
+    <ul>
+      <li>
+      <a name="InternPrescaler1">
+      <b>Internal prescaler</b></a> - Internal prescaler value.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="InternCompare1">
+      <b>Internal compare</b></a> - Internal compare prescaler value.
+      <ul>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="Tmg1">
+    <b>Initial period</b></a> - Time before reinitialize counter. It is necessary to type here both value and unit (see <a href="../../DOCs/Units.html">Timing Setting Syntax</a>). The setting may be made with the help of the <a href="../../DOCs/Beantiming.html">Timing dialog box</a> that gets open when clicking on button <img src="../../DOCs/images/icon1.gif" border="0" /> (...).
+    </li>
+    <li>
+    <a name="EntireTimer1">
+    <b>Component uses entire timer</b></a> - If set, the component occupies the entire timer with all its compares, captures and so on. The advantage is that the compare can reset the timer - a shorter event period can be reached. The disadvantage is that no other component can use this timer.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<li><u><a name="SecondTimer_2">SWCOUNTER</a></u> - Timer implemented as SWCOUNTER The following items are displayed in this mode:
+<ul>
+  <li>
+  <b>OSEK Second Counter name</b> - <i>See <a href="#SecCtrName">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="SecMaxAlVal">
+  <b>Second counter max allowed value</b></a> - The property defines maximum allowed counter value. After the counter reaches this value it rolls over and starts to count again from zero.
+  </li>
+  <li>
+  <b>Second counter min cycle</b> - <i>See <a href="#SecMinCycle">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>Second counter ticks per base</b> - <i>See <a href="#SecTickPerBase">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="SecSW">
+  <b>SWCOUNTER</b></a> - Timer used for SecondTimer as SWCOUNTER.
+  <ul>
+    <li>
+    <a name="CmpS1">
+    <b>Timer</b></a> - Periodic interrupt source: compare register, reload register, (the pull-down menu propose the possible timers).
+    </li>
+    <li>
+    <a name="TmrS1">
+    <b>Counter</b></a> - Name of the counter used by this component (for information only).
+    </li>
+    <li>
+    <a name="IntServiceS1">
+    <b>Interrupt service</b></a> - Component uses the interrupt service for the counter function (always enabled).<br />
+The following items are available only if the group is enabled (the value is "Enabled"):<br />
+
+    <ul>
+      <li>
+      <a name="CmpIntS1">
+      <b>Interrupt</b></a> - Interrupt vector invoked from the timer (for information only).
+      </li>
+      <li>
+      <a name="CmpInitPriorityS1">
+      <b>Interrupt priority</b></a> - Priority of the interrupt associated with the timer.
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="InitPrescalerS1">
+    <b>Prescaler</b></a> - Prescaler selected for the timer. There is also a possibility to let Processor Expert decide which prescaler is the best - just select <tt>Auto selected prescaler</tt>.
+    <ul>
+      <li>
+      <a name="InternPrescalerS1">
+      <b>Internal prescaler</b></a> - Internal prescaler value.
+      <ul>
+      </ul>
+      </li>
+      <li>
+      <a name="InternCompareS1">
+      <b>Internal compare</b></a> - Internal compare prescaler value.
+      <ul>
+      </ul>
+      </li>
+    </ul>
+    </li>
+    <li>
+    <a name="TmgS1">
+    <b>Initial period</b></a> - Time before reinitialize counter. It is necessary to type here both value and unit (see <a href="../../DOCs/Units.html">Timing Setting Syntax</a>). The setting may be made with the help of the <a href="../../DOCs/Beantiming.html">Timing dialog box</a> that gets open when clicking on button <img src="../../DOCs/images/icon1.gif" border="0" /> (...).
+    </li>
+    <li>
+    <a name="EntireTimerS1">
+    <b>Component uses entire timer</b></a> - If set, the component occupies the entire timer with all its compares, captures and so on. The advantage is that the compare can reset the timer - a shorter event period can be reached. The disadvantage is that no other component can use this timer.
+    </li>
+  </ul>
+  </li>
+</ul>
+</li>
+<li><u><a name="SecondTimer_3">USER SWCOUNTER</a></u> - Timer support for derivatives without direct OSEK support. The following items are displayed in this mode:
+<ul>
+  <li>
+  <b>OSEK Second Counter name</b> - <i>See <a href="#SecCtrName">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>Second counter max allowed value</b> - <i>See <a href="#SecMaxAlVal">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>Second counter min cycle</b> - <i>See <a href="#SecMinCycle">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <b>Second counter ticks per base</b> - <i>See <a href="#SecTickPerBase">previous</a> modes for more details</i>
+  </li>
+  <li>
+  <a name="UserSecCntr">
+  <b>User Second counter</b></a> - Settings of inherited component used as User SWCOUNTER. User SW Counter should be used for derivatives without direct OSEK support (for details about settings see <a href="../../DOCs/InheritanceAndSharing.html">Component Inheritance &amp; Component Sharing</a>).
+  </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a name="HCLowPower">
+<b>HC Low power</b></a> - This attribute defines that low power mode shall be used when there is no ready or running tasks and scheduler goes into idle loop.
+</li>
+<li>
+<a name="IntList">
+<b>OSEK interrupt handlers</b></a> - Declaration of following interrupt handlers will be added to OSEK configuration file (oil). If any other component uses interrupt(s) in the project, ISR declarations are automatically added to the oil file with category 1.<br />
+If other ISR category is desired or additional attributes are needed (Resources, Accessors), the interrupt vector(s) must be inserted in this section and attributes configured as needed.
+<br />One Item of the list looks like:<br />
+  <a name="IntGrp">
+  <b>ISR</b></a> - Interrupt handler properties.
+  <ul>
+    <li>
+    <a name="IntVect">
+    <b>Interrupt vector</b></a> - Interrupt vector associated with an interrupt handler. To add declaration of an interrupt handler from a component, use the same interrupt vector as in corresponding component.
+    </li>
+    <li>
+    <a name="Category">
+    <b>Category</b></a> - Category 1 - ISR is executed on current stack most OS services are disabled.<br />
+Category 2 - execution switched to the ISR stack calling of OS service enabled.
+    </li>
+    <li>
+    <a name="Resources">
+    <b>Resources</b></a> - The reference specifies resources accessed by the ISR (not available if Category value equals to 1).
+    <br />One Item of the list looks like:<br />
+  <a name="ResName0">
+  <b>Resource Name0</b></a> - The resource reference name.
+    </li>
+    <li>
+    <a name="Accessors">
+    <b>Accessors</b></a> - The attributes define type of usage for the message, message reference, and reference for the message data.
+    <br />One Item of the list looks like:<br />
+  <a name="AccessorGrp">
+  <b>Accessors0</b></a> - Accessor.
+  <ul>
+    <li>
+    <a name="Access">
+    <b>Accessor</b></a> - The attribute is used to define the type of usage for the message.
+    </li>
+    <li>
+    <a name="Message">
+    <b>Message</b></a> - The message specifies the message to be send or received by the task.
+    </li>
+    <li>
+    <a name="AccName">
+    <b>Access Name</b></a> - The attribute defines the reference which can be used by the application to access the message data.
+    </li>
+  </ul>
+    </li>
+  </ul>
+</li>
+
+     </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+</div>
+           <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2010 Freescale Semiconductor, Inc.
+           </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

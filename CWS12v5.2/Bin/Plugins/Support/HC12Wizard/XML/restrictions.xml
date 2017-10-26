@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<?codewarrior wizardversion="1.0" ideversion="5.2" ?>
+
+<!DOCTYPE WIZARD SYSTEM "../wizard.dtd">
+
+<WIZARD>
+    <WIZARDELEMENTLIST>            
+      <WIZARDELEMENT name="" term="" id="ID_LANG_LIST">
+         <WIZARDELEMENTLIST>            
+            <WIZARDELEMENT name="" term="" id="ID_LANG_ASM"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_LANG_C"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_LANG_CPP"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+      <WIZARDELEMENT name="" term="" id="ID_CONNECTION_LIST">
+         <WIZARDELEMENTLIST>
+            	<WIZARDELEMENT name="" term="" id="ID_CONN_SIM"/>
+                <!--WIZARDELEMENT name="" term="" id="	"/-->
+                <WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12"/>
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12X"/-->
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_PEHW_HCS12XE"/-->
+                <!--WIZARDELEMENT name="" term="" id="ID_CONN_ST"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12"/>                
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12X"/>     
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ST_HCS12XE"/>     
+                <WIZARDELEMENT name="" term="" id="ID_CONN_HITEX"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_LAUT"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ABAT"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_ABAT_HCS12XE"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_NL"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_SDI"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_MON"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_DB12"/>
+                <WIZARDELEMENT name="" term="" id="ID_CONN_TBDML"/> 
+                <WIZARDELEMENT name="" term="" id="ID_CONN_TBDML_HCS12XE"/-->      
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+      <WIZARDELEMENT name="" term="" id="ID_PRC_EXP">
+         <WIZARDELEMENTLIST>
+            <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_NO"></WIZARDELEMENT>           
+            <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_INIT"></WIZARDELEMENT>           
+            <WIZARDELEMENT name="" term="" id="ID_PRC_EXP_RAD"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+      <WIZARDELEMENT name="" term="" id="ID_PC_LINT">
+         <WIZARDELEMENTLIST>
+            <WIZARDELEMENT name="" term="" id="ID_PC_LINT_YES"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_PC_LINT_NO"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+      <WIZARDELEMENT name="" term="" id="ID_FL_POINT">
+         <WIZARDELEMENTLIST>
+            <WIZARDELEMENT name="" term="" id="ID_FL_POINT_NONE"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_FL_POINT_32"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_FL_POINT_64"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+      <WIZARDELEMENT name="" term="" id="ID_MEM_MDL">
+         <WIZARDELEMENTLIST>
+            <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_S"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_B"></WIZARDELEMENT>
+            <WIZARDELEMENT name="" term="" id="ID_MEM_MDL_L"></WIZARDELEMENT>
+         </WIZARDELEMENTLIST>
+      </WIZARDELEMENT>
+    </WIZARDELEMENTLIST>
+
+   <!--REJECTIONLIST>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_DB12"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_HITEX"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_LAUT"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_NL"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_SDI"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_TBDML"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_TBDML_HCS12XE"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_MON"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ST"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ST_HCS12"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ST_HCS12X"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ST_HCS12XE"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ABAT"></WIZARDELEMENTREF>
+       </REJECTION>
+       <REJECTION>
+           <WIZARDELEMENTREF idref="ID_CONN_ABAT_HCS12XE"></WIZARDELEMENTREF>
+       </REJECTION>
+   </REJECTIONLIST-->
+</WIZARD>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Interface>
+  <Name>PWMMC</Name>
+  <Description>Pulse width modulation for motor control</Description>
+  <Author>Processor Expert / PA</Author>
+  <Version>01.002</Version>
+  <FileVersion>2</FileVersion>
+  <MethodList>
+    <EmptySection_DummyValue/>
+  </MethodList>
+  <EventList>
+    <EmptySection_DummyValue/>
+  </EventList>
+  <Registration>
+    <Template>PWMMC</Template>
+  </Registration>
+  <UserTypes>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>TChannels</Name>
+      <Hint>Structure contains bit informations for 6 channels, one bit for each channel.</Hint>
+      <Generate>yes</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>yes</GenerateHelp>
+      <PreparedHint>typedef struct {\n  byte channel0  : 1;      /* Channel 0 bit */\n  byte channel1  : 1;      /* Channel 1 bit */\n  byte channel2  : 1;      /* Channel 2 bit */\n  byte channel3  : 1;      /* Channel 3 bit */\n  byte channel4  : 1;      /* channel 4 bit */\n  byte channel5  : 1;      /* channel 5 bit */\n} TChannels; /* Structure contains bit informations for 6 channels, one bit for each channel. */\n</PreparedHint>
+      <Type>typedef struct {\n  byte channel0  : 1;      %&gt;&gt;/* Channel 0 bit */\n  byte channel1  : 1;      %&gt;&gt;/* Channel 1 bit */\n  byte channel2  : 1;      %&gt;&gt;/* Channel 2 bit */\n  byte channel3  : 1;      %&gt;&gt;/* Channel 3 bit */\n  byte channel4  : 1;      %&gt;&gt;/* channel 4 bit */\n  byte channel5  : 1;      %&gt;&gt;/* channel 5 bit */\n} TChannels;</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+    <Type>
+      <UsrType>TUserType</UsrType>
+      <Name>TChannelPairs</Name>
+      <Hint>3 channel pairs represented by bit in structure.</Hint>
+      <Generate>yes</Generate>
+      <Unique>no</Unique>
+      <GenerateHelp>yes</GenerateHelp>
+      <PreparedHint>typedef struct {\n  byte pair0 : 1;            /* PWM pair 0 */\n  byte pair1 : 1;            /* PWM pair 1 */\n  byte pair2 : 1;            /* PWM pair 2 */\n} TChannelPairs; /* 3 channel pairs represented by bit in structure. */\n</PreparedHint>
+      <Type>typedef struct {\n  byte pair0 : 1;            %&gt;&gt;/* PWM pair 0 */\n  byte pair1 : 1;            %&gt;&gt;/* PWM pair 1 */\n  byte pair2 : 1;            %&gt;&gt;/* PWM pair 2 */\n} TChannelPairs;</Type>
+      <HWTestType>pointer</HWTestType>
+    </Type>
+  </UserTypes>
+</Interface>

@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1250">
+<title>
+Component  documentation - Methods
+</title>
+<STYLE type="text/css">
+body{
+  background-color: white;
+  margin:0px;
+  font: 13px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+A:visited {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:link {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #2D8AA7; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #2D8AA7; TEXT-DECORATION: underline
+}
+.VSP {
+	COLOR: #2D8AA7; FONT: bold italic 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.reflink {
+	FONT: 11px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+ 	COLOR: #2D8AA7;
+}
+.user_text {
+	FONT: 12px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+	COLOR: #000000;
+}
+.bluetext {
+  COLOR: #695F52;
+}
+.versionspec {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspecdetail {
+  padding:5px; 
+  background-color: RGB(243, 242, 230);
+  margin-top:5px;
+  margin-bottom:5px;  
+}
+.versionspeclabel {
+  font-style: italic;
+}
+LI.DEF {
+  list-style-image: url(DefaultLI.gif) ;
+}
+LI.BAS {
+	list-style-image: url(BasicLI.gif) ;
+}
+LI.ADV {
+	list-style-image: url(AdvancedLI.gif) ;
+}
+LI.EXP {
+	list-style-image: url(ExpertLI.gif) ;
+}
+.titlebox {  
+  font: bold 18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #51626F;
+  margin-bottom: 10px;
+}
+.lefttitlebox {
+  background-color:#C3CFD1;  
+}
+.lefttitle {
+  color:#51626F;
+  font: bold 11px Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.beanname {
+  font: bold 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding-top:6px;
+  padding-bottom:5px;
+  margin-bottom: 5px;
+  border-bottom-style: dotted;
+  border-bottom-width: 1;  
+}
+.descrtext {
+  font-style: italic;
+  font: 14px/18px Helvetica Neue, Helvetica, Arial, sans-serif;  
+  padding-bottom:9px;
+}
+.footer {
+  color: #b0b0b0; 
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color: #BOBOBO;
+  border-top-width: 1px;  
+  padding-top: 5px;
+  margin-top: 20px;
+}
+.info_name {
+  font: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+  padding: 0px;
+  color: black;
+}
+.info_text {
+  font: 11px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.text_title {
+  COLOR: #000000; 
+  FONT: bold 14px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.descr_line {
+  COLOR: gray; 
+  FONT: 9px Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.code {
+  background-color: RGB(243, 242, 230);
+  padding: 10px;
+  white-space: pre;
+  font-family: Courier New, Monospace;
+}
+</STYLE>
+
+</head>
+
+<body>
+
+<table border="0"  cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" width="150" >
+      <table  width="150" height="160" cellpadding="3" cellspacing="0" border="0">
+        <tbody>
+        <tr class="lefttitlebox">
+          <td width="4"></td>
+          <td align="center" valign="middle" height="30" width="128">
+            <span class="lefttitle">
+<b>FreescaleCAN</b>
+            </span>
+          </td>
+        </tr>
+        <tr height="700">
+          <td width="4"></td>
+          <td width="128" valign="top">
+            &nbsp;<br />
+            <div class="reflink">
+<!---HTMLLISTBEG_SHORT DON'T CHANGE THIS LINE-->
+<a href="FreescaleCAN.html">General Info</a><br />
+<a href="FreescaleCANProperties.html">Properties</a><br />
+<i>Methods</i><br />
+<a href="FreescaleCANEvents.html">Events</a><br />
+<a href="FreescaleCANUser Types.html">Types and constants</a><br />
+<a href="FreescaleCANTypical Usage.html">Typical Usage</a><br />
+<!---HTMLLISTEND DON'T CHANGE THIS LINE-->
+<br /><br /><br />
+<a href="../../DOCs/PredefSymbols.html">Types &amp; definitions</a><br/>
+<a href="../../DOCs/BEANindex.html">Component Index</a><br/>
+<a href="../../DOCs/CPUindex.html">CPU Component Index</a><br/>
+<a href="../../DOCs/EmbeddedBeans.html">Embedded Components</a><br/>
+<a href="../../DOCs/BeanCategories.html">Component Categories</a><br/>
+
+<br /><br /><br />
+<center>
+<img src="FreescaleCAN_b.gif" alt="Component icon"/>
+
+
+</center>
+            </div>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+    <td width="1" class="lefttitlebox" valign="top">
+      <table class="lefttitlebox" width="1" cellpadding="0" cellspacing="0" height="100%" border="0">
+        <tr class="lefttitlebox"><td width="1"></td></tr>
+      </table>
+    </td>
+    <td style="padding-left:15px;padding-right:10px;" valign="top" align="left" width="100%" >
+
+         <div class="titlebox">
+            <div class="beanname">
+              Component
+              
+              
+              FreescaleCAN
+            </div>
+            <div class="descrtext">CAN communication for Freescale implementation</div>
+            <div class="info_name">Component Level: <span class="info_text"><a href="../../DOCs/BeanCategoriesInfo.html#LevelAbstraction">High</a></span></div>
+            <div class="info_name">Category: 
+              <span class="info_text">
+              <a href="../../DOCs/BeanCategoriesInfo.html">CPU Internal Peripherals-Communication</a>
+              
+              </span>
+            </div>
+          </div>
+
+         <div class="text_title">
+              Methods:
+    		 </div>		 
+    		 <div class="descr_line">                  
+              (Methods are user-callable functions/subroutines intended for
+               the component functions control. Please see the <a href="../../DOCs/EmbeddedBeans.html#Methods">Embedded Components page</a> for more information.)                   
+         </div>
+                  
+         <div class="user_text">
+            <ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<li><a name="Enable">
+<b>Enable</b></a>
+ - Enables the component - it turns on the send and receive functions. Events may be generated (&quot;DisableEvent&quot;/&quot;EnableEvent&quot;).
+<ul>
+<br /><i>ANSIC prototype:</i> byte Enable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="Disable">
+<b>Disable</b></a>
+ - Disables the component - it stops the send and receive functions. No events will be generated.
+<ul>
+<br /><i>ANSIC prototype:</i> byte Disable(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="EnableEvent">
+<b>EnableEvent</b></a>
+ - Enables the events. This method is available if the interrupt service/event property is enabled and at least one event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte EnableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li><a name="DisableEvent">
+<b>DisableEvent</b></a>
+ - Disables the events. This method is available if the interrupt service/event property is enabled and at least one event is enabled.
+<ul>
+<br /><i>ANSIC prototype:</i> byte DisableEvent(void)<br />
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HCS12, HCS08 and DSP80x derivatives.</span>
+<ul>
+<li><a name="SetAcceptanceCode">
+<b>SetAcceptanceCode</b></a>
+ - Sets the acceptance code registers. This method writes a code mask directly to the acceptance code registers.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetAcceptanceCode(dword AccCode1, dword AccCode2)<br />
+<li><i>AccCode1:dword</i> - Acceptance code for the message filtering. This acceptance code will be written to the acceptance code registers IDAR0-IDAR3. The most significant byte of the acceptance code will be written to the IDAR0 register and the least significant byte of the acceptance code will be written to the IDAR3 register.</li>
+<li><i>AccCode2:dword</i> - Acceptance code for the message filtering. This acceptance code will be written to the acceptance code registers IDAR4-IDAR7. The most significant byte of the acceptance code will be written to the IDAR4 register and the least significant byte of the acceptance code will be written to the IDAR7 register.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user
+</li>
+</ul><br />
+</li>
+<li><a name="GetAcceptanceCode">
+<b>GetAcceptanceCode</b></a>
+ - Returns a content of the acceptance code registers.
+<ul>
+<br /><i>ANSIC prototype:</i> void GetAcceptanceCode(dword *AccCode1, dword *AccCode2)<br />
+<li><i>AccCode1: Pointer to dword</i> - Pointer to the acceptance code for the message filtering. The acceptance code will be read from the acceptance code registers IDAR0-IDAR3. The most significant byte of the acceptance code will be read from the IDAR0 register and the least significant byte of the acceptance code will be read from the IDAR3 register.</li>
+<li><i>AccCode2: Pointer to dword</i> - Pointer to the acceptance code for the message filtering. The acceptance code will be read from the acceptance code registers IDAR4-IDAR7. The most significant byte of the acceptance code will be read from the IDAR4 register and the least significant byte of the acceptance code will be read from the IDAR7 register.</li>
+</ul><br />
+</li>
+<li><a name="SetAcceptanceMask">
+<b>SetAcceptanceMask</b></a>
+ - Sets the acceptance mask registers. This method writes an acceptance mask directly to the acceptance mask registers.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetAcceptanceMask(dword AccMask1, dword AccMask2)<br />
+<li><i>AccMask1:dword</i> - Acceptance mask for the message filtering. This acceptance mask will be written to the acceptance mask registers IDMR0-IDMR3. The most significant byte of the acceptance mask will be written to the IDMR0 register and the least significant byte of the acceptance mask will be written to the IDMR3 register.</li>
+<li><i>AccMask2:dword</i> - Acceptance mask for the message filtering. This acceptance mask will be written to the acceptance mask registers IDMR4-IDMR7. The most significant byte of the acceptance mask will be written to the IDMR4 register and the least significant byte of the acceptance mask will be written to the IDMR7 register.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user
+</li>
+</ul><br />
+</li>
+<li><a name="GetAcceptanceMask">
+<b>GetAcceptanceMask</b></a>
+ - Returns the content of acceptance mask registers.
+<ul>
+<br /><i>ANSIC prototype:</i> void GetAcceptanceMask(dword *AccMask1, dword *AccMask2)<br />
+<li><i>AccMask1: Pointer to dword</i> - Pointer to the acceptance mask for the message filtering. The acceptance mask will be read from the acceptance mask registers IDMR0-IDMR3. The most significant byte of the acceptance mask will be read from the IDMR0 register and the least significant byte of the acceptance mask will be read from the IDMR3 register.</li>
+<li><i>AccMask2: Pointer to dword</i> - Pointer to the acceptance mask for the message filtering. The acceptance mask will be read from the acceptance mask registers IDMR4-IDMR7. The most significant byte of the acceptance mask will be read from the IDMR4 register and the least significant byte of the acceptance mask will be read from the IDMR7 register.</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HCS08 and DSP80x derivatives.</span>
+<ul>
+<li><a name="SetAcceptanceMode">
+<b>SetAcceptanceMode</b></a>
+ - Sets the acceptance mode register.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetAcceptanceMode(byte Mode)<br />
+<li><i>Mode:byte</i> - Acceptance mode.<br />Supported modes: <br />     TWO_32_FILTERS - Two 32-bit acceptance filters<br />     FOUR_16_FILTERS - Four 16-bit acceptance filters<br />     EIGHT_8_FILTERS - Eight 8-bit acceptance filters<br />     FILTER_CLOSED - Filter closed</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user<br />     ERR_VALUE - Parameter has incorrect value
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HC08, HCS12, HCS08 and DSP80x derivatives.</span>
+<ul>
+<li><a name="SendFrame">
+<b>SendFrame</b></a>
+ - Sends the frame via the CAN device. Using this method the user can send own message to the CAN bus. This method allows to specify CAN buffer number, message ID, data to be sent and frame type (DATA_FRAME/REMOTE_FRAME).
+<ul>
+<br /><i>ANSIC prototype:</i> byte SendFrame(byte BufferNum, dword MessageID, byte FrameType, byte Length, void* Data)<br />
+<li><i>BufferNum:byte</i> - Number of the buffer.</li>
+<li><i>MessageID:dword</i> - Identification of the message - ID. Message ID can be specified in the STANDARD format (default) or the EXTENDED format. The most significant bit in the ID is set to specify EXTENDED format. Predefined macro CAN_EXTENDED_FRAME_ID can be used (ID &quot;bitwise or&quot; CAN_EXTENDED_FRAME_ID) to mark ID as extended. If the most significant bit of ID is clear, STANDARD format is used.</li>
+<li><i>FrameType:byte</i> - Type of frame<br />    DATA_FRAME - data frame<br />    REMOTE_FRAME - remote frame</li>
+<li><i>Length:byte</i> - The length of the frame in bytes (0..8)</li>
+<li><i>Data:void*</i> - Pointer to data</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user<br />     ERR_VALUE - Some parameter is out of possible range<br />     ERR_TXFULL - Transmition buffer is full.
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li><a name="GetTransmitErrorCounter">
+<b>GetTransmitErrorCounter</b></a>
+ - Returns a value of the transmission error counter.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetTransmitErrorCounter(void)<br />
+<li><i>Return value:byte</i> - Returns a value of the transmission error counter
+</li>
+</ul><br />
+</li>
+<li><a name="GetReceiverErrorCounter">
+<b>GetReceiverErrorCounter</b></a>
+ - Returns a value of the reception error counter.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetReceiverErrorCounter(void)<br />
+<li><i>Return value:byte</i> - Returns a value of the reception error counter
+</li>
+</ul><br />
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for not DSP83x derivatives.</span>
+<ul>
+<li><a name="ReadFrame">
+<b>ReadFrame</b></a>
+ - Reads a frame from the CAN device. The user is informed about CAN reception through OnFullRxBuffer event or GetStateRX method.
+<ul>
+<br /><i>ANSIC prototype:</i> byte ReadFrame(dword *MessageID, byte *FrameType, byte *FrameFormat, byte *Length, void* Data)<br />
+<li><i>MessageID: Pointer to dword</i> - Pointer to a message indentification</li>
+<li><i>FrameType: Pointer to byte</i> - Pointer to a frame type<br />     DATA_FRAME - data frame<br />     REMOTE_FRAME - remote frame</li>
+<li><i>FrameFormat: Pointer to byte</i> - Pointer to a frame format<br />     STANDARD_FORMAT - standard frame 11-bits<br />     EXTENDED_FORMAT - extended frame 29-bits.<br /><br />Note: This parameter is obsolete and will be removed in future releases.</li>
+<li><i>Length: Pointer to byte</i> - Pointer to a length of the frame</li>
+<li><i>Data:void*</i> - The buffer for received data</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user<br />     ERR_RXEMPTY - The receive buffer is empty<br />     ERR_OVERRUN - The previous (unread) message in the receive buffer was overwriten by a new message. Returns only if Interrupt service is enabled.
+</li>
+</ul><br />
+</li>
+<li><a name="GetStateTX">
+<b>GetStateTX</b></a>
+ - Returns a value of the transmission complete flags.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetStateTX(void)<br />
+<li><i>Return value:byte</i> - Content of the transmitter complete flag register.
+</li>
+</ul><br />
+</li>
+<li><a name="GetStateRX">
+<b>GetStateRX</b></a>
+ - Returns a value of the reception complete flag.
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetStateRX(void)<br />
+<li><i>Return value:bool</i> - The value of the receiver complete flag of the given buffer. 
+Possible values:
+     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - message buffer is empty
+     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - message buffer isn't empty
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li><a name="GetError">
+<b>GetError</b></a>
+ - Returns the content of the receiver flag register.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetError(<i>ComponentName_</i>TError *Err)<br />
+<li><i>Err: Pointer to <a href="FreescaleCANUser Types.html#TError"><i>ComponentName_</i>TError</a></i> - Pointer to the returned set of errors</li>
+<li><i>Return value:byte</i> - Error code (if GetError did not succeed), possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode
+</li>
+</ul><br />
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HC08, HCS12, HCS08 and DSP80x derivatives.</span>
+<ul>
+<li><a name="SetSleepRequest">
+<b>SetSleepRequest</b></a>
+ - This method sets the request to enter Sleep Mode, which is an internal power saving mode.
+<ul>
+<br /><i>ANSIC prototype:</i> void SetSleepRequest(void)<br />
+</ul><br />
+</li>
+<li><a name="ClearSleepRequest">
+<b>ClearSleepRequest</b></a>
+ - This method clears the request to enter Sleep Mode, which is an internal power saving mode.
+<ul>
+<br /><i>ANSIC prototype:</i> void ClearSleepRequest(void)<br />
+</ul><br />
+</li>
+<li><a name="GetSleepAck">
+<b>GetSleepAck</b></a>
+ - Returns the status of sleep mode acknowledge.
+<ul>
+<br /><i>ANSIC prototype:</i> bool GetSleepAck(void)<br />
+<li><i>Return value:bool</i> -     <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">true</a> - The MSCAN module has entered Sleep Mode
+    <a href="..\..\DOCs\BeanCodeTypicalUsage.html#Bool">false</a> - The MSCAN module hasn't entered Sleep Mode.
+</li>
+</ul><br />
+</li>
+<li><a name="AbortMessage">
+<b>AbortMessage</b></a>
+ - Requests that scheduled message buffer is aborted.
+<ul>
+<br /><i>ANSIC prototype:</i> byte AbortMessage(byte BufferMask)<br />
+<li><i>BufferMask:byte</i> - Buffer mask that specify transmit buffers to be aborted.</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK
+</li>
+</ul><br />
+</li>
+<li><a name="GetAbortMessageAck">
+<b>GetAbortMessageAck</b></a>
+ - Returns the status of the abort message acknowledge.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetAbortMessageAck(void)<br />
+<li><i>Return value:byte</i> - Returns the buffer mask that specifies which transmit buffers were aborted.
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HC08, HCS12 and DSP80x derivatives.</span>
+<ul>
+<li><a name="GetAccHitIndicator">
+<b>GetAccHitIndicator</b></a>
+ - Returns the value of acceptance hit generator.
+<ul>
+<br /><i>ANSIC prototype:</i> byte GetAccHitIndicator(void)<br />
+<li><i>Return value:byte</i> - The value of the acceptance hit generator.
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspec"><span class="versionspeclabel">Methods for HCS08, ColdFireV1, HCS12 and HCS12X derivatives.</span>
+<ul>
+<li><a name="SendFrameExt">
+<b>SendFrameExt</b></a>
+ - Sends a frame. This method automatically selects a free transmit buffer for data transmission. The user cannot specify a transmit buffer.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SendFrameExt(dword MessageID, byte FrameType, byte Length, byte *Data)<br />
+<li><i>MessageID:dword</i> - Identification of the message - ID. Message ID can be specified in the STANDARD format (default) or the EXTENDED format. The most significant bit in the ID is set to specify EXTENDED format. Predefined macro CAN_EXTENDED_FRAME_ID can be used (ID &quot;bitwise or&quot; CAN_EXTENDED_FRAME_ID) to mark ID as extended. If the most significant bit of ID is clear, STANDARD format is used.</li>
+<li><i>FrameType:byte</i> - Type of frame<br />    DATA_FRAME - data frame<br />    REMOTE_FRAME - remote frame</li>
+<li><i>Length:byte</i> - The length of the frame in bytes (0..8)</li>
+<li><i>Data: Pointer to byte</i> - Pointer to data</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user<br />     ERR_VALUE - Some parameter is out of possible range
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HCS08, ColdFireV1, HCS12, HCS12X, HCS12Z derivatives and 56F802x,56F803x,56F82xx,56F80x CpuSubFamilies.</span>
+<ul>
+<li><a name="SetTxBufPriority">
+<b>SetTxBufPriority</b></a>
+ - Sets the priority of the transmited message. The method should be called prior to  SendFrame or SendFrameExt to configure the next message priority.
+<ul>
+<br /><i>ANSIC prototype:</i> byte SetTxBufPriority(byte BufferNum, byte Priority)<br />
+<li><i>BufferNum:byte</i> - Number of the buffer.</li>
+<li><i>Priority:byte</i> - Numerical value for priority (0..255).</li>
+<li><i>Return value:byte</i> - Error code, possible codes:<br />     ERR_OK - OK<br />     ERR_SPEED - This device does not work in the active speed mode<br />     ERR_DISABLED - This component is disabled by user<br />     ERR_VALUE - Some parameter is out of possible range
+</li>
+</ul><br />
+</li>
+</ul>
+</li>
+<li class="versionspecdetail"><span class="versionspeclabel">Methods for HCS12X, HCS08, ColdFireV1 and 56F803x derivatives.</span>
+<ul>
+<li><a name="BusOffRecoveryRequest">
+<b>BusOffRecoveryRequest</b></a>
+ - The method sets the request for recovery from the bus-off mode. The method is available only if the &quot;Bus-off recovery mode&quot; property is set to &quot;User&quot;.
+<ul>
+<br /><i>ANSIC prototype:</i> void BusOffRecoveryRequest(void)<br />
+</ul><br />
+</li>
+</ul>
+</li>
+           </ul>
+<!---USERBEG DON'T CHANGE THIS LINE-->
+
+<!---USEREND DON'T CHANGE THIS LINE-->
+<p>
+<br />
+Note: Some methods can be implemented as macros.
+</p>
+          </div>
+          <p class="footer">
+            PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc.
+            <br />
+            Copyright 1997 - 2013 Freescale Semiconductor, Inc.
+          </p>
+    </td>
+  </tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bean>
+  <Header>
+    <Name>BasicProperties</Name>
+    <Description>This component is example of basic properties. The component was designed to help developers start creating a new user components quickly.</Description>
+    <Author>Processor Expert/MT</Author>
+    <Version>01.028</Version>
+    <Icon/>
+    <TypesFiles>PE,BasicProperties\BasicProperties</TypesFiles>
+    <FileVersion>6</FileVersion>
+  </Header>
+  <Options>
+    <BW_HelpType>Basic</BW_HelpType>
+    <BW_AutoSaveHelp>yes</BW_AutoSaveHelp>
+    <BW_AutoSaveDriver>yes</BW_AutoSaveDriver>
+    <BW_DetailedHelp>yes</BW_DetailedHelp>
+    <BW_NeedTps>yes</BW_NeedTps>
+    <Category>SW-Tutorials And Demonstrations</Category>
+    <DemoDriver>no</DemoDriver>
+    <BW_HelpFiles>,Properties,Methods,Events</BW_HelpFiles>
+    <BeanStatus>RELEASE</BeanStatus>
+    <BeanLevel>High</BeanLevel>
+    <BW_NeedUst>0</BW_NeedUst>
+    <GroupCategory>DEMO</GroupCategory>
+    <BW_NeedCns>0</BW_NeedCns>
+    <Copyright>Copyright 1997 - 2009 Freescale Semiconductor, Inc.</Copyright>
+  </Options>
+  <PropertyList>
+    <Property>
+      <TCompNameItem>
+        <Name>Component name</Name>
+        <Symbol>DeviceName</Symbol>
+        <Hint>Component name</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue/>
+      </TCompNameItem>
+    </Property>
+    <Property>
+      <TAddrItem>
+        <Name>Address in CPU address space</Name>
+        <Symbol>ADDR</Symbol>
+        <Hint>Setting of the property: AddrType: EXTERNAL, INTERNAL, RAM, ROM, FLASH, EEPROM, ONETYPEONLY; FixedSize=0; Symbol=ADDR; Value=0; MinValue=0; MaxValue=-1;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue>0</DefaultValue>
+        <MinValue>0</MinValue>
+        <MaxValue>-1</MaxValue>
+        <Bases>DEC HEX</Bases>
+        <DefaultBase>DEC</DefaultBase>
+        <ExtraHintDisabled>false</ExtraHintDisabled>
+        <ChangeValueIntoRange>true</ChangeValueIntoRange>
+        <RuntimeProperty>false</RuntimeProperty>
+        <Size>0</Size>
+        <AddrType>external internal RAM ROM FLASH EEPROM one_type_only</AddrType>
+      </TAddrItem>
+    </Property>
+    <Property>
+      <TBoolGrupItem>
+        <Name>Boolean group</Name>
+        <Symbol>BOOLGROUP</Symbol>
+        <TypeSpec>typeEnaDis</TypeSpec>
+        <Hint>Setting of the property: Symbol=BOOLGROUP; TypeSpecName=typeEnaDis; Value=true; DefineSymbol=YES_NO</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <BoldName>true</BoldName>
+        <EditLine>false</EditLine>
+        <Description>Enabled</Description>
+        <Expanded>Yes</Expanded>
+        <DefaultValue>true</DefaultValue>
+        <DefineSymbol>YES_NO</DefineSymbol>
+        <IfDisabled>setNOTHING</IfDisabled>
+        <Children>
+          <GrupItem>
+            <TBoolItem>
+              <Name>Boolean yes / no</Name>
+              <Symbol>BOOL</Symbol>
+              <TypeSpec>typeYesNo</TypeSpec>
+              <Hint>Setting of the property: Symbol=BOOL; TypeSpecName=typeYesNo; Value=false; GetTextValueIndex=False</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>false</EditLine>
+              <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+              <DefaultIndex>1</DefaultIndex>
+              <TextValueIndex>false</TextValueIndex>
+              <RuntimeProperty>false</RuntimeProperty>
+              <CanDelete>false</CanDelete>
+              <IconPopup>false</IconPopup>
+              <DefaultValue>false</DefaultValue>
+              <Popup>false</Popup>
+            </TBoolItem>
+          </GrupItem>
+        </Children>
+      </TBoolGrupItem>
+    </Property>
+    <Property>
+      <TDateItem>
+        <Name>Date</Name>
+        <Symbol>DATE</Symbol>
+        <Hint>Setting of the property: Symbol=DATE; Text=31.12.2000; MinDateValue=01.01.1900; MaxDateValue=31.12.2999</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <Date>2000-12-31</Date>
+        <MinDate>1900-01-01</MinDate>
+        <MaxDate>2999-12-31</MaxDate>
+      </TDateItem>
+    </Property>
+    <Property>
+      <TDirectoryItem>
+        <Name>Directory</Name>
+        <Symbol>DIR</Symbol>
+        <Hint>Setting of the property: Symbol=DIR; Value=; </Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue/>
+        <ExcludeTrailBackSlash>false</ExcludeTrailBackSlash>
+      </TDirectoryItem>
+    </Property>
+    <Property>
+      <TEnumItem>
+        <Name>Enumeration</Name>
+        <Symbol>ENUM</Symbol>
+        <TypeSpec>MyFirstEnumType</TypeSpec>
+        <Hint>Setting of the property: Symbol=ENUM; TypeSpecName=MyFirstEnumType; GetTextValueIndex=False; Index=0;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>false</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+      </TEnumItem>
+    </Property>
+    <Property>
+      <TBtmpFileItem>
+        <Name>External bitmap file</Name>
+        <Symbol>BITMAP</Symbol>
+        <Hint>Setting of the property: Filter=Bitmap file (*.bmp)&amp;lt;PIPE&amp;gt;*.bmp; Symbol=BITMAP;Value=;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue/>
+        <FileDefine>none</FileDefine>
+        <FileMustExist>true</FileMustExist>
+        <Filter>Bitmap file (*.bmp)|*.bmp</Filter>
+        <BitmapFormat>ANY</BitmapFormat>
+      </TBtmpFileItem>
+    </Property>
+    <Property>
+      <TFileItem>
+        <Name>External file</Name>
+        <Symbol>FILE</Symbol>
+        <Hint>Setting of the property: FileDefine=NONE; Filter=Html file (*.html)&amp;lt;PIPE&amp;gt;*.html; Symbol=FILE; Value=;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue/>
+        <FileDefine>none</FileDefine>
+        <FileMustExist>true</FileMustExist>
+        <Filter>Html file (*.html)|*.html</Filter>
+      </TFileItem>
+    </Property>
+    <Property>
+      <TGrupItem>
+        <Name>Group of items</Name>
+        <Symbol>GROUP</Symbol>
+        <Hint>Setting of the property: Expanded=YES; Symbol=GROUP; Text=group of integer numbers;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <BoldName>true</BoldName>
+        <EditLine>false</EditLine>
+        <Description>group of integer numbers</Description>
+        <Expanded>Yes</Expanded>
+        <Children>
+          <GrupItem>
+            <TIntgItem>
+              <Name>Integer - signed</Name>
+              <Symbol>INT</Symbol>
+              <Hint>Setting of the property: Symbol=INT; Value=1; MaxValue=16; MinValue=-16;</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>true</EditLine>
+              <DefaultValue>1</DefaultValue>
+              <MinValue>-16</MinValue>
+              <MaxValue>16</MaxValue>
+              <Bases>DEC</Bases>
+              <DefaultBase>DEC</DefaultBase>
+              <ExtraHintDisabled>false</ExtraHintDisabled>
+              <ChangeValueIntoRange>true</ChangeValueIntoRange>
+              <RuntimeProperty>false</RuntimeProperty>
+            </TIntgItem>
+          </GrupItem>
+          <GrupItem>
+            <TIntgItem>
+              <Name>Integer - unsigned</Name>
+              <Symbol>WORD</Symbol>
+              <Hint>Setting of the property: Symbol=WORD; Value=100; MaxValue=65535; MinValue=0;</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>true</EditLine>
+              <DefaultValue>100</DefaultValue>
+              <MinValue>0</MinValue>
+              <MaxValue>65535</MaxValue>
+              <Bases>DEC</Bases>
+              <DefaultBase>DEC</DefaultBase>
+              <ExtraHintDisabled>false</ExtraHintDisabled>
+              <ChangeValueIntoRange>true</ChangeValueIntoRange>
+              <RuntimeProperty>false</RuntimeProperty>
+            </TIntgItem>
+          </GrupItem>
+        </Children>
+      </TGrupItem>
+    </Property>
+    <Property>
+      <TListItem>
+        <Name>List of items</Name>
+        <Symbol>LIST</Symbol>
+        <Hint>Setting of the property: ItemsName=Real; ItemsSymb=REAL; ItemsType=Real number; Symbol=LIST; ItemsTypeSpecName=; MaxItems=-1; MinItems=1</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <Description>list of real numbers</Description>
+        <Expanded>Yes</Expanded>
+        <ItemsType>TRealItem</ItemsType>
+        <ItemsTypeChangeAble>false</ItemsTypeChangeAble>
+        <ItemsName>Real</ItemsName>
+        <ItemsNameFrstIndx>0</ItemsNameFrstIndx>
+        <ItemsHint>Real value </ItemsHint>
+        <ItemsSymb>REAL</ItemsSymb>
+        <ItemsTypeSpec/>
+        <MinItems>1</MinItems>
+        <MaxItems>-1</MaxItems>
+        <MinItemsProtected>false</MinItemsProtected>
+        <SetNumOfListItemsAfterLoad>1</SetNumOfListItemsAfterLoad>
+      </TListItem>
+    </Property>
+    <Property>
+      <TStrgItem>
+        <Name>String</Name>
+        <Symbol>STRING</Symbol>
+        <Hint>Setting of the property: Symbol=STRING; Value=default string value; MaxLength=-1; MinLength=0;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <DefaultValue>default string value</DefaultValue>
+        <StrDefine>nothing</StrDefine>
+        <MinLength>0</MinLength>
+        <MaxLength>-1</MaxLength>
+      </TStrgItem>
+    </Property>
+    <Property>
+      <TStrgListItem>
+        <Name>String list</Name>
+        <Symbol>STRLIST</Symbol>
+        <Hint>Setting of the property: DefineList=False; AcceptNonPrintChars=False; ExternEditorEnabled=True;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <DefaultValue>(string list)</DefaultValue>
+        <DefineList>false</DefineList>
+        <ExternEditorEnabled>true</ExternEditorEnabled>
+        <AcceptNonPrintChars>false</AcceptNonPrintChars>
+        <DefaultStrgList lines_count="0"/>
+      </TStrgListItem>
+    </Property>
+    <Property>
+      <TTimeItem>
+        <Name>Time</Name>
+        <Symbol>TIME</Symbol>
+        <Hint>Setting of the property: Symbol=TIME; Text=08:15:00</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>true</EditLine>
+        <Time>0.343750000000</Time>
+        <MinTime>0</MinTime>
+        <MaxTime>0</MaxTime>
+        <TimeFormat>PC_LONG</TimeFormat>
+      </TTimeItem>
+    </Property>
+    <Property>
+      <TGrupItem>
+        <Name>CPU clock/speed selection</Name>
+        <Symbol>_SpeedGrp</Symbol>
+        <Hint>Setting of the property: default speed mode settings: Expanded=YES; Symbol=_SpeedGrp;</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <BoldName>true</BoldName>
+        <EditLine>false</EditLine>
+        <Description/>
+        <Expanded>Yes</Expanded>
+        <Children>
+          <GrupItem>
+            <TSpeedItem>
+              <Name>High speed mode</Name>
+              <Symbol>HighSpeed</Symbol>
+              <TypeSpec>typeEnaDis</TypeSpec>
+              <Hint>High speed mode</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>false</EditLine>
+              <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+              <DefaultIndex>0</DefaultIndex>
+              <TextValueIndex>true</TextValueIndex>
+              <RuntimeProperty>false</RuntimeProperty>
+              <CanDelete>false</CanDelete>
+              <IconPopup>false</IconPopup>
+              <DefaultValue>true</DefaultValue>
+              <Popup>false</Popup>
+            </TSpeedItem>
+          </GrupItem>
+          <GrupItem>
+            <TSpeedItem>
+              <Name>Low speed mode</Name>
+              <Symbol>LowSpeed</Symbol>
+              <TypeSpec>typeEnaDis</TypeSpec>
+              <Hint>Low speed mode</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>false</EditLine>
+              <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+              <DefaultIndex>1</DefaultIndex>
+              <TextValueIndex>true</TextValueIndex>
+              <RuntimeProperty>false</RuntimeProperty>
+              <CanDelete>false</CanDelete>
+              <IconPopup>false</IconPopup>
+              <DefaultValue>false</DefaultValue>
+              <Popup>false</Popup>
+            </TSpeedItem>
+          </GrupItem>
+          <GrupItem>
+            <TSpeedItem>
+              <Name>Slow speed mode</Name>
+              <Symbol>SlowSpeed</Symbol>
+              <TypeSpec>typeEnaDis</TypeSpec>
+              <Hint>Slow speed mode</Hint>
+              <ItemLevel>BASIC</ItemLevel>
+              <EditLine>false</EditLine>
+              <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+              <DefaultIndex>1</DefaultIndex>
+              <TextValueIndex>true</TextValueIndex>
+              <RuntimeProperty>false</RuntimeProperty>
+              <CanDelete>false</CanDelete>
+              <IconPopup>false</IconPopup>
+              <DefaultValue>false</DefaultValue>
+              <Popup>false</Popup>
+            </TSpeedItem>
+          </GrupItem>
+        </Children>
+      </TGrupItem>
+    </Property>
+  </PropertyList>
+  <MethodList>
+    <Method>
+      <TMthdItem>
+        <Name>Method1</Name>
+        <Symbol>Method1</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>This is only an example. This method do nothing.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>false</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <ReturnType>void</ReturnType>
+        <RetHint>nothing</RetHint>
+        <ParamCount>0</ParamCount>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>void #M#_#C#(void)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+    <Method>
+      <TMthdItem>
+        <Name>Method2</Name>
+        <Symbol>Method2</Symbol>
+        <TypeSpec>typeMethod</TypeSpec>
+        <Hint>This is only an example. This method do nothing.</Hint>
+        <ItemLevel>BASIC</ItemLevel>
+        <EditLine>false</EditLine>
+        <TypeSpecNameChangeAble>false</TypeSpecNameChangeAble>
+        <DefaultIndex>0</DefaultIndex>
+        <TextValueIndex>true</TextValueIndex>
+        <RuntimeProperty>false</RuntimeProperty>
+        <CanDelete>false</CanDelete>
+        <IconPopup>false</IconPopup>
+        <DefaultValue>true</DefaultValue>
+        <Popup>false</Popup>
+        <PublicMethod>true</PublicMethod>
+        <IsAssembler>false</IsAssembler>
+        <InDefinition>true</InDefinition>
+        <ReturnType>void</ReturnType>
+        <RetHint>nothing</RetHint>
+        <ParamCount>0</ParamCount>
+        <Scope>PRIVATE</Scope>
+        <Declarations>
+          <ANSIC>void #M#_#C#(void)</ANSIC>
+        </Declarations>
+      </TMthdItem>
+    </Method>
+  </MethodList>
+  <Links>
+    <EmptySection_DummyValue/>
+  </Links>
+  <Revisions>
+    <RevisionVersion>2</RevisionVersion>
+    <Revision>
+      <Date>2003-03-31</Date>
+      <Version>01.012</Version>
+      <Level>3</Level>
+      <Author>LU</Author>
+      <Verified/>
+      <Comment>Property ADDR (Address in CPU address space) feature AddrType addrALLOCATE set to FALSE</Comment>
+    </Revision>
+    <Revision>
+      <Date>2004-01-19</Date>
+      <Version>01.015</Version>
+      <Level>5</Level>
+      <Author>MT</Author>
+      <Verified>LU</Verified>
+      <Comment>Hints updated</Comment>
+    </Revision>
+    <Revision>
+      <Date>2004-05-05</Date>
+      <Version>01.017</Version>
+      <Level>5</Level>
+      <Author>LU</Author>
+      <Verified/>
+      <Comment>Corrected hints for proper display in html code.</Comment>
+    </Revision>
+    <Revision>
+      <Date>2006-01-27</Date>
+      <Version>01.018</Version>
+      <Level>9</Level>
+      <Author>MT</Author>
+      <Verified/>
+      <Comment>Adiminstrators category specified</Comment>
+    </Revision>
+    <Revision>
+      <Date>2006-05-23</Date>
+      <Version>01.019</Version>
+      <Level>9</Level>
+      <Author>LU</Author>
+      <Verified>LU</Verified>
+      <Comment>Changed Component category to DEMO.</Comment>
+    </Revision>
+    <Revision>
+      <Date>2009-06-04</Date>
+      <Version>01.023</Version>
+      <Level>5</Level>
+      <Author>MS</Author>
+      <Verified>LU</Verified>
+      <Comment>Hints fixed</Comment>
+    </Revision>
+    <Revision>
+      <Date>2009-07-16</Date>
+      <Version>01.025</Version>
+      <Level>3</Level>
+      <Author>LU</Author>
+      <Verified/>
+      <Comment>Property External file must point to existing file</Comment>
+    </Revision>
+    <Revision>
+      <Date>2009-09-17</Date>
+      <Version>01.027</Version>
+      <Level>3</Level>
+      <Author>MT</Author>
+      <Verified/>
+      <Comment>Property Bitmap file must point to existing file. Copyright added</Comment>
+    </Revision>
+    <Revision>
+      <Date>2009-12-07</Date>
+      <Version>01.028</Version>
+      <Level>3</Level>
+      <Author>MT</Author>
+      <Verified/>
+      <Comment>Bean renamed to component</Comment>
+    </Revision>
+  </Revisions>
+</Bean>

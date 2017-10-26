@@ -1,0 +1,140 @@
+===============================================================================
+RELEASE NOTES FOR the Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+===============================================================================
+hc12.sim: V6.1.26 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of New Features
+--------------------
+- HCS12XS series support.
+
+Improvements
+------------
+- None.
+
+List of fixed Bugs
+------------------
+- None.
+
+===============================================================================
+hc12.sim: V6.1.25 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of new Features
+------------------------------
+
+- HCS12XE Series MMCCTL1 register, ROMHM and RAMHM flags setup support:
+
+--support for alternative mapping of memory range 0x4000..0x7FFF
+  - extended command HCS12_SUPPORT:
+     syntax: HCS12_SUPPORT ("?" | "ON" | "OFF" | "HC12" | "HCS12" | "HCS12X" | "HCS12XE" | "STATUS") ["HCS12X_FLASH"=<num>] ["XGATE_RAM"=<num>] ["HCS12X_MAP4000"= ("FLASH"|"RAM"|"EXTERNAL")]
+     new parameter:
+     "HCS12XE" : enable the instruction set of the HCS12XE family (superset of HCS12X)
+     new option:
+     "HCS12X_MAP4000":  defines the mapping of the memory range 0x4000 to 0x7FFF to one of these memory types:
+            "FLASH":    non banked FLASH is mapped (default)
+            "RAM":      non banked RAM is mapped
+            "EXTERNAL": external space is mapped
+     this option affects only HCS12X devices 
+
+--New supported equivalent environment variable: HCS12X_MAP4000
+ Syntax: HCS12X_MAP4000 = (0 | 1 | 2) 
+   with:
+   0 = FLASH (default)
+   1 = RAM
+   2 = EXTERNAL
+
+
+===============================================================================
+hc12.sim: V6.1.24 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of new Features
+------------------------------
+- added command STACK_AREA_CHECK
+     syntax: STACK_AREA_CHECK ("?" | "AUTO" | "OFF" | "ON" low..high | "STATUS").
+     "STACK_AREA_CHECK ?" : displays the help
+     "STACK_AREA_CHECK AUTO" : enables stack checking. The range information is read from the ELF file. This option does only work if an ELF file is actually loaded, so it 
+                               does not work with a HIWARE format object file or with an SRECORD. An area specified with ON overrules the area set by the AUTO setting.
+     "STACK_AREA_CHECK AUTO" : disables the stack checking. This is the default, so this command only has an effect after it was enabled with the ON or AUTO command.
+     "STACK_AREA_CHECK ON 0x1234..0x1245": enables the stack checking. If the SP goes out of the 0x1234..0x1245 area, the simulation will stop with a stack overflow status.
+     "STACK_AREA_CHECK STATUS": prints a message which contains if the stack checking is currently enabled, and if so which area is used.
+
+- added command STACK_POINTER_INFO
+     syntax: STACK_POINTER_INFO (? | RESET | INFO).
+     "STACK_POINTER_INFO ?" : displays the help
+     "STACK_POINTER_INFO RESET" : resets the collection stack pointer values. Future INFO calls will only report the SP area from now on.
+     "STACK_POINTER_INFO INFO" : prints the area the SP was pointing to since the last RESET.
+
+
+
+List of fixed Bugs
+------------------------------
+- none
+
+List of known Bugs
+------------------------------
+- None.
+
+===============================================================================
+hc12.sim: V6.1.23 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of new Features
+------------------------------
+- Support to RUN XGATE Code out of Flash.
+
+List of fixed Bugs
+------------------------------
+- fixed Simulation of HC12/HCS12 fix MOV's with memory indirect destinations 
+  (e.g. MOVB #0, [D,X])
+  The Version V6.1.23 build 4160 used in the HCS12X V4.0 did contain a bug 
+  when simulating the HC12/HCS12 version of the MOVB/MOVW instruction
+  with certain addressing modes.
+  Note that officially, HCS12X V4.0 does only support the HCS12X cpu.
+  And with this CPU this bug does not happen.
+
+List of known Bugs
+------------------------------
+- None.
+
+===============================================================================
+hc12.sim: V6.1.22 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of new Features
+------------------------------
+- Support to simulator the XGATE core.
+- Support for the enhanced HCS12X instructions.
+- Support for multiple interrupt levels
+- Support for the extended condition code (IPL/Interrupt Priority Level)
+
+List of fixed Bugs
+------------------------------
+- simulation cycle bug: one cycle too much for "EMAXD [D,X/Y/SP]", 
+  "MAXA [D,X/Y/SP]" and "MINA [D,X/Y/SP]"
+- 1-47631571 EDIVS: don't store Y/D for overflow (as hardware)
+
+List of known Bugs
+------------------------------
+- None.
+
+===============================================================================
+hc12.sim: V6.1.21 Instruction-Set Simulator for the HC12, HCS12 and HCS12X
+===============================================================================
+
+List of new Features
+------------------------------
+- None
+
+List of fixed Bugs
+------------------------------
+- R2952 fixed wrong handling of WAV, REV, REVW, MEM fuzzy instructions 
+  (also with interrupt happening during the execution of these)
+- wrong cycles for CALL extended instruction (8 cycles instead of 7)
+
+List of known Bugs
+------------------------------
+- None.

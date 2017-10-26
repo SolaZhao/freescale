@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=us-ascii">
+
+<title>
+Speed Modes Support
+</title>
+<LINK href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body  style="margin-top:0px;margin-left:0px;margin-right:0px;"><table border="0" cellspacing="0" cellpadding="0" height="100%" width="100%">
+  <tr>
+  <td valign="top" width="150" >
+    <table cellspacing="0" border="0">
+      <tr>
+        <td style="width:150;height:30;text-align:center;" class="leftTitleBox" >
+          <span class="lefttitle" >User manual</span><br />
+        </td>        
+      </tr>
+      <tr><td>&nbsp;<br/>
+        <span class="leftmenu">
+        </span>           
+      </td>
+      </tr>      
+    </table>                
+    <div style=";text-align:left;vertical-align:top;margin-left:4px;" >                                                
+    <br/>
+    </div>        
+
+    </td>      
+    <td width="1" class="splitterLine" valign="top">
+      <div style="width:1px;height:100%"></div>
+    </td>
+    <td width="4">
+    </td>
+    <td style="vertical-align:top;padding-left:15px;padding-right:15px;padding-top:0px;">
+<p class="pagetitle">Speed Modes Support</p>
+<div class="normal">
+<p>The CPU component supports up to three different <b>speed modes</b>. The three <b>speed modes</b> is a Processor Expert specific concept which (among all the other PE features and concepts) ensures the portability of the PE projects between different CPU models. </p><p>In fact, the three speed modes are a generalization of all the possible CPU clock speed modes used for power-saving that can be found in most of the modern microcontrollers. In the area of embedded systems, power saving and power management functions are so important that we could not neglect the proper HW- independent software implementation of these functions. <br /> Therefore, for keeping the portability (HW independence) of PE projects, we recommend not to program the CPU speed functions manually, but use these three CPU Component speed modes instead: </p><p><a name="31"></a></p><ul><li class="normli"><b>High speed mode</b> - this mode is selected after reset and must be enabled in the project. This speed mode must be the fastest mode of the main CPU clock.</li><li class="normli"><b>Low speed mode</b> - this mode is usually used for another PLL or main prescaler settings of the main CPU clock.</li><li class="normli"><b>Slow speed mode</b> - this mode is usually used for the slowest possible mode of the main CPU clock. </li></ul><h2>Switching Speed Modes at Runtime</h2><p>The modes can be switched in the runtime by the following <b>CPU component methods</b>:</p><ul><li class="normli">SetHighSpeed</li><li class="normli">SetLowSpeed</li><li class="normli">SetSlowSpeed</li></ul><p>If a speed mode is enabled in the CPU Component properties, the corresponding method is enabled automatically.</p><p><b>It is highly recommended to disable interrupts before switching to another speed mode and enable them afterwards.</b></p><h2>Speed Modes Support in Components</h2><p>Using the component property <i>CPU clock/speed selection</i>, it is possible to define the speed modes supported by the component.<br /> Some components allow to set two values of the <i>CPU clock/speed selection</i> property:</p><ul><li class="normli"><i>Supported</i> - The <i>CPU clock/speed selection</i> group contains properties defining which speed modes are supported for the component.</li><li class="normli"><i>Ignored</i> - The speed mode settings are ignored and there are no action is performed when a speed mode is changed, that is the peripheral continues to run with the same configuration for all speed modes. No speed mode handling code is generated for this component. The component timing values are valid only for high-speed mode.</li></ul><p>The following features are available for high-level components, if the <i>CPU clock/speed selection</i> is not set to <i>ignored</i>: </p><ul><li class="normli">During the design, all the timing-related settings for such a component are checked to be correct in all the speed modes that the component supports and the component is enabled in these modes.</li><li class="normli">If the speed mode is changed, the current timing components are preserved (recalculated to be the same in the new speed mode), except the timing that is set at runtime from interval.<br /> If the CPU speed mode is changed to a mode that the component does not support for any reason, the component is disabled right after the CPU speed mode is changed. Otherwise the component is enabled. </li><li class="normli">Before or after the speed mode is changed, the <i>BeforeNewSpeed and AfterNewSpeed</i> event functions are called. </li></ul></div>
+<div class="copyright" style="text-align:center"> Copyright 2011 Freescale Semiconductor, Inc.<br /> PROCESSOR EXPERT is trademark of Freescale Semiconductor, Inc. </div>
+
+  </td>
+  </tr>
+</table>
+
+</body>
+</html>

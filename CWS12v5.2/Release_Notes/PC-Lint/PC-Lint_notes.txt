@@ -1,0 +1,98 @@
+RELEASE NOTES CodeWarrior PC-lint 
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.5
+
+List of New Features
+- none.
+
+List of Fixed Bugs
+- default file mappings in V1.4 were wrong.
+
+List of Known Bugs
+- none.
+
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.4
+
+
+List of New Features
+- The default file extension for new projects was changed to allow to add arbritrary files to the PC lint build target.
+  Files with unknown extension are ignored.
+
+List of Fixed Bugs
+- some config file improvements.
+
+List of Known Bugs
+- none.
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.3
+
+
+List of New Features
+- none.
+
+List of Fixed Bugs
+- all dll's have now the same version number.
+- Fixed crash for illegal projects. 
+  This was only happening if the project did get into touch with a prerelease > 1.0 PC lint preference panel.
+- some config file improvements.
+
+List of Known Bugs
+- none.
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.2
+
+
+List of New Features
+- none.
+
+List of Fixed Bugs
+- The Shielded Folders of the IDE are now taken into account.
+
+List of Known Bugs
+- none.
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.1
+Files:
+  \bin\Plugins\Compiler\PCLintCompiler.dll            V1.0.0.0
+  \bin\Plugins\Linker\PCLintLinker.dll                V1.0.0.0
+  \bin\Plugins\\Preference_Panel\PCLintSettings.dll   V1.2.0.0 (new)
+  \bin\Plugins\\Preference_Panel\PCLintOptions.dll    V1.1.0.0 (new)
+  \CodeWarrior Help\CWPCLINTO.HLP                              (new)
+  \CodeWarrior Help\CWPCLINTS.HLP                              (new)
+List of New Features
+- none.
+List of Fixed Bugs
+- in the 'PC-lint main settings' and 'PC-lint main settings' preference panels, 
+  tooltip/F1 help did not work for some of the controls.
+List of Known Bugs
+- none.
+
+RELEASE NOTE CodeWarrior PC-lint Plug-Ins V1.0
+
+Introduction
+
+  This is the first release of the PC-lint plugins for CodeWarrior. PC-lint is a product of 
+  Gimple (www.gimpel.com), which has to be installed separately. This plug-in 
+  interfaces the PC-lint with CodeWarrior in a simple and easy way.
+  Following files are installed/needed for this:
+  -	CodeWarrior help\CWPCLINTO.HLP: PC-lint options help (CodeWarrior tool tips)
+  -	CodeWarrior help\ CWPCLINTS.HLP: PC-lint main help (CodeWarrior tool tips)
+  -	Bin\plugins\Compiler\PCLintCompiler.dll: Compiler plug-in
+  -	Bin\plugins\Linker\PCLintLinker.dll: Linker plug-in
+  -	Bin\plugins\Preference Panel\PCLintOptions.dll: options preference panel
+  -	Bin\plugins\Preference Panel\PCLintSettings.dll: settings preference panel
+  -	Lint\lnt\CodeWarrior\*.lnt: lint configuration files
+  The implementation assumes that you have the PC-lint software installed in the Lint 
+  folder inside CodeWarrior. If not, then you have to adapt the path settings in the PC-
+  lint settings of the preference panels.
+  Note: to use the PC-lint Plug-in, a special license is required.
+
+List of New Features
+  - none.
+
+List of Fixed Bugs
+  - none.
+
+List of Known Bugs
+  - none.
