@@ -1,7 +1,0 @@
-$if has-source-includes$$\$
-$include SourceIncludeList.mtl$
-$endif$$\$
-$if has-source-namespace-uses$
-
-$include SourceNamespaceList.mtl$
-$endif$$\$

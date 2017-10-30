@@ -1,5 +1,0 @@
-$if is-first-initializer$: $else$, $endif$$\$
-$if should-wrap-line$
-	$\$
-$endif$$\$
-$data-member-name$($data-member-initializer$)$\$

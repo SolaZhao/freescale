@@ -1,8 +1,0 @@
-<br />
-<div class="versionspec">
-<B CLASS="VSP">
-Version specific information for %itemname% derivatives
-</B>
-<br/>
-Write your description here ...
-</div>

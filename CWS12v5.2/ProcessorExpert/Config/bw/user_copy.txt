@@ -1,3 +1,0 @@
-(c) Copyright <company/user-name>, %year%
-http      : www.<company>.com
-mail      : info@<company>.com

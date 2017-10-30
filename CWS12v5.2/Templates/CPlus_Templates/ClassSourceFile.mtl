@@ -1,4 +1,0 @@
-$include TopFileComment.mtl$
-$include SourceFileTop.mtl$
-$include ClassSource.mtl$
-$include SourceFileBottom.mtl$

@@ -1,3 +1,0 @@
-$foreach source-include-file$$\$
-#include $include-file-name$
-$endloop$$\$
